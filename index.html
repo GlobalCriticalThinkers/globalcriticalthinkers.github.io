@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Critical Thinkers — Global Critical Thinking Competition</title>
-  <meta name="description" content="Global Critical Thinkers is a global critical thinking competition for high school and university students. Four roles, one real-world challenge, no script.">
+  <title data-i18n="meta.title">Global Critical Thinkers — Global Critical Thinking Competition</title>
+  <meta name="description" content="Global Critical Thinkers is a global critical thinking competition for high school and university students. Four roles, one real-world challenge, no script." data-i18n-content="meta.description">
 
-  <meta property="og:title" content="Global Critical Thinkers — Global Critical Thinking Competition">
-  <meta property="og:description" content="A global critical thinking competition for ambitious students who want to think clearly, not just talk loudly.">
+  <meta property="og:title" content="Global Critical Thinkers — Global Critical Thinking Competition" data-i18n-content="meta.title">
+  <meta property="og:description" content="A global critical thinking competition for ambitious students who want to think clearly, not just talk loudly." data-i18n-content="meta.ogDescription">
   <meta property="og:image" content="images/hero.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
 
   <div class="progress-thread" aria-hidden="true">
     <div class="progress-thread__fill" id="progressFill"></div>
@@ -31,9 +31,16 @@
   <header class="site-header" id="siteHeader">
     <div class="site-header__inner">
       <a href="#arrival" class="site-header__logo">
-        <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-header__logo-img">
+        <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-header__logo-img" data-i18n-alt="brand.logoAlt">
       </a>
-      <a href="#registration" class="site-header__cta">Register now</a>
+      <div class="site-header__actions">
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-switch__divider" aria-hidden="true">|</span>
+          <button type="button" class="lang-switch__btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+        <a href="#registration" class="site-header__cta" data-i18n="nav.register">Register now</a>
+      </div>
     </div>
   </header>
 
@@ -44,7 +51,7 @@
     <!-- ============================================ -->
     <section class="hero" id="arrival" aria-labelledby="hero-heading">
       <div class="hero__media">
-        <img src="images/hero.jpg" alt="Four students in a strategy discussion during Global Critical Thinkers" loading="eager">
+        <img src="images/hero.jpg" alt="Four students in a strategy discussion during Global Critical Thinkers" loading="eager" data-i18n-alt="hero.imageAlt">
       </div>
       <div class="hero__scrim"></div>
       <div class="hero__frame" aria-hidden="true"></div>
@@ -52,30 +59,30 @@
       <div class="hero__content">
         <div class="hero__kicker">
           <span class="hero__kicker-line"></span>
-          <span class="hero__kicker-text">Global Critical Thinking Competition</span>
+          <span class="hero__kicker-text" data-i18n="hero.kicker">Global Critical Thinking Competition</span>
         </div>
-        <h1 id="hero-heading" class="hero__headline">Zero ego.<br><em>Real</em> critical thinking.</h1>
+        <h1 id="hero-heading" class="hero__headline" data-i18n-html="hero.headline">Zero ego.<br><em>Real</em> critical thinking.</h1>
         <div class="hero__foot">
-          <p class="hero__sub">Four roles. One real-world challenge. No scripts. No memorization. Just clear thinking under pressure.</p>
+          <p class="hero__sub" data-i18n="hero.sub">Four roles. One real-world challenge. No scripts. No memorization. Just clear thinking under pressure.</p>
           <div class="hero__stats">
             <div>
               <div class="hero__stat-num">4</div>
-              <div class="hero__stat-label">Roles per team</div>
+              <div class="hero__stat-label" data-i18n="hero.stat1">Roles per team</div>
             </div>
             <div>
               <div class="hero__stat-num">1</div>
-              <div class="hero__stat-label">Real-world challenge</div>
+              <div class="hero__stat-label" data-i18n="hero.stat2">Real-world challenge</div>
             </div>
             <div>
               <div class="hero__stat-num">∞</div>
-              <div class="hero__stat-label">Questions asked</div>
+              <div class="hero__stat-label" data-i18n="hero.stat3">Questions asked</div>
             </div>
           </div>
         </div>
       </div>
 
-      <a href="#mission" class="scroll-cue" aria-label="Scroll to the next section">
-        <span>Scroll</span>
+      <a href="#mission" class="scroll-cue" aria-label="Scroll to the next section" data-i18n-aria-label="hero.scrollAria">
+        <span data-i18n="hero.scroll">Scroll</span>
         <svg width="14" height="20" viewBox="0 0 16 24" fill="none" aria-hidden="true">
           <path d="M8 2v18M8 20l-6-6M8 20l6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -88,10 +95,10 @@
     <section class="section section--paper founding-story" id="founding-story" aria-labelledby="founding-story-heading">
       <div class="container">
         <div class="founding-story__text reveal">
-          <p class="eyebrow eyebrow--dark">Why GCT exists</p>
-          <h2 id="founding-story-heading" class="display-lg founding-story__headline">A competition built on one belief.</h2>
-          <p class="lede lede--paper founding-story__mission">We created GCT because we believe competitions should reward thinking, not memorization. Most competitions reward the loudest voice in the room. We wanted one that rewards the clearest one.</p>
-          <p class="founding-story__note">GCT started as a conversation between a small group of people who kept noticing the same gap: students who could argue well, but hadn't been asked to actually reason well. So we built the competition we wished we'd had. One real-world challenge, drawn from business, technology, policy, or another field entirely. Four roles that force real division of labor. A defense round with nowhere to hide. There is rarely one perfect answer, only the strength of the reasoning behind it. Nothing scripted, nothing rehearsed.</p>
+          <p class="eyebrow eyebrow--dark" data-i18n="foundingStory.eyebrow">Why GCT exists</p>
+          <h2 id="founding-story-heading" class="display-lg founding-story__headline" data-i18n="foundingStory.headline">A competition built on one belief.</h2>
+          <p class="lede lede--paper founding-story__mission" data-i18n="foundingStory.mission">We created GCT because we believe competitions should reward thinking, not memorization. Most competitions reward the loudest voice in the room. We wanted one that rewards the clearest one.</p>
+          <p class="founding-story__note" data-i18n="foundingStory.note">GCT started as a conversation between a small group of people who kept noticing the same gap: students who could argue well, but hadn't been asked to actually reason well. So we built the competition we wished we'd had. One real-world challenge, drawn from business, technology, policy, or another field entirely. Four roles that force real division of labor. A defense round with nowhere to hide. There is rarely one perfect answer, only the strength of the reasoning behind it. Nothing scripted, nothing rehearsed.</p>
         </div>
       </div>
     </section>
@@ -103,17 +110,17 @@
       <div class="container">
 
         <div class="leadership__head reveal">
-          <p class="eyebrow eyebrow--dark">The people behind GCT</p>
-          <h2 id="leadership-heading" class="display-md leadership__headline">Meet the Founding Team</h2>
+          <p class="eyebrow eyebrow--dark" data-i18n="leadership.eyebrow">The people behind GCT</p>
+          <h2 id="leadership-heading" class="display-md leadership__headline" data-i18n="leadership.headline">Meet the Founding Team</h2>
         </div>
 
         <div class="leadership__founder reveal">
           <div class="leadership__photo leadership__photo--founder">
             <img src="images/dhita.jpeg" alt="Dhita Utama" loading="lazy">
           </div>
-          <span class="leadership__label">Founder</span>
+          <span class="leadership__label" data-i18n="leadership.founderLabel">Founder</span>
           <h3 class="leadership__name leadership__name--founder">Dhita Utama</h3>
-          <p class="leadership__role leadership__role--founder">Founded Global Critical Thinkers to create a competition where reasoning matters more than memorization.</p>
+          <p class="leadership__role leadership__role--founder" data-i18n="leadership.founderBio">Founded Global Critical Thinkers to create a competition where reasoning matters more than memorization.</p>
         </div>
 
         <div class="leadership__rule" aria-hidden="true"></div>
@@ -123,17 +130,17 @@
             <div class="leadership__photo">
               <img src="images/gilang.png" alt="R. Gilang" loading="lazy">
             </div>
-            <span class="leadership__label">Co-Founder</span>
+            <span class="leadership__label" data-i18n="leadership.cofounderLabel">Co-Founder</span>
             <h3 class="leadership__name">R. Gilang</h3>
-            <p class="leadership__role">Background in International Relations with experience coordinating international conferences and youth engagement programs.</p>
+            <p class="leadership__role" data-i18n="leadership.gilangBio">Background in International Relations with experience coordinating international conferences and youth engagement programs.</p>
           </li>
           <li class="leadership__member">
             <div class="leadership__photo">
               <img src="images/putri.png" alt="Putri Ayu" loading="lazy">
             </div>
-            <span class="leadership__label">Co-Founder</span>
+            <span class="leadership__label" data-i18n="leadership.cofounderLabel">Co-Founder</span>
             <h3 class="leadership__name">Putri Ayu</h3>
-            <p class="leadership__role">Experienced in international programs, nonprofit initiatives, and cross-cultural collaboration, with a strong focus on community impact.</p>
+            <p class="leadership__role" data-i18n="leadership.putriBio">Experienced in international programs, nonprofit initiatives, and cross-cultural collaboration, with a strong focus on community impact.</p>
           </li>
         </ul>
 
@@ -147,24 +154,24 @@
       <div class="container">
         <div class="mission__top reveal">
           <div>
-            <p class="eyebrow">The mission</p>
-            <h2 id="mission-heading" class="display-lg mission__headline">A real challenge.<br>A real deadline.</h2>
+            <p class="eyebrow" data-i18n="mission.eyebrow">The mission</p>
+            <h2 id="mission-heading" class="display-lg mission__headline" data-i18n-html="mission.headline">A real challenge.<br>A real deadline.</h2>
           </div>
-          <p class="mission__copy">No hypotheticals, no rehearsed pitches. Every team receives the same real-world challenge, drawn from an authentic situation, and works against the same clock. What separates the winners isn't confidence. It's how they think under pressure.</p>
+          <p class="mission__copy" data-i18n="mission.copy">No hypotheticals, no rehearsed pitches. Every team receives the same real-world challenge, drawn from an authentic situation, and works against the same clock. What separates the winners isn't confidence. It's how they think under pressure.</p>
         </div>
 
         <div class="mission__stats reveal-stagger" id="missionStats">
           <div class="mission__stat">
             <div class="mission__stat-num">1</div>
-            <div class="mission__stat-label">Real-world challenge, identical for every team, revealed on the day</div>
+            <div class="mission__stat-label" data-i18n="mission.stat1">Real-world challenge, identical for every team, revealed on the day</div>
           </div>
           <div class="mission__stat">
             <div class="mission__stat-num">4</div>
-            <div class="mission__stat-label">Distinct roles a team must fill: Analyst, Evidence Analyst, Strategist, Presenter</div>
+            <div class="mission__stat-label" data-i18n="mission.stat2">Distinct roles a team must fill: Analyst, Evidence Analyst, Strategist, Presenter</div>
           </div>
           <div class="mission__stat">
             <div class="mission__stat-num">0</div>
-            <div class="mission__stat-label">Scripted answers permitted during the judges' defense round</div>
+            <div class="mission__stat-label" data-i18n="mission.stat3">Scripted answers permitted during the judges' defense round</div>
           </div>
         </div>
       </div>
@@ -177,18 +184,18 @@
       <div class="container">
         <div class="discussion__grid">
           <div class="discussion__text reveal">
-            <p class="eyebrow eyebrow--dark">The discussion</p>
-            <h2 id="discussion-heading" class="display-lg">Four ways of thinking.<br>One team.</h2>
+            <p class="eyebrow eyebrow--dark" data-i18n="discussion.eyebrow">The discussion</p>
+            <h2 id="discussion-heading" class="display-lg" data-i18n-html="discussion.headline">Four ways of thinking.<br>One team.</h2>
             <blockquote class="discussion__quote">
-              "The best teams don't agree quickly. They disagree well, then land somewhere stronger than where any one of them started."
-              <cite>— Facilitator note, GCT judging panel</cite>
+              <span data-i18n="discussion.quote">"The best teams don't agree quickly. They disagree well, then land somewhere stronger than where any one of them started."</span>
+              <cite data-i18n="discussion.cite">— Facilitator note, GCT judging panel</cite>
             </blockquote>
           </div>
           <div class="discussion__media reveal">
-            <img src="images/gambar2.jpg" alt="The full team in a collaborative discussion together around a whiteboard">
+            <img src="images/gambar2.jpg" alt="The full team in a collaborative discussion together around a whiteboard" data-i18n-alt="discussion.imageAlt">
             <div class="discussion__tag">
               <strong>45</strong>
-              <span>Minutes to align on a single direction before drafting begins</span>
+              <span data-i18n="discussion.tag">Minutes to align on a single direction before drafting begins</span>
             </div>
           </div>
         </div>
@@ -201,49 +208,49 @@
     <section class="section section--navy analysis" id="analysis" aria-labelledby="analysis-heading">
       <div class="container">
         <div class="analysis__head reveal">
-          <p class="eyebrow">The analysis</p>
-          <h2 id="analysis-heading" class="display-lg">Where the thinking<br>gets rigorous.</h2>
+          <p class="eyebrow" data-i18n="analysis.eyebrow">The analysis</p>
+          <h2 id="analysis-heading" class="display-lg" data-i18n-html="analysis.headline">Where the thinking<br>gets rigorous.</h2>
         </div>
 
         <div class="role-grid reveal-stagger">
           <article class="role-card">
             <div class="role-card__media">
-              <img src="images/gambar3.jpg" alt="The Analyst breaking down the core problem in the challenge">
+              <img src="images/gambar3.jpg" alt="The Analyst breaking down the core problem in the challenge" data-i18n-alt="analysis.role1Alt">
             </div>
             <span class="role-card__num">01</span>
             <div class="role-card__body">
-              <h3 class="role-card__title">Analyst</h3>
-              <p class="role-card__desc">Breaks the challenge down to its real problem, not the one sitting on the surface.</p>
+              <h3 class="role-card__title" data-i18n="analysis.role1Title">Analyst</h3>
+              <p class="role-card__desc" data-i18n="analysis.role1Desc">Breaks the challenge down to its real problem, not the one sitting on the surface.</p>
             </div>
           </article>
           <article class="role-card">
             <div class="role-card__media">
-              <img src="images/gambar4.jpg" alt="The Evidence Analyst testing whether the data holds up">
+              <img src="images/gambar4.jpg" alt="The Evidence Analyst testing whether the data holds up" data-i18n-alt="analysis.role2Alt">
             </div>
             <span class="role-card__num">02</span>
             <div class="role-card__body">
-              <h3 class="role-card__title">Evidence Analyst</h3>
-              <p class="role-card__desc">Tests every assumption against the data. If it doesn't hold up, it doesn't go forward.</p>
+              <h3 class="role-card__title" data-i18n="analysis.role2Title">Evidence Analyst</h3>
+              <p class="role-card__desc" data-i18n="analysis.role2Desc">Tests every assumption against the data. If it doesn't hold up, it doesn't go forward.</p>
             </div>
           </article>
           <article class="role-card">
             <div class="role-card__media">
-              <img src="images/gambar2.jpg" alt="The Strategist connecting analysis into a plan of action">
+              <img src="images/gambar2.jpg" alt="The Strategist connecting analysis into a plan of action" data-i18n-alt="analysis.role3Alt">
             </div>
             <span class="role-card__num">03</span>
             <div class="role-card__body">
-              <h3 class="role-card__title">Strategist</h3>
-              <p class="role-card__desc">Turns the analysis into a recommendation the team can actually stand behind.</p>
+              <h3 class="role-card__title" data-i18n="analysis.role3Title">Strategist</h3>
+              <p class="role-card__desc" data-i18n="analysis.role3Desc">Turns the analysis into a recommendation the team can actually stand behind.</p>
             </div>
           </article>
           <article class="role-card">
             <div class="role-card__media">
-              <img src="images/gambar5.jpg" alt="The Presenter, team leader, delivering the recommendation to the room">
+              <img src="images/gambar5.jpg" alt="The Presenter, team leader, delivering the recommendation to the room" data-i18n-alt="analysis.role4Alt">
             </div>
             <span class="role-card__num">04</span>
             <div class="role-card__body">
-              <h3 class="role-card__title">Presenter</h3>
-              <p class="role-card__desc">Everything the team built comes down to this. Clear thinking, spoken plainly.</p>
+              <h3 class="role-card__title" data-i18n="analysis.role4Title">Presenter</h3>
+              <p class="role-card__desc" data-i18n="analysis.role4Desc">Everything the team built comes down to this. Clear thinking, spoken plainly.</p>
             </div>
           </article>
         </div>
@@ -257,16 +264,16 @@
       <div class="container">
         <div class="presentation__grid">
           <div class="presentation__collage reveal">
-            <img class="c1" src="images/gambar6.jpg" alt="A team member speaking during the presentation round">
-            <img class="c2" src="images/gambar1.jpg" alt="Judges and delegates listening during a presentation">
+            <img class="c1" src="images/gambar6.jpg" alt="A team member speaking during the presentation round" data-i18n-alt="presentation.imageAlt1">
+            <img class="c2" src="images/gambar1.jpg" alt="Judges and delegates listening during a presentation" data-i18n-alt="presentation.imageAlt2">
           </div>
           <div class="presentation__text reveal">
-            <p class="eyebrow eyebrow--dark">The presentation</p>
-            <h2 id="presentation-heading" class="display-lg">The idea meets the room.</h2>
+            <p class="eyebrow eyebrow--dark" data-i18n="presentation.eyebrow">The presentation</p>
+            <h2 id="presentation-heading" class="display-lg" data-i18n="presentation.headline">The idea meets the room.</h2>
             <ul class="presentation__list">
-              <li><b>10 minutes</b> to present the full recommendation, unaided by a script.</li>
-              <li><b>Any team member</b> can be asked to answer, not only the Presenter.</li>
-              <li><b>Clarity over polish.</b> Judges are trained to reward substance, not delivery flourish.</li>
+              <li><b data-i18n="presentation.item1Bold">10 minutes</b> <span data-i18n="presentation.item1Rest">to present the full recommendation, unaided by a script.</span></li>
+              <li><b data-i18n="presentation.item2Bold">Any team member</b> <span data-i18n="presentation.item2Rest">can be asked to answer, not only the Presenter.</span></li>
+              <li><b data-i18n="presentation.item3Bold">Clarity over polish.</b> <span data-i18n="presentation.item3Rest">Judges are trained to reward substance, not delivery flourish.</span></li>
             </ul>
           </div>
         </div>
@@ -278,22 +285,22 @@
     <!-- ============================================ -->
     <section class="defense" id="defense" aria-labelledby="defense-heading">
       <div class="defense__media">
-        <img src="images/gambar6.jpg" alt="The team fielding tough questions from the judges" loading="lazy">
+        <img src="images/gambar6.jpg" alt="The team fielding tough questions from the judges" loading="lazy" data-i18n-alt="defense.imageAlt">
       </div>
       <div class="defense__scrim"></div>
       <div class="container">
         <div class="defense__content reveal">
-          <p class="eyebrow">The defense</p>
-          <h2 id="defense-heading" class="display-lg defense__headline">Every idea gets challenged.<br><em>Every ego</em> gets left at the door.</h2>
-          <p class="lede" style="margin-top:1.3rem;">The judges push back, hard. The team holds its ground or changes its mind in real time. Both are wins, if the reasoning behind them is sound.</p>
+          <p class="eyebrow" data-i18n="defense.eyebrow">The defense</p>
+          <h2 id="defense-heading" class="display-lg defense__headline" data-i18n-html="defense.headline">Every idea gets challenged.<br><em>Every ego</em> gets left at the door.</h2>
+          <p class="lede" style="margin-top:1.3rem;" data-i18n="defense.copy">The judges push back, hard. The team holds its ground or changes its mind in real time. Both are wins, if the reasoning behind them is sound.</p>
           <div class="defense__marks">
             <div class="defense__mark">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              <span>15-minute open cross-examination</span>
+              <span data-i18n="defense.mark1">15-minute open cross-examination</span>
             </div>
             <div class="defense__mark">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Judged on reasoning, not just conclusions</span>
+              <span data-i18n="defense.mark2">Judged on reasoning, not just conclusions</span>
             </div>
           </div>
         </div>
@@ -306,58 +313,58 @@
     <section class="section section--navy timeline" id="timeline" aria-labelledby="timeline-heading">
       <div class="container">
         <div class="timeline__head reveal">
-          <p class="eyebrow">Timeline</p>
-          <h2 id="timeline-heading" class="display-lg">Your journey,<br>step by step.</h2>
+          <p class="eyebrow" data-i18n="timeline.eyebrow">Timeline</p>
+          <h2 id="timeline-heading" class="display-lg" data-i18n-html="timeline.headline">Your journey,<br>step by step.</h2>
         </div>
         <div class="timeline-list reveal-stagger">
           <div class="timeline-item">
-            <span class="timeline-item__date">Now Open</span>
+            <span class="timeline-item__date" data-i18n="timeline.item1Date">Now Open</span>
             <div class="timeline-item__body">
-              <span class="timeline-item__title">Registration Opens</span>
+              <span class="timeline-item__title" data-i18n="timeline.item1Title">Registration Opens</span>
             </div>
-            <span class="timeline-item__tag">Registration</span>
+            <span class="timeline-item__tag" data-i18n="timeline.item1Tag">Registration</span>
           </div>
           <div class="timeline-item">
             <span class="timeline-item__date">31 Aug 2026</span>
             <div class="timeline-item__body">
-              <span class="timeline-item__title">Early Bird Ends</span>
+              <span class="timeline-item__title" data-i18n="timeline.item2Title">Early Bird Ends</span>
             </div>
-            <span class="timeline-item__tag">Pricing</span>
+            <span class="timeline-item__tag" data-i18n="timeline.item2Tag">Pricing</span>
           </div>
           <div class="timeline-item">
-            <span class="timeline-item__date">To Be Announced</span>
+            <span class="timeline-item__date" data-i18n="timeline.item3Date">To Be Announced</span>
             <div class="timeline-item__body">
-              <span class="timeline-item__title">Registration Closes</span>
+              <span class="timeline-item__title" data-i18n="timeline.item3Title">Registration Closes</span>
             </div>
-            <span class="timeline-item__tag">Registration</span>
+            <span class="timeline-item__tag" data-i18n="timeline.item3Tag">Registration</span>
           </div>
           <div class="timeline-item timeline-item--expanded">
-            <span class="timeline-item__date">Prep</span>
+            <span class="timeline-item__date" data-i18n="timeline.item4Date">Prep</span>
             <div class="timeline-item__body">
-              <span class="timeline-item__title">Pre-Event Preparation</span>
+              <span class="timeline-item__title" data-i18n="timeline.item4Title">Pre-Event Preparation</span>
               <ul class="timeline-item__list">
-                <li>Critical Thinking Workshop</li>
-                <li>Public Speaking Workshop</li>
-                <li>Online Technical Meeting (Gladi Resik)</li>
+                <li data-i18n="timeline.item4List1">Critical Thinking Workshop</li>
+                <li data-i18n="timeline.item4List2">Public Speaking Workshop</li>
+                <li data-i18n="timeline.item4List3">Online Technical Meeting (Gladi Resik)</li>
               </ul>
             </div>
-            <span class="timeline-item__tag">Preparation</span>
+            <span class="timeline-item__tag" data-i18n="timeline.item4Tag">Preparation</span>
           </div>
           <div class="timeline-item">
-            <span class="timeline-item__date">Jakarta</span>
+            <span class="timeline-item__date" data-i18n="timeline.item5Date">Jakarta</span>
             <div class="timeline-item__body">
-              <span class="timeline-item__title">Competition Day</span>
-              <span class="timeline-item__meta">Premium 4-Star Hotel</span>
+              <span class="timeline-item__title" data-i18n="timeline.item5Title">Competition Day</span>
+              <span class="timeline-item__meta" data-i18n="timeline.item5Meta">Premium 4-Star Hotel</span>
             </div>
-            <span class="timeline-item__tag">Event Day</span>
+            <span class="timeline-item__tag" data-i18n="timeline.item5Tag">Event Day</span>
           </div>
           <div class="timeline-item">
-            <span class="timeline-item__date">Post-Event</span>
+            <span class="timeline-item__date" data-i18n="timeline.item6Date">Post-Event</span>
             <div class="timeline-item__body">
-              <span class="timeline-item__title">Certificates &amp; Personal Performance Reports</span>
-              <span class="timeline-item__meta">Issued after the competition.</span>
+              <span class="timeline-item__title" data-i18n-html="timeline.item6Title">Certificates &amp; Personal Performance Reports</span>
+              <span class="timeline-item__meta" data-i18n="timeline.item6Meta">Issued after the competition.</span>
             </div>
-            <span class="timeline-item__tag">Wrap-Up</span>
+            <span class="timeline-item__tag" data-i18n="timeline.item6Tag">Wrap-Up</span>
           </div>
         </div>
       </div>
@@ -368,21 +375,21 @@
     <!-- ============================================ -->
     <section class="section achievement" id="achievement" aria-labelledby="achievement-heading">
       <div class="achievement__media">
-        <img src="images/gambar1.jpg" alt="The team at the moment of resolution, challenge solved" loading="lazy">
+        <img src="images/gambar1.jpg" alt="The team at the moment of resolution, challenge solved" loading="lazy" data-i18n-alt="achievement.imageAlt">
       </div>
       <div class="achievement__scrim"></div>
       <div class="container">
         <div class="achievement__content reveal">
-          <p class="eyebrow">The outcome</p>
-          <h2 id="achievement-heading" class="display-lg achievement__headline">This isn't a competition<br>to be right.<br>It's one to think clearly.</h2>
+          <p class="eyebrow" data-i18n="achievement.eyebrow">The outcome</p>
+          <h2 id="achievement-heading" class="display-lg achievement__headline" data-i18n-html="achievement.headline">This isn't a competition<br>to be right.<br>It's one to think clearly.</h2>
           <div class="achievement__outcomes">
-            <p class="achievement__outcomes-title">What you'll leave with</p>
+            <p class="achievement__outcomes-title" data-i18n="achievement.outcomesTitle">What you'll leave with</p>
             <ul class="achievement__outcomes-list">
-              <li>Official Certificate</li>
-              <li>Personal Performance Report</li>
-              <li>Professional Feedback</li>
-              <li>Stronger Critical Thinking</li>
-              <li>Valuable Professional Connections</li>
+              <li data-i18n="achievement.outcome1">Official Certificate</li>
+              <li data-i18n="achievement.outcome2">Personal Performance Report</li>
+              <li data-i18n="achievement.outcome3">Professional Feedback</li>
+              <li data-i18n="achievement.outcome4">Stronger Critical Thinking</li>
+              <li data-i18n="achievement.outcome5">Valuable Professional Connections</li>
             </ul>
           </div>
         </div>
@@ -395,98 +402,98 @@
     <section class="section section--paper trust" id="trust" aria-labelledby="trust-heading">
       <div class="container">
         <div class="trust__head reveal">
-          <p class="eyebrow eyebrow--dark">The record</p>
-          <h2 id="trust-heading" class="display-lg">Everything you'd want<br>to verify before you commit.</h2>
+          <p class="eyebrow eyebrow--dark" data-i18n="trust.eyebrow">The record</p>
+          <h2 id="trust-heading" class="display-lg" data-i18n-html="trust.headline">Everything you'd want<br>to verify before you commit.</h2>
         </div>
 
         <div class="trust-tabs" role="tablist" aria-label="Trust information categories">
-          <button class="trust-tab is-active" role="tab" aria-selected="true" data-tab="partners">Partners</button>
-          <button class="trust-tab" role="tab" aria-selected="false" data-tab="judges">Judges</button>
-          <button class="trust-tab" role="tab" aria-selected="false" data-tab="awards">Awards</button>
-          <button class="trust-tab" role="tab" aria-selected="false" data-tab="why-gct">Why Join GCT</button>
-          <button class="trust-tab" role="tab" aria-selected="false" data-tab="venue">Venue</button>
-          <button class="trust-tab" role="tab" aria-selected="false" data-tab="faq">FAQ</button>
+          <button class="trust-tab is-active" role="tab" aria-selected="true" data-tab="partners" data-i18n="trust.tabPartners">Partners</button>
+          <button class="trust-tab" role="tab" aria-selected="false" data-tab="judges" data-i18n="trust.tabJudges">Judges</button>
+          <button class="trust-tab" role="tab" aria-selected="false" data-tab="awards" data-i18n="trust.tabAwards">Awards</button>
+          <button class="trust-tab" role="tab" aria-selected="false" data-tab="why-gct" data-i18n="trust.tabWhyGct">Why Join GCT</button>
+          <button class="trust-tab" role="tab" aria-selected="false" data-tab="venue" data-i18n="trust.tabVenue">Venue</button>
+          <button class="trust-tab" role="tab" aria-selected="false" data-tab="faq" data-i18n="trust.tabFaq">FAQ</button>
         </div>
 
         <div class="trust-panel is-active" data-panel="partners">
           <div class="panel-intro">
-            <h3 class="panel-intro__title">Strategic Partners</h3>
-            <p class="panel-intro__copy">We are currently collaborating with universities, industry leaders, and organizations to deliver an exceptional competition experience. Official partners will be announced soon.</p>
+            <h3 class="panel-intro__title" data-i18n="trust.partnersTitle">Strategic Partners</h3>
+            <p class="panel-intro__copy" data-i18n="trust.partnersCopy">We are currently collaborating with universities, industry leaders, and organizations to deliver an exceptional competition experience. Official partners will be announced soon.</p>
           </div>
           <div class="logo-row">
             <div class="logo-cell">
-              <span class="logo-cell__label">Partner Announcement</span>
-              <span class="logo-cell__status">Coming Soon</span>
+              <span class="logo-cell__label" data-i18n="trust.partnerAnnouncement">Partner Announcement</span>
+              <span class="logo-cell__status" data-i18n="trust.comingSoon">Coming Soon</span>
             </div>
             <div class="logo-cell">
-              <span class="logo-cell__label">Partner Announcement</span>
-              <span class="logo-cell__status">Coming Soon</span>
+              <span class="logo-cell__label" data-i18n="trust.partnerAnnouncement">Partner Announcement</span>
+              <span class="logo-cell__status" data-i18n="trust.comingSoon">Coming Soon</span>
             </div>
             <div class="logo-cell">
-              <span class="logo-cell__label">Partner Announcement</span>
-              <span class="logo-cell__status">Coming Soon</span>
+              <span class="logo-cell__label" data-i18n="trust.partnerAnnouncement">Partner Announcement</span>
+              <span class="logo-cell__status" data-i18n="trust.comingSoon">Coming Soon</span>
             </div>
             <div class="logo-cell">
-              <span class="logo-cell__label">Partner Announcement</span>
-              <span class="logo-cell__status">Coming Soon</span>
+              <span class="logo-cell__label" data-i18n="trust.partnerAnnouncement">Partner Announcement</span>
+              <span class="logo-cell__status" data-i18n="trust.comingSoon">Coming Soon</span>
             </div>
           </div>
         </div>
 
         <div class="trust-panel" data-panel="judges">
           <div class="panel-intro">
-            <h3 class="panel-intro__title">Meet Our Judges</h3>
-            <p class="panel-intro__copy">Our judging panel consists of experienced professionals from across industry, government, and academia. Official names will be revealed closer to the event.</p>
+            <h3 class="panel-intro__title" data-i18n="trust.judgesTitle">Meet Our Judges</h3>
+            <p class="panel-intro__copy" data-i18n="trust.judgesCopy">Our judging panel consists of experienced professionals from across industry, government, and academia. Official names will be revealed closer to the event.</p>
           </div>
           <div class="judge-grid judge-grid--three">
             <div class="judge-card">
               <div class="judge-card__photo"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
-              <div class="judge-card__name">Government Representative</div>
-              <div class="judge-card__role">To Be Announced</div>
+              <div class="judge-card__name" data-i18n="trust.judge1Name">Government Representative</div>
+              <div class="judge-card__role" data-i18n="trust.tba">To Be Announced</div>
             </div>
             <div class="judge-card">
               <div class="judge-card__photo"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
-              <div class="judge-card__name">Industry Executive</div>
-              <div class="judge-card__role">To Be Announced</div>
+              <div class="judge-card__name" data-i18n="trust.judge2Name">Industry Executive</div>
+              <div class="judge-card__role" data-i18n="trust.tba">To Be Announced</div>
             </div>
             <div class="judge-card">
               <div class="judge-card__photo"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
-              <div class="judge-card__name">Academic Expert</div>
-              <div class="judge-card__role">To Be Announced</div>
+              <div class="judge-card__name" data-i18n="trust.judge3Name">Academic Expert</div>
+              <div class="judge-card__role" data-i18n="trust.tba">To Be Announced</div>
             </div>
           </div>
         </div>
 
         <div class="trust-panel" data-panel="awards">
           <div class="panel-intro">
-            <h3 class="panel-intro__title">Recognition &amp; Certification</h3>
-            <p class="panel-intro__copy">This competition does not provide cash prizes. Every participant who completes the competition will receive an official certificate.</p>
+            <h3 class="panel-intro__title" data-i18n="trust.awardsTitle">Recognition &amp; Certification</h3>
+            <p class="panel-intro__copy" data-i18n="trust.awardsCopy">This competition does not provide cash prizes. Every participant who completes the competition will receive an official certificate.</p>
           </div>
           <div class="award-list">
-            <div class="award-row"><span class="award-row__name">Champion</span><span class="award-row__value">Certificate</span></div>
-            <div class="award-row"><span class="award-row__name">Excellence Award <em>(Top 10%)</em></span><span class="award-row__value">Certificate</span></div>
-            <div class="award-row"><span class="award-row__name">Outstanding Team</span><span class="award-row__value">Certificate</span></div>
-            <div class="award-row"><span class="award-row__name">Best Presenter</span><span class="award-row__value">Certificate</span></div>
-            <div class="award-row"><span class="award-row__name">Best Strategic Thinking</span><span class="award-row__value">Certificate</span></div>
-            <div class="award-row"><span class="award-row__name">Best Critical Analysis</span><span class="award-row__value">Certificate</span></div>
-            <div class="award-row"><span class="award-row__name">Judges' Recognition</span><span class="award-row__value">Certificate</span></div>
-            <div class="award-row"><span class="award-row__name">Certificate of Participation</span><span class="award-row__value">All Participants</span></div>
+            <div class="award-row"><span class="award-row__name" data-i18n="trust.award1">Champion</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+            <div class="award-row"><span class="award-row__name" data-i18n-html="trust.award2">Excellence Award <em>(Top 10%)</em></span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+            <div class="award-row"><span class="award-row__name" data-i18n="trust.award3">Outstanding Team</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+            <div class="award-row"><span class="award-row__name" data-i18n="trust.award4">Best Presenter</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+            <div class="award-row"><span class="award-row__name" data-i18n="trust.award5">Best Strategic Thinking</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+            <div class="award-row"><span class="award-row__name" data-i18n="trust.award6">Best Critical Analysis</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+            <div class="award-row"><span class="award-row__name" data-i18n="trust.award7">Judges' Recognition</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+            <div class="award-row"><span class="award-row__name" data-i18n="trust.award8">Certificate of Participation</span><span class="award-row__value" data-i18n="trust.allParticipants">All Participants</span></div>
           </div>
         </div>
 
         <div class="trust-panel" data-panel="why-gct">
           <div class="feature-grid">
             <div class="feature-card">
-              <h3>Real-World Challenges</h3>
-              <p>Solve authentic challenges inspired by real-world situations across multiple disciplines.</p>
+              <h3 data-i18n="trust.feature1Title">Real-World Challenges</h3>
+              <p data-i18n="trust.feature1Copy">Solve authentic challenges inspired by real-world situations across multiple disciplines.</p>
             </div>
             <div class="feature-card">
-              <h3>Professional Feedback</h3>
-              <p>Receive valuable insights from experienced judges and professionals across industries.</p>
+              <h3 data-i18n="trust.feature2Title">Professional Feedback</h3>
+              <p data-i18n="trust.feature2Copy">Receive valuable insights from experienced judges and professionals across industries.</p>
             </div>
             <div class="feature-card">
-              <h3>Leadership &amp; Collaboration</h3>
-              <p>Develop teamwork, communication, strategic thinking, and confidence in a high-pressure environment.</p>
+              <h3 data-i18n="trust.feature3Title">Leadership &amp; Collaboration</h3>
+              <p data-i18n="trust.feature3Copy">Develop teamwork, communication, strategic thinking, and confidence in a high-pressure environment.</p>
             </div>
           </div>
         </div>
@@ -497,10 +504,10 @@
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="currentColor" stroke-width="1.3"/></svg>
             </div>
             <div class="venue-panel__body">
-              <p class="eyebrow eyebrow--dark">Venue</p>
-              <h3 class="venue-panel__name">Premium 4-Star Hotel</h3>
-              <p class="venue-panel__location">Jakarta, Indonesia</p>
-              <p class="venue-panel__note">The official venue will be announced to all registered participants after registration closes.</p>
+              <p class="eyebrow eyebrow--dark" data-i18n="trust.venueEyebrow">Venue</p>
+              <h3 class="venue-panel__name" data-i18n="trust.venueName">Premium 4-Star Hotel</h3>
+              <p class="venue-panel__location" data-i18n="trust.venueLocation">Jakarta, Indonesia</p>
+              <p class="venue-panel__note" data-i18n="trust.venueNote">The official venue will be announced to all registered participants after registration closes.</p>
             </div>
           </div>
         </div>
@@ -508,36 +515,36 @@
         <div class="trust-panel" data-panel="faq">
           <div class="faq-list">
             <div class="faq-item">
-              <button class="faq-item__q"><span>Who can participate?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p>Global Critical Thinkers is open to junior high school students, senior high school students, university students, and fresh graduates.</p></div>
+              <button class="faq-item__q"><span data-i18n="trust.faqQ1">Who can participate?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+              <div class="faq-item__a"><p data-i18n="trust.faqA1">Global Critical Thinkers is open to junior high school students, senior high school students, university students, and fresh graduates.</p></div>
             </div>
             <div class="faq-item">
-              <button class="faq-item__q"><span>Can I register individually or as a team?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p>Yes. Participants may register individually or with friends. Final team arrangements (up to 10 participants per team) will be organized by the committee to ensure balanced collaboration.</p></div>
+              <button class="faq-item__q"><span data-i18n="trust.faqQ2">Can I register individually or as a team?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+              <div class="faq-item__a"><p data-i18n="trust.faqA2">Yes. Participants may register individually or with friends. Final team arrangements (up to 10 participants per team) will be organized by the committee to ensure balanced collaboration.</p></div>
             </div>
             <div class="faq-item">
-              <button class="faq-item__q"><span>Do I need prior experience?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p>No. The competition is designed for both beginners and experienced participants.</p></div>
+              <button class="faq-item__q"><span data-i18n="trust.faqQ3">Do I need prior experience?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+              <div class="faq-item__a"><p data-i18n="trust.faqA3">No. The competition is designed for both beginners and experienced participants.</p></div>
             </div>
             <div class="faq-item">
-              <button class="faq-item__q"><span>What language will be used?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p>English.</p></div>
+              <button class="faq-item__q"><span data-i18n="trust.faqQ4">What language will be used?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+              <div class="faq-item__a"><p data-i18n="trust.faqA4">English.</p></div>
             </div>
             <div class="faq-item">
-              <button class="faq-item__q"><span>What should I prepare?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p>A laptop, business casual attire, an optional notebook, and an open mindset with a willingness to collaborate.</p></div>
+              <button class="faq-item__q"><span data-i18n="trust.faqQ5">What should I prepare?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+              <div class="faq-item__a"><p data-i18n="trust.faqA5">A laptop, business casual attire, an optional notebook, and an open mindset with a willingness to collaborate.</p></div>
             </div>
             <div class="faq-item">
-              <button class="faq-item__q"><span>Is accommodation included?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p>Lunch and two coffee breaks are included. Transportation and accommodation are not included.</p></div>
+              <button class="faq-item__q"><span data-i18n="trust.faqQ6">Is accommodation included?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+              <div class="faq-item__a"><p data-i18n="trust.faqA6">Lunch and two coffee breaks are included. Transportation and accommodation are not included.</p></div>
             </div>
             <div class="faq-item">
-              <button class="faq-item__q"><span>When will the venue be announced?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p>The official venue will be announced before the event.</p></div>
+              <button class="faq-item__q"><span data-i18n="trust.faqQ7">When will the venue be announced?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+              <div class="faq-item__a"><p data-i18n="trust.faqA7">The official venue will be announced before the event.</p></div>
             </div>
             <div class="faq-item">
-              <button class="faq-item__q"><span>What happens after payment?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p>Your registration will be confirmed within 48 hours after payment verification.</p></div>
+              <button class="faq-item__q"><span data-i18n="trust.faqQ8">What happens after payment?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+              <div class="faq-item__a"><p data-i18n="trust.faqA8">Your registration will be confirmed within 48 hours after payment verification.</p></div>
             </div>
           </div>
         </div>
@@ -550,45 +557,45 @@
     <section class="section section--navy why-gct" id="why-gct" aria-labelledby="why-gct-heading">
       <div class="container">
         <div class="why-gct__head reveal">
-          <p class="eyebrow">Why GCT?</p>
-          <h2 id="why-gct-heading" class="display-lg">More than a competition.</h2>
-          <p class="lede" style="margin-top:1.3rem;">Spend one full day solving a real-world challenge, collaborating with ambitious students, presenting your recommendation before experienced judges, and building connections that extend far beyond the competition.</p>
+          <p class="eyebrow" data-i18n="whyGct.eyebrow">Why GCT?</p>
+          <h2 id="why-gct-heading" class="display-lg" data-i18n="whyGct.headline">More than a competition.</h2>
+          <p class="lede" style="margin-top:1.3rem;" data-i18n="whyGct.lede">Spend one full day solving a real-world challenge, collaborating with ambitious students, presenting your recommendation before experienced judges, and building connections that extend far beyond the competition.</p>
         </div>
 
         <div class="why-grid reveal-stagger">
           <div class="why-card">
             <div class="why-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="currentColor" stroke-width="1.5"/></svg></div>
-            <h3>Real-World Challenges</h3>
-            <p>Solve authentic challenges inspired by real situations across business, technology, policy, and beyond.</p>
+            <h3 data-i18n="whyGct.card1Title">Real-World Challenges</h3>
+            <p data-i18n="whyGct.card1Copy">Solve authentic challenges inspired by real situations across business, technology, policy, and beyond.</p>
           </div>
           <div class="why-card">
             <div class="why-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
-            <h3>Professional Judges</h3>
-            <p>Present your ideas before experienced professionals from industry and academia.</p>
+            <h3 data-i18n="whyGct.card2Title">Professional Judges</h3>
+            <p data-i18n="whyGct.card2Copy">Present your ideas before experienced professionals from industry and academia.</p>
           </div>
           <div class="why-card">
             <div class="why-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5c.8 0 1.5-.7 1.5-1.5v-13z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
-            <h3>Exclusive Learning Journey</h3>
-            <p>Receive pre-event workshops in Critical Thinking and Public Speaking, participate in an online technical meeting (gladi resik), and continue developing throughout the competition.</p>
+            <h3 data-i18n="whyGct.card3Title">Exclusive Learning Journey</h3>
+            <p data-i18n="whyGct.card3Copy">Receive pre-event workshops in Critical Thinking and Public Speaking, participate in an online technical meeting (gladi resik), and continue developing throughout the competition.</p>
           </div>
           <div class="why-card">
             <div class="why-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 6.9L12 17.8l-6.2 3.3L7 14.2 2 9.3l7.1-.7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-            <h3>Beyond The Competition</h3>
-            <p>Top-performing participants will receive priority consideration for an exclusive champions-only competition planned for late 2027.</p>
+            <h3 data-i18n="whyGct.card4Title">Beyond The Competition</h3>
+            <p data-i18n="whyGct.card4Copy">Top-performing participants will receive priority consideration for an exclusive champions-only competition planned for late 2027.</p>
           </div>
         </div>
 
         <div class="founding reveal">
           <div class="founding__text">
-            <p class="founding__eyebrow">Be The First.</p>
-            <p class="founding__copy">Every great tradition begins somewhere. Join the inaugural Global Critical Thinkers and become part of the founding generation that shapes the future of this competition.</p>
+            <p class="founding__eyebrow" data-i18n="whyGct.foundingEyebrow">Be The First.</p>
+            <p class="founding__copy" data-i18n="whyGct.foundingCopy">Every great tradition begins somewhere. Join the inaugural Global Critical Thinkers and become part of the founding generation that shapes the future of this competition.</p>
           </div>
           <div class="founding__journey">
-            <span>GCT 2026</span>
+            <span data-i18n="whyGct.journey1">GCT 2026</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Top Performing Participants</span>
+            <span data-i18n="whyGct.journey2">Top Performing Participants</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="founding__journey-highlight">Exclusive Champions Competition 2027</span>
+            <span class="founding__journey-highlight" data-i18n="whyGct.journey3">Exclusive Champions Competition 2027</span>
           </div>
         </div>
       </div>
@@ -601,75 +608,75 @@
       <div class="container">
         <div class="registration__grid">
           <div class="reveal">
-            <p class="eyebrow">Registration</p>
-            <h2 id="registration-heading" class="display-lg registration__headline">Claim your place<br>at the table.</h2>
-            <p class="lede registration__copy">Register individually or with friends and step into a real-world challenge, judged by people who've done this for a living. No hypotheticals. No safety net.</p>
+            <p class="eyebrow" data-i18n="registration.eyebrow">Registration</p>
+            <h2 id="registration-heading" class="display-lg registration__headline" data-i18n-html="registration.headline">Claim your place<br>at the table.</h2>
+            <p class="lede registration__copy" data-i18n="registration.copy">Register individually or with friends and step into a real-world challenge, judged by people who've done this for a living. No hypotheticals. No safety net.</p>
             <ul class="registration__benefits">
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>One real-world challenge based on an authentic situation</span>
+                <span data-i18n="registration.benefit1">One real-world challenge based on an authentic situation</span>
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Pre-event workshops in Critical Thinking and Public Speaking, plus direct feedback from an experienced judging panel</span>
+                <span data-i18n="registration.benefit2">Pre-event workshops in Critical Thinking and Public Speaking, plus direct feedback from an experienced judging panel</span>
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>An official certificate and a personal performance report card from assessors</span>
+                <span data-i18n="registration.benefit3">An official certificate and a personal performance report card from assessors</span>
               </li>
             </ul>
           </div>
 
           <div class="reveal">
             <div class="price-card">
-              <span class="price-card__label">Registration information</span>
-              <h3 class="price-card__title">Registration Fee</h3>
-              <p class="price-card__subtitle">Individual Registration Only</p>
-              <p class="price-card__note price-card__note--top">Participants will be assigned to balanced teams by the organizing committee. Team assignments will be announced one week before the competition.</p>
+              <span class="price-card__label" data-i18n="registration.priceLabel">Registration information</span>
+              <h3 class="price-card__title" data-i18n="registration.priceTitle">Registration Fee</h3>
+              <p class="price-card__subtitle" data-i18n="registration.priceSubtitle">Individual Registration Only</p>
+              <p class="price-card__note price-card__note--top" data-i18n="registration.priceNoteTop">Participants will be assigned to balanced teams by the organizing committee. Team assignments will be announced one week before the competition.</p>
               <div class="price-tiers">
                 <div class="price-tier price-tier--active">
                   <div>
-                    <div class="price-tier__name">Early Bird</div>
-                    <div class="price-tier__deadline">Until 31 August 2026</div>
+                    <div class="price-tier__name" data-i18n="registration.tier1Name">Early Bird</div>
+                    <div class="price-tier__deadline" data-i18n="registration.tier1Deadline">Until 31 August 2026</div>
                   </div>
                   <div class="price-tier__amount">IDR 1,500,000</div>
                 </div>
                 <div class="price-tier">
                   <div>
-                    <div class="price-tier__name">Regular Price</div>
-                    <div class="price-tier__deadline">From 1 September 2026</div>
+                    <div class="price-tier__name" data-i18n="registration.tier2Name">Regular Price</div>
+                    <div class="price-tier__deadline" data-i18n="registration.tier2Deadline">From 1 September 2026</div>
                   </div>
                   <div class="price-tier__amount">IDR 1,700,000</div>
                 </div>
               </div>
               <div class="price-card__seats">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"/></svg>
-                <span data-placeholder="seats">72 Seats Remaining</span>
+                <span data-placeholder="seats" data-i18n="registration.seats">72 Seats Remaining</span>
               </div>
-              <a href="[[REGISTRATION_LINK_PLACEHOLDER]]" class="btn btn--gold price-card__cta">Register Now</a>
-              <p class="price-card__note">Confirmation sent within 48 hours of payment verification.</p>
+              <a href="[[REGISTRATION_LINK_PLACEHOLDER]]" class="btn btn--gold price-card__cta" data-i18n="registration.cta">Register Now</a>
+              <p class="price-card__note" data-i18n="registration.confirmNote">Confirmation sent within 48 hours of payment verification.</p>
             </div>
           </div>
         </div>
 
         <div class="includes reveal">
-          <p class="eyebrow">Your Registration Includes</p>
+          <p class="eyebrow" data-i18n="registration.includesEyebrow">Your Registration Includes</p>
           <div class="includes__grid reveal-stagger">
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Global Critical Thinking Competition</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Critical Thinking Strategy Workshop</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Public Speaking Workshop</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Online Technical Meeting (Gladi Resik)</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>E-Book</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Premium 4-Star Hotel Venue</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Lunch</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Two Coffee Breaks</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Official Certificate</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Personal Performance Report Card from Assessors</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>GCT Delegate Kit</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Official Name Badge</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Professional Networking</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Closing Ceremony</span></div>
-            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Priority pathway to the exclusive 2027 Champions Competition</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include1">Global Critical Thinking Competition</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include2">Critical Thinking Strategy Workshop</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include3">Public Speaking Workshop</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include4">Online Technical Meeting (Gladi Resik)</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include5">E-Book</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include6">Premium 4-Star Hotel Venue</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include7">Lunch</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include8">Two Coffee Breaks</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include9">Official Certificate</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include10">Personal Performance Report Card from Assessors</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include11">GCT Delegate Kit</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include12">Official Name Badge</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include13">Professional Networking</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include14">Closing Ceremony</span></div>
+            <div class="includes__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="registration.include15">Priority pathway to the exclusive 2027 Champions Competition</span></div>
           </div>
         </div>
       </div>
@@ -681,49 +688,51 @@
   <!-- FOOTER -->
   <!-- ============================================ -->
   <footer class="site-footer">
-    <p class="site-footer__bookend">Zero ego. Real critical thinking.<br>Your turn.</p>
+    <p class="site-footer__bookend" data-i18n-html="footer.bookend">Zero ego. Real critical thinking.<br>Your turn.</p>
 
     <div class="site-footer__main">
       <div>
         <div class="site-footer__brand">
-          <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-footer__brand-img">
+          <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-footer__brand-img" data-i18n-alt="brand.logoAlt">
         </div>
-        <p class="site-footer__tagline">A Global Critical Thinking Competition where participants solve real-world challenges through reasoning, collaboration, and communication.</p>
+        <p class="site-footer__tagline" data-i18n="footer.tagline">A Global Critical Thinking Competition where participants solve real-world challenges through reasoning, collaboration, and communication.</p>
       </div>
 
       <nav class="footer-col" aria-label="Site navigation">
-        <p class="footer-col__title">Explore</p>
+        <p class="footer-col__title" data-i18n="footer.exploreTitle">Explore</p>
         <ul>
-          <li><a href="#mission">The mission</a></li>
-          <li><a href="#analysis">The roles</a></li>
-          <li><a href="#why-gct">Why GCT</a></li>
-          <li><a href="#trust">FAQ</a></li>
+          <li><a href="#mission" data-i18n="footer.exploreMission">The mission</a></li>
+          <li><a href="#analysis" data-i18n="footer.exploreRoles">The roles</a></li>
+          <li><a href="#why-gct" data-i18n="footer.exploreWhyGct">Why GCT</a></li>
+          <li><a href="#trust" data-i18n="footer.exploreFaq">FAQ</a></li>
         </ul>
       </nav>
 
       <nav class="footer-col" aria-label="Registration">
-        <p class="footer-col__title">Register</p>
+        <p class="footer-col__title" data-i18n="footer.registerTitle">Register</p>
         <ul>
-          <li><a href="#registration">Pricing</a></li>
-          <li><a href="[[REGISTRATION_LINK_PLACEHOLDER]]">Register now</a></li>
+          <li><a href="#registration" data-i18n="footer.registerPricing">Pricing</a></li>
+          <li><a href="[[REGISTRATION_LINK_PLACEHOLDER]]" data-i18n="footer.registerNow">Register now</a></li>
         </ul>
       </nav>
 
       <nav class="footer-col" aria-label="Contact">
-        <p class="footer-col__title">Contact</p>
+        <p class="footer-col__title" data-i18n="footer.contactTitle">Contact</p>
         <ul>
-          <li><a href="[[CONTACT_LINK_PLACEHOLDER]]">Email us</a></li>
-          <li><a href="[[INSTAGRAM_LINK_PLACEHOLDER]]">Instagram</a></li>
+          <li><a href="[[CONTACT_LINK_PLACEHOLDER]]" data-i18n="footer.contactEmail">Email us</a></li>
+          <li><a href="[[INSTAGRAM_LINK_PLACEHOLDER]]" data-i18n="footer.contactInstagram">Instagram</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="site-footer__bottom">
-      <p>&copy; <span id="currentYear"></span> Global Critical Thinkers.</p>
-      <p>Zero ego, real critical thinking.</p>
+      <p><span data-i18n="footer.copyright">&copy;</span> <span id="currentYear"></span> Global Critical Thinkers.</p>
+      <p data-i18n="footer.bottomTagline">Zero ego, real critical thinking.</p>
     </div>
   </footer>
 
+  <script src="js/translations.js" defer></script>
+  <script src="js/i18n.js" defer></script>
   <script src="js/script.js" defer></script>
 </body>
 </html>

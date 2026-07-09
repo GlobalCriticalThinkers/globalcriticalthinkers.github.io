@@ -552,6 +552,43 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 1.4rem;
+  overflow: hidden;
+  border: 1px solid var(--gold);
+  box-shadow: 0 12px 28px -18px rgba(11, 18, 32, 0.35);
+}
+.founder-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Founder-first layout: lead founder card, divider, team heading */
+.founder-grid--lead { grid-template-columns: 1fr; max-width: 22rem; }
+.founder-card--lead { text-align: left; }
+.founder-card__photo--lead {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1.6rem;
+}
+.founder-divider {
+  margin: 2.75rem 0 2rem;
+  height: 1px;
+  background: rgba(11, 18, 32, 0.1);
+}
+.founder-team-heading {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-on-paper);
+  margin-bottom: 1.5rem;
+}
+.founder-grid--co { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 860px) {
+  .founder-grid--lead { max-width: none; }
+  .founder-grid--co { grid-template-columns: 1fr; }
 }
 .founder-card__label {
   display: block;

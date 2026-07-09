@@ -500,195 +500,156 @@ body {
    6b. FOUNDING STORY — Why GCT Exists (founder story + mission + team)
    ------------------------------------------------------------------------- */
 .founding-story { background: var(--paper); color: var(--ink); }
-.founding-story__grid {
-  display: grid;
-  grid-template-columns: 0.72fr 1fr;
-  gap: clamp(2.5rem, 6vw, 5rem);
-  align-items: start;
+.founding-story__text {
+  max-width: 62ch;
+  margin-inline: auto;
+  text-align: center;
 }
-.founding-story__text { max-width: 46ch; }
+.founding-story__text .eyebrow { justify-content: center; }
 .founding-story__headline { margin-top: 1.2rem; color: var(--ink); }
 .founding-story__mission {
   margin-top: 1.6rem;
+  margin-inline: auto;
   color: var(--ink);
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.18rem;
+  font-size: clamp(1.15rem, 1.6vw, 1.32rem);
   line-height: 1.6;
-  max-width: none;
+  max-width: 48ch;
 }
 .founding-story__note {
   margin-top: 1.5rem;
-  font-size: 0.96rem;
-  line-height: 1.8;
+  margin-inline: auto;
+  font-size: 0.98rem;
+  line-height: 1.85;
   color: var(--muted-on-paper);
-  max-width: 44ch;
+  max-width: 56ch;
 }
 
-.founder-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+/* -------------------------------------------------------------------------
+   6c. LEADERSHIP — Meet the Founding Team
+   ------------------------------------------------------------------------- */
+.section--white { background: var(--white); color: var(--ink); }
+
+.leadership__head {
+  text-align: center;
+  max-width: 40ch;
+  margin: 0 auto clamp(3.5rem, 7vw, 5.5rem);
 }
-.founder-card {
-  padding: 2.25rem 1.8rem;
-  background: linear-gradient(180deg, var(--white) 0%, #FDFCF8 100%);
-  border: 1px solid rgba(201, 162, 75, 0.18);
-  border-radius: 22px;
-  box-shadow: 0 30px 60px -36px rgba(11, 18, 32, 0.22), 0 2px 0 rgba(201, 162, 75, 0.15) inset;
-  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
-}
-.founder-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 40px 70px -32px rgba(11, 18, 32, 0.28), 0 2px 0 rgba(201, 162, 75, 0.25) inset;
-}
-.founder-card__photo {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--paper-dim);
-  color: var(--muted-on-paper);
+.leadership__head .eyebrow { justify-content: center; }
+.leadership__headline { margin-top: 1rem; color: var(--ink); }
+
+/* Founder — centered, dominant primary profile */
+.leadership__founder {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 1.4rem;
-  overflow: hidden;
-  border: 1px solid var(--gold);
-  box-shadow: 0 12px 28px -18px rgba(11, 18, 32, 0.35);
-}
-.founder-card__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  text-align: center;
+  max-width: 34rem;
+  margin-inline: auto;
 }
 
-/* Founder-first layout: lead founder card, divider, team heading */
-.founder-grid--lead { grid-template-columns: 1fr; max-width: 30rem; }
-.founder-card--lead {
-  text-align: left;
-  padding: clamp(2.75rem, 4vw, 3.5rem) clamp(2.5rem, 4vw, 3.25rem);
-  border-radius: 24px;
-  background: linear-gradient(165deg, var(--white) 0%, #FBF8EF 100%);
-  border: 1px solid rgba(201, 162, 75, 0.28);
-  box-shadow: 0 44px 80px -40px rgba(11, 18, 32, 0.28), 0 2px 0 rgba(201, 162, 75, 0.3) inset;
-  position: relative;
+/* Shared photo styling for founder + co-founders */
+.leadership__photo {
+  border-radius: 50%;
   overflow: hidden;
+  background: var(--paper-dim);
+  box-shadow: 0 24px 48px -24px rgba(11, 18, 32, 0.3);
+  position: relative;
 }
-.founder-card--lead::before {
+.leadership__photo::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 100% 0%, rgba(201, 162, 75, 0.1), transparent 55%);
-  pointer-events: none;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 162, 75, 0.35);
 }
-.founder-card--lead:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 56px 90px -36px rgba(11, 18, 32, 0.32), 0 2px 0 rgba(201, 162, 75, 0.4) inset;
-}
-.founder-card__photo--lead {
-  width: clamp(130px, 14vw, 150px);
-  height: clamp(130px, 14vw, 150px);
-  margin-bottom: 2rem;
-  border-width: 2px;
-  box-shadow: 0 20px 40px -18px rgba(11, 18, 32, 0.4), 0 0 0 6px rgba(201, 162, 75, 0.08);
-}
-.founder-divider {
-  margin: 3.5rem 0 2.25rem;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(201, 162, 75, 0.4), rgba(11, 18, 32, 0.08) 60%);
-}
-.founder-team-heading {
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted-on-paper);
-  margin-bottom: 1.75rem;
-}
-.founder-grid--co {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem;
-}
-.founder-grid--co .founder-card {
-  padding: clamp(2rem, 3vw, 2.5rem) clamp(1.75rem, 2.5vw, 2.25rem);
-  border-radius: 20px;
-}
-.founder-grid--co .founder-card__photo {
-  width: clamp(90px, 8vw, 100px);
-  height: clamp(90px, 8vw, 100px);
-  margin-bottom: 1.75rem;
+.leadership__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-@media (max-width: 860px) {
-  .founder-grid--lead { max-width: none; }
-  .founder-grid--co { grid-template-columns: 1fr; }
+.leadership__photo--founder {
+  width: clamp(128px, 12vw, 160px);
+  height: clamp(128px, 12vw, 160px);
+  margin-bottom: 2rem;
+  box-shadow: 0 30px 60px -26px rgba(11, 18, 32, 0.36), 0 0 0 8px rgba(201, 162, 75, 0.07);
 }
-.founder-card__label {
+.leadership__photo--founder::after { border-width: 1.5px; }
+
+.leadership__label {
   display: block;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
 }
-.founder-card--lead .founder-card__label {
-  font-size: 0.76rem;
-  letter-spacing: 0.2em;
-}
-.founder-card__name {
-  margin-top: 0.6rem;
+.leadership__founder .leadership__label { font-size: 0.78rem; }
+
+.leadership__name {
+  margin-top: 0.7rem;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 1.15rem;
   color: var(--ink);
 }
-.founder-card--lead .founder-card__name {
-  margin-top: 0.9rem;
-  font-size: clamp(1.7rem, 2.4vw, 2.1rem);
-  line-height: 1.15;
+.leadership__name--founder {
+  margin-top: 1rem;
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  line-height: 1.12;
 }
-.founder-grid--co .founder-card__name {
-  margin-top: 0.75rem;
-  font-size: 1.3rem;
-}
-.founder-card__role {
-  margin-top: 0.4rem;
-  font-size: 0.82rem;
-  line-height: 1.5;
+
+.leadership__role {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
   color: var(--muted-on-paper);
 }
-.founder-card--lead .founder-card__role {
+.leadership__role--founder {
   margin-top: 1.1rem;
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 34ch;
+  font-size: 1.06rem;
+  line-height: 1.75;
+  max-width: 36ch;
+  margin-inline: auto;
 }
-.founder-grid--co .founder-card__role {
-  margin-top: 0.6rem;
-  font-size: 0.9rem;
-  line-height: 1.65;
+
+/* Divider between founder and founding team */
+.leadership__rule {
+  width: 64px;
+  height: 1px;
+  margin: clamp(3rem, 6vw, 4.5rem) auto;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
-.founder-card__linkedin {
-  display: inline-flex;
-  align-items: center;
+
+/* Co-founders — symmetric row beneath the founder */
+.leadership__co {
+  display: flex;
   justify-content: center;
-  width: 30px;
-  height: 30px;
-  margin-top: 1.4rem;
-  border-top: 1px solid rgba(11, 18, 32, 0.08);
-  padding-top: 1.2rem;
-  color: var(--muted-on-paper);
-  transition: color 0.3s var(--ease);
+  flex-wrap: wrap;
+  gap: clamp(3rem, 7vw, 6rem);
+  max-width: 44rem;
+  margin-inline: auto;
 }
-.founder-card__linkedin:hover { color: var(--gold); }
+.leadership__member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 15.5rem;
+}
+.leadership__member .leadership__photo {
+  width: clamp(104px, 9vw, 120px);
+  height: clamp(104px, 9vw, 120px);
+  margin-bottom: 1.5rem;
+}
+.leadership__member .leadership__name { font-size: 1.28rem; }
+.leadership__member .leadership__role { max-width: 26ch; }
 
 @media (max-width: 860px) {
-  .founding-story__grid { grid-template-columns: 1fr; }
-  .founder-grid { grid-template-columns: 1fr; gap: 1.25rem; }
-}
-@media (min-width: 861px) and (max-width: 1080px) {
-  .founder-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .leadership__co { flex-direction: column; align-items: center; gap: 2.75rem; }
+  .leadership__member { width: 100%; max-width: 22rem; }
 }
 
 /* -------------------------------------------------------------------------

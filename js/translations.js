@@ -66,7 +66,7 @@ const translations = {
     evaluationTeaser: {
       eyebrow: "Evaluation",
       headline: "How great thinking is evaluated.",
-      body: "Participants are assessed through a structured framework that values reasoning, evidence, judgment, and communication — not confidence alone.",
+      body: "Participants are assessed through a structured framework built around how they reason — not how confident they sound.",
       cta: "Explore the Evaluation Framework <span aria-hidden=\"true\">&rarr;</span>"
     },
     leadership: {
@@ -81,7 +81,7 @@ const translations = {
     mission: {
       eyebrow: "The mindset",
       headline: "Certainty is easy.<br>Clear thinking isn't.",
-      copy: "GCT is not designed to see who can perform confidence. It's designed to see how you actually think when the answer isn't obvious, the clock is running, and no one is going to agree with you by default. What separates strong thinkers isn't how sure they sound. It's how carefully they've reasoned before they speak.",
+      copy: "GCT is designed to see how you actually think when the answer isn't obvious, the clock is running, and no one agrees with you by default. What separates strong thinkers isn't how sure they sound. It's how carefully they've reasoned before they speak.",
       stat1: "Real-world challenge, unseen until the day it begins",
       stat2: "Distinct disciplines of thinking required to solve it: analysis, evidence, strategy, communication",
       stat3: "Scripted answers permitted once your reasoning is questioned",
@@ -644,7 +644,7 @@ const translations = {
     evaluationTeaser: {
       eyebrow: "Penilaian",
       headline: "Bagaimana penalaran hebat dinilai.",
-      body: "Peserta dinilai melalui kerangka terstruktur yang mengutamakan penalaran, bukti, penilaian, dan komunikasi — bukan sekadar rasa percaya diri.",
+      body: "Peserta dinilai melalui kerangka terstruktur yang berfokus pada cara mereka bernalar — bukan sekadar rasa percaya diri.",
       cta: "Jelajahi Kerangka Penilaian <span aria-hidden=\"true\">&rarr;</span>"
     },
     leadership: {
@@ -659,7 +659,7 @@ const translations = {
     mission: {
       eyebrow: "Pola pikir",
       headline: "Rasa yakin itu mudah.<br>Berpikir jernih tidak.",
-      copy: "GCT tidak dirancang untuk melihat siapa yang paling bisa tampil percaya diri. GCT dirancang untuk melihat bagaimana kamu benar-benar berpikir saat jawabannya tidak jelas, waktu terus berjalan, dan tidak ada seorang pun yang akan otomatis setuju denganmu. Yang membedakan pemikir kuat bukan seberapa yakin suaranya terdengar, melainkan seberapa cermat penalarannya sebelum ia bicara.",
+      copy: "GCT dirancang untuk melihat bagaimana kamu benar-benar berpikir saat jawabannya tidak jelas, waktu terus berjalan, dan tidak ada seorang pun yang akan otomatis setuju denganmu. Yang membedakan pemikir kuat bukan seberapa yakin suaranya terdengar, melainkan seberapa cermat penalarannya sebelum ia bicara.",
       stat1: "Tantangan nyata, tidak diketahui hingga hari pelaksanaan tiba",
       stat2: "Disiplin berpikir berbeda yang dibutuhkan untuk menyelesaikannya: analisis, bukti, strategi, komunikasi",
       stat3: "Jawaban berskrip yang diizinkan begitu penalaranmu dipertanyakan",

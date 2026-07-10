@@ -460,6 +460,7 @@ const translations = {
       info: {
         emailLabel: "Email",
         instagramLabel: "Instagram",
+        socialLabel: "Social Media",
         locationLabel: "Location",
         locationValue: "Jakarta, Indonesia",
         responseLabel: "Response Time",
@@ -929,6 +930,7 @@ const translations = {
       info: {
         emailLabel: "Email",
         instagramLabel: "Instagram",
+        socialLabel: "Media Sosial",
         locationLabel: "Lokasi",
         locationValue: "Jakarta, Indonesia",
         responseLabel: "Waktu Respons",

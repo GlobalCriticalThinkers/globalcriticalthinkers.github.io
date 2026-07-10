@@ -578,35 +578,6 @@ body {
   .scroll-cue { display: none; }
 }
 
-/* Quick Facts — six-item strip directly beneath the hero */
-.quick-facts {
-  background: var(--navy-950);
-  border-bottom: 1px solid var(--line-navy);
-  padding-block: clamp(1.75rem, 3vw, 2.5rem);
-}
-.quick-facts__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(1.5rem, 4vw, 3.25rem);
-}
-.quick-facts__list li {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--muted-on-navy);
-  white-space: nowrap;
-}
-.quick-facts__icon { font-size: 1.05rem; line-height: 1; }
-@media (max-width: 760px) {
-  .quick-facts__list { justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding-bottom: 0.25rem; }
-  .quick-facts__list li { flex-shrink: 0; }
-}
-
 /* -------------------------------------------------------------------------
    5. MISSION — statistic band
    ------------------------------------------------------------------------- */

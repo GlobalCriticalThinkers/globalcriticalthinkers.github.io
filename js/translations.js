@@ -212,7 +212,7 @@ const translations = {
       faqQ6: "Is accommodation included?",
       faqA6: "Lunch and two coffee breaks are included. Transportation and accommodation are not included.",
       faqQ7: "When will the venue be announced?",
-      faqA7: "The official venue will be announced before the event.",
+      faqA7: "The venue shown on this website is the planned location for the event. Final confirmation will be announced no later than one month before the event takes place.",
       faqQ8: "What happens after payment?",
       faqA8: "Your registration will be confirmed within 48 hours after payment verification."
     },
@@ -742,7 +742,7 @@ const translations = {
       faqQ6: "Apakah akomodasi termasuk dalam biaya pendaftaran?",
       faqA6: "Makan siang dan dua kali coffee break sudah termasuk. Transportasi dan akomodasi tidak termasuk.",
       faqQ7: "Kapan lokasi acara akan diumumkan?",
-      faqA7: "Lokasi resmi akan diumumkan sebelum hari acara berlangsung.",
+      faqA7: "Lokasi yang ditampilkan di website ini merupakan lokasi rencana untuk acara. Konfirmasi akhir akan diumumkan selambat-lambatnya satu bulan sebelum acara berlangsung.",
       faqQ8: "Apa yang terjadi setelah saya melakukan pembayaran?",
       faqA8: "Pendaftaran kamu akan dikonfirmasi dalam waktu 48 jam setelah pembayaran terverifikasi."
     },

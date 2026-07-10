@@ -278,6 +278,24 @@ const translations = {
       reportNote: "Winning is only one outcome.<br>Understanding how you think is the lasting one.",
       imageAlt: "Participants engaged in collaborative analysis and reasoning during the competition"
     },
+    integrity: {
+      eyebrow: "Our standards",
+      headline: "Code of Integrity",
+      opening1: "Excellence is measured not only by achievement, but by the integrity behind every decision.",
+      opening2: "The quality of a competition depends not only on how participants perform, but also on the principles everyone chooses to uphold.",
+      principle1Title: "Equal Opportunity",
+      principle1Desc: "Every participant competes under the same standards regardless of background, school, institution, or previous experience.",
+      principle2Title: "Independent Judging",
+      principle2Desc: "Every evaluation is based solely on the quality of reasoning, evidence, and decision-making.",
+      principle3Title: "Academic Integrity",
+      principle3Desc: "Participants are expected to produce original work, respect intellectual honesty, and never fabricate evidence or plagiarize ideas.",
+      principle4Title: "Respectful Dialogue",
+      principle4Desc: "Ideas should be challenged rigorously. People should always be treated respectfully.",
+      principle5Title: "Evidence-Based Reasoning",
+      principle5Desc: "Strong conclusions require strong evidence. Arguments should be supported by logic rather than assumptions.",
+      closing1: "Integrity is not a separate part of this competition.",
+      closing2: "It is the standard expected from every participant, judge, assessor, facilitator, and organizer."
+    },
     registration: {
       eyebrow: "Registration",
       headline: "Claim your place<br>at the table.",
@@ -600,6 +618,24 @@ const translations = {
       reportCopy: "Setiap peserta menerima Laporan Performa personal berdasarkan kerangka evaluasi yang sama yang digunakan sepanjang kompetisi.",
       reportNote: "Menang hanyalah satu hasil.<br>Memahami cara kamu berpikir adalah hasil yang bertahan lama.",
       imageAlt: "Peserta terlibat dalam analisis dan penalaran kolaboratif selama kompetisi berlangsung"
+    },
+    integrity: {
+      eyebrow: "Standar kami",
+      headline: "Kode Etik",
+      opening1: "Keunggulan tidak hanya diukur dari pencapaian, tetapi juga dari integritas di balik setiap keputusan.",
+      opening2: "Kualitas sebuah kompetisi tidak hanya ditentukan oleh performa peserta, tetapi juga oleh prinsip yang dijunjung oleh setiap orang di dalamnya.",
+      principle1Title: "Kesetaraan Kesempatan",
+      principle1Desc: "Setiap peserta berkompetisi dengan standar yang sama, terlepas dari latar belakang, sekolah, institusi, atau pengalaman sebelumnya.",
+      principle2Title: "Penilaian Independen",
+      principle2Desc: "Setiap evaluasi semata-mata didasarkan pada kualitas penalaran, bukti, dan pengambilan keputusan.",
+      principle3Title: "Integritas Akademik",
+      principle3Desc: "Peserta diharapkan menghasilkan karya orisinal, menjunjung kejujuran intelektual, dan tidak pernah memalsukan bukti atau menjiplak gagasan.",
+      principle4Title: "Dialog yang Saling Menghormati",
+      principle4Desc: "Gagasan harus diuji secara ketat. Setiap orang harus tetap diperlakukan dengan hormat.",
+      principle5Title: "Penalaran Berbasis Bukti",
+      principle5Desc: "Kesimpulan yang kuat membutuhkan bukti yang kuat. Argumen harus didukung oleh logika, bukan asumsi.",
+      closing1: "Integritas bukan bagian yang terpisah dari kompetisi ini.",
+      closing2: "Integritas adalah standar yang diharapkan dari setiap peserta, juri, asesor, fasilitator, dan penyelenggara."
     },
     registration: {
       eyebrow: "Pendaftaran",

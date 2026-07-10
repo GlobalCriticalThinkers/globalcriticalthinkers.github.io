@@ -1455,12 +1455,13 @@ body {
 
 /* What Makes GCT Different — editorial left/right comparison table */
 .different { background: var(--navy-900); border-top: 1px solid var(--line-navy); border-bottom: 1px solid var(--line-navy); }
+.different .container { max-width: 900px; }
 .different__head { max-width: 680px; }
 .different__head .display-md { margin-top: 1.3rem; color: var(--paper); }
 
 .compare {
   margin-top: clamp(3.5rem, 6vw, 5rem);
-  max-width: 780px;
+  max-width: 100%;
 }
 .compare__labels {
   display: grid;

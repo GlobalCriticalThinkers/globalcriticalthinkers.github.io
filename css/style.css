@@ -652,6 +652,15 @@ body {
   .mission__stat { border-right: none; border-bottom: 1px solid var(--line-navy); padding-bottom: 1.8rem; }
 }
 
+/* Paper-background variant, used by the homepage's "Why GCT Exists" instance */
+.mission__copy--paper { color: var(--muted-on-paper); }
+.mission__stats--paper { border-top-color: rgba(11,18,32,0.12); }
+.mission__stats--paper .mission__stat { border-right-color: rgba(11,18,32,0.12); }
+.mission__stats--paper .mission__stat-label { color: var(--muted-on-paper); }
+@media (max-width: 860px) {
+  .mission__stats--paper .mission__stat { border-bottom-color: rgba(11,18,32,0.12); }
+}
+
 /* Quiet transition link to the About page — deliberately unobtrusive, not a CTA */
 .mission__about-link {
   margin-top: clamp(2.5rem, 4.5vw, 3.5rem);
@@ -1099,117 +1108,43 @@ body {
   padding-top: 0.1rem;
 }
 
-/* How It Works — connected step flow (axis + cards), reusing the roadmap grammar */
-.works__head { max-width: 620px; }
-.works__head .display-md { margin-top: 1.2rem; color: var(--ink); }
+/* How the Competition Works — six steps, no connectors, generous whitespace */
+.works__head { max-width: 640px; }
+.works__head .display-md { margin-top: 1.3rem; color: var(--paper); }
 
-.works-axis {
-  margin-top: clamp(3.5rem, 6vw, 5rem);
+.works-steps {
+  margin-top: clamp(4rem, 7vw, 6rem);
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: clamp(3.5rem, 6vw, 5rem);
+  column-gap: clamp(2rem, 4vw, 3.5rem);
 }
-.works-axis::before {
-  content: '';
-  position: absolute;
-  top: 5px; left: 0; right: 0;
-  height: 1px;
-  background: rgba(11,18,32,0.14);
-}
-.works-node { position: relative; padding-right: clamp(0.5rem, 1.2vw, 1rem); }
-.works-node:last-child { padding-right: 0; }
-.works-node__dot {
-  position: relative; z-index: 1;
-  display: block;
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--paper);
-  border: 2px solid var(--gold);
-}
-.works-node__title {
-  margin-top: 0.9rem;
-  font-family: var(--font-display);
-  font-size: 0.82rem;
-  line-height: 1.25;
-  color: var(--ink);
-  max-width: 12ch;
-}
-
-.works-cards {
-  margin-top: clamp(2rem, 3.5vw, 2.75rem);
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: clamp(0.75rem, 1.4vw, 1.25rem);
-}
-.works-card {
-  padding: 1.25rem 1.1rem;
-  background: var(--white);
-  border: 1px solid rgba(11,18,32,0.1);
-  border-radius: var(--radius-md);
-  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
-}
-.works-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); border-color: var(--gold-dim); }
-.works-card__num {
+.works-step__num {
   display: block;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 0.95rem;
-  color: var(--gold);
+  font-size: 1.1rem;
+  color: var(--gold-light);
 }
-.works-card__title-mobile { display: none; }
-.works-card__desc {
-  margin-top: 0.6rem;
-  font-size: 0.78rem;
-  line-height: 1.55;
-  color: var(--muted-on-paper);
+.works-step__title {
+  margin-top: 0.9rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--paper);
+}
+.works-step__desc {
+  margin-top: 0.7rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--muted-on-navy);
+  max-width: 28ch;
 }
 
-@media (max-width: 1100px) {
-  .works-axis, .works-cards { grid-template-columns: repeat(4, 1fr); }
-  .works-axis { row-gap: 2.5rem; }
-  .works-axis::before { display: none; }
-  .works-cards { row-gap: 1rem; }
+@media (max-width: 860px) {
+  .works-steps { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 700px) {
-  .works-axis { display: none; }
-  .works-cards {
-    grid-template-columns: 1fr;
-    gap: 0;
-    position: relative;
-    padding-left: 1.75rem;
-  }
-  .works-cards::before {
-    content: '';
-    position: absolute;
-    top: 0.5rem; bottom: 2rem; left: 5px;
-    width: 1px;
-    background: rgba(11,18,32,0.14);
-  }
-  .works-card {
-    position: relative;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0 0 2rem;
-  }
-  .works-card::before {
-    content: '';
-    position: absolute;
-    top: 0.35rem; left: -1.75rem;
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--paper);
-    border: 2px solid var(--gold);
-  }
-  .works-card:last-child { padding-bottom: 0; }
-  .works-card__num { display: none; }
-  .works-card__title-mobile {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 1rem;
-    color: var(--ink);
-    margin-bottom: 0.5rem;
-  }
+@media (max-width: 560px) {
+  .works-steps { grid-template-columns: 1fr; row-gap: 2.5rem; }
 }
 
 /* -------------------------------------------------------------------------
@@ -1547,76 +1482,105 @@ body {
   .why-grid { grid-template-columns: 1fr; }
 }
 
+/* What Makes GCT Different — editorial left/right comparison table */
+.different { background: var(--navy-900); border-top: 1px solid var(--line-navy); border-bottom: 1px solid var(--line-navy); }
+.different__head { max-width: 680px; }
+.different__head .display-md { margin-top: 1.3rem; color: var(--paper); }
+
+.compare {
+  margin-top: clamp(3.5rem, 6vw, 5rem);
+  max-width: 780px;
+}
+.compare__labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--gold);
+}
+.compare__labels span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.compare__labels span:first-child { color: var(--muted-on-navy); }
+.compare__labels span:last-child { color: var(--gold-light); text-align: right; }
+
+.compare__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: 1.4rem;
+  border-bottom: 1px solid var(--line-navy);
+}
+.compare__left {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--muted-on-navy);
+}
+.compare__right {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--paper);
+  text-align: right;
+}
+
+@media (max-width: 560px) {
+  .compare__left, .compare__right { font-size: 1.02rem; }
+}
+
 /* -------------------------------------------------------------------------
    12c. OVERVIEW — institutional fact grid + detail columns
    ------------------------------------------------------------------------- */
-.overview { background: var(--navy-900); border-top: 1px solid var(--line-navy); border-bottom: 1px solid var(--line-navy); }
-.overview__head { max-width: 640px; margin-bottom: clamp(3rem, 5.5vw, 4.5rem); }
-.overview__head .display-md { margin-top: 1.3rem; color: var(--paper); }
-.overview__head .lede { margin-top: 1.2rem; color: var(--muted-on-navy); }
+.glance { background: var(--paper); color: var(--ink); }
+.glance__head { max-width: 640px; margin-bottom: clamp(3.5rem, 6vw, 5rem); }
+.glance__head .display-md { color: var(--ink); }
 
-/* Prominent editorial fact strip — the six quick facts, kept visually dominant */
-.overview__facts-editorial {
+/* The six Quick Facts — primary visual content of this section */
+.glance__facts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.75rem, 3.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(2.5rem, 4.5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
 }
-.overview__fact-editorial { padding-top: 1.4rem; border-top: 2px solid var(--gold); }
-.overview__fact-editorial-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-}
-.overview__fact-editorial-value {
-  margin-top: 0.7rem;
+.glance__fact { text-align: left; }
+.glance__fact-icon { font-size: 2rem; line-height: 1; display: block; }
+.glance__fact-label {
+  margin-top: 1rem;
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2vw, 1.6rem);
-  color: var(--paper);
-  line-height: 1.28;
+  font-size: 1.15rem;
+  color: var(--ink);
+  line-height: 1.32;
+  max-width: 16ch;
 }
 
-/* Supporting details — condensed to quiet inline text, clearly secondary */
-.overview__support {
-  margin-top: clamp(3rem, 5.5vw, 4.5rem);
-  padding-top: clamp(2rem, 3.5vw, 2.75rem);
-  border-top: 1px solid var(--line-navy);
-  max-width: 74ch;
+/* Supporting information — clearly secondary, separated by whitespace only, no divider line */
+.glance__support {
+  margin-top: clamp(4.5rem, 7vw, 6.5rem);
   display: grid;
-  gap: 0.9rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(2rem, 3.5vw, 3rem);
 }
-.overview__support p { font-size: 0.92rem; line-height: 1.7; color: var(--muted-on-navy); }
-.overview__support b { color: var(--paper); font-weight: 600; }
-
-.overview__statement {
-  margin-top: clamp(3.5rem, 6vw, 5rem);
-  padding-top: clamp(3rem, 5.5vw, 4.5rem);
-  border-top: 1px solid var(--line-navy);
-  text-align: center;
+.glance__support-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
-.overview__statement-headline {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-style: italic;
-  font-size: clamp(1.9rem, 4vw, 2.8rem);
-  line-height: 1.22;
-  color: var(--paper);
-}
-.overview__statement-copy {
-  margin-top: 1.3rem;
-  margin-inline: auto;
-  max-width: 58ch;
-  font-size: 0.98rem;
-  color: var(--muted-on-navy);
-  line-height: 1.75;
+.glance__support-value {
+  margin-top: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--muted-on-paper);
+  line-height: 1.55;
 }
 
 @media (max-width: 860px) {
-  .overview__facts-editorial { grid-template-columns: 1fr 1fr; }
+  .glance__facts { grid-template-columns: 1fr 1fr; }
+  .glance__support { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) {
-  .overview__facts-editorial { grid-template-columns: 1fr; }
+  .glance__facts { grid-template-columns: 1fr; }
+  .glance__support { grid-template-columns: 1fr; }
 }
 
 /* -------------------------------------------------------------------------
@@ -1937,6 +1901,29 @@ body {
 }
 @media (min-width: 701px) {
   .institution__card-title-mobile { display: none; }
+}
+
+/* -------------------------------------------------------------------------
+   12g. FINAL CTA — short editorial closing band before Registration
+   ------------------------------------------------------------------------- */
+.final-cta {
+  background: var(--navy-950);
+  text-align: center;
+  padding-block: clamp(4rem, 7vw, 6rem);
+}
+.final-cta__eyebrow { display: flex; justify-content: center; }
+.final-cta__headline {
+  margin-top: 1.3rem;
+  margin-inline: auto;
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  line-height: 1.2;
+  color: var(--paper);
+}
+.final-cta .btn {
+  margin-top: 2.2rem;
 }
 
 /* -------------------------------------------------------------------------

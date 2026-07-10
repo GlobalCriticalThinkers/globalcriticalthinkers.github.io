@@ -22,7 +22,8 @@ const translations = {
     nav: {
       skip: "Skip to content",
       register: "Register now",
-      about: "About GCT"
+      home: "Home",
+      about: "About"
     },
     hero: {
       imageAlt: "A student reasoning through a real-world challenge during Global Critical Thinkers",
@@ -474,7 +475,8 @@ const translations = {
     nav: {
       skip: "Langsung ke konten",
       register: "Daftar sekarang",
-      about: "Tentang GCT"
+      home: "Beranda",
+      about: "Tentang"
     },
     hero: {
       imageAlt: "Seorang peserta bernalar menghadapi tantangan nyata dalam ajang Global Critical Thinkers",

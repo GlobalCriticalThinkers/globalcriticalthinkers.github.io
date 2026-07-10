@@ -48,23 +48,19 @@ const translations = {
     },
     howItWorks: {
       eyebrow: "How it works",
-      headline: "From registration<br>to results.",
+      headline: "Experience the journey from preparation to presentation.",
       step1Title: "Register",
       step1Desc: "Sign up individually or as a team.",
-      step2Title: "Online Workshop",
+      step2Title: "Workshop",
       step2Desc: "Learn the frameworks you'll use on competition day.",
-      step3Title: "Receive the Challenge",
-      step3Desc: "A real-world problem, unseen until the day it begins.",
+      step3Title: "Challenge",
+      step3Desc: "A real-world problem, unseen until it begins.",
       step4Title: "Analyze",
       step4Desc: "Break the problem down and build your position.",
-      step5Title: "Discussion",
-      step5Desc: "Test your reasoning out loud before it's tested by judges.",
-      step6Title: "Presentation",
-      step6Desc: "Make your reasoning legible to a live panel.",
-      step7Title: "Evaluation",
-      step7Desc: "Judges assess how you think, not just what you conclude.",
-      step8Title: "Awards",
-      step8Desc: "Certificates, performance reports, and recognition for every participant."
+      step5Title: "Present",
+      step5Desc: "Make your reasoning legible to a live panel.",
+      step6Title: "Awards",
+      step6Desc: "Certificates and recognition for every participant."
     },
     leadership: {
       eyebrow: "The people behind GCT",
@@ -236,7 +232,17 @@ const translations = {
       foundingCopy: "Every serious institution begins somewhere. Join the inaugural Global Critical Thinkers and become part of the founding generation whose thinking sets the standard for everyone who follows.",
       journey1: "GCT 2026",
       journey2: "Sharpest Reasoning",
-      journey3: "Exclusive Champions Competition 2027"
+      journey3: "Exclusive Champions Competition 2027",
+      compareLeftLabel: "Traditional Competition",
+      compareRightLabel: "Global Critical Thinkers",
+      compare1Left: "Memorization",
+      compare1Right: "Reasoning",
+      compare2Left: "Knowledge",
+      compare2Right: "Judgement",
+      compare3Left: "Correct Answer",
+      compare3Right: "Defensible Answer",
+      compare4Left: "Competition",
+      compare4Right: "Critical Thinking"
     },
     overview: {
       eyebrow: "The details",
@@ -289,6 +295,22 @@ const translations = {
       cadence: "Future editions are planned as recurring competitions, each introducing a new challenge, venue, and industry focus while preserving the same competition framework.",
       statementHeadline: "One Framework.<br>Endless Challenges.",
       statementCopy: "Every edition follows the same competition methodology — the same rigor, the same standard of judgment — while introducing a completely new case, venue, and industry focus."
+    },
+    glance: {
+      headline: "Competition at a Glance",
+      venueLabel: "Venue",
+      venueValue: "Grand Kemang Hotel",
+      prepLabel: "Preparation",
+      prepValue: "Critical Thinking & Communicating Ideas workshops",
+      durationLabel: "Duration",
+      durationValue: "One Intensive Day",
+      locationLabel: "Location",
+      locationValue: "Jakarta, Indonesia"
+    },
+    finalCta: {
+      eyebrow: "Registration",
+      headline: "Ready to challenge the way you think?",
+      cta: "Register Now"
     },
     evaluation: {
       eyebrow: "Assessment",
@@ -446,7 +468,8 @@ const translations = {
         headline: "Learning does not end when the competition does.",
         body1: "A single competition is a starting point, not a destination. Future editions aim to strengthen the community around Global Critical Thinkers, creating ongoing opportunities for participants to keep learning, keep contributing, and take on greater responsibility over time.",
         reference: "The long-term direction of this community is outlined on the <a href=\"index.html#institution\">Building an Institution</a> section of the main page.",
-        bridge: "None of this exists on its own. It was built, and is still being built, by a small group of people who started it."
+        bridge: "None of this exists on its own. It was built, and is still being built, by a small group of people who started it.",
+        framework: "<em>One framework. Endless challenges.</em> Every edition follows the same competition methodology — the same rigor, the same standard of judgment — while introducing a completely new case, venue, and industry focus."
       },
       commitment: {
         eyebrow: "Our commitment",
@@ -555,23 +578,19 @@ const translations = {
     },
     howItWorks: {
       eyebrow: "Cara kerjanya",
-      headline: "Dari pendaftaran<br>hingga hasil akhir.",
+      headline: "Rasakan perjalanan dari persiapan hingga presentasi.",
       step1Title: "Daftar",
       step1Desc: "Daftar secara individu atau sebagai tim.",
-      step2Title: "Workshop Daring",
+      step2Title: "Workshop",
       step2Desc: "Pelajari kerangka berpikir yang akan kamu gunakan pada hari kompetisi.",
-      step3Title: "Terima Tantangan",
-      step3Desc: "Sebuah masalah nyata, tidak diketahui hingga hari itu tiba.",
+      step3Title: "Tantangan",
+      step3Desc: "Sebuah masalah nyata, tidak diketahui hingga tiba waktunya.",
       step4Title: "Analisis",
       step4Desc: "Uraikan masalahnya dan bangun posisimu.",
-      step5Title: "Diskusi",
-      step5Desc: "Uji penalaranmu secara terbuka sebelum diuji oleh juri.",
-      step6Title: "Presentasi",
-      step6Desc: "Buat penalaranmu mudah dipahami oleh panel juri secara langsung.",
-      step7Title: "Evaluasi",
-      step7Desc: "Juri menilai cara kamu berpikir, bukan sekadar kesimpulannya.",
-      step8Title: "Penghargaan",
-      step8Desc: "Sertifikat, laporan performa, dan pengakuan untuk setiap peserta."
+      step5Title: "Presentasi",
+      step5Desc: "Buat penalaranmu mudah dipahami oleh panel juri secara langsung.",
+      step6Title: "Penghargaan",
+      step6Desc: "Sertifikat dan pengakuan untuk setiap peserta."
     },
     leadership: {
       eyebrow: "Orang-orang di balik GCT",
@@ -743,7 +762,17 @@ const translations = {
       foundingCopy: "Setiap institusi serius selalu bermula dari suatu titik awal. Bergabunglah dalam Global Critical Thinkers perdana dan jadilah bagian dari generasi pendiri yang cara berpikirnya menjadi standar bagi semua yang mengikuti setelahnya.",
       journey1: "GCT 2026",
       journey2: "Penalaran Paling Tajam",
-      journey3: "Kompetisi Champions Eksklusif 2027"
+      journey3: "Kompetisi Champions Eksklusif 2027",
+      compareLeftLabel: "Kompetisi Tradisional",
+      compareRightLabel: "Global Critical Thinkers",
+      compare1Left: "Hafalan",
+      compare1Right: "Penalaran",
+      compare2Left: "Pengetahuan",
+      compare2Right: "Penilaian",
+      compare3Left: "Jawaban Benar",
+      compare3Right: "Jawaban yang Dapat Dipertahankan",
+      compare4Left: "Kompetisi",
+      compare4Right: "Berpikir Kritis"
     },
     overview: {
       eyebrow: "Rincian",
@@ -796,6 +825,22 @@ const translations = {
       cadence: "Edisi-edisi berikutnya direncanakan sebagai kompetisi berkelanjutan, masing-masing menghadirkan tantangan, lokasi, dan fokus industri yang baru, sambil tetap mempertahankan kerangka kompetisi yang sama.",
       statementHeadline: "Satu Kerangka.<br>Tantangan Tanpa Batas.",
       statementCopy: "Setiap edisi mengikuti metodologi kompetisi yang sama — kedisiplinan yang sama, standar penilaian yang sama — sambil menghadirkan tantangan, lokasi, dan fokus industri yang sepenuhnya baru."
+    },
+    glance: {
+      headline: "Kompetisi dalam Sekilas",
+      venueLabel: "Lokasi",
+      venueValue: "Grand Kemang Hotel",
+      prepLabel: "Persiapan",
+      prepValue: "Workshop Critical Thinking & Menyampaikan Gagasan",
+      durationLabel: "Durasi",
+      durationValue: "Satu Hari Penuh",
+      locationLabel: "Kota",
+      locationValue: "Jakarta, Indonesia"
+    },
+    finalCta: {
+      eyebrow: "Pendaftaran",
+      headline: "Siap menantang cara berpikirmu?",
+      cta: "Daftar Sekarang"
     },
     evaluation: {
       eyebrow: "Penilaian",
@@ -953,7 +998,8 @@ const translations = {
         headline: "Pembelajaran tidak berhenti saat kompetisi usai.",
         body1: "Satu kompetisi adalah titik awal, bukan tujuan akhir. Edisi-edisi berikutnya bertujuan memperkuat komunitas di sekitar Global Critical Thinkers, menciptakan kesempatan berkelanjutan bagi peserta untuk terus belajar, terus berkontribusi, dan mengemban tanggung jawab yang lebih besar seiring waktu.",
         reference: "Arah jangka panjang komunitas ini diuraikan pada bagian <a href=\"index.html#institution\">Membangun Sebuah Institusi</a> di halaman utama.",
-        bridge: "Semua ini tidak berdiri sendiri. Semua ini dibangun, dan masih terus dibangun, oleh sekelompok kecil orang yang memulainya."
+        bridge: "Semua ini tidak berdiri sendiri. Semua ini dibangun, dan masih terus dibangun, oleh sekelompok kecil orang yang memulainya.",
+        framework: "<em>Satu kerangka. Tantangan tanpa batas.</em> Setiap edisi mengikuti metodologi kompetisi yang sama — kedisiplinan yang sama, standar penilaian yang sama — sambil menghadirkan tantangan, lokasi, dan fokus industri yang sepenuhnya baru."
       },
       commitment: {
         eyebrow: "Komitmen kami",

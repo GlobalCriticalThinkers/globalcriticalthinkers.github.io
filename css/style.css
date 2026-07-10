@@ -1666,6 +1666,13 @@ body {
   color: var(--muted-on-paper);
   line-height: 1.62;
 }
+/* On navy backgrounds (e.g. About page "Our Commitment"), the paper-tuned
+   muted color reads too dark. Use a softer light gray for readability. */
+.about-block--navy .integrity__card-desc,
+.section--navy .integrity__card-desc,
+.section--navy-deep .integrity__card-desc {
+  color: #C6CDD8;
+}
 
 .integrity__closing {
   margin-top: clamp(3.5rem, 6vw, 5rem);

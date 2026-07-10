@@ -386,13 +386,15 @@ const translations = {
         eyebrow: "Why GCT exists",
         headline: "A world with more information, and a growing need for better judgment.",
         body1: "Today's world offers more information than any generation before it has had access to. What has not grown at the same pace is the ability to evaluate that information carefully — to separate a strong argument from a persuasive one, and a sound decision from a fast one.",
-        body2: "Global Critical Thinkers was established to give young people a structured place to practice exactly that: reasoning through real, unresolved problems, under real scrutiny, without a script to fall back on."
+        body2: "Global Critical Thinkers was established to give young people a structured place to practice exactly that: reasoning through real, unresolved problems, under real scrutiny, without a script to fall back on.",
+        bridge: "That purpose points toward something larger than any single competition — a vision for the kind of thinkers this generation can become."
       },
       vision: {
         eyebrow: "Our vision",
         headline: "A generation that reasons carefully before it decides.",
         body1: "Our long-term vision is an educational one: to help develop a generation of thinkers who are more thoughtful in how they reason, stronger in how they communicate, and more responsible in how they decide.",
-        body2: "This vision extends beyond any single competition. It is about the habits of mind that stay with a participant long after the day of the event has ended."
+        body2: "This vision extends beyond any single competition. It is about the habits of mind that stay with a participant long after the day of the event has ended.",
+        bridge: "A vision like this needs firm ground to stand on — the principles that guide every decision we make."
       },
       philosophy: {
         eyebrow: "Our philosophy",
@@ -406,7 +408,8 @@ const translations = {
         p4Title: "Better Decisions",
         p4Desc: "The goal is not to win an argument, but to reach the strongest possible decision.",
         p5Title: "Continuous Growth",
-        p5Desc: "Thinking is a skill that develops with practice, feedback, and reflection."
+        p5Desc: "Thinking is a skill that develops with practice, feedback, and reflection.",
+        bridge: "Principles are only meaningful when they are upheld — which is why we hold ourselves to them as closely as we ask participants to."
       },
       design: {
         eyebrow: "How we design competitions",
@@ -422,13 +425,15 @@ const translations = {
         item4Desc: "The same framework applied consistently to every participant.",
         item5Title: "Personalized Reports",
         item5Desc: "Individual feedback that outlasts the day of the competition.",
-        reference: "A full breakdown of the competition format is available on the <a href=\"index.html#overview\">Competition Overview</a> and <a href=\"index.html#evaluation\">How You're Evaluated</a> sections of the main page."
+        reference: "A full breakdown of the competition format is available on the <a href=\"index.html#overview\">Competition Overview</a> and <a href=\"index.html#evaluation\">How You're Evaluated</a> sections of the main page.",
+        bridge: "This structure repeats every edition — but the institution around it is built to outlast any one of them."
       },
       beyond: {
-        eyebrow: "Beyond competition",
+        eyebrow: "Building an institution",
         headline: "Learning does not end when the competition does.",
         body1: "A single competition is a starting point, not a destination. Future editions aim to strengthen the community around Global Critical Thinkers, creating ongoing opportunities for participants to keep learning, keep contributing, and take on greater responsibility over time.",
-        reference: "The long-term direction of this community is outlined on the <a href=\"index.html#institution\">Building an Institution</a> section of the main page."
+        reference: "The long-term direction of this community is outlined on the <a href=\"index.html#institution\">Building an Institution</a> section of the main page.",
+        bridge: "None of this exists on its own. It was built, and is still being built, by a small group of people who started it."
       },
       commitment: {
         eyebrow: "Our commitment",
@@ -442,7 +447,17 @@ const translations = {
         c4Title: "Respect",
         c4Desc: "For every participant, judge, assessor, and facilitator involved.",
         c5Title: "Continuous Improvement",
-        c5Desc: "Each edition is an opportunity to refine and strengthen what came before it."
+        c5Desc: "Each edition is an opportunity to refine and strengthen what came before it.",
+        bridge: "These commitments are not abstract — they shape the concrete structure of every competition we run."
+      },
+      team: {
+        eyebrow: "The people behind GCT",
+        intro: "Global Critical Thinkers was founded by a small team who noticed the same gap from different vantage points, and set out to close it."
+      },
+      contact: {
+        eyebrow: "Contact",
+        headline: "We're glad to hear from you.",
+        body: "For questions about Global Critical Thinkers, reach out through either of the channels below."
       }
     }
   },
@@ -823,13 +838,15 @@ const translations = {
         eyebrow: "Mengapa GCT hadir",
         headline: "Dunia dengan lebih banyak informasi, dan kebutuhan yang terus tumbuh akan penilaian yang lebih baik.",
         body1: "Dunia saat ini menawarkan lebih banyak informasi dibandingkan generasi mana pun sebelumnya. Yang tidak bertumbuh dengan kecepatan yang sama adalah kemampuan untuk menilai informasi tersebut secara cermat — membedakan argumen yang kuat dari yang sekadar meyakinkan, dan keputusan yang matang dari yang sekadar cepat.",
-        body2: "Global Critical Thinkers didirikan untuk memberi generasi muda ruang yang terstruktur untuk melatih persis hal itu: bernalar melalui masalah nyata yang belum terselesaikan, di bawah pengawasan yang sesungguhnya, tanpa naskah untuk bersembunyi di baliknya."
+        body2: "Global Critical Thinkers didirikan untuk memberi generasi muda ruang yang terstruktur untuk melatih persis hal itu: bernalar melalui masalah nyata yang belum terselesaikan, di bawah pengawasan yang sesungguhnya, tanpa naskah untuk bersembunyi di baliknya.",
+        bridge: "Tujuan itu mengarah pada sesuatu yang lebih besar dari satu kompetisi tunggal — sebuah visi tentang jenis pemikir yang bisa dibentuk oleh generasi ini."
       },
       vision: {
         eyebrow: "Visi kami",
         headline: "Generasi yang bernalar dengan cermat sebelum memutuskan.",
         body1: "Visi jangka panjang kami bersifat edukatif: membantu mengembangkan generasi pemikir yang lebih bijaksana dalam cara bernalar, lebih kuat dalam cara berkomunikasi, dan lebih bertanggung jawab dalam cara mengambil keputusan.",
-        body2: "Visi ini melampaui satu kompetisi tunggal. Ini tentang kebiasaan berpikir yang tetap melekat pada peserta jauh setelah hari acara berakhir."
+        body2: "Visi ini melampaui satu kompetisi tunggal. Ini tentang kebiasaan berpikir yang tetap melekat pada peserta jauh setelah hari acara berakhir.",
+        bridge: "Visi seperti ini membutuhkan landasan yang kokoh — prinsip-prinsip yang memandu setiap keputusan yang kami ambil."
       },
       philosophy: {
         eyebrow: "Filosofi kami",
@@ -843,7 +860,8 @@ const translations = {
         p4Title: "Keputusan yang Lebih Baik",
         p4Desc: "Tujuannya bukan memenangkan perdebatan, melainkan mencapai keputusan yang paling kuat.",
         p5Title: "Pertumbuhan Berkelanjutan",
-        p5Desc: "Berpikir adalah keterampilan yang berkembang melalui latihan, masukan, dan refleksi."
+        p5Desc: "Berpikir adalah keterampilan yang berkembang melalui latihan, masukan, dan refleksi.",
+        bridge: "Prinsip hanya berarti jika benar-benar dijunjung — karena itulah kami memegangnya seketat kami meminta peserta untuk melakukannya."
       },
       design: {
         eyebrow: "Cara kami merancang kompetisi",
@@ -859,13 +877,15 @@ const translations = {
         item4Desc: "Kerangka yang sama, diterapkan secara konsisten kepada setiap peserta.",
         item5Title: "Laporan yang Dipersonalisasi",
         item5Desc: "Masukan individual yang tetap relevan jauh melampaui hari kompetisi.",
-        reference: "Rincian lengkap format kompetisi tersedia pada bagian <a href=\"index.html#overview\">Ikhtisar Kompetisi</a> dan <a href=\"index.html#evaluation\">Bagaimana Kamu Dinilai</a> di halaman utama."
+        reference: "Rincian lengkap format kompetisi tersedia pada bagian <a href=\"index.html#overview\">Ikhtisar Kompetisi</a> dan <a href=\"index.html#evaluation\">Bagaimana Kamu Dinilai</a> di halaman utama.",
+        bridge: "Struktur ini terulang di setiap edisi — namun institusi di baliknya dibangun untuk bertahan lebih lama dari salah satu edisinya."
       },
       beyond: {
-        eyebrow: "Lebih dari sekadar kompetisi",
+        eyebrow: "Membangun sebuah institusi",
         headline: "Pembelajaran tidak berhenti saat kompetisi usai.",
         body1: "Satu kompetisi adalah titik awal, bukan tujuan akhir. Edisi-edisi berikutnya bertujuan memperkuat komunitas di sekitar Global Critical Thinkers, menciptakan kesempatan berkelanjutan bagi peserta untuk terus belajar, terus berkontribusi, dan mengemban tanggung jawab yang lebih besar seiring waktu.",
-        reference: "Arah jangka panjang komunitas ini diuraikan pada bagian <a href=\"index.html#institution\">Membangun Sebuah Institusi</a> di halaman utama."
+        reference: "Arah jangka panjang komunitas ini diuraikan pada bagian <a href=\"index.html#institution\">Membangun Sebuah Institusi</a> di halaman utama.",
+        bridge: "Semua ini tidak berdiri sendiri. Semua ini dibangun, dan masih terus dibangun, oleh sekelompok kecil orang yang memulainya."
       },
       commitment: {
         eyebrow: "Komitmen kami",
@@ -879,7 +899,17 @@ const translations = {
         c4Title: "Rasa Hormat",
         c4Desc: "Bagi setiap peserta, juri, asesor, dan fasilitator yang terlibat.",
         c5Title: "Perbaikan Berkelanjutan",
-        c5Desc: "Setiap edisi adalah kesempatan untuk menyempurnakan dan memperkuat apa yang telah dibangun sebelumnya."
+        c5Desc: "Setiap edisi adalah kesempatan untuk menyempurnakan dan memperkuat apa yang telah dibangun sebelumnya.",
+        bridge: "Komitmen ini bukan sekadar pernyataan abstrak — komitmen ini membentuk struktur nyata dari setiap kompetisi yang kami jalankan."
+      },
+      team: {
+        eyebrow: "Orang-orang di balik GCT",
+        intro: "Global Critical Thinkers didirikan oleh tim kecil yang melihat kesenjangan yang sama dari sudut pandang yang berbeda, lalu memutuskan untuk menutupnya."
+      },
+      contact: {
+        eyebrow: "Kontak",
+        headline: "Kami senang mendengar kabar darimu.",
+        body: "Untuk pertanyaan seputar Global Critical Thinkers, hubungi kami melalui salah satu kanal di bawah ini."
       }
     }
   }

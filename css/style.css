@@ -1565,7 +1565,7 @@ body {
 }
 
 /* -------------------------------------------------------------------------
-   12f. INSTITUTION — long-term roadmap, connected-dot timeline
+   12f. INSTITUTION — long-term roadmap, true editorial timeline
    ------------------------------------------------------------------------- */
 .institution { background: var(--navy-900); border-top: 1px solid var(--line-navy); border-bottom: 1px solid var(--line-navy); }
 .institution__head { max-width: 680px; }
@@ -1582,62 +1582,64 @@ body {
 }
 .institution__statement p + p { margin-top: 0.9rem; }
 
-.institution__roadmap {
-  margin-top: clamp(4rem, 7vw, 6rem);
-  display: flex;
-  align-items: flex-start;
-  gap: 0;
-}
-.institution__stage {
-  flex: 1 1 0;
+/* --- Axis: the horizontal line with nodes and titles --- */
+.institution__axis {
+  margin-top: clamp(4.5rem, 7.5vw, 6.5rem);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   position: relative;
-  padding-top: 2.1rem;
-  padding-right: clamp(0.75rem, 1.6vw, 1.5rem);
 }
-.institution__stage::before {
-  /* the dot */
+.institution__axis::before {
+  /* the connecting line running through every node */
   content: '';
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--gold);
-}
-.institution__stage::after {
-  /* the connecting line */
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 9px;
   right: 0;
   height: 1px;
   background: var(--line-navy);
 }
-.institution__stage:last-child::after { display: none; }
-.institution__stage:last-child { padding-right: 0; }
-.institution__stage-num {
-  display: block;
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 0.7rem;
+.institution__node {
+  position: relative;
+  padding-right: clamp(0.6rem, 1.4vw, 1.25rem);
+  text-align: left;
 }
-.institution__stage-title {
+.institution__node:last-child { padding-right: 0; }
+.institution__node-dot {
+  position: relative;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--navy-900);
+  border: 2px solid var(--gold);
+}
+.institution__node-title {
+  margin-top: 1.1rem;
   font-family: var(--font-display);
-  font-size: 1.02rem;
+  font-size: 0.94rem;
   line-height: 1.28;
   color: var(--paper);
+  max-width: 15ch;
 }
-.institution__stage-desc {
-  margin-top: 0.65rem;
-  font-size: 0.8rem;
+
+/* --- Cards: the descriptions beneath the axis --- */
+.institution__cards {
+  margin-top: clamp(2.5rem, 4.5vw, 3.5rem);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: clamp(0.9rem, 1.6vw, 1.5rem);
+}
+.institution__card {
+  padding: 1.4rem 1.25rem;
+  background: var(--navy-800);
+  border: 1px solid var(--line-navy);
+  border-radius: var(--radius-md);
+}
+.institution__card-desc {
+  font-size: 0.79rem;
   color: var(--muted-on-navy);
-  line-height: 1.58;
-  max-width: 24ch;
+  line-height: 1.6;
 }
 
 .institution__footnote {
@@ -1652,36 +1654,57 @@ body {
 }
 
 @media (max-width: 1100px) {
-  .institution__roadmap { flex-wrap: wrap; row-gap: 3rem; }
-  .institution__stage { flex: 1 1 33%; min-width: 220px; }
+  .institution__axis { grid-template-columns: repeat(4, 1fr); row-gap: 3rem; }
+  .institution__axis::before { display: none; }
+  .institution__cards { grid-template-columns: repeat(4, 1fr); row-gap: 1.5rem; }
 }
-@media (max-width: 640px) {
-  .institution__roadmap {
-    flex-direction: column;
-    row-gap: 0;
+@media (max-width: 700px) {
+  /* Mobile: vertical connected timeline, nodes + titles + card together per stage */
+  .institution__axis { display: none; }
+  .institution__cards {
+    grid-template-columns: 1fr;
+    gap: 0;
+    position: relative;
+    padding-left: 1.75rem;
   }
-  .institution__stage {
-    flex: none;
-    width: 100%;
-    padding-right: 0;
-    padding-left: 1.5rem;
-    padding-top: 0;
-    padding-bottom: 2.2rem;
-  }
-  .institution__stage::before {
-    top: 0.35rem;
-    left: 0;
-  }
-  .institution__stage::after {
-    top: 0.35rem;
-    left: 4px;
-    right: auto;
+  .institution__cards::before {
+    content: '';
+    position: absolute;
+    top: 0.55rem;
+    bottom: 2.2rem;
+    left: 5px;
     width: 1px;
-    height: 100%;
+    background: var(--line-navy);
   }
-  .institution__stage:last-child::after { display: none; }
-  .institution__stage:last-child { padding-bottom: 0; }
-  .institution__stage-desc { max-width: 44ch; }
+  .institution__card {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 2.4rem;
+  }
+  .institution__card::before {
+    content: '';
+    position: absolute;
+    top: 0.4rem;
+    left: -1.75rem;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--navy-900);
+    border: 2px solid var(--gold);
+  }
+  .institution__card:last-child { padding-bottom: 0; }
+  .institution__card-title-mobile {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--paper);
+    margin-bottom: 0.6rem;
+  }
+}
+@media (min-width: 701px) {
+  .institution__card-title-mobile { display: none; }
 }
 
 /* -------------------------------------------------------------------------

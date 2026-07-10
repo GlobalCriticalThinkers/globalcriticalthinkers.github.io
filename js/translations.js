@@ -435,6 +435,47 @@ const translations = {
         headline: "We're glad to hear from you.",
         body: "For questions about Global Critical Thinkers, reach out through either of the channels below."
       }
+    },
+    contact: {
+      meta: {
+        title: "Contact — Global Critical Thinkers",
+        description: "Get in touch with the Global Critical Thinkers team about the competition, partnerships, media inquiries, or future collaborations."
+      },
+      hero: {
+        kicker: "Contact",
+        title: "Get in Touch",
+        subtitle: "We're glad to hear from you."
+      },
+      form: {
+        eyebrow: "Contact our team",
+        title: "Contact Our Team",
+        intro: "We'd love to hear from you. Whether you have questions about the competition, partnerships, media inquiries, or future collaborations, our team is ready to help.",
+        nameLabel: "Full Name",
+        emailLabel: "Email Address",
+        whatsappLabel: "WhatsApp Number",
+        subjectLabel: "Subject",
+        messageLabel: "Message",
+        submit: "Send Inquiry"
+      },
+      info: {
+        emailLabel: "Email",
+        instagramLabel: "Instagram",
+        locationLabel: "Location",
+        locationValue: "Jakarta, Indonesia",
+        responseLabel: "Response Time",
+        responseValue: "Within one business day"
+      }
+    },
+    thankYou: {
+      meta: {
+        title: "Thank You — Global Critical Thinkers",
+        description: "Your message has been sent to the Global Critical Thinkers team."
+      },
+      eyebrow: "Message sent",
+      title: "Thank You",
+      copy1: "Your message has been successfully sent.",
+      copy2: "Our team will review your inquiry and respond within one business day.",
+      cta: "Return to Home"
     }
   },
 
@@ -863,6 +904,47 @@ const translations = {
         headline: "Kami senang mendengar kabar darimu.",
         body: "Untuk pertanyaan seputar Global Critical Thinkers, hubungi kami melalui salah satu kanal di bawah ini."
       }
+    },
+    contact: {
+      meta: {
+        title: "Kontak — Global Critical Thinkers",
+        description: "Hubungi tim Global Critical Thinkers untuk pertanyaan seputar kompetisi, kemitraan, liputan media, atau kolaborasi di masa mendatang."
+      },
+      hero: {
+        kicker: "Kontak",
+        title: "Hubungi Kami",
+        subtitle: "Kami senang mendengar kabar darimu."
+      },
+      form: {
+        eyebrow: "Hubungi tim kami",
+        title: "Hubungi Tim Kami",
+        intro: "Kami senang mendengar kabar darimu. Baik kamu punya pertanyaan seputar kompetisi, kemitraan, liputan media, atau kolaborasi di masa mendatang, tim kami siap membantu.",
+        nameLabel: "Nama Lengkap",
+        emailLabel: "Alamat Email",
+        whatsappLabel: "Nomor WhatsApp",
+        subjectLabel: "Subjek",
+        messageLabel: "Pesan",
+        submit: "Kirim Pertanyaan"
+      },
+      info: {
+        emailLabel: "Email",
+        instagramLabel: "Instagram",
+        locationLabel: "Lokasi",
+        locationValue: "Jakarta, Indonesia",
+        responseLabel: "Waktu Respons",
+        responseValue: "Dalam waktu satu hari kerja"
+      }
+    },
+    thankYou: {
+      meta: {
+        title: "Terima Kasih — Global Critical Thinkers",
+        description: "Pesanmu telah dikirim ke tim Global Critical Thinkers."
+      },
+      eyebrow: "Pesan terkirim",
+      title: "Terima Kasih",
+      copy1: "Pesanmu telah berhasil dikirim.",
+      copy2: "Tim kami akan meninjau pertanyaanmu dan merespons dalam waktu satu hari kerja.",
+      cta: "Kembali ke Beranda"
     }
   }
 };

@@ -21,7 +21,8 @@ const translations = {
     },
     nav: {
       skip: "Skip to content",
-      register: "Register now"
+      register: "Register now",
+      about: "About GCT"
     },
     hero: {
       imageAlt: "A student reasoning through a real-world challenge during Global Critical Thinkers",
@@ -369,6 +370,80 @@ const translations = {
       contactInstagram: "Instagram",
       copyright: "&copy;",
       bottomTagline: "Think sharper. Reason without a script."
+    },
+    about: {
+      meta: {
+        title: "About Global Critical Thinkers — Global Critical Thinkers",
+        description: "Global Critical Thinkers is an educational competition platform developing critical thinking, evidence-based decision-making, communication, and responsible leadership through real-world challenges."
+      },
+      hero: {
+        kicker: "About Global Critical Thinkers",
+        title: "About Global Critical Thinkers",
+        subtitle: "Developing better thinkers for a more thoughtful world.",
+        intro: "Global Critical Thinkers is an educational competition platform designed to develop critical thinking, evidence-based decision-making, communication, and responsible leadership through real-world challenges."
+      },
+      whyExists: {
+        eyebrow: "Why GCT exists",
+        headline: "A world with more information, and a growing need for better judgment.",
+        body1: "Today's world offers more information than any generation before it has had access to. What has not grown at the same pace is the ability to evaluate that information carefully — to separate a strong argument from a persuasive one, and a sound decision from a fast one.",
+        body2: "Global Critical Thinkers was established to give young people a structured place to practice exactly that: reasoning through real, unresolved problems, under real scrutiny, without a script to fall back on."
+      },
+      vision: {
+        eyebrow: "Our vision",
+        headline: "A generation that reasons carefully before it decides.",
+        body1: "Our long-term vision is an educational one: to help develop a generation of thinkers who are more thoughtful in how they reason, stronger in how they communicate, and more responsible in how they decide.",
+        body2: "This vision extends beyond any single competition. It is about the habits of mind that stay with a participant long after the day of the event has ended."
+      },
+      philosophy: {
+        eyebrow: "Our philosophy",
+        headline: "Five principles that guide how we think.",
+        p1Title: "Critical Thinking",
+        p1Desc: "Every problem deserves to be questioned before it is answered.",
+        p2Title: "Evidence Before Opinion",
+        p2Desc: "A position is only as strong as the evidence that supports it.",
+        p3Title: "Respectful Dialogue",
+        p3Desc: "Ideas can be challenged rigorously while people are treated with respect.",
+        p4Title: "Better Decisions",
+        p4Desc: "The goal is not to win an argument, but to reach the strongest possible decision.",
+        p5Title: "Continuous Growth",
+        p5Desc: "Thinking is a skill that develops with practice, feedback, and reflection."
+      },
+      design: {
+        eyebrow: "How we design competitions",
+        headline: "Consistent educational principles behind every edition.",
+        body1: "Every Global Critical Thinkers competition, regardless of theme or venue, is built on the same underlying educational structure.",
+        item1Title: "Real-World Challenges",
+        item1Desc: "Problems drawn from authentic situations, not textbook scenarios.",
+        item2Title: "Collaborative Discussion",
+        item2Desc: "Structured space for reasoning to be tested before it is presented.",
+        item3Title: "Structured Presentations",
+        item3Desc: "A clear format for communicating reasoning, not performing it.",
+        item4Title: "Standardized Evaluation",
+        item4Desc: "The same framework applied consistently to every participant.",
+        item5Title: "Personalized Reports",
+        item5Desc: "Individual feedback that outlasts the day of the competition.",
+        reference: "A full breakdown of the competition format is available on the <a href=\"index.html#overview\">Competition Overview</a> and <a href=\"index.html#evaluation\">How You're Evaluated</a> sections of the main page."
+      },
+      beyond: {
+        eyebrow: "Beyond competition",
+        headline: "Learning does not end when the competition does.",
+        body1: "A single competition is a starting point, not a destination. Future editions aim to strengthen the community around Global Critical Thinkers, creating ongoing opportunities for participants to keep learning, keep contributing, and take on greater responsibility over time.",
+        reference: "The long-term direction of this community is outlined on the <a href=\"index.html#institution\">Building an Institution</a> section of the main page."
+      },
+      commitment: {
+        eyebrow: "Our commitment",
+        headline: "What we hold ourselves to.",
+        c1Title: "Fairness",
+        c1Desc: "The same standards, applied consistently to every participant.",
+        c2Title: "Transparency",
+        c2Desc: "Clear communication about how the competition works and how it is judged.",
+        c3Title: "Educational Quality",
+        c3Desc: "Every element is designed to teach, not only to test.",
+        c4Title: "Respect",
+        c4Desc: "For every participant, judge, assessor, and facilitator involved.",
+        c5Title: "Continuous Improvement",
+        c5Desc: "Each edition is an opportunity to refine and strengthen what came before it."
+      }
     }
   },
 
@@ -383,7 +458,8 @@ const translations = {
     },
     nav: {
       skip: "Langsung ke konten",
-      register: "Daftar sekarang"
+      register: "Daftar sekarang",
+      about: "Tentang GCT"
     },
     hero: {
       imageAlt: "Seorang peserta bernalar menghadapi tantangan nyata dalam ajang Global Critical Thinkers",
@@ -731,6 +807,80 @@ const translations = {
       contactInstagram: "Instagram",
       copyright: "&copy;",
       bottomTagline: "Berpikir lebih tajam. Bernalar tanpa naskah."
+    },
+    about: {
+      meta: {
+        title: "Tentang Global Critical Thinkers — Global Critical Thinkers",
+        description: "Global Critical Thinkers adalah platform kompetisi edukatif yang mengembangkan kemampuan berpikir kritis, pengambilan keputusan berbasis bukti, komunikasi, dan kepemimpinan yang bertanggung jawab melalui tantangan nyata."
+      },
+      hero: {
+        kicker: "Tentang Global Critical Thinkers",
+        title: "Tentang Global Critical Thinkers",
+        subtitle: "Mengembangkan pemikir yang lebih baik untuk dunia yang lebih bijaksana.",
+        intro: "Global Critical Thinkers adalah platform kompetisi edukatif yang dirancang untuk mengembangkan kemampuan berpikir kritis, pengambilan keputusan berbasis bukti, komunikasi, dan kepemimpinan yang bertanggung jawab melalui tantangan nyata."
+      },
+      whyExists: {
+        eyebrow: "Mengapa GCT hadir",
+        headline: "Dunia dengan lebih banyak informasi, dan kebutuhan yang terus tumbuh akan penilaian yang lebih baik.",
+        body1: "Dunia saat ini menawarkan lebih banyak informasi dibandingkan generasi mana pun sebelumnya. Yang tidak bertumbuh dengan kecepatan yang sama adalah kemampuan untuk menilai informasi tersebut secara cermat — membedakan argumen yang kuat dari yang sekadar meyakinkan, dan keputusan yang matang dari yang sekadar cepat.",
+        body2: "Global Critical Thinkers didirikan untuk memberi generasi muda ruang yang terstruktur untuk melatih persis hal itu: bernalar melalui masalah nyata yang belum terselesaikan, di bawah pengawasan yang sesungguhnya, tanpa naskah untuk bersembunyi di baliknya."
+      },
+      vision: {
+        eyebrow: "Visi kami",
+        headline: "Generasi yang bernalar dengan cermat sebelum memutuskan.",
+        body1: "Visi jangka panjang kami bersifat edukatif: membantu mengembangkan generasi pemikir yang lebih bijaksana dalam cara bernalar, lebih kuat dalam cara berkomunikasi, dan lebih bertanggung jawab dalam cara mengambil keputusan.",
+        body2: "Visi ini melampaui satu kompetisi tunggal. Ini tentang kebiasaan berpikir yang tetap melekat pada peserta jauh setelah hari acara berakhir."
+      },
+      philosophy: {
+        eyebrow: "Filosofi kami",
+        headline: "Lima prinsip yang membimbing cara kami berpikir.",
+        p1Title: "Berpikir Kritis",
+        p1Desc: "Setiap masalah layak dipertanyakan sebelum dijawab.",
+        p2Title: "Bukti Sebelum Opini",
+        p2Desc: "Sebuah posisi hanya sekuat bukti yang mendukungnya.",
+        p3Title: "Dialog yang Saling Menghormati",
+        p3Desc: "Gagasan dapat diuji secara ketat sementara setiap orang tetap diperlakukan dengan hormat.",
+        p4Title: "Keputusan yang Lebih Baik",
+        p4Desc: "Tujuannya bukan memenangkan perdebatan, melainkan mencapai keputusan yang paling kuat.",
+        p5Title: "Pertumbuhan Berkelanjutan",
+        p5Desc: "Berpikir adalah keterampilan yang berkembang melalui latihan, masukan, dan refleksi."
+      },
+      design: {
+        eyebrow: "Cara kami merancang kompetisi",
+        headline: "Prinsip edukatif yang konsisten di balik setiap edisi.",
+        body1: "Setiap kompetisi Global Critical Thinkers, apa pun tema atau lokasinya, dibangun di atas struktur edukatif dasar yang sama.",
+        item1Title: "Tantangan Nyata",
+        item1Desc: "Masalah yang diangkat dari situasi otentik, bukan skenario buku teks.",
+        item2Title: "Diskusi Kolaboratif",
+        item2Desc: "Ruang terstruktur bagi penalaran untuk diuji sebelum dipresentasikan.",
+        item3Title: "Presentasi Terstruktur",
+        item3Desc: "Format yang jelas untuk mengomunikasikan penalaran, bukan sekadar menampilkannya.",
+        item4Title: "Evaluasi Terstandarisasi",
+        item4Desc: "Kerangka yang sama, diterapkan secara konsisten kepada setiap peserta.",
+        item5Title: "Laporan yang Dipersonalisasi",
+        item5Desc: "Masukan individual yang tetap relevan jauh melampaui hari kompetisi.",
+        reference: "Rincian lengkap format kompetisi tersedia pada bagian <a href=\"index.html#overview\">Ikhtisar Kompetisi</a> dan <a href=\"index.html#evaluation\">Bagaimana Kamu Dinilai</a> di halaman utama."
+      },
+      beyond: {
+        eyebrow: "Lebih dari sekadar kompetisi",
+        headline: "Pembelajaran tidak berhenti saat kompetisi usai.",
+        body1: "Satu kompetisi adalah titik awal, bukan tujuan akhir. Edisi-edisi berikutnya bertujuan memperkuat komunitas di sekitar Global Critical Thinkers, menciptakan kesempatan berkelanjutan bagi peserta untuk terus belajar, terus berkontribusi, dan mengemban tanggung jawab yang lebih besar seiring waktu.",
+        reference: "Arah jangka panjang komunitas ini diuraikan pada bagian <a href=\"index.html#institution\">Membangun Sebuah Institusi</a> di halaman utama."
+      },
+      commitment: {
+        eyebrow: "Komitmen kami",
+        headline: "Apa yang kami junjung.",
+        c1Title: "Keadilan",
+        c1Desc: "Standar yang sama, diterapkan secara konsisten kepada setiap peserta.",
+        c2Title: "Transparansi",
+        c2Desc: "Komunikasi yang jelas tentang bagaimana kompetisi berjalan dan bagaimana penilaiannya dilakukan.",
+        c3Title: "Kualitas Edukatif",
+        c3Desc: "Setiap elemen dirancang untuk mengajarkan, bukan hanya menguji.",
+        c4Title: "Rasa Hormat",
+        c4Desc: "Bagi setiap peserta, juri, asesor, dan fasilitator yang terlibat.",
+        c5Title: "Perbaikan Berkelanjutan",
+        c5Desc: "Setiap edisi adalah kesempatan untuk menyempurnakan dan memperkuat apa yang telah dibangun sebelumnya."
+      }
     }
   }
 };

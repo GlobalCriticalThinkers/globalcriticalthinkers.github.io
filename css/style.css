@@ -1260,6 +1260,141 @@ body {
 }
 
 /* -------------------------------------------------------------------------
+   12c. OVERVIEW — institutional fact grid + detail columns
+   ------------------------------------------------------------------------- */
+.overview { background: var(--paper); color: var(--ink); border-bottom: 1px solid rgba(11,18,32,0.1); }
+.overview__head { max-width: 640px; margin-bottom: clamp(3rem, 5.5vw, 4.5rem); }
+.overview__head .display-lg { margin-top: 1.3rem; color: var(--ink); }
+.overview__head .lede { margin-top: 1.2rem; }
+
+.overview__facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(11,18,32,0.12);
+  border-left: 1px solid rgba(11,18,32,0.12);
+}
+.overview__fact {
+  padding: 1.9rem 1.9rem;
+  border-right: 1px solid rgba(11,18,32,0.12);
+  border-bottom: 1px solid rgba(11,18,32,0.12);
+}
+.overview__fact-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.overview__fact-value {
+  margin-top: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.overview__fact-value span { display: block; }
+.overview__fact-sub {
+  margin-top: 0.3rem;
+  font-size: 0.86rem;
+  color: var(--muted-on-paper);
+}
+.overview__fact-list {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+}
+.overview__fact-list span {
+  display: inline;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  color: var(--muted-on-paper);
+}
+.overview__fact-list span:not(:last-child)::after { content: '·'; margin-left: 0.6rem; color: rgba(11,18,32,0.25); }
+
+.overview__details {
+  margin-top: clamp(3.5rem, 6vw, 5rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+.overview__detail-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--ink);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(11,18,32,0.12);
+}
+.overview__detail-note {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  color: var(--muted-on-paper);
+  line-height: 1.65;
+}
+.overview__detail-list {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+.overview__detail-list li {
+  font-size: 0.9rem;
+  color: var(--muted-on-paper);
+  line-height: 1.5;
+  padding-left: 1rem;
+  position: relative;
+}
+.overview__detail-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.overview__cadence {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid rgba(11,18,32,0.12);
+  font-size: 0.92rem;
+  color: var(--muted-on-paper);
+  line-height: 1.7;
+  max-width: 66ch;
+}
+
+.overview__statement {
+  margin-top: clamp(3.5rem, 6vw, 5rem);
+  padding-top: clamp(3rem, 5.5vw, 4.5rem);
+  border-top: 1px solid rgba(11,18,32,0.12);
+  text-align: center;
+}
+.overview__statement-headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.22;
+  color: var(--ink);
+}
+.overview__statement-copy {
+  margin-top: 1.3rem;
+  margin-inline: auto;
+  max-width: 58ch;
+  font-size: 0.98rem;
+  color: var(--muted-on-paper);
+  line-height: 1.75;
+}
+
+@media (max-width: 860px) {
+  .overview__facts { grid-template-columns: 1fr 1fr; }
+  .overview__details { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .overview__facts { grid-template-columns: 1fr; }
+}
+
+/* -------------------------------------------------------------------------
    13. REGISTRATION — two column, luxury pricing card
    ------------------------------------------------------------------------- */
 .registration { background: var(--navy-950); border-top: 1px solid var(--line-navy); }

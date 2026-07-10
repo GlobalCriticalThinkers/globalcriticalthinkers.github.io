@@ -1565,6 +1565,126 @@ body {
 }
 
 /* -------------------------------------------------------------------------
+   12f. INSTITUTION — long-term roadmap, connected-dot timeline
+   ------------------------------------------------------------------------- */
+.institution { background: var(--navy-900); border-top: 1px solid var(--line-navy); border-bottom: 1px solid var(--line-navy); }
+.institution__head { max-width: 680px; }
+.institution__head .display-lg { margin-top: 1.3rem; }
+
+.institution__statement {
+  margin-top: clamp(1.6rem, 3vw, 2.2rem);
+  max-width: 60ch;
+}
+.institution__statement p {
+  font-size: 1.04rem;
+  color: var(--muted-on-navy);
+  line-height: 1.78;
+}
+.institution__statement p + p { margin-top: 0.9rem; }
+
+.institution__roadmap {
+  margin-top: clamp(4rem, 7vw, 6rem);
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+.institution__stage {
+  flex: 1 1 0;
+  position: relative;
+  padding-top: 2.1rem;
+  padding-right: clamp(0.75rem, 1.6vw, 1.5rem);
+}
+.institution__stage::before {
+  /* the dot */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.institution__stage::after {
+  /* the connecting line */
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 9px;
+  right: 0;
+  height: 1px;
+  background: var(--line-navy);
+}
+.institution__stage:last-child::after { display: none; }
+.institution__stage:last-child { padding-right: 0; }
+.institution__stage-num {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.7rem;
+}
+.institution__stage-title {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  line-height: 1.28;
+  color: var(--paper);
+}
+.institution__stage-desc {
+  margin-top: 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted-on-navy);
+  line-height: 1.58;
+  max-width: 24ch;
+}
+
+.institution__footnote {
+  margin-top: clamp(3rem, 5.5vw, 4.5rem);
+  padding-top: clamp(2rem, 3.5vw, 2.75rem);
+  border-top: 1px solid var(--line-navy);
+  max-width: 66ch;
+  font-size: 0.86rem;
+  color: var(--muted-on-navy);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+@media (max-width: 1100px) {
+  .institution__roadmap { flex-wrap: wrap; row-gap: 3rem; }
+  .institution__stage { flex: 1 1 33%; min-width: 220px; }
+}
+@media (max-width: 640px) {
+  .institution__roadmap {
+    flex-direction: column;
+    row-gap: 0;
+  }
+  .institution__stage {
+    flex: none;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 2.2rem;
+  }
+  .institution__stage::before {
+    top: 0.35rem;
+    left: 0;
+  }
+  .institution__stage::after {
+    top: 0.35rem;
+    left: 4px;
+    right: auto;
+    width: 1px;
+    height: 100%;
+  }
+  .institution__stage:last-child::after { display: none; }
+  .institution__stage:last-child { padding-bottom: 0; }
+  .institution__stage-desc { max-width: 44ch; }
+}
+
+/* -------------------------------------------------------------------------
    13. REGISTRATION — two column, luxury pricing card
    ------------------------------------------------------------------------- */
 .registration { background: var(--navy-950); border-top: 1px solid var(--line-navy); }

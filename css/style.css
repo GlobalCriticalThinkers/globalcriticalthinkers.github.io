@@ -2134,7 +2134,9 @@ body {
 /* Founding Team on the About page: same component as the landing page, framed as this page's penultimate chapter */
 .about-team__intro {
   max-width: 62ch;
+  margin-inline: auto;
   margin-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+  text-align: center;
   font-size: 1.02rem;
   color: var(--muted-on-paper);
   line-height: 1.8;

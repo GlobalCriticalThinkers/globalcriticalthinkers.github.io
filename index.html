@@ -33,6 +33,11 @@
       <a href="#arrival" class="site-header__logo">
         <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-header__logo-img" data-i18n-alt="brand.logoAlt">
       </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="about.html" class="site-nav__link" data-i18n="nav.about">About GCT</a>
+      </nav>
+
       <div class="site-header__actions">
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
@@ -40,7 +45,15 @@
           <button type="button" class="lang-switch__btn" data-lang="id" aria-pressed="false">ID</button>
         </div>
         <a href="#registration" class="site-header__cta" data-i18n="nav.register">Register now</a>
+        <button type="button" class="site-nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+          <span class="site-nav__toggle-icon"></span>
+        </button>
       </div>
+    </div>
+
+    <div class="site-nav__mobile" id="navMobile">
+      <a href="about.html" class="site-nav__mobile-link" data-i18n="nav.about">About GCT</a>
+      <a href="#registration" class="site-header__cta site-nav__mobile-cta" data-i18n="nav.register">Register now</a>
     </div>
   </header>
 

@@ -63,6 +63,12 @@ const translations = {
       step6Title: "Awards",
       step6Desc: "Certificates and recognition for every participant."
     },
+    evaluationTeaser: {
+      eyebrow: "Evaluation",
+      headline: "How great thinking is evaluated.",
+      body: "Participants are assessed through a structured framework that values reasoning, evidence, judgment, and communication — not confidence alone.",
+      cta: "Explore the Evaluation Framework <span aria-hidden=\"true\">&rarr;</span>"
+    },
     leadership: {
       eyebrow: "The people behind GCT",
       headline: "Meet the Founding Team",
@@ -554,6 +560,17 @@ const translations = {
         headline: "One challenge. One day. One standard of judgment.",
         body: "Every participant is measured against the same real-world challenge, under the same conditions, using the same evaluation framework — regardless of background, school, or prior experience."
       },
+      experience: {
+        eyebrow: "The Experience",
+        headline: "From preparation to presentation.",
+        step1Title: "Prepare",
+        step1Desc: "Register and join a workshop covering the frameworks you'll use.",
+        step2Title: "Face the Challenge",
+        step2Desc: "A real-world problem, unseen until the day it begins.",
+        step3Title: "Present &amp; Get Evaluated",
+        step3Desc: "Defend your reasoning live, then get assessed against a standardized framework.",
+        bridge: "Here's exactly how that evaluation works."
+      },
       partners: {
         eyebrow: "Partners",
         headline: "Partnership opportunities are currently open.",
@@ -619,6 +636,12 @@ const translations = {
       step5Desc: "Buat penalaranmu mudah dipahami oleh panel juri secara langsung.",
       step6Title: "Penghargaan",
       step6Desc: "Sertifikat dan pengakuan untuk setiap peserta."
+    },
+    evaluationTeaser: {
+      eyebrow: "Penilaian",
+      headline: "Bagaimana penalaran hebat dinilai.",
+      body: "Peserta dinilai melalui kerangka terstruktur yang mengutamakan penalaran, bukti, penilaian, dan komunikasi — bukan sekadar rasa percaya diri.",
+      cta: "Jelajahi Kerangka Penilaian <span aria-hidden=\"true\">&rarr;</span>"
     },
     leadership: {
       eyebrow: "Orang-orang di balik GCT",
@@ -1110,6 +1133,17 @@ const translations = {
         eyebrow: "Ikhtisar Kompetisi",
         headline: "Satu tantangan. Satu hari. Satu standar penilaian.",
         body: "Setiap peserta diukur dengan tantangan nyata yang sama, dalam kondisi yang sama, menggunakan kerangka evaluasi yang sama — terlepas dari latar belakang, sekolah, atau pengalaman sebelumnya."
+      },
+      experience: {
+        eyebrow: "Pengalaman Kompetisi",
+        headline: "Dari persiapan hingga presentasi.",
+        step1Title: "Persiapan",
+        step1Desc: "Daftar dan ikuti workshop yang membahas kerangka berpikir yang akan kamu gunakan.",
+        step2Title: "Hadapi Tantangan",
+        step2Desc: "Sebuah masalah nyata, tidak diketahui hingga tiba waktunya.",
+        step3Title: "Presentasi &amp; Dinilai",
+        step3Desc: "Pertahankan penalaranmu secara langsung, lalu dinilai menggunakan kerangka evaluasi yang terstandarisasi.",
+        bridge: "Berikut cara penilaian itu bekerja secara rinci."
       },
       partners: {
         eyebrow: "Mitra",

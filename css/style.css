@@ -2089,4 +2089,56 @@ body {
   .about-approach { grid-template-columns: 1fr; }
 }
 
+/* Bridge line: a short italic transition that closes one section and gestures to the next */
+.about-block__bridge {
+  margin-top: clamp(2.2rem, 4vw, 3rem);
+  padding-top: clamp(1.6rem, 3vw, 2.2rem);
+  border-top: 1px solid rgba(11,18,32,0.1);
+  max-width: 60ch;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.55;
+}
+.about-block--paper .about-block__bridge { color: var(--navy-800); border-top-color: rgba(11,18,32,0.1); }
+.about-block--navy .about-block__bridge { color: var(--paper); border-top-color: var(--line-navy); }
 
+/* Founding Team on the About page: same component as the landing page, framed as this page's penultimate chapter */
+.about-team__intro {
+  max-width: 62ch;
+  margin-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+  font-size: 1.02rem;
+  color: var(--muted-on-paper);
+  line-height: 1.8;
+}
+
+/* Contact: simple, quiet, no decoration */
+.about-contact { text-align: center; }
+.about-contact__head { max-width: 520px; margin-inline: auto; }
+.about-contact__head .display-md { margin-top: 1.3rem; }
+.about-contact__body {
+  margin-top: 1.2rem;
+  max-width: 52ch;
+  margin-inline: auto;
+  font-size: 1rem;
+  color: var(--muted-on-navy);
+  line-height: 1.75;
+}
+.about-contact__links {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.about-contact__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-light);
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+.about-contact__link:hover { color: var(--paper); border-bottom-color: var(--gold); }

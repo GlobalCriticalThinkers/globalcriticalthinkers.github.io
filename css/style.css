@@ -1502,6 +1502,69 @@ body {
 }
 
 /* -------------------------------------------------------------------------
+   12e. INTEGRITY — honor-code grid, text-only editorial cards
+   ------------------------------------------------------------------------- */
+.integrity { background: var(--paper); color: var(--ink); border-bottom: 1px solid rgba(11,18,32,0.1); }
+.integrity__head { max-width: 680px; margin-bottom: clamp(1rem, 2vw, 1.5rem); }
+.integrity__head .display-lg { margin-top: 1.3rem; color: var(--ink); }
+
+.integrity__statement {
+  max-width: 62ch;
+  margin-top: clamp(1.6rem, 3vw, 2.2rem);
+}
+.integrity__statement p {
+  font-size: 1.04rem;
+  color: var(--muted-on-paper);
+  line-height: 1.78;
+}
+.integrity__statement p + p { margin-top: 0.9rem; }
+
+.integrity__grid {
+  margin-top: clamp(3.5rem, 6vw, 5rem);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(1.75rem, 3vw, 2.25rem);
+}
+.integrity__card {
+  padding-top: 1.6rem;
+  border-top: 2px solid var(--gold);
+}
+.integrity__card-title {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  color: var(--ink);
+  line-height: 1.28;
+}
+.integrity__card-desc {
+  margin-top: 0.8rem;
+  font-size: 0.86rem;
+  color: var(--muted-on-paper);
+  line-height: 1.62;
+}
+
+.integrity__closing {
+  margin-top: clamp(3.5rem, 6vw, 5rem);
+  padding-top: clamp(2.5rem, 4.5vw, 3.5rem);
+  border-top: 1px solid rgba(11,18,32,0.12);
+  max-width: 62ch;
+}
+.integrity__closing p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  line-height: 1.55;
+  color: var(--navy-800);
+}
+.integrity__closing p + p { margin-top: 0.6rem; }
+
+@media (max-width: 1024px) {
+  .integrity__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .integrity__grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* -------------------------------------------------------------------------
    13. REGISTRATION — two column, luxury pricing card
    ------------------------------------------------------------------------- */
 .registration { background: var(--navy-950); border-top: 1px solid var(--line-navy); }

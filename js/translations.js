@@ -23,7 +23,8 @@ const translations = {
       skip: "Skip to content",
       register: "Register now",
       home: "Home",
-      about: "About"
+      about: "About",
+      competition: "Competition"
     },
     hero: {
       imageAlt: "A student reasoning through a real-world challenge during Global Critical Thinkers",
@@ -537,6 +538,32 @@ const translations = {
       copy1: "Your message has been successfully sent.",
       copy2: "Our team will review your inquiry and respond within one business day.",
       cta: "Return to Home"
+    },
+    competition: {
+      meta: {
+        title: "The Competition — Global Critical Thinkers",
+        description: "Discover how Global Critical Thinkers evaluates reasoning, judgment, and communication throughout the competition."
+      },
+      hero: {
+        kicker: "The Competition",
+        title: "The Competition",
+        subtitle: "Discover how Global Critical Thinkers evaluates reasoning, judgment, and communication throughout the competition."
+      },
+      overview: {
+        eyebrow: "Competition Overview",
+        headline: "One challenge. One day. One standard of judgment.",
+        body: "Every participant is measured against the same real-world challenge, under the same conditions, using the same evaluation framework — regardless of background, school, or prior experience."
+      },
+      partners: {
+        eyebrow: "Partners",
+        headline: "Partnership opportunities are currently open.",
+        body: "We're in conversation with universities, industry leaders, and organizations who share our standard for how thinking should be tested. Official partners will be announced here as they're confirmed."
+      },
+      judges: {
+        eyebrow: "Judges",
+        headline: "The judging panel is currently being finalized.",
+        body: "Every judge will come from professional backgrounds across academia, industry, entrepreneurship, and public policy — chosen for their ability to evaluate reasoning, not performance. Names will be announced ahead of the competition."
+      }
     }
   },
 
@@ -553,7 +580,8 @@ const translations = {
       skip: "Langsung ke konten",
       register: "Daftar sekarang",
       home: "Beranda",
-      about: "Tentang"
+      about: "Tentang",
+      competition: "Kompetisi"
     },
     hero: {
       imageAlt: "Seorang peserta bernalar menghadapi tantangan nyata dalam ajang Global Critical Thinkers",
@@ -1067,6 +1095,32 @@ const translations = {
       copy1: "Pesanmu telah berhasil dikirim.",
       copy2: "Tim kami akan meninjau pertanyaanmu dan merespons dalam waktu satu hari kerja.",
       cta: "Kembali ke Beranda"
+    },
+    competition: {
+      meta: {
+        title: "Kompetisi — Global Critical Thinkers",
+        description: "Pelajari bagaimana Global Critical Thinkers menilai penalaran, penilaian, dan komunikasi sepanjang kompetisi berlangsung."
+      },
+      hero: {
+        kicker: "Kompetisi",
+        title: "Kompetisi",
+        subtitle: "Pelajari bagaimana Global Critical Thinkers menilai penalaran, penilaian, dan komunikasi sepanjang kompetisi berlangsung."
+      },
+      overview: {
+        eyebrow: "Ikhtisar Kompetisi",
+        headline: "Satu tantangan. Satu hari. Satu standar penilaian.",
+        body: "Setiap peserta diukur dengan tantangan nyata yang sama, dalam kondisi yang sama, menggunakan kerangka evaluasi yang sama — terlepas dari latar belakang, sekolah, atau pengalaman sebelumnya."
+      },
+      partners: {
+        eyebrow: "Mitra",
+        headline: "Kesempatan bermitra saat ini terbuka.",
+        body: "Kami sedang menjalin komunikasi dengan universitas, pemimpin industri, dan berbagai organisasi yang memiliki standar yang sama dengan kami dalam menguji cara berpikir. Mitra resmi akan diumumkan di sini begitu terkonfirmasi."
+      },
+      judges: {
+        eyebrow: "Juri",
+        headline: "Dewan juri saat ini sedang difinalisasi.",
+        body: "Setiap juri berasal dari latar belakang profesional lintas akademisi, industri, kewirausahaan, dan kebijakan publik — dipilih karena kemampuan mereka menilai penalaran, bukan penampilan. Nama-nama akan diumumkan menjelang kompetisi."
+      }
     }
   }
 };

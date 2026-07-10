@@ -1354,7 +1354,7 @@ body {
 .faq-item.is-open .faq-item__q svg { transform: rotate(45deg); }
 .faq-item__a { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease); }
 .faq-item.is-open .faq-item__a { max-height: 320px; }
-.faq-item__a p { padding-bottom: 1.4rem; color: var(--muted-on-paper); font-size: 0.95rem; max-width: 62ch; line-height: 1.6; }
+.faq-item__a p { padding-bottom: 1.4rem; color: #47463C; font-size: 0.95rem; max-width: 62ch; line-height: 1.6; }
 
 @media (max-width: 900px) {
   .logo-row { grid-template-columns: repeat(2, 1fr); }

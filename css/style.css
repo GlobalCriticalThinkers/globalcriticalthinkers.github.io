@@ -617,6 +617,27 @@ body {
   .mission__stat { border-right: none; border-bottom: 1px solid var(--line-navy); padding-bottom: 1.8rem; }
 }
 
+/* Quiet transition link to the About page — deliberately unobtrusive, not a CTA */
+.mission__about-link {
+  margin-top: clamp(2.5rem, 4.5vw, 3.5rem);
+  padding-top: clamp(1.75rem, 3vw, 2.25rem);
+  border-top: 1px solid var(--line-navy);
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--muted-on-navy);
+}
+.mission__about-link span:first-child { margin-right: 0.6rem; }
+.mission__about-link a {
+  color: var(--gold-light);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+.mission__about-link a:hover { color: var(--gold); }
+.mission__about-link a span { display: inline-block; transition: transform 0.25s ease; }
+.mission__about-link a:hover span { transform: translateX(3px); }
+
 /* -------------------------------------------------------------------------
    6. DISCUSSION — editorial split, no fullscreen image
    ------------------------------------------------------------------------- */

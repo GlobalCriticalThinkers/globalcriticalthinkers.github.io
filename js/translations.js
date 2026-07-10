@@ -36,12 +36,6 @@ const translations = {
       scroll: "Scroll",
       scrollAria: "Scroll to the next section"
     },
-    foundingStory: {
-      eyebrow: "Why GCT exists",
-      headline: "Most competitions reward speaking. We built one that rewards thinking.",
-      mission: "We created GCT because most competitions test how convincingly you can perform an answer. Few ever test whether your reasoning was sound in the first place. We wanted to build the one that does.",
-      note: "GCT began with a simple observation: many young people can argue persuasively without ever being asked to reason well. So we built the competition we wished existed — one real-world challenge, no script, and nowhere to hide behind confidence alone. You'll be pushed to question your own assumptions before anyone else questions them for you. There is rarely one perfect answer. What matters is the discipline behind how you got there."
-    },
     leadership: {
       eyebrow: "The people behind GCT",
       headline: "Meet the Founding Team",
@@ -57,7 +51,9 @@ const translations = {
       copy: "GCT is not designed to see who can perform confidence. It's designed to see how you actually think when the answer isn't obvious, the clock is running, and no one is going to agree with you by default. What separates strong thinkers isn't how sure they sound. It's how carefully they've reasoned before they speak.",
       stat1: "Real-world challenge, unseen until the day it begins",
       stat2: "Distinct disciplines of thinking required to solve it: analysis, evidence, strategy, communication",
-      stat3: "Scripted answers permitted once your reasoning is questioned"
+      stat3: "Scripted answers permitted once your reasoning is questioned",
+      aboutPrompt: "Want to learn more about Global Critical Thinkers?",
+      aboutLink: "Learn About GCT <span aria-hidden=\"true\">&rarr;</span>"
     },
     discussion: {
       eyebrow: "The reasoning",
@@ -298,27 +294,6 @@ const translations = {
       closing1: "Integrity is not a separate part of this competition.",
       closing2: "It is the standard expected from every participant, judge, assessor, facilitator, and organizer."
     },
-    institution: {
-      eyebrow: "The long view",
-      headline: "Building an Institution",
-      opening1: "Great institutions are not built in a single event. They are built one generation of thinkers at a time.",
-      intro: "Global Critical Thinkers is designed to grow beyond a single competition. Each edition contributes to a larger ecosystem where participants continue developing, outstanding performers may take on greater responsibilities, and every competition helps strengthen the community for future generations.",
-      stage1Title: "Founding Edition",
-      stage1Desc: "The beginning of a long-term competition ecosystem built around critical thinking and responsible leadership.",
-      stage2Title: "Future Competition Series",
-      stage2Desc: "Future editions may introduce new real-world challenges while preserving the same competition framework and evaluation standards.",
-      stage3Title: "Growing Community",
-      stage3Desc: "Participants may remain connected through future learning opportunities, competitions, and collaborative initiatives.",
-      stage4Title: "Outstanding Participants",
-      stage4Desc: "Exceptional participants may be recognized for consistently demonstrating outstanding reasoning, leadership, and integrity.",
-      stage5Title: "Future Assessors",
-      stage5Desc: "Outstanding participants may be invited to support future competitions as assessors, helping maintain evaluation quality.",
-      stage6Title: "Future Judges",
-      stage6Desc: "Experienced assessors may later contribute as judges, helping the competition continue to uphold its standards across future editions.",
-      stage7Title: "Annual Championship",
-      stage7Desc: "Top-performing participants from multiple competition editions may receive invitations to an exclusive championship event.",
-      footnote: "Competition frequency and future initiatives will evolve alongside the growth of the Global Critical Thinkers community, while maintaining the same commitment to educational quality."
-    },
     registration: {
       eyebrow: "Registration",
       headline: "Claim your place<br>at the table.",
@@ -489,12 +464,6 @@ const translations = {
       scroll: "Gulir",
       scrollAria: "Gulir ke bagian berikutnya"
     },
-    foundingStory: {
-      eyebrow: "Mengapa GCT hadir",
-      headline: "Kebanyakan kompetisi menghargai cara bicara. Kami membangun yang menghargai cara berpikir.",
-      mission: "Kami mendirikan GCT karena kebanyakan kompetisi hanya menguji seberapa meyakinkan kamu menyampaikan sebuah jawaban. Jarang ada yang benar-benar menguji apakah penalaran di baliknya solid. Kami ingin membangun yang melakukannya.",
-      note: "GCT bermula dari satu pengamatan sederhana: banyak anak muda bisa berargumen dengan meyakinkan tanpa pernah benar-benar diuji untuk bernalar dengan baik. Maka kami membangun kompetisi yang selama ini kami harapkan ada — satu tantangan nyata, tanpa naskah, dan tanpa tempat bersembunyi di balik rasa percaya diri semata. Kamu akan didorong untuk mempertanyakan asumsimu sendiri, sebelum orang lain yang melakukannya untukmu. Jarang ada satu jawaban yang sempurna. Yang menentukan adalah kedisiplinan di balik bagaimana kamu sampai ke sana."
-    },
     leadership: {
       eyebrow: "Orang-orang di balik GCT",
       headline: "Kenali Tim Pendiri",
@@ -510,7 +479,9 @@ const translations = {
       copy: "GCT tidak dirancang untuk melihat siapa yang paling bisa tampil percaya diri. GCT dirancang untuk melihat bagaimana kamu benar-benar berpikir saat jawabannya tidak jelas, waktu terus berjalan, dan tidak ada seorang pun yang akan otomatis setuju denganmu. Yang membedakan pemikir kuat bukan seberapa yakin suaranya terdengar, melainkan seberapa cermat penalarannya sebelum ia bicara.",
       stat1: "Tantangan nyata, tidak diketahui hingga hari pelaksanaan tiba",
       stat2: "Disiplin berpikir berbeda yang dibutuhkan untuk menyelesaikannya: analisis, bukti, strategi, komunikasi",
-      stat3: "Jawaban berskrip yang diizinkan begitu penalaranmu dipertanyakan"
+      stat3: "Jawaban berskrip yang diizinkan begitu penalaranmu dipertanyakan",
+      aboutPrompt: "Ingin tahu lebih lanjut tentang Global Critical Thinkers?",
+      aboutLink: "Pelajari Tentang GCT <span aria-hidden=\"true\">&rarr;</span>"
     },
     discussion: {
       eyebrow: "Penalaran",
@@ -750,27 +721,6 @@ const translations = {
       principle5Desc: "Kesimpulan yang kuat membutuhkan bukti yang kuat. Argumen harus didukung oleh logika, bukan asumsi.",
       closing1: "Integritas bukan bagian yang terpisah dari kompetisi ini.",
       closing2: "Integritas adalah standar yang diharapkan dari setiap peserta, juri, asesor, fasilitator, dan penyelenggara."
-    },
-    institution: {
-      eyebrow: "Visi jangka panjang",
-      headline: "Membangun Sebuah Institusi",
-      opening1: "Institusi besar tidak dibangun dalam satu acara. Institusi besar dibangun satu generasi pemikir demi satu generasi pemikir.",
-      intro: "Global Critical Thinkers dirancang untuk bertumbuh melampaui satu kompetisi tunggal. Setiap edisi berkontribusi pada ekosistem yang lebih besar, tempat peserta terus berkembang, performa terbaik dapat membawa tanggung jawab yang lebih besar, dan setiap kompetisi turut memperkuat komunitas bagi generasi berikutnya.",
-      stage1Title: "Edisi Perdana",
-      stage1Desc: "Awal dari ekosistem kompetisi jangka panjang yang dibangun di sekitar berpikir kritis dan kepemimpinan yang bertanggung jawab.",
-      stage2Title: "Rangkaian Kompetisi Mendatang",
-      stage2Desc: "Edisi berikutnya berpotensi menghadirkan tantangan nyata yang baru, sambil tetap mempertahankan kerangka kompetisi dan standar evaluasi yang sama.",
-      stage3Title: "Komunitas yang Bertumbuh",
-      stage3Desc: "Peserta berpotensi tetap terhubung melalui kesempatan belajar, kompetisi, dan inisiatif kolaboratif di masa mendatang.",
-      stage4Title: "Peserta Berprestasi",
-      stage4Desc: "Peserta dengan performa luar biasa dapat diakui karena secara konsisten menunjukkan penalaran, kepemimpinan, dan integritas yang unggul.",
-      stage5Title: "Calon Asesor",
-      stage5Desc: "Peserta berprestasi berpotensi diundang untuk mendukung kompetisi mendatang sebagai asesor, membantu menjaga kualitas penilaian.",
-      stage6Title: "Calon Juri",
-      stage6Desc: "Asesor berpengalaman berpotensi kelak berkontribusi sebagai juri, membantu kompetisi terus menjaga standarnya di setiap edisi mendatang.",
-      stage7Title: "Kejuaraan Tahunan",
-      stage7Desc: "Peserta dengan performa terbaik dari berbagai edisi kompetisi dapat menerima undangan untuk mengikuti ajang kejuaraan eksklusif.",
-      footnote: "Frekuensi kompetisi dan inisiatif mendatang akan terus berkembang seiring pertumbuhan komunitas Global Critical Thinkers, dengan tetap menjaga komitmen yang sama terhadap kualitas pendidikan."
     },
     registration: {
       eyebrow: "Pendaftaran",

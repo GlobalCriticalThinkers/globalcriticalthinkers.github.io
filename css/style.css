@@ -2142,3 +2142,127 @@ body {
   transition: border-color 0.25s ease, color 0.25s ease;
 }
 .about-contact__link:hover { color: var(--paper); border-bottom-color: var(--gold); }
+
+/* -------------------------------------------------------------------------
+   14b. ABOUT PAGE — editorial split sections (image one side, text the other)
+   ------------------------------------------------------------------------- */
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+}
+.about-split__media { position: relative; aspect-ratio: 4/5; }
+.about-split__media img {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block;
+}
+.about-split__text {
+  padding: clamp(3rem, 6vw, 6rem);
+}
+.about-split__text .eyebrow { margin-bottom: 0; }
+.about-split__text .display-lg,
+.about-split__text .display-md { margin-top: 1.3rem; }
+.about-split__text .about-block__body { margin-top: clamp(1.5rem, 3vw, 2rem); }
+.about-split--reverse .about-split__media { order: 2; }
+.about-split--reverse .about-split__text { order: 1; }
+
+@media (max-width: 900px) {
+  .about-split { grid-template-columns: 1fr; }
+  .about-split__media { aspect-ratio: 16/10; order: -1 !important; }
+  .about-split__text { padding: clamp(2.5rem, 8vw, 3.5rem) var(--edge-pad); order: 2 !important; }
+}
+
+/* -------------------------------------------------------------------------
+   14c. ABOUT PAGE — immersive full-bleed section (Building an Institution)
+   ------------------------------------------------------------------------- */
+.about-immersive {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(4rem, 8vw, 6rem);
+}
+.about-immersive__media { position: absolute; inset: 0; z-index: 0; }
+.about-immersive__media img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: contrast(1.06) saturate(0.92);
+}
+.about-immersive__scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(7,11,20,0.55) 0%, rgba(7,11,20,0.72) 55%, rgba(7,11,20,0.96) 100%);
+}
+.about-immersive__content { position: relative; z-index: 2; max-width: 640px; }
+.about-immersive__content .eyebrow { color: var(--gold-light); }
+.about-immersive__content .display-lg { margin-top: 1.4rem; color: var(--paper); }
+.about-immersive__content .about-block__body { margin-top: 1.6rem; }
+.about-immersive__content .about-block__body p { color: var(--muted-on-navy); }
+.about-immersive__content .about-block__reference { color: var(--muted-on-navy); }
+.about-immersive__content .about-block__reference a { color: var(--gold-light); }
+@media (max-width: 560px) {
+  .about-immersive { min-height: 70vh; }
+}
+
+/* -------------------------------------------------------------------------
+   14d. ABOUT PAGE — centered typographic section (Our Vision)
+   ------------------------------------------------------------------------- */
+.about-centered {
+  text-align: center;
+  padding-block: clamp(5.5rem, 10vw, 9rem);
+}
+.about-centered__eyebrow { display: flex; justify-content: center; }
+.about-centered__headline {
+  margin-top: 1.5rem;
+  margin-inline: auto;
+  max-width: 20ch;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.12;
+}
+.about-centered__body {
+  margin-top: 1.8rem;
+  margin-inline: auto;
+  max-width: 56ch;
+  font-size: 1.06rem;
+  line-height: 1.85;
+  color: var(--muted-on-navy);
+}
+.about-centered__body p + p { margin-top: 1.1rem; }
+
+/* -------------------------------------------------------------------------
+   14e. ABOUT PAGE — closing CTA
+   ------------------------------------------------------------------------- */
+.about-cta {
+  text-align: center;
+  padding-block: clamp(5rem, 9vw, 8rem);
+  background: var(--navy-950);
+  border-top: 1px solid var(--line-navy);
+}
+.about-cta__eyebrow { display: flex; justify-content: center; }
+.about-cta__headline {
+  margin-top: 1.4rem;
+  margin-inline: auto;
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  line-height: 1.15;
+  color: var(--paper);
+}
+.about-cta__body {
+  margin-top: 1.2rem;
+  margin-inline: auto;
+  max-width: 48ch;
+  font-size: 1rem;
+  color: var(--muted-on-navy);
+  line-height: 1.75;
+}
+.about-cta__actions {
+  margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}

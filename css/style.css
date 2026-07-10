@@ -307,6 +307,110 @@ body {
   gap: clamp(0.9rem, 1.6vw, 1.6rem);
 }
 
+/* Primary site navigation (desktop) */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.6rem, 2.6vw, 2.6rem);
+}
+.site-nav__link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--muted-on-navy);
+  transition: color 0.3s var(--ease);
+  position: relative;
+  padding-bottom: 0.3rem;
+}
+.site-nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s var(--ease);
+}
+.site-nav__link:hover { color: var(--paper); }
+.site-nav__link:hover::after { transform: scaleX(1); }
+.site-nav__link.is-active { color: var(--gold-light); }
+.site-nav__link.is-active::after { transform: scaleX(1); }
+
+/* Mobile nav toggle button */
+.site-nav__toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  color: var(--paper);
+}
+.site-nav__toggle-icon,
+.site-nav__toggle-icon::before,
+.site-nav__toggle-icon::after {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: currentColor;
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.site-nav__toggle-icon { position: relative; }
+.site-nav__toggle-icon::before,
+.site-nav__toggle-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.site-nav__toggle-icon::before { top: -6px; }
+.site-nav__toggle-icon::after { top: 6px; }
+.site-header.is-nav-open .site-nav__toggle-icon { background: transparent; }
+.site-header.is-nav-open .site-nav__toggle-icon::before { transform: translateY(6px) rotate(45deg); }
+.site-header.is-nav-open .site-nav__toggle-icon::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* Mobile nav drawer */
+.site-nav__mobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .site-nav { display: none; }
+  .site-nav__toggle { display: inline-flex; }
+  .site-nav__mobile {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    z-index: 900;
+    background: var(--navy-950);
+    display: flex;
+    flex-direction: column;
+    padding: clamp(6rem, 18vw, 8rem) var(--edge-pad) 3rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), visibility 0s linear 0.35s;
+  }
+  .site-header.is-nav-open .site-nav__mobile {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), visibility 0s linear 0s;
+  }
+  .site-nav__mobile-link {
+    display: block;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line-navy);
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--paper);
+  }
+  .site-nav__mobile-link.is-active { color: var(--gold-light); }
+  .site-nav__mobile-cta {
+    margin-top: 2rem;
+    align-self: flex-start;
+  }
+}
+
 /* Language switcher */
 .lang-switch {
   display: flex;
@@ -1865,3 +1969,124 @@ body {
 }
 @media (max-width: 860px) { .site-footer__main { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .site-footer__main { grid-template-columns: 1fr; } }
+
+/* -------------------------------------------------------------------------
+   14. ABOUT PAGE — institutional subpage
+   ------------------------------------------------------------------------- */
+
+/* Page header: typographic, no photography, generous top clearance for the sticky header */
+.page-header {
+  background: var(--navy-950);
+  padding-top: clamp(9rem, 16vw, 12rem);
+  padding-bottom: clamp(4rem, 7vw, 6rem);
+  border-bottom: 1px solid var(--line-navy);
+}
+.page-header__kicker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+.page-header__kicker-line { width: 2.4rem; height: 1px; background: var(--gold); }
+.page-header__kicker-text {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.page-header__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5.6vw, 4.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+  max-width: 18ch;
+}
+.page-header__subtitle {
+  margin-top: 1.3rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  color: var(--gold-light);
+  max-width: 34ch;
+}
+.page-header__intro {
+  margin-top: 2rem;
+  font-size: 1.02rem;
+  color: var(--muted-on-navy);
+  line-height: 1.78;
+  max-width: 62ch;
+}
+
+/* Generic institutional text section (Why GCT Exists, Our Vision, Beyond Competition) */
+.about-block { padding-block: clamp(4.5rem, 8vw, 7rem); }
+.about-block--paper { background: var(--paper); color: var(--ink); }
+.about-block--navy { background: var(--navy-900); border-top: 1px solid var(--line-navy); border-bottom: 1px solid var(--line-navy); }
+.about-block__head { max-width: 680px; }
+.about-block__head .display-lg,
+.about-block__head .display-md { margin-top: 1.3rem; }
+.about-block--paper .display-lg,
+.about-block--paper .display-md { color: var(--ink); }
+.about-block__body {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  max-width: 66ch;
+}
+.about-block__body p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+.about-block--paper .about-block__body p { color: var(--muted-on-paper); }
+.about-block--navy .about-block__body p { color: var(--muted-on-navy); }
+.about-block__body p + p { margin-top: 1.1rem; }
+
+/* Reference line: a quiet cross-link to a landing-page section, styled as a citation not a CTA */
+.about-block__reference {
+  margin-top: 1.6rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--gold);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.about-block--paper .about-block__reference { color: var(--muted-on-paper); }
+.about-block--navy .about-block__reference { color: var(--muted-on-navy); }
+.about-block__reference a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.25s ease;
+}
+.about-block--navy .about-block__reference a { color: var(--gold-light); }
+.about-block__reference a:hover { color: var(--gold-dim); }
+
+/* Design-approach list (section 5: How We Design Competitions) */
+.about-approach {
+  margin-top: clamp(2.5rem, 4.5vw, 3.5rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--line-navy);
+  border: 1px solid var(--line-navy);
+}
+.about-approach__item {
+  background: var(--navy-900);
+  padding: 1.75rem 1.6rem;
+}
+.about-approach__item-title {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  color: var(--paper);
+}
+.about-approach__item-desc {
+  margin-top: 0.6rem;
+  font-size: 0.84rem;
+  color: var(--muted-on-navy);
+  line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .about-approach { grid-template-columns: 1fr; }
+}
+
+

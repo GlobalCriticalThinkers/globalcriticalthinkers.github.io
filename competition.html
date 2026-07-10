@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="competition.meta.title">The Competition — Global Critical Thinkers</title>
+  <meta name="description" content="Discover how Global Critical Thinkers evaluates reasoning, judgment, and communication throughout the competition." data-i18n-content="competition.meta.description">
+
+  <meta property="og:title" content="The Competition — Global Critical Thinkers" data-i18n-content="competition.meta.title">
+  <meta property="og:description" content="Discover how Global Critical Thinkers evaluates reasoning, judgment, and communication throughout the competition." data-i18n-content="competition.meta.description">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+  <div class="progress-thread" aria-hidden="true">
+    <div class="progress-thread__fill" id="progressFill"></div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-header__logo-img" data-i18n-alt="brand.logoAlt">
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" class="site-nav__link" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="site-nav__link" data-i18n="nav.about">About</a>
+        <a href="competition.html" class="site-nav__link is-active" data-i18n="nav.competition">Competition</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-switch__divider" aria-hidden="true">|</span>
+          <button type="button" class="lang-switch__btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+        <a href="index.html#registration" class="site-header__cta" data-i18n="nav.register">Register now</a>
+        <button type="button" class="site-nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+          <span class="site-nav__toggle-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="site-nav__mobile" id="navMobile">
+      <a href="index.html" class="site-nav__mobile-link" data-i18n="nav.home">Home</a>
+      <a href="about.html" class="site-nav__mobile-link" data-i18n="nav.about">About</a>
+      <a href="competition.html" class="site-nav__mobile-link is-active" data-i18n="nav.competition">Competition</a>
+      <a href="index.html#registration" class="site-header__cta site-nav__mobile-cta" data-i18n="nav.register">Register now</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================ -->
+    <!-- PAGE HEADER — small hero -->
+    <!-- ============================================ -->
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__kicker">
+          <span class="page-header__kicker-line"></span>
+          <span class="page-header__kicker-text" data-i18n="competition.hero.kicker">The Competition</span>
+        </div>
+        <h1 class="page-header__title" data-i18n="competition.hero.title">The Competition</h1>
+        <p class="page-header__subtitle" data-i18n="competition.hero.subtitle">Discover how Global Critical Thinkers evaluates reasoning, judgment, and communication throughout the competition.</p>
+      </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- COMPETITION OVERVIEW -->
+    <!-- ============================================ -->
+    <section class="about-block about-block--paper" id="competition-overview" aria-labelledby="competition-overview-heading">
+      <div class="container">
+        <div class="about-block__head reveal">
+          <p class="eyebrow eyebrow--dark" data-i18n="competition.overview.eyebrow">Competition Overview</p>
+          <h2 id="competition-overview-heading" class="display-md" data-i18n="competition.overview.headline">One challenge. One day. One standard of judgment.</h2>
+        </div>
+        <div class="about-block__body reveal">
+          <p data-i18n="competition.overview.body">Every participant is measured against the same real-world challenge, under the same conditions, using the same evaluation framework — regardless of background, school, or prior experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- EVALUATION — relocated from homepage -->
+    <!-- ============================================ -->
+    <section class="section evaluation" id="evaluation" aria-labelledby="evaluation-heading">
+      <div class="container">
+        <div class="evaluation__grid">
+          <div class="evaluation__content">
+            <div class="evaluation__head reveal">
+              <p class="eyebrow" data-i18n="evaluation.eyebrow">Assessment</p>
+              <h2 id="evaluation-heading" class="display-lg" data-i18n="evaluation.headline">How You're Evaluated</h2>
+              <p class="lede" data-i18n="evaluation.intro1">Great decisions begin with great reasoning.</p>
+              <p class="lede" style="margin-top:0.8rem;" data-i18n="evaluation.intro2">Every participant is assessed using a standardized evaluation framework designed to measure not only outcomes, but also the quality of thinking behind every decision.</p>
+            </div>
+
+            <div class="evaluation__list reveal-stagger">
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">01</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim1Title">Critical Analysis</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim1Desc">Ability to identify the real problem instead of reacting to the obvious one.</p>
+                </div>
+              </div>
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">02</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim2Title">Evidence Evaluation</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim2Desc">Ability to distinguish facts, assumptions, opinions, and weak arguments.</p>
+                </div>
+              </div>
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">03</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim3Title">Decision Making</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim3Desc">Ability to choose the strongest solution under uncertainty.</p>
+                </div>
+              </div>
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">04</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim4Title">Communication</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim4Desc">Ability to explain complex reasoning clearly and logically.</p>
+                </div>
+              </div>
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">05</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim5Title">Reflection</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim5Desc">Ability to defend, reconsider, and improve ideas when challenged.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="evaluation__block reveal">
+              <p class="evaluation__block-label" data-i18n="evaluation.philosophyLabel">Assessment Philosophy</p>
+              <p class="evaluation__philosophy-text" data-i18n-html="evaluation.philosophy">We do not reward the fastest answer.<br>We reward the strongest reasoning.</p>
+            </div>
+
+            <div class="evaluation__block reveal">
+              <p class="evaluation__block-label" data-i18n="evaluation.reportLabel">Performance Report</p>
+              <p class="evaluation__report-copy" data-i18n="evaluation.reportCopy">Every participant receives a personalized Performance Report based on the same evaluation framework used throughout the competition.</p>
+              <p class="evaluation__report-note" data-i18n-html="evaluation.reportNote">Winning is only one outcome.<br>Understanding how you think is the lasting one.</p>
+            </div>
+          </div>
+
+          <div class="evaluation__media reveal">
+            <img src="images/gambar7.png" alt="Participants engaged in collaborative analysis and reasoning during the competition" data-i18n-alt="evaluation.imageAlt" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PARTNERS — editorial block, not finalized -->
+    <!-- ============================================ -->
+    <section class="about-block about-block--paper" id="partners" aria-labelledby="partners-heading" style="padding-block:0;">
+      <div class="about-split reveal">
+        <div class="about-split__text">
+          <p class="eyebrow eyebrow--dark" data-i18n="competition.partners.eyebrow">Partners</p>
+          <h2 id="partners-heading" class="display-md" data-i18n="competition.partners.headline">Partnership opportunities are currently open.</h2>
+          <div class="about-block__body">
+            <p data-i18n="competition.partners.body">We're in conversation with universities, industry leaders, and organizations who share our standard for how thinking should be tested. Official partners will be announced here as they're confirmed.</p>
+          </div>
+        </div>
+        <div class="about-split__media">
+          <img src="images/handshake.png" alt="Two professionals shaking hands, representing collaboration and partnership" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- JUDGES — editorial block, not finalized -->
+    <!-- ============================================ -->
+    <section class="about-block about-block--navy" id="judges" aria-labelledby="judges-heading" style="padding-block:0; border-top:1px solid var(--line-navy); border-bottom:1px solid var(--line-navy);">
+      <div class="about-split about-split--reverse reveal">
+        <div class="about-split__text">
+          <p class="eyebrow" data-i18n="competition.judges.eyebrow">Judges</p>
+          <h2 id="judges-heading" class="display-md" data-i18n="competition.judges.headline">The judging panel is currently being finalized.</h2>
+          <div class="about-block__body">
+            <p data-i18n="competition.judges.body">Every judge will come from professional backgrounds across academia, industry, entrepreneurship, and public policy — chosen for their ability to evaluate reasoning, not performance. Names will be announced ahead of the competition.</p>
+          </div>
+        </div>
+        <div class="about-split__media">
+          <img src="images/Judges.png" alt="A panel taking notes during a professional evaluation session" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer class="site-footer">
+    <p class="site-footer__bookend" data-i18n-html="footer.bookend">Think sharper.<br>Your turn.</p>
+
+    <div class="site-footer__main">
+      <div>
+        <div class="site-footer__brand">
+          <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-footer__brand-img" data-i18n-alt="brand.logoAlt">
+        </div>
+        <p class="site-footer__tagline" data-i18n="footer.tagline">A Global Critical Thinking Competition where participants sharpen how they reason, judge, and communicate under real pressure.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Site navigation">
+        <p class="footer-col__title" data-i18n="footer.exploreTitle">Explore</p>
+        <ul>
+          <li><a href="index.html#why-gct" data-i18n="footer.exploreWhyGct">Why GCT</a></li>
+          <li><a href="index.html#how-it-works" data-i18n="footer.exploreHowItWorks">How it works</a></li>
+          <li><a href="index.html#quick-facts" data-i18n="footer.exploreOverview">Overview</a></li>
+          <li><a href="index.html#trust" data-i18n="footer.exploreFaq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Registration">
+        <p class="footer-col__title" data-i18n="footer.registerTitle">Register</p>
+        <ul>
+          <li><a href="index.html#registration" data-i18n="footer.registerPricing">Pricing</a></li>
+          <li><a href="[[REGISTRATION_LINK_PLACEHOLDER]]" data-i18n="footer.registerNow">Register now</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Contact">
+        <p class="footer-col__title" data-i18n="footer.contactTitle">Contact</p>
+        <ul>
+          <li><a href="contact.html" data-i18n="footer.contactEmail">Email us</a></li>
+          <li><a href="[[INSTAGRAM_LINK_PLACEHOLDER]]" data-i18n="footer.contactInstagram">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p><span data-i18n="footer.copyright">©</span> <span id="currentYear"></span> Global Critical Thinkers.</p>
+      <p data-i18n="footer.bottomTagline">Think sharper. Reason without a script.</p>
+    </div>
+  </footer>
+
+  <script src="js/translations.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -88,41 +88,41 @@
             <h2 id="contact-form-heading" class="display-md contact-intro__title" data-i18n="contact.form.title">Contact Our Team</h2>
             <p class="contact-intro__copy" data-i18n="contact.form.intro">We'd love to hear from you. Whether you have questions about the competition, partnerships, media inquiries, or future collaborations, our team is ready to help.</p>
 
-            <form class="contact-form" action="https://formsubmit.co/globalcriticalthinkers@gmail.com" method="POST">
-              <!-- FormSubmit configuration -->
-              <input type="hidden" name="_subject" value="New Inquiry - Global Critical Thinkers">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="thank-you.html">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Web3Forms configuration -->
+              <input type="hidden" name="access_key" value="a08f5db5-74ff-4eaa-862b-fa66049f498e">
+              <input type="hidden" name="from_name" value="Global Critical Thinkers Website">
+              <input type="hidden" name="subject" value="New Contact Form Submission | Global Critical Thinkers">
+              <input type="hidden" name="redirect" value="https://globalcriticalthinkers.github.io/thank-you.html">
 
               <!-- Honeypot spam trap, hidden from real visitors -->
-              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
               <div class="contact-form__row">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="cf-name" data-i18n="contact.form.nameLabel">Full Name</label>
-                  <input class="contact-form__input" type="text" id="cf-name" name="Full Name" required autocomplete="name">
+                  <input class="contact-form__input" type="text" id="cf-name" name="name" required autocomplete="name">
                 </div>
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="cf-email" data-i18n="contact.form.emailLabel">Email Address</label>
-                  <input class="contact-form__input" type="email" id="cf-email" name="Email Address" required autocomplete="email">
+                  <input class="contact-form__input" type="email" id="cf-email" name="email" required autocomplete="email">
                 </div>
               </div>
 
               <div class="contact-form__row">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="cf-whatsapp" data-i18n="contact.form.whatsappLabel">WhatsApp Number</label>
-                  <input class="contact-form__input" type="tel" id="cf-whatsapp" name="WhatsApp Number" autocomplete="tel">
+                  <input class="contact-form__input" type="tel" id="cf-whatsapp" name="whatsapp" required autocomplete="tel">
                 </div>
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="cf-subject" data-i18n="contact.form.subjectLabel">Subject</label>
-                  <input class="contact-form__input" type="text" id="cf-subject" name="Subject" required>
+                  <input class="contact-form__input" type="text" id="cf-subject" name="inquiry_subject">
                 </div>
               </div>
 
               <div class="contact-form__field">
                 <label class="contact-form__label" for="cf-message" data-i18n="contact.form.messageLabel">Message</label>
-                <textarea class="contact-form__textarea" id="cf-message" name="Message" required></textarea>
+                <textarea class="contact-form__textarea" id="cf-message" name="message" required></textarea>
               </div>
 
               <button type="submit" class="btn btn--gold contact-form__submit" data-i18n="contact.form.submit">Send Inquiry</button>

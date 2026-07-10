@@ -344,7 +344,7 @@ const translations = {
       contactTitle: "Contact",
       contactEmail: "Email us",
       contactInstagram: "Instagram",
-      copyright: "&copy;",
+      copyright: "©",
       bottomTagline: "Think sharper. Reason without a script."
     },
     about: {
@@ -814,7 +814,7 @@ const translations = {
       contactTitle: "Kontak",
       contactEmail: "Kirim email",
       contactInstagram: "Instagram",
-      copyright: "&copy;",
+      copyright: "©",
       bottomTagline: "Berpikir lebih tajam. Bernalar tanpa naskah."
     },
     about: {

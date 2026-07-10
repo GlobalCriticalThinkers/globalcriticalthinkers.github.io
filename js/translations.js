@@ -178,10 +178,12 @@ const translations = {
       tabWhyGct: "Why Join GCT",
       tabVenue: "Venue",
       tabFaq: "FAQ",
-      partnersTitle: "Strategic Partners",
-      partnersCopy: "Partnership opportunities are currently open. We're in conversation with universities, industry leaders, and organizations who share our standard for how thinking should be tested — official partners will be named here as they're confirmed.",
-      judgesTitle: "Meet Our Judges",
-      judgesCopy: "Judges are currently being finalized. Every judge will come from professional backgrounds across academia, industry, entrepreneurship, and public policy — chosen for their ability to evaluate reasoning, not performance.",
+      partnersTitle: "Built together with trusted partners.",
+      partnersCopy: "Global Critical Thinkers collaborates with educational institutions, organizations, and strategic partners to create a meaningful competition experience for students worldwide.",
+      partnersCta: "Meet Our Partners <span aria-hidden=\"true\">&rarr;</span>",
+      judgesTitle: "Meet the experts behind the evaluation.",
+      judgesCopy: "Our judges are carefully selected from diverse professional and academic backgrounds to evaluate participants with fairness, depth, and real-world perspective.",
+      judgesCta: "Learn about our Judges <span aria-hidden=\"true\">&rarr;</span>",
       judgesStatement: "Names will be announced here as they're confirmed, ahead of the competition.",
       awardsTitle: "Recognition & Certification",
       awardsCopy: "This competition does not provide cash prizes. Every participant who completes the competition will receive an official certificate.",
@@ -573,8 +575,10 @@ const translations = {
       },
       partners: {
         eyebrow: "Partners",
-        headline: "Partnership opportunities are currently open.",
-        body: "We're in conversation with universities, industry leaders, and organizations who share our standard for how thinking should be tested. Official partners will be announced here as they're confirmed."
+        headline: "Built together with trusted partners.",
+        body1: "Global Critical Thinkers collaborates with universities, schools, and industry organizations that share our standard for how thinking should be tested. These institutional and educational partners help shape a competition experience grounded in real academic and professional rigor.",
+        body2: "Strategic partners contribute expertise, resources, and platforms that extend the competition's reach — from evaluation design to opportunities for participants beyond the competition day itself.",
+        body3: "Every partnership is chosen deliberately. It's how GCT stays connected to real institutions and real standards, rather than operating in isolation. Partnership opportunities are currently open, and official partners will be named here as they're confirmed."
       },
       judges: {
         eyebrow: "Judges",
@@ -752,10 +756,12 @@ const translations = {
       tabWhyGct: "Alasan Bergabung",
       tabVenue: "Lokasi",
       tabFaq: "FAQ",
-      partnersTitle: "Mitra Strategis",
-      partnersCopy: "Kesempatan bermitra saat ini terbuka. Kami sedang menjalin komunikasi dengan universitas, pemimpin industri, dan berbagai organisasi yang memiliki standar yang sama dengan kami dalam menguji cara berpikir — mitra resmi akan diumumkan di sini begitu terkonfirmasi.",
-      judgesTitle: "Kenali Dewan Juri Kami",
-      judgesCopy: "Dewan juri kami saat ini sedang difinalisasi. Setiap juri berasal dari latar belakang profesional lintas akademisi, industri, kewirausahaan, dan kebijakan publik — dipilih karena kemampuan mereka menilai penalaran, bukan penampilan.",
+      partnersTitle: "Dibangun bersama mitra terpercaya.",
+      partnersCopy: "Global Critical Thinkers berkolaborasi dengan institusi pendidikan, organisasi, dan mitra strategis untuk menciptakan pengalaman kompetisi yang bermakna bagi pelajar di seluruh dunia.",
+      partnersCta: "Kenali Mitra Kami <span aria-hidden=\"true\">&rarr;</span>",
+      judgesTitle: "Kenali para ahli di balik penilaian.",
+      judgesCopy: "Dewan juri kami dipilih secara cermat dari beragam latar belakang profesional dan akademik untuk menilai peserta dengan adil, mendalam, dan berdasarkan perspektif dunia nyata.",
+      judgesCta: "Kenali Dewan Juri Kami <span aria-hidden=\"true\">&rarr;</span>",
       judgesStatement: "Nama-nama juri akan diumumkan di sini begitu terkonfirmasi, menjelang kompetisi berlangsung.",
       awardsTitle: "Pengakuan & Sertifikasi",
       awardsCopy: "Kompetisi ini tidak memberikan hadiah uang tunai. Setiap peserta yang menyelesaikan kompetisi akan menerima sertifikat resmi.",
@@ -1147,8 +1153,10 @@ const translations = {
       },
       partners: {
         eyebrow: "Mitra",
-        headline: "Kesempatan bermitra saat ini terbuka.",
-        body: "Kami sedang menjalin komunikasi dengan universitas, pemimpin industri, dan berbagai organisasi yang memiliki standar yang sama dengan kami dalam menguji cara berpikir. Mitra resmi akan diumumkan di sini begitu terkonfirmasi."
+        headline: "Dibangun bersama mitra terpercaya.",
+        body1: "Global Critical Thinkers berkolaborasi dengan universitas, sekolah, dan organisasi industri yang memiliki standar yang sama dengan kami dalam menguji cara berpikir. Mitra institusi dan pendidikan ini membantu membentuk pengalaman kompetisi yang berlandaskan rigor akademik dan profesional yang nyata.",
+        body2: "Mitra strategis menyumbangkan keahlian, sumber daya, dan platform yang memperluas jangkauan kompetisi — mulai dari perancangan penilaian hingga membuka peluang bagi peserta di luar hari kompetisi itu sendiri.",
+        body3: "Setiap kemitraan dipilih dengan cermat. Inilah cara GCT tetap terhubung dengan institusi dan standar yang nyata, bukan berjalan sendiri. Kesempatan bermitra saat ini terbuka, dan mitra resmi akan diumumkan di sini begitu terkonfirmasi."
       },
       judges: {
         eyebrow: "Juri",

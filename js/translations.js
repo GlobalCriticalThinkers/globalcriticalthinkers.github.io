@@ -885,7 +885,7 @@ const translations = {
       dim4Desc: "Kemampuan menjelaskan penalaran yang kompleks secara jelas dan logis.",
       dim5Title: "Refleksi",
       dim5Desc: "Kemampuan mempertahankan, mempertimbangkan ulang, dan menyempurnakan gagasan saat ditantang.",
-      philosophy: "Kami tidak menghargai jawaban tercepat.<br>Kami menghargai penalaran terkuat.",
+      philosophy: "Kami mengutamakan penalaran terkuat.<br>Bukan sekadar jawaban tercepat.",
       philosophyLabel: "Filosofi Penilaian",
       reportLabel: "Laporan Performa",
       reportCopy: "Setiap peserta menerima Laporan Performa personal berdasarkan kerangka evaluasi yang sama yang digunakan sepanjang kompetisi.",

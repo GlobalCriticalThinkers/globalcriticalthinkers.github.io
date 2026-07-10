@@ -110,20 +110,75 @@
   var navMobile = document.getElementById('navMobile');
 
   if (navToggle && navMobile) {
+    var navTransitioning = false;
+
+    function openNav() {
+      siteHeader.classList.add('is-nav-open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Close menu');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeNav() {
+      siteHeader.classList.remove('is-nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+      document.body.style.overflow = '';
+    }
+
+    function isNavOpen() {
+      return siteHeader.classList.contains('is-nav-open');
+    }
+
+    function lockToggle() {
+      navTransitioning = true;
+      window.setTimeout(function () { navTransitioning = false; }, 350);
+    }
+
     navToggle.addEventListener('click', function () {
-      var isOpen = siteHeader.classList.toggle('is-nav-open');
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (navTransitioning) return;
+      lockToggle();
+      if (isNavOpen()) {
+        closeNav();
+      } else {
+        openNav();
+      }
     });
 
     navMobile.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        siteHeader.classList.remove('is-nav-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', 'Open menu');
-        document.body.style.overflow = '';
+        if (navTransitioning) return;
+        lockToggle();
+        closeNav();
       });
+    });
+
+    /* Click outside the menu content (i.e. on the backdrop area of the
+       full-screen panel itself, not on a link) closes the menu. */
+    navMobile.addEventListener('click', function (event) {
+      if (event.target === navMobile) {
+        if (navTransitioning) return;
+        lockToggle();
+        closeNav();
+      }
+    });
+
+    /* Click anywhere else on the page while the menu is open closes it. */
+    document.addEventListener('click', function (event) {
+      if (!isNavOpen()) return;
+      if (navMobile.contains(event.target) || navToggle.contains(event.target)) return;
+      if (navTransitioning) return;
+      lockToggle();
+      closeNav();
+    });
+
+    /* Escape key closes the menu. */
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && isNavOpen()) {
+        if (navTransitioning) return;
+        lockToggle();
+        closeNav();
+      }
     });
   }
 

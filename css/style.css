@@ -2109,6 +2109,9 @@ body {
 
 /* Generic institutional text section (Why GCT Exists, Our Vision, Beyond Competition) */
 .about-block { padding-block: clamp(4.5rem, 8vw, 7rem); }
+/* Homepage Evaluation Teaser sits between two full-scale sections; match --section-pad
+   so pacing stays even through the How It Works → Evaluation Teaser → Why GCT Is Different run. */
+#evaluation-teaser { padding-block: var(--section-pad); }
 .about-block--paper { background: var(--paper); color: var(--ink); }
 .about-block--navy { background: var(--navy-900); border-top: 1px solid var(--line-navy); border-bottom: 1px solid var(--line-navy); }
 .about-block__head { max-width: 680px; }

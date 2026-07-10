@@ -2378,6 +2378,49 @@ body {
 .contact-info__value a { color: inherit; transition: color 0.25s ease; }
 .contact-info__value a:hover { color: var(--gold-light); }
 
+/* Social media icon row */
+.contact-info__social {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.contact-info__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 350ms ease,
+              box-shadow 350ms ease;
+}
+.contact-info__social-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.contact-info__social-link:hover,
+.contact-info__social-link:focus-visible {
+  transform: translateY(-4px) scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(201, 162, 75, 0.55));
+  box-shadow: 0 10px 24px -10px rgba(201, 162, 75, 0.45);
+  outline: none;
+}
+.contact-info__social-link:active {
+  transform: translateY(-1px) scale(0.96);
+  transition-duration: 120ms;
+}
+
+@media (max-width: 560px) {
+  .contact-info__social { gap: 1rem; }
+  .contact-info__social-link { width: 40px; height: 40px; }
+}
+
 @media (max-width: 900px) {
   .contact-grid { grid-template-columns: 1fr; }
   .contact-form__row { grid-template-columns: 1fr; }

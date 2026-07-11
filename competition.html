@@ -20,7 +20,7 @@
 
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="competition">
 
   <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
 
@@ -28,39 +28,7 @@
     <div class="progress-thread__fill" id="progressFill"></div>
   </div>
 
-  <header class="site-header" id="siteHeader">
-    <div class="site-header__inner">
-      <a href="index.html" class="site-header__logo">
-        <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-header__logo-img" data-i18n-alt="brand.logoAlt">
-      </a>
-
-      <nav class="site-nav" aria-label="Primary">
-        <a href="index.html" class="site-nav__link" data-i18n="nav.home">Home</a>
-        <a href="about.html" class="site-nav__link" data-i18n="nav.about">About</a>
-        <a href="competition.html" class="site-nav__link is-active" data-i18n="nav.competition">Competition</a>
-      </nav>
-
-      <div class="site-header__actions">
-        <div class="lang-switch" role="group" aria-label="Language switcher">
-          <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
-          <span class="lang-switch__divider" aria-hidden="true">|</span>
-          <button type="button" class="lang-switch__btn" data-lang="id" aria-pressed="false">ID</button>
-        </div>
-        <a href="index.html#registration" class="site-header__cta" data-i18n="nav.register">Register now</a>
-        <div class="nav-pop">
-          <button type="button" class="site-nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
-            <span class="site-nav__toggle-icon"></span>
-          </button>
-          <div class="nav-pop__panel" id="navMobile" role="menu">
-            <a href="index.html" class="nav-pop__link" role="menuitem" data-i18n="nav.home">Home</a>
-            <a href="about.html" class="nav-pop__link" role="menuitem" data-i18n="nav.about">About</a>
-            <a href="competition.html" class="nav-pop__link is-active" role="menuitem" data-i18n="nav.competition">Competition</a>
-            <a href="index.html#registration" class="nav-pop__cta" role="menuitem" data-i18n="nav.register">Register now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <header class="site-header" id="siteHeader" data-layout="header"></header>
 
   <main id="main">
 
@@ -207,50 +175,10 @@
   <!-- ============================================ -->
   <!-- FOOTER -->
   <!-- ============================================ -->
-  <footer class="site-footer">
-    <p class="site-footer__bookend" data-i18n-html="footer.bookend">Think sharper.<br>Your turn.</p>
+  <footer class="site-footer" data-layout="footer"></footer>
 
-    <div class="site-footer__main">
-      <div>
-        <div class="site-footer__brand">
-          <img src="images/logo-horizontal.png" alt="Global Critical Thinkers" class="site-footer__brand-img" data-i18n-alt="brand.logoAlt">
-        </div>
-        <p class="site-footer__tagline" data-i18n="footer.tagline">A Global Critical Thinking Competition where participants sharpen how they reason, judge, and communicate under real pressure.</p>
-      </div>
-
-      <nav class="footer-col" aria-label="Site navigation">
-        <p class="footer-col__title" data-i18n="footer.exploreTitle">Explore</p>
-        <ul>
-          <li><a href="index.html#why-gct" data-i18n="footer.exploreWhyGct">Why GCT</a></li>
-          <li><a href="index.html#how-it-works" data-i18n="footer.exploreHowItWorks">How it works</a></li>
-          <li><a href="index.html#quick-facts" data-i18n="footer.exploreOverview">Overview</a></li>
-          <li><a href="index.html#trust" data-i18n="footer.exploreFaq">FAQ</a></li>
-        </ul>
-      </nav>
-
-      <nav class="footer-col" aria-label="Registration">
-        <p class="footer-col__title" data-i18n="footer.registerTitle">Register</p>
-        <ul>
-          <li><a href="index.html#registration" data-i18n="footer.registerPricing">Pricing</a></li>
-          <li><a href="[[REGISTRATION_LINK_PLACEHOLDER]]" data-i18n="footer.registerNow">Register now</a></li>
-        </ul>
-      </nav>
-
-      <nav class="footer-col" aria-label="Contact">
-        <p class="footer-col__title" data-i18n="footer.contactTitle">Contact</p>
-        <ul>
-          <li><a href="contact.html" data-i18n="footer.contactEmail">Email us</a></li>
-          <li><a href="[[INSTAGRAM_LINK_PLACEHOLDER]]" data-i18n="footer.contactInstagram">Instagram</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="site-footer__bottom">
-      <p><span data-i18n="footer.copyright">©</span> <span id="currentYear"></span> Global Critical Thinkers.</p>
-      <p data-i18n="footer.bottomTagline">Think sharper. Reason without a script.</p>
-    </div>
-  </footer>
-
+  <script src="js/layout.js"></script>
+  <script src="js/layout-loader.js"></script>
   <script src="js/translations.js" defer></script>
   <script src="js/i18n.js" defer></script>
   <script src="js/script.js" defer></script>

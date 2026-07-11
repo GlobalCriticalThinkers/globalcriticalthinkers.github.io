@@ -21,7 +21,7 @@
   --paper-dim: #EAE4D2;
   --ink: #0B1220;
   --muted-on-navy: #92A0BC;
-  --muted-on-paper: #47463C;
+  --muted-on-paper: #5B5A4E;
   --white: #FFFFFF;
 
   --font-display: 'Fraunces', ui-serif, Georgia, serif;
@@ -340,8 +340,8 @@ body {
 /* Mobile nav toggle button */
 .site-nav__toggle {
   display: none;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   align-items: center;
   justify-content: center;
   color: var(--paper);
@@ -387,14 +387,12 @@ body {
     padding: clamp(6rem, 18vw, 8rem) var(--edge-pad) 3rem;
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
     transform: translateY(-8px);
     transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), visibility 0s linear 0.35s;
   }
-  .site-header.is-nav-open + .site-nav__mobile {
+  .site-header.is-nav-open .site-nav__mobile {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
     transform: translateY(0);
     transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), visibility 0s linear 0s;
   }
@@ -1211,10 +1209,6 @@ body {
 }
 .trust-tab.is-active, .trust-tab:hover { color: var(--ink); border-color: var(--gold); }
 
-@media (max-width: 560px) {
-  .trust-tab { padding: 0.9rem 0.6rem; margin-right: 0.6rem; }
-}
-
 .trust-panel { display: none; }
 .trust-panel.is-active { display: block; animation: fade-in 0.5s ease; }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
@@ -1466,6 +1460,7 @@ body {
 
 .compare {
   margin-top: clamp(3.5rem, 6vw, 5rem);
+  max-width: 780px;
 }
 .compare__labels {
   display: grid;
@@ -1502,17 +1497,7 @@ body {
 }
 
 @media (max-width: 560px) {
-  .compare__labels { grid-template-columns: 1fr; gap: 0.4rem; }
-  .compare__labels span:last-child { text-align: left; }
-  .compare__row { grid-template-columns: 1fr; row-gap: 0.35rem; padding-block: 1.2rem; }
-  .compare__left, .compare__right { font-size: 1.05rem; text-align: left; }
-  .compare__right { padding-left: 1rem; position: relative; }
-  .compare__right::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--gold);
-  }
+  .compare__left, .compare__right { font-size: 1.02rem; }
 }
 
 /* -------------------------------------------------------------------------
@@ -2123,9 +2108,6 @@ body {
 
 /* Generic institutional text section (Why GCT Exists, Our Vision, Beyond Competition) */
 .about-block { padding-block: clamp(4.5rem, 8vw, 7rem); }
-/* Homepage Evaluation Teaser sits between two full-scale sections; match --section-pad
-   so pacing stays even through the How It Works → Evaluation Teaser → Why GCT Is Different run. */
-#evaluation-teaser { padding-block: var(--section-pad); }
 .about-block--paper { background: var(--paper); color: var(--ink); }
 .about-block--navy { background: var(--navy-900); border-top: 1px solid var(--line-navy); border-bottom: 1px solid var(--line-navy); }
 .about-block__head { max-width: 680px; }

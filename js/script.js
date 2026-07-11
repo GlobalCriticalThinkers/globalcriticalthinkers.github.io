@@ -5,9 +5,8 @@
  *   1. Scroll progress thread fill
  *   2. Header scrolled state
  *   3. Section reveal via IntersectionObserver
- *   4. Trust section tabs (Partners / Judges / Awards / Testimonials / Venue / FAQ)
- *   5. FAQ accordion
- *   6. Footer year
+ *   4. FAQ accordion
+ *   5. Footer year
  */
 
 (function () {
@@ -65,30 +64,7 @@
   }
 
   /* ------------------------------------------------------------------
-     4. Trust section tabs
-     ------------------------------------------------------------------ */
-  var tabs = document.querySelectorAll('.trust-tab');
-  var panels = document.querySelectorAll('.trust-panel');
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var target = tab.getAttribute('data-tab');
-
-      tabs.forEach(function (t) {
-        t.classList.remove('is-active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('is-active');
-      tab.setAttribute('aria-selected', 'true');
-
-      panels.forEach(function (p) {
-        p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
-      });
-    });
-  });
-
-  /* ------------------------------------------------------------------
-     5. FAQ accordion
+     4. FAQ accordion
      ------------------------------------------------------------------ */
   document.querySelectorAll('.faq-item__q').forEach(function (btn) {
     btn.addEventListener('click', function () {

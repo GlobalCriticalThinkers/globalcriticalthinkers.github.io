@@ -24,7 +24,8 @@ const translations = {
       register: "Register now",
       home: "Home",
       about: "About",
-      competition: "Competition"
+      competition: "Competition",
+      contact: "Contact"
     },
     hero: {
       imageAlt: "A student reasoning through a real-world challenge during Global Critical Thinkers",
@@ -592,7 +593,8 @@ const translations = {
       register: "Daftar sekarang",
       home: "Beranda",
       about: "Tentang",
-      competition: "Kompetisi"
+      competition: "Kompetisi",
+      contact: "Kontak"
     },
     hero: {
       imageAlt: "Seorang peserta bernalar menghadapi tantangan nyata dalam ajang Global Critical Thinkers",

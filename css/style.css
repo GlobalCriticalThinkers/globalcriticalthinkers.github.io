@@ -1183,19 +1183,20 @@ body {
 }
 
 /* -------------------------------------------------------------------------
-   12. TRUST — Awards / Venue / FAQ, stacked (final reassurance before CTA)
+   12. TRUST — Awards / Venue / FAQ, each its own section (final reassurance
+   before CTA). Awards & FAQ sit on --section--paper, Venue on --section--navy;
+   background/text color come from those section modifiers, not from .trust.
    ------------------------------------------------------------------------- */
-.trust { background: var(--paper); color: var(--ink); }
 .trust__head { max-width: 640px; margin-bottom: clamp(3rem, 5.5vw, 4.5rem); }
 .trust__head .display-lg { margin-top: 1.3rem; color: var(--ink); }
-
-.trust-block { margin-bottom: clamp(3.5rem, 6vw, 5rem); }
-.trust-block:last-child { margin-bottom: 0; }
-.trust-block--divider { padding-top: clamp(3.5rem, 6vw, 5rem); border-top: 1px solid rgba(11,18,32,0.12); }
 
 .panel-intro { max-width: 620px; margin-bottom: 2.2rem; }
 .panel-intro__title { font-family: var(--font-display); font-size: 1.35rem; color: var(--ink); margin-bottom: 0.7rem; }
 .panel-intro__copy { color: var(--muted-on-paper); font-size: 0.95rem; line-height: 1.7; }
+
+/* Venue panel sits on a navy section — override the paper-tuned text colors */
+.trust--venue .venue-panel__name { color: var(--paper); }
+.trust--venue .venue-panel__note { color: var(--muted-on-navy); }
 
 .logo-row {
   display: grid;

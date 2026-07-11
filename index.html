@@ -347,7 +347,7 @@
         </div>
 
         <div class="trust-nav reveal-stagger" role="tablist" aria-label="Awards, Venue, FAQ">
-          <button class="trust-nav__card is-active" type="button" role="tab" id="trust-tab-awards" aria-selected="true" aria-controls="trust-panel-awards" data-target="awards">
+          <button class="trust-nav__card" type="button" role="tab" id="trust-tab-awards" aria-selected="false" aria-controls="trust-panel-awards" data-target="awards">
             <span class="trust-nav__icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 5.6L20 8.3l-4.2 3.9 1.2 5.8L12 14.9l-5 3.1 1.2-5.8L4 8.3l5.6-.7L12 2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
             </span>
@@ -371,7 +371,9 @@
         </div>
 
         <div class="trust-panels">
-          <div class="trust-panel is-active" id="trust-panel-awards" role="tabpanel" aria-labelledby="trust-tab-awards">
+          <p class="trust-empty" id="trust-empty" data-i18n="trust.emptyState">Choose a topic above to continue.</p>
+
+          <div class="trust-panel" id="trust-panel-awards" role="tabpanel" aria-labelledby="trust-tab-awards" hidden>
             <div class="panel-intro reveal">
               <h3 class="panel-intro__title" data-i18n="trust.awardsTitle">Recognition & Certification</h3>
               <p class="panel-intro__copy" data-i18n="trust.awardsCopy">This competition does not provide cash prizes. Every participant who completes the competition will receive an official certificate.</p>

@@ -47,19 +47,20 @@
           <button type="button" class="lang-switch__btn" data-lang="id" aria-pressed="false">ID</button>
         </div>
         <a href="index.html#registration" class="site-header__cta" data-i18n="nav.register">Register now</a>
-        <button type="button" class="site-nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
-          <span class="site-nav__toggle-icon"></span>
-        </button>
+        <div class="nav-pop">
+          <button type="button" class="site-nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+            <span class="site-nav__toggle-icon"></span>
+          </button>
+          <div class="nav-pop__panel" id="navMobile" role="menu">
+            <a href="index.html" class="nav-pop__link" role="menuitem" data-i18n="nav.home">Home</a>
+            <a href="about.html" class="nav-pop__link" role="menuitem" data-i18n="nav.about">About</a>
+            <a href="competition.html" class="nav-pop__link is-active" role="menuitem" data-i18n="nav.competition">Competition</a>
+            <a href="index.html#registration" class="nav-pop__cta" role="menuitem" data-i18n="nav.register">Register now</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
-
-  <div class="site-nav__mobile" id="navMobile">
-    <a href="index.html" class="site-nav__mobile-link" data-i18n="nav.home">Home</a>
-    <a href="about.html" class="site-nav__mobile-link" data-i18n="nav.about">About</a>
-    <a href="competition.html" class="site-nav__mobile-link is-active" data-i18n="nav.competition">Competition</a>
-    <a href="index.html#registration" class="site-header__cta site-nav__mobile-cta" data-i18n="nav.register">Register now</a>
-  </div>
 
   <main id="main">
 

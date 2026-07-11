@@ -80,6 +80,55 @@
   });
 
   /* ------------------------------------------------------------------
+     Trust section — Awards / Venue / FAQ card switcher
+     ------------------------------------------------------------------ */
+  var trustCards = document.querySelectorAll('.trust-nav__card');
+
+  function activateTrustCard(target) {
+    var card = document.querySelector('.trust-nav__card[data-target="' + target + '"]');
+    if (!card) return;
+
+    trustCards.forEach(function (c) {
+      var isTarget = c === card;
+      c.classList.toggle('is-active', isTarget);
+      c.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('.trust-panel').forEach(function (panel) {
+      var isTarget = panel.id === 'trust-panel-' + target;
+      panel.classList.toggle('is-active', isTarget);
+      panel.hidden = !isTarget;
+    });
+  }
+
+  if (trustCards.length) {
+    trustCards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        var target = card.getAttribute('data-target');
+        if (!target || card.classList.contains('is-active')) return;
+        activateTrustCard(target);
+      });
+    });
+
+    /* Deep links like #faq or #venue should open the matching card
+       instead of landing on a hidden panel. */
+    var deepLinkMap = { faq: 'faq', venue: 'venue', trust: 'awards' };
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      var hash = link.getAttribute('href').slice(1);
+      if (deepLinkMap[hash]) {
+        link.addEventListener('click', function () {
+          activateTrustCard(deepLinkMap[hash]);
+        });
+      }
+    });
+
+    if (window.location.hash) {
+      var initialHash = window.location.hash.slice(1);
+      if (deepLinkMap[initialHash]) activateTrustCard(deepLinkMap[initialHash]);
+    }
+  }
+
+  /* ------------------------------------------------------------------
      Mobile navigation toggle
      ------------------------------------------------------------------ */
   var navToggle = document.getElementById('navToggle');

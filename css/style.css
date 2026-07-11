@@ -1183,35 +1183,15 @@ body {
 }
 
 /* -------------------------------------------------------------------------
-   12. TRUST GRID — partners / judges / awards / testimonials placeholders
+   12. TRUST — Awards / Venue / FAQ, stacked (final reassurance before CTA)
    ------------------------------------------------------------------------- */
 .trust { background: var(--paper); color: var(--ink); }
 .trust__head { max-width: 640px; margin-bottom: clamp(3rem, 5.5vw, 4.5rem); }
 .trust__head .display-lg { margin-top: 1.3rem; color: var(--ink); }
 
-.trust-tabs {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  border-bottom: 1px solid rgba(11,18,32,0.12);
-  margin-bottom: 3rem;
-}
-.trust-tab {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.9rem 0.2rem;
-  margin-right: 1.8rem;
-  color: var(--muted-on-paper);
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-.trust-tab.is-active, .trust-tab:hover { color: var(--ink); border-color: var(--gold); }
-
-.trust-panel { display: none; }
-.trust-panel.is-active { display: block; animation: fade-in 0.5s ease; }
-@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.trust-block { margin-bottom: clamp(3.5rem, 6vw, 5rem); }
+.trust-block:last-child { margin-bottom: 0; }
+.trust-block--divider { padding-top: clamp(3.5rem, 6vw, 5rem); border-top: 1px solid rgba(11,18,32,0.12); }
 
 .panel-intro { max-width: 620px; margin-bottom: 2.2rem; }
 .panel-intro__title { font-family: var(--font-display); font-size: 1.35rem; color: var(--ink); margin-bottom: 0.7rem; }

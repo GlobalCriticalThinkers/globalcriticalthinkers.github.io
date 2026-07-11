@@ -224,6 +224,7 @@ body {
   top: 0; right: 0;
   width: 2px;
   height: 100vh;
+  height: 100dvh;
   background: rgba(255,255,255,0.06);
   z-index: 900;
 }
@@ -241,11 +242,6 @@ body {
   background: var(--navy-950, #070b14);
   transition: background 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
   border-bottom: 1px solid transparent;
-  /* Keeps the sticky header in its own compositor layer on mobile Safari,
-     so it repaints cleanly (instead of visually overlapping content below)
-     when the browser's own UI chrome collapses or expands the viewport. */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
 }
 .site-header.is-scrolled {
   background: rgba(7, 11, 20, 0.92);

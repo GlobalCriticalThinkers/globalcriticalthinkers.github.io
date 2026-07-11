@@ -37,28 +37,6 @@
     }
   }, { passive: true });
 
-  /* Mobile browsers (notably iOS Safari) resize the visual viewport when
-     their own UI chrome (address bar, tab switcher) collapses or expands.
-     That doesn't fire a `scroll` event, so the sticky header's scrolled
-     state and the layout below it can fall out of sync and visually
-     overlap until the next real scroll. Re-running the same update on
-     resize keeps them reconciled. */
-  window.addEventListener('resize', function () {
-    if (!ticking) {
-      window.requestAnimationFrame(updateOnScroll);
-      ticking = true;
-    }
-  }, { passive: true });
-
-  if (window.visualViewport) {
-    window.visualViewport.addEventListener('resize', function () {
-      if (!ticking) {
-        window.requestAnimationFrame(updateOnScroll);
-        ticking = true;
-      }
-    }, { passive: true });
-  }
-
   updateOnScroll();
 
   /* ------------------------------------------------------------------
@@ -154,35 +132,36 @@
   }
 
   /* ------------------------------------------------------------------
-     Mobile navigation toggle
+     Mobile navigation toggle — floating dropdown panel
      ------------------------------------------------------------------ */
   var navToggle = document.getElementById('navToggle');
   var navMobile = document.getElementById('navMobile');
+  var navPop = navToggle ? navToggle.closest('.nav-pop') : null;
 
-  if (navToggle && navMobile) {
+  if (navToggle && navMobile && navPop) {
     var navTransitioning = false;
 
+    function isNavOpen() {
+      return navPop.classList.contains('is-open');
+    }
+
     function openNav() {
+      navPop.classList.add('is-open');
       siteHeader.classList.add('is-nav-open');
       navToggle.setAttribute('aria-expanded', 'true');
       navToggle.setAttribute('aria-label', 'Close menu');
-      document.body.style.overflow = 'hidden';
     }
 
     function closeNav() {
+      navPop.classList.remove('is-open');
       siteHeader.classList.remove('is-nav-open');
       navToggle.setAttribute('aria-expanded', 'false');
       navToggle.setAttribute('aria-label', 'Open menu');
-      document.body.style.overflow = '';
-    }
-
-    function isNavOpen() {
-      return siteHeader.classList.contains('is-nav-open');
     }
 
     function lockToggle() {
       navTransitioning = true;
-      window.setTimeout(function () { navTransitioning = false; }, 350);
+      window.setTimeout(function () { navTransitioning = false; }, 250);
     }
 
     navToggle.addEventListener('click', function () {
@@ -197,37 +176,22 @@
 
     navMobile.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        if (navTransitioning) return;
-        lockToggle();
         closeNav();
       });
     });
 
-    /* Click outside the menu content (i.e. on the backdrop area of the
-       full-screen panel itself, not on a link) closes the menu. */
-    navMobile.addEventListener('click', function (event) {
-      if (event.target === navMobile) {
-        if (navTransitioning) return;
-        lockToggle();
-        closeNav();
-      }
-    });
-
-    /* Click anywhere else on the page while the menu is open closes it. */
+    /* Click anywhere outside the panel and its trigger closes it. */
     document.addEventListener('click', function (event) {
       if (!isNavOpen()) return;
-      if (navMobile.contains(event.target) || navToggle.contains(event.target)) return;
-      if (navTransitioning) return;
-      lockToggle();
+      if (navPop.contains(event.target)) return;
       closeNav();
     });
 
-    /* Escape key closes the menu. */
+    /* Escape key closes the panel and returns focus to the trigger. */
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && isNavOpen()) {
-        if (navTransitioning) return;
-        lockToggle();
         closeNav();
+        navToggle.focus();
       }
     });
   }

@@ -37,7 +37,6 @@
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html" class="site-nav__link is-active" data-i18n="nav.home">Home</a>
         <a href="about.html" class="site-nav__link" data-i18n="nav.about">About</a>
-        <a href="competition.html" class="site-nav__link" data-i18n="nav.competition">Competition</a>
       </nav>
 
       <div class="site-header__actions">
@@ -52,14 +51,13 @@
         </button>
       </div>
     </div>
-  </header>
 
-  <div class="site-nav__mobile" id="navMobile">
-    <a href="index.html" class="site-nav__mobile-link is-active" data-i18n="nav.home">Home</a>
-    <a href="about.html" class="site-nav__mobile-link" data-i18n="nav.about">About</a>
-    <a href="competition.html" class="site-nav__mobile-link" data-i18n="nav.competition">Competition</a>
-    <a href="#registration" class="site-header__cta site-nav__mobile-cta" data-i18n="nav.register">Register now</a>
-  </div>
+    <div class="site-nav__mobile" id="navMobile">
+      <a href="index.html" class="site-nav__mobile-link is-active" data-i18n="nav.home">Home</a>
+      <a href="about.html" class="site-nav__mobile-link" data-i18n="nav.about">About</a>
+      <a href="#registration" class="site-header__cta site-nav__mobile-cta" data-i18n="nav.register">Register now</a>
+    </div>
+  </header>
 
   <main id="main">
 
@@ -80,7 +78,7 @@
           <p class="hero__sub" data-i18n="hero.sub">One real-world challenge, one day, one panel of judges. Participants reason, defend, and present their way to a result — no scripts, no memorized answers.</p>
           <div class="hero__actions">
             <a href="#registration" class="btn btn--gold" data-i18n="hero.ctaPrimary">Register Now</a>
-            <a href="#how-it-works" class="btn btn--outline" data-i18n="hero.ctaSecondary">Explore the Competition</a>
+            <a href="#why-gct" class="btn btn--outline" data-i18n="hero.ctaSecondary">Explore the Competition</a>
           </div>
         </div>
       </div>
@@ -189,17 +187,29 @@
       </div>
     </section>
 
-    <section class="about-block about-block--navy" id="evaluation-teaser" aria-labelledby="evaluation-teaser-heading">
+    <section class="section section--paper mission" id="why-exists" aria-labelledby="mission-heading">
       <div class="container">
-        <div class="about-block__head reveal">
-          <p class="eyebrow" data-i18n="evaluationTeaser.eyebrow">Evaluation</p>
-          <h2 id="evaluation-teaser-heading" class="display-md" data-i18n="evaluationTeaser.headline">How great thinking is evaluated.</h2>
+        <div class="mission__top reveal">
+          <div>
+            <p class="eyebrow eyebrow--dark" data-i18n="mission.eyebrow">The mindset</p>
+            <h2 id="mission-heading" class="display-lg mission__headline" data-i18n-html="mission.headline">Certainty is easy.<br>Clear thinking isn't.</h2>
+          </div>
+          <p class="mission__copy mission__copy--paper" data-i18n="mission.copy">GCT is not designed to see who can perform confidence. It's designed to see how you actually think when the answer isn't obvious, the clock is running, and no one is going to agree with you by default. What separates strong thinkers isn't how sure they sound. It's how carefully they've reasoned before they speak.</p>
         </div>
-        <div class="about-block__body reveal">
-          <p data-i18n="evaluationTeaser.body">Participants are assessed through a structured framework built around how they reason — not how confident they sound.</p>
-        </div>
-        <div class="reveal" style="margin-top: 2rem;">
-          <a href="competition.html#evaluation" class="btn btn--outline" data-i18n-html="evaluationTeaser.cta">Explore the Evaluation Framework <span aria-hidden="true">&rarr;</span></a>
+
+        <div class="mission__stats mission__stats--paper reveal-stagger">
+          <div class="mission__stat">
+            <div class="mission__stat-num">1</div>
+            <div class="mission__stat-label" data-i18n="mission.stat1">Real-world challenge, unseen until the day it begins</div>
+          </div>
+          <div class="mission__stat">
+            <div class="mission__stat-num">4</div>
+            <div class="mission__stat-label" data-i18n="mission.stat2">Distinct disciplines of thinking required to solve it: analysis, evidence, strategy, communication</div>
+          </div>
+          <div class="mission__stat">
+            <div class="mission__stat-num">0</div>
+            <div class="mission__stat-label" data-i18n="mission.stat3">Scripted answers permitted once your reasoning is questioned</div>
+          </div>
         </div>
       </div>
     </section>
@@ -236,6 +246,74 @@
       </div>
     </section>
 
+    <section class="section evaluation" id="evaluation" aria-labelledby="evaluation-heading">
+      <div class="container">
+        <div class="evaluation__grid">
+          <div class="evaluation__content">
+            <div class="evaluation__head reveal">
+              <p class="eyebrow" data-i18n="evaluation.eyebrow">Assessment</p>
+              <h2 id="evaluation-heading" class="display-lg" data-i18n="evaluation.headline">How You're Evaluated</h2>
+              <p class="lede" data-i18n="evaluation.intro1">Great decisions begin with great reasoning.</p>
+              <p class="lede" style="margin-top:0.8rem;" data-i18n="evaluation.intro2">Every participant is assessed using a standardized evaluation framework designed to measure not only outcomes, but also the quality of thinking behind every decision.</p>
+            </div>
+
+            <div class="evaluation__list reveal-stagger">
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">01</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim1Title">Critical Analysis</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim1Desc">Ability to identify the real problem instead of reacting to the obvious one.</p>
+                </div>
+              </div>
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">02</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim2Title">Evidence Evaluation</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim2Desc">Ability to distinguish facts, assumptions, opinions, and weak arguments.</p>
+                </div>
+              </div>
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">03</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim3Title">Decision Making</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim3Desc">Ability to choose the strongest solution under uncertainty.</p>
+                </div>
+              </div>
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">04</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim4Title">Communication</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim4Desc">Ability to explain complex reasoning clearly and logically.</p>
+                </div>
+              </div>
+              <div class="evaluation__item">
+                <span class="evaluation__item-num">05</span>
+                <div>
+                  <h3 class="evaluation__item-title" data-i18n="evaluation.dim5Title">Reflection</h3>
+                  <p class="evaluation__item-desc" data-i18n="evaluation.dim5Desc">Ability to defend, reconsider, and improve ideas when challenged.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="evaluation__block reveal">
+              <p class="evaluation__block-label" data-i18n="evaluation.philosophyLabel">Assessment Philosophy</p>
+              <p class="evaluation__philosophy-text" data-i18n-html="evaluation.philosophy">We do not reward the fastest answer.<br>We reward the strongest reasoning.</p>
+            </div>
+
+            <div class="evaluation__block reveal">
+              <p class="evaluation__block-label" data-i18n="evaluation.reportLabel">Performance Report</p>
+              <p class="evaluation__report-copy" data-i18n="evaluation.reportCopy">Every participant receives a personalized Performance Report based on the same evaluation framework used throughout the competition.</p>
+              <p class="evaluation__report-note" data-i18n-html="evaluation.reportNote">Winning is only one outcome.<br>Understanding how you think is the lasting one.</p>
+            </div>
+          </div>
+
+          <div class="evaluation__media reveal">
+            <img src="images/gambar7.png" alt="Participants engaged in collaborative analysis and reasoning during the competition" data-i18n-alt="evaluation.imageAlt" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section achievement" id="achievement" aria-labelledby="achievement-heading">
       <div class="achievement__media">
         <img src="images/gambar1.jpg" alt="A participant in the quiet moment after their reasoning has been tested and held" loading="lazy" data-i18n-alt="achievement.imageAlt">
@@ -259,33 +337,6 @@
       </div>
     </section>
 
-    <section class="section section--paper mission" id="why-exists" aria-labelledby="mission-heading">
-      <div class="container">
-        <div class="mission__top reveal">
-          <div>
-            <p class="eyebrow eyebrow--dark" data-i18n="mission.eyebrow">The mindset</p>
-            <h2 id="mission-heading" class="display-lg mission__headline" data-i18n-html="mission.headline">Certainty is easy.<br>Clear thinking isn't.</h2>
-          </div>
-          <p class="mission__copy mission__copy--paper" data-i18n="mission.copy">GCT is designed to see how you actually think when the answer isn't obvious, the clock is running, and no one agrees with you by default. What separates strong thinkers isn't how sure they sound. It's how carefully they've reasoned before they speak.</p>
-        </div>
-
-        <div class="mission__stats mission__stats--paper reveal-stagger">
-          <div class="mission__stat">
-            <div class="mission__stat-num">1</div>
-            <div class="mission__stat-label" data-i18n="mission.stat1">Real-world challenge, unseen until the day it begins</div>
-          </div>
-          <div class="mission__stat">
-            <div class="mission__stat-num">4</div>
-            <div class="mission__stat-label" data-i18n="mission.stat2">Distinct disciplines of thinking required to solve it: analysis, evidence, strategy, communication</div>
-          </div>
-          <div class="mission__stat">
-            <div class="mission__stat-num">0</div>
-            <div class="mission__stat-label" data-i18n="mission.stat3">Scripted answers permitted once your reasoning is questioned</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section section--paper trust" id="trust" aria-labelledby="trust-heading">
       <div class="container">
         <div class="trust__head reveal">
@@ -304,18 +355,19 @@
 
         <div class="trust-panel is-active" data-panel="partners">
           <div class="panel-intro">
-            <h3 class="panel-intro__title" data-i18n="trust.partnersTitle">Built together with trusted partners.</h3>
-            <p class="panel-intro__copy" data-i18n="trust.partnersCopy">Global Critical Thinkers collaborates with educational institutions, organizations, and strategic partners to create a meaningful competition experience for students worldwide.</p>
+            <h3 class="panel-intro__title" data-i18n="trust.partnersTitle">Strategic Partners</h3>
+            <p class="panel-intro__copy" data-i18n="trust.partnersCopy">Partnership opportunities are currently open. We're in conversation with universities, industry leaders, and organizations who share our standard for how thinking should be tested — official partners will be named here as they're confirmed.</p>
           </div>
-          <a href="competition.html#partners" class="btn btn--outline-dark" data-i18n-html="trust.partnersCta">Meet Our Partners <span aria-hidden="true">&rarr;</span></a>
         </div>
 
         <div class="trust-panel" data-panel="judges">
           <div class="panel-intro">
-            <h3 class="panel-intro__title" data-i18n="trust.judgesTitle">Meet the experts behind the evaluation.</h3>
-            <p class="panel-intro__copy" data-i18n="trust.judgesCopy">Our judges are carefully selected from diverse professional and academic backgrounds to evaluate participants with fairness, depth, and real-world perspective.</p>
+            <h3 class="panel-intro__title" data-i18n="trust.judgesTitle">Meet Our Judges</h3>
+            <p class="panel-intro__copy" data-i18n="trust.judgesCopy">Judges are currently being finalized. Every judge will come from professional backgrounds across academia, industry, entrepreneurship, and public policy — chosen for their ability to evaluate reasoning, not performance.</p>
           </div>
-          <a href="competition.html#judges" class="btn btn--outline-dark" data-i18n-html="trust.judgesCta">Learn about our Judges <span aria-hidden="true">&rarr;</span></a>
+          <div class="judges-statement">
+            <p class="judges-statement__text" data-i18n="trust.judgesStatement">Names will be announced here as they're confirmed, ahead of the competition.</p>
+          </div>
         </div>
 
         <div class="trust-panel" data-panel="awards">
@@ -338,16 +390,16 @@
         <div class="trust-panel" data-panel="why-gct">
           <div class="feature-grid">
             <div class="feature-card">
-              <h3 data-i18n="trust.feature1Title">Skills That Outlast the Competition</h3>
-              <p data-i18n="trust.feature1Copy">Structured reasoning, evidence-based thinking, and clear communication — abilities that carry into university interviews, internships, and everyday decisions.</p>
+              <h3 data-i18n="trust.feature1Title">A Real Test of Judgment</h3>
+              <p data-i18n="trust.feature1Copy">Not a simulation. A real-world challenge that exposes how you actually think when there's no obvious answer to fall back on.</p>
             </div>
             <div class="feature-card">
-              <h3 data-i18n="trust.feature2Title">A Credential Worth Having</h3>
-              <p data-i18n="trust.feature2Copy">A personalized Performance Report and certificate that speak to how you think — useful for university applications and future opportunities.</p>
+              <h3 data-i18n="trust.feature2Title">Feedback That Sharpens You</h3>
+              <p data-i18n="trust.feature2Copy">Judges who think for a living tell you exactly where your reasoning held and where it didn't.</p>
             </div>
             <div class="feature-card">
-              <h3 data-i18n="trust.feature3Title">A Global Peer Network</h3>
-              <p data-i18n="trust.feature3Copy">Meet ambitious, sharp-minded students from other countries and backgrounds — the kind of network that keeps proving useful long after the competition ends.</p>
+              <h3 data-i18n="trust.feature3Title">Composure Under Scrutiny</h3>
+              <p data-i18n="trust.feature3Copy">Learn to hold a position, question it honestly, and communicate it clearly — even when someone is actively trying to take it apart.</p>
             </div>
           </div>
         </div>
@@ -394,7 +446,7 @@
             </div>
             <div class="faq-item">
               <button class="faq-item__q"><span data-i18n="trust.faqQ7">When will the venue be announced?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-              <div class="faq-item__a"><p data-i18n="trust.faqA7">The venue shown on this website is the planned location for the event. Final confirmation will be announced no later than one month before the event takes place.</p></div>
+              <div class="faq-item__a"><p data-i18n="trust.faqA7">The official venue will be announced before the event.</p></div>
             </div>
             <div class="faq-item">
               <button class="faq-item__q"><span data-i18n="trust.faqQ8">What happens after payment?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
@@ -515,7 +567,7 @@
           <li><a href="#why-gct" data-i18n="footer.exploreWhyGct">Why GCT</a></li>
           <li><a href="#how-it-works" data-i18n="footer.exploreHowItWorks">How it works</a></li>
           <li><a href="#quick-facts" data-i18n="footer.exploreOverview">Overview</a></li>
-          <li><a href="#trust" data-i18n="footer.exploreFaq">Everything to Know</a></li>
+          <li><a href="#trust" data-i18n="footer.exploreFaq">FAQ</a></li>
         </ul>
       </nav>
 

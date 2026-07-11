@@ -37,6 +37,28 @@
     }
   }, { passive: true });
 
+  /* Mobile browsers (notably iOS Safari) resize the visual viewport when
+     their own UI chrome (address bar, tab switcher) collapses or expands.
+     That doesn't fire a `scroll` event, so the sticky header's scrolled
+     state and the layout below it can fall out of sync and visually
+     overlap until the next real scroll. Re-running the same update on
+     resize keeps them reconciled. */
+  window.addEventListener('resize', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(updateOnScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateOnScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
   updateOnScroll();
 
   /* ------------------------------------------------------------------

@@ -83,6 +83,7 @@
      Trust section — Awards / Venue / FAQ card switcher
      ------------------------------------------------------------------ */
   var trustCards = document.querySelectorAll('.trust-nav__card');
+  var trustPanelsWrap = document.querySelector('.trust-panels');
 
   function activateTrustCard(target) {
     var card = document.querySelector('.trust-nav__card[data-target="' + target + '"]');
@@ -99,6 +100,8 @@
       panel.classList.toggle('is-active', isTarget);
       panel.hidden = !isTarget;
     });
+
+    if (trustPanelsWrap) trustPanelsWrap.classList.add('has-selection');
   }
 
   if (trustCards.length) {

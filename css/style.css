@@ -1291,6 +1291,19 @@ body {
 
 .trust-panels { position: relative; }
 
+.trust-empty {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--muted-on-paper);
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3.2rem) 1rem;
+  border: 1px dashed rgba(11,18,32,0.16);
+  border-radius: var(--radius-lg);
+  animation: trustPanelIn 0.45s var(--ease);
+}
+.trust-panels.has-selection .trust-empty { display: none; }
+
 .trust-panel {
   animation: trustPanelIn 0.45s var(--ease);
 }

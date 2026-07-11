@@ -1641,25 +1641,46 @@ body {
   max-width: 16ch;
 }
 
-/* Supporting information — clearly secondary, separated by whitespace only, no divider line */
+/* Supporting information — Venue / Preparation / Duration / Location.
+   Reads as a key summary of the section: a top rule ties it visually to
+   the fact grid above, each item is a labeled pair with a serif value
+   carrying real weight, and vertical dividers on wider screens give it
+   the rhythm of a data strip rather than trailing footnotes. */
 .glance__support {
-  margin-top: clamp(4.5rem, 7vw, 6.5rem);
+  margin-top: clamp(3.5rem, 6vw, 5rem);
+  padding-top: clamp(2rem, 3.5vw, 2.75rem);
+  border-top: 1px solid rgba(11,18,32,0.14);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(2rem, 3.5vw, 3rem);
+  gap: clamp(2rem, 3vw, 2.5rem);
+}
+.glance__support-item {
+  position: relative;
+  padding-left: clamp(1.25rem, 2vw, 1.75rem);
+}
+.glance__support-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 2px;
+  background: var(--gold);
 }
 .glance__support-label {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--gold);
 }
 .glance__support-value {
-  margin-top: 0.6rem;
-  font-size: 0.92rem;
-  color: var(--muted-on-paper);
-  line-height: 1.55;
+  margin-top: 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
 }
 
 @media (max-width: 860px) {
@@ -1668,7 +1689,7 @@ body {
 }
 @media (max-width: 560px) {
   .glance__facts { grid-template-columns: 1fr; }
-  .glance__support { grid-template-columns: 1fr; }
+  .glance__support { grid-template-columns: 1fr; row-gap: 1.75rem; }
 }
 
 /* -------------------------------------------------------------------------

@@ -421,18 +421,11 @@ const translations = {
         intro: "Global Critical Thinkers is an educational competition platform designed to develop critical thinking, evidence-based decision-making, communication, and responsible leadership through real-world challenges."
       },
       whyExists: {
-        eyebrow: "Why GCT exists",
-        headline: "A world with more information, and a growing need for better judgment.",
-        body1: "Today's world offers more information than any generation before it has had access to. What has not grown at the same pace is the ability to evaluate that information carefully — to separate a strong argument from a persuasive one, and a sound decision from a fast one.",
-        body2: "Global Critical Thinkers was established to give young people a structured place to practice exactly that: reasoning through real, unresolved problems, under real scrutiny, without a script to fall back on.",
-        bridge: "That purpose points toward something larger than any single competition — a vision for the kind of thinkers this generation can become."
-      },
-      vision: {
-        eyebrow: "Our vision",
-        headline: "A generation that reasons carefully before it decides.",
-        body1: "Our long-term vision is an educational one: to help develop a generation of thinkers who are more thoughtful in how they reason, stronger in how they communicate, and more responsible in how they decide.",
-        body2: "This vision extends beyond any single competition. It is about the habits of mind that stay with a participant long after the day of the event has ended.",
-        bridge: "A vision like this needs firm ground to stand on — the principles that guide every decision we make."
+        eyebrow: "Why we exist",
+        headline: "More information than ever. Not, on its own, better judgment.",
+        body1: "No generation before this one has had so much information within reach. What has not kept pace is the ability to weigh it well — to tell a strong argument from a merely persuasive one, and a sound decision from a fast one.",
+        body2: "Global Critical Thinkers was founded on that gap. We wanted to give young people a place to practice reasoning through real, unresolved problems, under genuine scrutiny, with no script to hide behind.",
+        body3: "Our aim reaches beyond any single competition. We hope to help shape a generation that reasons more carefully, communicates more responsibly, and carries better judgment into every decision that follows."
       },
       philosophy: {
         eyebrow: "Our philosophy",
@@ -1021,18 +1014,11 @@ const translations = {
         intro: "Global Critical Thinkers adalah platform kompetisi edukatif yang dirancang untuk mengembangkan kemampuan berpikir kritis, pengambilan keputusan berbasis bukti, komunikasi, dan kepemimpinan yang bertanggung jawab melalui tantangan nyata."
       },
       whyExists: {
-        eyebrow: "Mengapa GCT hadir",
-        headline: "Dunia dengan lebih banyak informasi, dan kebutuhan yang terus tumbuh akan penilaian yang lebih baik.",
-        body1: "Dunia saat ini menawarkan lebih banyak informasi dibandingkan generasi mana pun sebelumnya. Yang tidak bertumbuh dengan kecepatan yang sama adalah kemampuan untuk menilai informasi tersebut secara cermat — membedakan argumen yang kuat dari yang sekadar meyakinkan, dan keputusan yang matang dari yang sekadar cepat.",
-        body2: "Global Critical Thinkers didirikan untuk memberi generasi muda ruang yang terstruktur untuk melatih persis hal itu: bernalar melalui masalah nyata yang belum terselesaikan, di bawah pengawasan yang sesungguhnya, tanpa naskah untuk bersembunyi di baliknya.",
-        bridge: "Tujuan itu mengarah pada sesuatu yang lebih besar dari satu kompetisi tunggal — sebuah visi tentang jenis pemikir yang bisa dibentuk oleh generasi ini."
-      },
-      vision: {
-        eyebrow: "Visi kami",
-        headline: "Generasi yang bernalar dengan cermat sebelum memutuskan.",
-        body1: "Visi jangka panjang kami bersifat edukatif: membantu mengembangkan generasi pemikir yang lebih bijaksana dalam cara bernalar, lebih kuat dalam cara berkomunikasi, dan lebih bertanggung jawab dalam cara mengambil keputusan.",
-        body2: "Visi ini melampaui satu kompetisi tunggal. Ini tentang kebiasaan berpikir yang tetap melekat pada peserta jauh setelah hari acara berakhir.",
-        bridge: "Visi seperti ini membutuhkan landasan yang kokoh — prinsip-prinsip yang memandu setiap keputusan yang kami ambil."
+        eyebrow: "Mengapa kami hadir",
+        headline: "Informasi lebih melimpah dari sebelumnya. Namun penilaian yang baik tidak datang dengan sendirinya.",
+        body1: "Tidak ada generasi sebelumnya yang memiliki akses informasi sebanyak ini. Yang belum berkembang setara adalah kemampuan untuk menimbangnya dengan cermat — membedakan argumen yang kuat dari yang sekadar meyakinkan, dan keputusan yang matang dari yang sekadar cepat.",
+        body2: "Global Critical Thinkers lahir dari kesenjangan itu. Kami ingin memberi generasi muda ruang untuk berlatih bernalar melalui masalah nyata yang belum terselesaikan, di bawah pengawasan yang sesungguhnya, tanpa naskah untuk bersembunyi di baliknya.",
+        body3: "Tujuan kami melampaui satu kompetisi tunggal. Kami berharap dapat membantu membentuk generasi yang bernalar lebih cermat, berkomunikasi lebih bertanggung jawab, dan membawa penilaian yang lebih baik ke dalam setiap keputusan yang mereka ambil selanjutnya."
       },
       philosophy: {
         eyebrow: "Filosofi kami",

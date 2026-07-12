@@ -2069,7 +2069,7 @@ body {
   line-height: 1.5;
   max-width: 42ch;
 }
-@media (max-width: 640px) {
+@media (max-width: 860px) {
   .evaluation__list { grid-template-columns: 1fr; }
   .evaluation__item:nth-child(odd) { border-right: none; padding-right: 0; }
 }

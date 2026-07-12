@@ -54,16 +54,16 @@ const translations = {
       eyebrow: "How it works",
       headline: "Experience the journey from preparation to presentation.",
       step1Title: "Register",
-      step1Desc: "Sign up individually or as a team.",
+      step1Desc: "Sign up individually.",
       step2Title: "Workshop",
       step2Desc: "Learn the frameworks you'll use on competition day.",
-      step3Title: "Challenge",
-      step3Desc: "A real-world problem, unseen until it begins.",
-      step4Title: "Analyze",
-      step4Desc: "Break the problem down and build your position.",
-      step5Title: "Present",
+      step3Title: "Form Your Position",
+      step3Desc: "A real-world problem, unseen until it begins — yours to reason through first.",
+      step4Title: "Collaborate",
+      step4Desc: "Work alongside a team of fellow thinkers to test ideas, challenge assumptions, and build a shared position.",
+      step5Title: "Defend Your Reasoning",
       step5Desc: "Make your reasoning legible to a live panel.",
-      step6Title: "Awards",
+      step6Title: "Recognition",
       step6Desc: "Certificates and recognition for every participant."
     },
     evaluationTeaser: {
@@ -319,7 +319,7 @@ const translations = {
       eyebrow: "Assessment",
       headline: "How You're Evaluated",
       intro1: "Great decisions begin with great reasoning.",
-      intro2: "Every participant is assessed using a standardized evaluation framework designed to measure not only outcomes, but also the quality of thinking behind every decision.",
+      intro2: "Every participant is assessed at each stage of the competition — individual and collaborative — using one standardized evaluation framework designed to measure not only outcomes, but also the quality of thinking behind every decision.",
       dim1Title: "Critical Analysis",
       dim1Desc: "Ability to identify the real problem instead of reacting to the obvious one.",
       dim2Title: "Evidence Evaluation",
@@ -358,7 +358,7 @@ const translations = {
     registration: {
       eyebrow: "Registration",
       headline: "Claim your place<br>at the table.",
-      copy: "Register on your own and step into a real-world challenge, judged by people who reason for a living. No hypotheticals. No safety net — and no one else's confidence to hide behind.",
+      copy: "Register individually. For the collaborative stages of the competition, you'll be placed into a diverse discussion team by the organizing committee. Together, you'll tackle one real-world challenge, judged by people who reason for a living. No hypotheticals. No safety net — and no one else's confidence to hide behind.",
       benefit1: "One real-world challenge based on an authentic situation",
       benefit2: "Pre-event workshops in Critical Thinking and Communicating Ideas, plus direct feedback from an experienced judging panel",
       benefit3: "An official certificate and a personal performance report card from assessors",
@@ -554,7 +554,7 @@ const translations = {
       overview: {
         eyebrow: "Competition Overview",
         headline: "One challenge. One day. One standard of judgment.",
-        body: "Every participant is measured against the same real-world challenge, under the same conditions, using the same evaluation framework — regardless of background, school, or prior experience."
+        body: "Every participant works through the same real-world challenge, under the same conditions, using the same evaluation framework — first on their own, then as part of a team — regardless of background, school, or prior experience."
       },
       experience: {
         eyebrow: "The Experience",
@@ -654,16 +654,16 @@ const translations = {
       eyebrow: "Cara kerjanya",
       headline: "Rasakan perjalanan dari persiapan hingga presentasi.",
       step1Title: "Daftar",
-      step1Desc: "Daftar secara individu atau sebagai tim.",
+      step1Desc: "Daftar secara individu.",
       step2Title: "Workshop",
       step2Desc: "Pelajari kerangka berpikir yang akan kamu gunakan pada hari kompetisi.",
-      step3Title: "Tantangan",
-      step3Desc: "Sebuah masalah nyata, tidak diketahui hingga tiba waktunya.",
-      step4Title: "Analisis",
-      step4Desc: "Uraikan masalahnya dan bangun posisimu.",
-      step5Title: "Presentasi",
+      step3Title: "Bangun Posisimu",
+      step3Desc: "Sebuah masalah nyata, tidak diketahui hingga tiba waktunya — dan pertama-tama kamu yang menalarnya sendiri.",
+      step4Title: "Berkolaborasi",
+      step4Desc: "Bekerja bersama satu tim pemikir untuk menguji ide, mempertanyakan asumsi, dan membangun posisi bersama.",
+      step5Title: "Pertahankan Penalaranmu",
       step5Desc: "Buat penalaranmu mudah dipahami oleh panel juri secara langsung.",
-      step6Title: "Penghargaan",
+      step6Title: "Pengakuan",
       step6Desc: "Sertifikat dan pengakuan untuk setiap peserta."
     },
     evaluationTeaser: {
@@ -919,7 +919,7 @@ const translations = {
       eyebrow: "Penilaian",
       headline: "Bagaimana Kamu Dinilai",
       intro1: "Keputusan yang baik selalu berawal dari penalaran yang baik.",
-      intro2: "Setiap peserta dinilai menggunakan kerangka evaluasi yang terstandarisasi, dirancang untuk mengukur bukan hanya hasil akhir, tetapi juga kualitas cara berpikir di balik setiap keputusan.",
+      intro2: "Setiap peserta dinilai di setiap tahap kompetisi — baik individu maupun kolaboratif — menggunakan satu kerangka evaluasi yang terstandarisasi, dirancang untuk mengukur bukan hanya hasil akhir, tetapi juga kualitas cara berpikir di balik setiap keputusan.",
       dim1Title: "Analisis Kritis",
       dim1Desc: "Kemampuan mengenali masalah yang sesungguhnya, bukan sekadar bereaksi terhadap apa yang tampak di permukaan.",
       dim2Title: "Evaluasi Bukti",
@@ -958,7 +958,7 @@ const translations = {
     registration: {
       eyebrow: "Pendaftaran",
       headline: "Klaim tempatmu<br>di meja diskusi.",
-      copy: "Daftar sendiri, lalu terjun langsung ke tantangan nyata yang dinilai oleh mereka yang bernalar sebagai profesi. Tanpa skenario andai-andai. Tanpa jaring pengaman — dan tanpa rasa percaya diri orang lain untuk bersembunyi di baliknya.",
+      copy: "Daftar secara individu. Untuk tahap kolaboratif kompetisi, kamu akan ditempatkan ke dalam satu tim diskusi yang beragam oleh panitia penyelenggara. Bersama tim, kamu akan menghadapi satu tantangan nyata yang dinilai oleh mereka yang bernalar sebagai profesi. Tanpa skenario andai-andai. Tanpa jaring pengaman — dan tanpa rasa percaya diri orang lain untuk bersembunyi di baliknya.",
       benefit1: "Satu tantangan nyata yang diangkat dari situasi otentik",
       benefit2: "Workshop sebelum acara dalam Critical Thinking dan Menyampaikan Gagasan, plus masukan langsung dari panel juri berpengalaman",
       benefit3: "Sertifikat resmi dan laporan performa pribadi dari para asesor",
@@ -1154,7 +1154,7 @@ const translations = {
       overview: {
         eyebrow: "Ikhtisar Kompetisi",
         headline: "Satu tantangan. Satu hari. Satu standar penilaian.",
-        body: "Setiap peserta diukur dengan tantangan nyata yang sama, dalam kondisi yang sama, menggunakan kerangka evaluasi yang sama — terlepas dari latar belakang, sekolah, atau pengalaman sebelumnya."
+        body: "Setiap peserta menghadapi tantangan nyata yang sama, dalam kondisi yang sama, menggunakan kerangka evaluasi yang sama — pertama secara individu, lalu sebagai bagian dari tim — terlepas dari latar belakang, sekolah, atau pengalaman sebelumnya."
       },
       experience: {
         eyebrow: "Pengalaman Kompetisi",

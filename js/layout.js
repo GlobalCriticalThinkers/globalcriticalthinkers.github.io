@@ -147,7 +147,9 @@
      ------------------------------------------------------------------ */
   function buildFooter(activePage) {
     var isHome = activePage === 'home';
+    var isCompetition = activePage === 'events';
     var prefix = isHome ? '' : 'index.html';
+    var competitionPrefix = isCompetition ? '' : 'competition.html';
 
     return (
       '<p class="site-footer__bookend" data-i18n-html="footer.bookend">Think sharper.<br>Your turn.</p>' +
@@ -166,7 +168,7 @@
             '<li><a href="' + prefix + '#why-gct" data-i18n="footer.exploreWhyGct">Why GCT</a></li>' +
             '<li><a href="' + prefix + '#how-it-works" data-i18n="footer.exploreHowItWorks">How it works</a></li>' +
             '<li><a href="' + prefix + '#quick-facts" data-i18n="footer.exploreOverview">Overview</a></li>' +
-            '<li><a href="' + prefix + '#trust" data-i18n="footer.exploreFaq">Everything to Know</a></li>' +
+            '<li><a href="' + competitionPrefix + '#trust" data-i18n="footer.exploreFaq">Everything to Know</a></li>' +
           '</ul>' +
         '</nav>' +
 

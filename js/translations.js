@@ -312,7 +312,8 @@ const translations = {
     finalCta: {
       eyebrow: "Registration",
       headline: "Ready to challenge the way you think?",
-      cta: "Register Now"
+      cta: "Register Now",
+      ctaSecondary: "See How It's Judged"
     },
     evaluation: {
       eyebrow: "Assessment",
@@ -577,6 +578,11 @@ const translations = {
         eyebrow: "Judges",
         headline: "The judging panel is currently being finalized.",
         body: "Every judge will come from professional backgrounds across academia, industry, entrepreneurship, and public policy — chosen for their ability to evaluate reasoning, not performance. Names will be announced ahead of the competition."
+      },
+      finalCta: {
+        eyebrow: "Registration",
+        headline: "You know what it takes. Now take your seat.",
+        cta: "Register Now"
       }
     },
     events: {
@@ -906,7 +912,8 @@ const translations = {
     finalCta: {
       eyebrow: "Pendaftaran",
       headline: "Siap menantang cara berpikirmu?",
-      cta: "Daftar Sekarang"
+      cta: "Daftar Sekarang",
+      ctaSecondary: "Lihat Cara Penilaiannya"
     },
     evaluation: {
       eyebrow: "Penilaian",
@@ -1171,6 +1178,11 @@ const translations = {
         eyebrow: "Juri",
         headline: "Dewan juri saat ini sedang difinalisasi.",
         body: "Setiap juri berasal dari latar belakang profesional lintas akademisi, industri, kewirausahaan, dan kebijakan publik — dipilih karena kemampuan mereka menilai penalaran, bukan penampilan. Nama-nama akan diumumkan menjelang kompetisi."
+      },
+      finalCta: {
+        eyebrow: "Pendaftaran",
+        headline: "Kamu sudah tahu apa yang dibutuhkan. Sekarang ambil tempatmu.",
+        cta: "Daftar Sekarang"
       }
     },
     events: {

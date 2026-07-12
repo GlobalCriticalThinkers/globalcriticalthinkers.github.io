@@ -179,6 +179,20 @@ body {
 .section--navy { background: var(--navy-900); }
 .section--navy-deep { background: var(--navy-950); }
 
+/* Judges — compact note, intentionally lower visual weight than a full section */
+.judges-note {
+  padding-block: clamp(2rem, 4vw, 3rem);
+  background: var(--navy-900);
+}
+.judges-note__card { max-width: 620px; margin-inline: auto; text-align: center; }
+.judges-note__text {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--paper);
+  line-height: 1.55;
+}
+.judges-note__text--muted { color: var(--muted-on-navy); font-size: 0.85rem; }
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);

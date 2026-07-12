@@ -120,16 +120,21 @@ const translations = {
       role4Desc: "The discipline of clarity. You learn that an idea only counts once someone else can follow exactly how you got there."
     },
     presentation: {
-      eyebrow: "Round two",
-      headline: "Then you make it legible to everyone else.",
-      imageAlt1: "A participant articulating their reasoning to the panel",
-      imageAlt2: "Judges listening closely as reasoning, not delivery, is being assessed",
-      item1Bold: "10 minutes",
-      item1Rest: "to make your reasoning legible — not to perform it, just to make it followable.",
-      item2Bold: "Anyone can be questioned,",
-      item2Rest: "not only whoever is speaking. Every idea in the room has to be defensible by the person who holds it.",
-      item3Bold: "Clarity outranks polish.",
-      item3Rest: "Judges are trained to listen for sound thinking, not confident delivery."
+      eyebrow: "Round 2 — Round Table Discussion",
+      headline: "Independent ideas become<br>collective judgment.",
+      intro: "With individual positions on the table, the team comes together. Over 45 minutes, participants weigh each other's reasoning, challenge assumptions, and work toward one solution the whole team can stand behind — the goal is a stronger shared answer, not a winning argument.",
+      imageAlt1: "Participants gathered around a table, weighing each other's reasoning",
+      imageAlt2: "A team working through differing viewpoints toward one shared solution",
+      item1Bold: "Explain each position.",
+      item1Rest: "Every participant walks the team through the reasoning behind what they presented individually.",
+      item2Bold: "Challenge assumptions.",
+      item2Rest: "Teammates question each other's logic and evidence, not to win, but to pressure-test it.",
+      item3Bold: "Negotiate viewpoints.",
+      item3Rest: "Differences are worked through openly until the strongest reasoning surfaces.",
+      item4Bold: "Build one consensus.",
+      item4Rest: "The team converges on a single, well-reasoned position everyone can defend.",
+      item5Bold: "Select a presenter.",
+      item5Rest: "Only once the team's final decision is set does the group choose who will carry it forward."
     },
     defense: {
       imageAlt: "A participant reasoning through a difficult question from the judges",
@@ -705,16 +710,21 @@ const translations = {
       role4Desc: "Disiplin kejelasan. Kamu belajar bahwa sebuah gagasan baru benar-benar berarti ketika orang lain bisa mengikuti persis bagaimana kamu sampai ke sana."
     },
     presentation: {
-      eyebrow: "Babak kedua",
-      headline: "Lalu kamu membuatnya mudah dipahami semua orang.",
-      imageAlt1: "Seorang peserta menjelaskan penalarannya kepada panel",
-      imageAlt2: "Juri menyimak dengan saksama, menilai penalaran, bukan gaya penyampaian",
-      item1Bold: "10 menit",
-      item1Rest: "untuk membuat penalaranmu mudah diikuti — bukan untuk tampil, hanya agar bisa dipahami.",
-      item2Bold: "Siapa pun bisa ditanya,",
-      item2Rest: "tidak hanya yang sedang bicara. Setiap gagasan di ruangan harus bisa dipertanggungjawabkan oleh orang yang mengemukakannya.",
-      item3Bold: "Kejelasan mengalahkan kesempurnaan gaya.",
-      item3Rest: "Juri dilatih untuk mendengarkan pemikiran yang solid, bukan penyampaian yang percaya diri."
+      eyebrow: "Babak 2 — Diskusi Meja Bundar",
+      headline: "Gagasan individu menjadi<br>penilaian bersama.",
+      intro: "Setelah setiap posisi individu disampaikan, tim berkumpul bersama. Selama 45 menit, para peserta menimbang penalaran satu sama lain, mempertanyakan asumsi, dan bekerja menuju satu solusi yang bisa dipertanggungjawabkan seluruh tim — tujuannya adalah jawaban bersama yang lebih kuat, bukan argumen yang menang.",
+      imageAlt1: "Para peserta berkumpul di sekitar meja, menimbang penalaran satu sama lain",
+      imageAlt2: "Sebuah tim mengolah perbedaan sudut pandang menuju satu solusi bersama",
+      item1Bold: "Jelaskan setiap posisi.",
+      item1Rest: "Setiap peserta menjelaskan kepada tim penalaran di balik posisi yang disampaikan secara individu.",
+      item2Bold: "Pertanyakan asumsi.",
+      item2Rest: "Rekan tim saling menguji logika dan bukti satu sama lain — bukan untuk menang, tapi untuk mengujinya.",
+      item3Bold: "Negosiasikan sudut pandang.",
+      item3Rest: "Perbedaan dibahas secara terbuka hingga penalaran terkuat muncul ke permukaan.",
+      item4Bold: "Bangun satu konsensus.",
+      item4Rest: "Tim menyatu pada satu posisi yang matang dan bisa dipertahankan bersama.",
+      item5Bold: "Pilih presenter.",
+      item5Rest: "Hanya setelah keputusan akhir tim ditetapkan, kelompok memilih siapa yang akan menyampaikannya."
     },
     defense: {
       imageAlt: "Seorang peserta bernalar menghadapi pertanyaan sulit dari para juri",

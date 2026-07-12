@@ -1,4 +1,4 @@
-# Global Critical Thinkers — website
+# Global Critical Thinkers — website aa
 
 A single-page, scroll-driven cinematic story site for Global Critical Thinkers (GCT), built for GitHub Pages. No build step, no dependencies beyond two Google Fonts.
 

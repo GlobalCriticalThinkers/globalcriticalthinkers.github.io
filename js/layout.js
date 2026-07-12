@@ -29,27 +29,83 @@
   var NAV_ITEMS = [
     { key: 'home', href: 'index.html', i18n: 'nav.home', label: 'Home' },
     { key: 'about', href: 'about.html', i18n: 'nav.about', label: 'About' },
-    { key: 'competition', href: 'competition.html', i18n: 'nav.competition', label: 'Competition' },
     { key: 'contact', href: 'contact.html', i18n: 'nav.contact', label: 'Contact' }
   ];
 
-  var REGISTER_HREF_FROM_HOME = '#registration';
-  var REGISTER_HREF_FROM_ELSEWHERE = 'index.html#registration';
+  /* ------------------------------------------------------------------
+     Events — the organization's permanent event directory. Rendered as
+     a dropdown on desktop and an accordion on mobile. Unlike NAV_ITEMS,
+     this is a parent with children, so it gets its own small structure
+     rather than being forced into the flat nav list. New events (once
+     they exist) get added to EVENTS_ITEMS only; nothing else changes.
+     ------------------------------------------------------------------ */
+  var EVENTS_ITEMS = [
+    { key: 'genesis', href: 'competition.html', i18n: 'nav.eventsGenesis', label: 'Genesis', disabled: false },
+    { key: 'coming-soon', href: null, i18n: 'nav.eventsComingSoon', label: 'Coming Soon', disabled: true }
+  ];
 
+  /* Renders as active whenever we're anywhere inside the Events
+     section — currently the events directory and the Genesis detail
+     page (competition.html, data-page="events"). */
   function buildHeader(activePage) {
     var isHome = activePage === 'home';
-    var registerHref = isHome ? REGISTER_HREF_FROM_HOME : REGISTER_HREF_FROM_ELSEWHERE;
+    var isEventsActive = activePage === 'events';
     var logoHref = isHome ? '#arrival' : 'index.html';
 
-    var desktopLinks = NAV_ITEMS.map(function (item) {
+    var homeAboutLinks = NAV_ITEMS.slice(0, 2).map(function (item) {
       var activeClass = item.key === activePage ? ' is-active' : '';
       return '<a href="' + item.href + '" class="site-nav__link' + activeClass + '" data-i18n="' + item.i18n + '">' + item.label + '</a>';
     }).join('\n        ');
 
-    var mobileLinks = NAV_ITEMS.map(function (item) {
+    var contactLink = NAV_ITEMS.slice(2).map(function (item) {
+      var activeClass = item.key === activePage ? ' is-active' : '';
+      return '<a href="' + item.href + '" class="site-nav__link' + activeClass + '" data-i18n="' + item.i18n + '">' + item.label + '</a>';
+    }).join('');
+
+    var desktopEventsChildren = EVENTS_ITEMS.map(function (item) {
+      if (item.disabled) {
+        return '<span class="nav-events__link is-disabled" role="menuitem" aria-disabled="true" data-i18n="' + item.i18n + '">' + item.label + '</span>';
+      }
+      return '<a href="' + item.href + '" class="nav-events__link" role="menuitem" data-i18n="' + item.i18n + '">' + item.label + '</a>';
+    }).join('\n            ');
+
+    var desktopLinks =
+      homeAboutLinks +
+      '\n        <div class="nav-events" id="navEventsDesktop">' +
+        '<a href="events.html" class="site-nav__link nav-events__trigger' + (isEventsActive ? ' is-active' : '') + '" id="navEventsToggle" aria-haspopup="true" aria-expanded="false" aria-controls="navEventsPanel" data-i18n="nav.events">Events</a>' +
+        '<div class="nav-events__panel" id="navEventsPanel" role="menu" aria-label="Events">' +
+        '\n            ' + desktopEventsChildren + '\n            ' +
+        '</div>' +
+      '</div>\n        ' +
+      contactLink;
+
+    var mobileEventsChildren = EVENTS_ITEMS.map(function (item) {
+      if (item.disabled) {
+        return '<span class="nav-pop__sublink is-disabled" role="menuitem" aria-disabled="true" data-i18n="' + item.i18n + '">' + item.label + '</span>';
+      }
+      return '<a href="' + item.href + '" class="nav-pop__sublink" role="menuitem" data-i18n="' + item.i18n + '">' + item.label + '</a>';
+    }).join('\n              ') +
+      '\n              <a href="events.html" class="nav-pop__sublink nav-pop__sublink--all" role="menuitem" data-i18n="nav.events">All Events</a>';
+
+    var homeAboutMobile = NAV_ITEMS.slice(0, 2).map(function (item) {
       var activeClass = item.key === activePage ? ' is-active' : '';
       return '<a href="' + item.href + '" class="nav-pop__link' + activeClass + '" role="menuitem" data-i18n="' + item.i18n + '">' + item.label + '</a>';
     }).join('\n            ');
+
+    var contactMobile = NAV_ITEMS.slice(2).map(function (item) {
+      var activeClass = item.key === activePage ? ' is-active' : '';
+      return '<a href="' + item.href + '" class="nav-pop__link' + activeClass + '" role="menuitem" data-i18n="' + item.i18n + '">' + item.label + '</a>';
+    }).join('');
+
+    var mobileLinks =
+      homeAboutMobile +
+      '\n            <div class="nav-pop__accordion">' +
+        '<button type="button" class="nav-pop__link nav-pop__accordion-trigger' + (isEventsActive ? ' is-active' : '') + '" id="navEventsAccordionToggle" aria-expanded="false" aria-controls="navEventsAccordionPanel" data-i18n="nav.events">Events</button>' +
+        '<div class="nav-pop__accordion-panel" id="navEventsAccordionPanel" role="menu" aria-label="Events">' +
+        '\n              ' + mobileEventsChildren + '\n              ' +
+        '</div>' +
+      '</div>' +
+      contactMobile;
 
     return (
       '<div class="site-header__inner">' +
@@ -73,7 +129,6 @@
             '</button>' +
             '<div class="nav-pop__panel" id="navMobile" role="menu">' +
             '\n            ' + mobileLinks + '\n            ' +
-            '<a href="' + registerHref + '" class="nav-pop__cta" role="menuitem" data-i18n="nav.register">Register now</a>' +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -138,6 +193,7 @@
 
   window.GCTLayout = {
     NAV_ITEMS: NAV_ITEMS,
+    EVENTS_ITEMS: EVENTS_ITEMS,
     buildHeader: buildHeader,
     buildFooter: buildFooter
   };

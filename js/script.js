@@ -197,6 +197,87 @@
   }
 
   /* ------------------------------------------------------------------
+     Desktop Events dropdown — opens on hover or click of the trigger,
+     closes on outside click, Escape, or link selection. Mirrors the
+     open/close pattern already used for the mobile nav-pop panel.
+     ------------------------------------------------------------------ */
+  var navEventsDesktop = document.getElementById('navEventsDesktop');
+  var navEventsToggle = document.getElementById('navEventsToggle');
+  var navEventsPanel = document.getElementById('navEventsPanel');
+
+  if (navEventsDesktop && navEventsToggle && navEventsPanel) {
+    function isEventsPanelOpen() {
+      return navEventsDesktop.classList.contains('is-open');
+    }
+
+    function openEventsPanel() {
+      navEventsDesktop.classList.add('is-open');
+      navEventsToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeEventsPanel() {
+      navEventsDesktop.classList.remove('is-open');
+      navEventsToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    navEventsDesktop.addEventListener('mouseenter', openEventsPanel);
+    navEventsDesktop.addEventListener('mouseleave', closeEventsPanel);
+
+    /* Click/tap and keyboard support for non-hover input (touch
+       laptops, keyboard navigation). The trigger is a real link to
+       events.html, so only prevent default when we're toggling the
+       panel open — a second activation (or Enter on an already-open
+       trigger) lets the link navigate normally. */
+    navEventsToggle.addEventListener('click', function (event) {
+      if (!isEventsPanelOpen()) {
+        event.preventDefault();
+        openEventsPanel();
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!isEventsPanelOpen()) return;
+      if (navEventsDesktop.contains(event.target)) return;
+      closeEventsPanel();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && isEventsPanelOpen()) {
+        closeEventsPanel();
+        navEventsToggle.focus();
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     Mobile Events accordion — lives inside the existing mobile nav-pop
+     panel. Tap to expand, tap again to collapse. No hover dependency.
+     ------------------------------------------------------------------ */
+  var navEventsAccordionToggle = document.getElementById('navEventsAccordionToggle');
+  var navEventsAccordionPanel = document.getElementById('navEventsAccordionPanel');
+
+  if (navEventsAccordionToggle && navEventsAccordionPanel) {
+    navEventsAccordionToggle.addEventListener('click', function () {
+      var isOpen = navEventsAccordionToggle.classList.contains('is-expanded');
+
+      if (isOpen) {
+        navEventsAccordionToggle.classList.remove('is-expanded');
+        navEventsAccordionToggle.setAttribute('aria-expanded', 'false');
+        navEventsAccordionPanel.style.maxHeight = null;
+      } else {
+        navEventsAccordionToggle.classList.add('is-expanded');
+        navEventsAccordionToggle.setAttribute('aria-expanded', 'true');
+        navEventsAccordionPanel.style.maxHeight = navEventsAccordionPanel.scrollHeight + 'px';
+      }
+    });
+
+    /* Only the accordion links (not the disabled Coming Soon span)
+       close the mobile nav-pop panel on selection; script.js's
+       existing navMobile link-close logic already covers real <a>
+       tags, including these, since they live inside #navMobile. */
+  }
+
+  /* ------------------------------------------------------------------
      Footer year
      ------------------------------------------------------------------ */
   var yearEl = document.getElementById('currentYear');

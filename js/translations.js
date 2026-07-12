@@ -24,8 +24,10 @@ const translations = {
       register: "Register now",
       home: "Home",
       about: "About",
-      competition: "Competition",
-      contact: "Contact"
+      events: "Events",
+      contact: "Contact",
+      eventsGenesis: "Genesis",
+      eventsComingSoon: "Coming Soon"
     },
     hero: {
       imageAlt: "A student reasoning through a real-world challenge during Global Critical Thinkers",
@@ -576,6 +578,29 @@ const translations = {
         headline: "The judging panel is currently being finalized.",
         body: "Every judge will come from professional backgrounds across academia, industry, entrepreneurship, and public policy — chosen for their ability to evaluate reasoning, not performance. Names will be announced ahead of the competition."
       }
+    },
+    events: {
+      meta: {
+        title: "Events — Global Critical Thinkers",
+        description: "Every event organized by Global Critical Thinkers, from the inaugural Genesis competition to future editions."
+      },
+      hero: {
+        kicker: "Global Critical Thinkers",
+        title: "Events",
+        subtitle: "Every competition we organize, past and upcoming, lives here."
+      },
+      genesis: {
+        status: "Registration Open",
+        title: "GENESIS",
+        description: "The inaugural international critical thinking competition organized by Global Critical Thinkers.",
+        cta: "Learn More"
+      },
+      comingSoon: {
+        status: "Coming Soon",
+        title: "Coming Soon",
+        description: "Our next Global Critical Thinkers event is currently in development. More information will be announced soon.",
+        cta: "Coming Soon"
+      }
     }
   },
 
@@ -593,8 +618,10 @@ const translations = {
       register: "Daftar sekarang",
       home: "Beranda",
       about: "Tentang",
-      competition: "Kompetisi",
-      contact: "Kontak"
+      events: "Acara",
+      contact: "Kontak",
+      eventsGenesis: "Genesis",
+      eventsComingSoon: "Segera Hadir"
     },
     hero: {
       imageAlt: "Seorang peserta bernalar menghadapi tantangan nyata dalam ajang Global Critical Thinkers",
@@ -1144,6 +1171,29 @@ const translations = {
         eyebrow: "Juri",
         headline: "Dewan juri saat ini sedang difinalisasi.",
         body: "Setiap juri berasal dari latar belakang profesional lintas akademisi, industri, kewirausahaan, dan kebijakan publik — dipilih karena kemampuan mereka menilai penalaran, bukan penampilan. Nama-nama akan diumumkan menjelang kompetisi."
+      }
+    },
+    events: {
+      meta: {
+        title: "Acara — Global Critical Thinkers",
+        description: "Setiap acara yang diselenggarakan oleh Global Critical Thinkers, mulai dari kompetisi perdana Genesis hingga edisi-edisi mendatang."
+      },
+      hero: {
+        kicker: "Global Critical Thinkers",
+        title: "Acara",
+        subtitle: "Setiap kompetisi yang kami selenggarakan, yang telah berlangsung maupun yang akan datang, ada di sini."
+      },
+      genesis: {
+        status: "Pendaftaran Dibuka",
+        title: "GENESIS",
+        description: "Kompetisi berpikir kritis internasional perdana yang diselenggarakan oleh Global Critical Thinkers.",
+        cta: "Pelajari Lebih Lanjut"
+      },
+      comingSoon: {
+        status: "Segera Hadir",
+        title: "Segera Hadir",
+        description: "Acara Global Critical Thinkers berikutnya sedang dalam tahap pengembangan. Informasi lebih lanjut akan segera diumumkan.",
+        cta: "Segera Hadir"
       }
     }
   }

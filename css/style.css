@@ -2245,6 +2245,14 @@ body {
 .final-cta .btn {
   margin-top: 2.2rem;
 }
+.final-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.final-cta__actions .btn { margin-top: 2.2rem; }
 
 /* -------------------------------------------------------------------------
    13. REGISTRATION — two column, luxury pricing card

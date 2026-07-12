@@ -206,11 +206,17 @@
   var navEventsPanel = document.getElementById('navEventsPanel');
 
   if (navEventsDesktop && navEventsToggle && navEventsPanel) {
+    var eventsCloseTimer = null;
+
     function isEventsPanelOpen() {
       return navEventsDesktop.classList.contains('is-open');
     }
 
     function openEventsPanel() {
+      if (eventsCloseTimer) {
+        window.clearTimeout(eventsCloseTimer);
+        eventsCloseTimer = null;
+      }
       navEventsDesktop.classList.add('is-open');
       navEventsToggle.setAttribute('aria-expanded', 'true');
     }
@@ -220,8 +226,17 @@
       navEventsToggle.setAttribute('aria-expanded', 'false');
     }
 
+    /* The panel is position:absolute, so it sits outside the wrapper's
+       normal-flow hover box despite being visually attached right below
+       the trigger. A short delay on mouseleave gives the cursor time to
+       land inside the panel (which re-triggers mouseenter on the same
+       wrapper, since the panel is a descendant of navEventsDesktop) before
+       we actually close — without this, moving the cursor down through
+       the visual gap between trigger and panel closes it prematurely. */
     navEventsDesktop.addEventListener('mouseenter', openEventsPanel);
-    navEventsDesktop.addEventListener('mouseleave', closeEventsPanel);
+    navEventsDesktop.addEventListener('mouseleave', function () {
+      eventsCloseTimer = window.setTimeout(closeEventsPanel, 200);
+    });
 
     /* Click/tap and keyboard support for non-hover input (touch
        laptops, keyboard navigation). The trigger is a real link to

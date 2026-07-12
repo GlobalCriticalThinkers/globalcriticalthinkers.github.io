@@ -159,6 +159,18 @@ body {
 }
 .lede--paper { color: var(--muted-on-paper); }
 
+/* Dedicated modifier for intro paragraphs that read too narrow at the
+   default 44ch cap (e.g. Four Disciplines intro). Widens the container
+   to a comfortable ~680–760px reading measure without altering font
+   size, line-height, or color inherited from .lede. Scoped via modifier
+   class so no other .lede usage is affected. */
+.lede--wide {
+  max-width: 940px;
+}
+@media (max-width: 1100px) {
+  .lede--wide { max-width: 100%; }
+}
+
 .container {
   max-width: 1280px;
   margin-inline: auto;
@@ -2793,26 +2805,6 @@ a.event-card:focus-visible {
   .about-split { grid-template-columns: 1fr; }
   .about-split__media { aspect-ratio: 16/10; order: -1 !important; }
   .about-split__text { padding: clamp(2.5rem, 8vw, 3.5rem) var(--edge-pad); order: 2 !important; }
-}
-
-/* Partners section — image is supporting content, not a focal visual.
-   Widened aspect ratio (~3/2 vs the standard 4/5) shortens the displayed
-   height by roughly 35% for the same column width, keeping the text and
-   image columns visually balanced. object-fit: cover, border-radius, and
-   all other media styling are inherited unchanged, so the image is
-   cropped rather than distorted. Self-aligned to center rather than
-   stretched to the full row height. */
-#partners.about-split .about-split__media,
-#partners .about-split .about-split__media {
-  align-self: center;
-  aspect-ratio: 3/2;
-}
-
-@media (max-width: 900px) {
-  #partners.about-split .about-split__media,
-  #partners .about-split .about-split__media {
-    aspect-ratio: 16/10;
-  }
 }
 
 /* -------------------------------------------------------------------------

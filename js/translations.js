@@ -576,9 +576,8 @@ const translations = {
       partners: {
         eyebrow: "Partners",
         headline: "Built together with trusted partners.",
-        body1: "Global Critical Thinkers collaborates with universities, schools, and industry organizations that share our standard for how thinking should be tested. These institutional and educational partners help shape a competition experience grounded in real academic and professional rigor.",
-        body2: "Strategic partners contribute expertise, resources, and platforms that extend the competition's reach — from evaluation design to opportunities for participants beyond the competition day itself.",
-        body3: "Every partnership is chosen deliberately. It's how GCT stays connected to real institutions and real standards, rather than operating in isolation. Partnership opportunities are currently open, and official partners will be named here as they're confirmed."
+        body1: "Global Critical Thinkers collaborates with universities, schools, and industry organizations that share our standard for how thinking should be tested and evaluated.",
+        body2: "Each partnership is chosen deliberately, for academic and professional rigor. Official partners will be announced here as they are confirmed."
       },
       judges: {
         eyebrow: "Judging Panel",
@@ -1182,9 +1181,8 @@ const translations = {
       partners: {
         eyebrow: "Mitra",
         headline: "Dibangun bersama mitra terpercaya.",
-        body1: "Global Critical Thinkers berkolaborasi dengan universitas, sekolah, dan organisasi industri yang memiliki standar yang sama dengan kami dalam menguji cara berpikir. Mitra institusi dan pendidikan ini membantu membentuk pengalaman kompetisi yang berlandaskan rigor akademik dan profesional yang nyata.",
-        body2: "Mitra strategis menyumbangkan keahlian, sumber daya, dan platform yang memperluas jangkauan kompetisi — mulai dari perancangan penilaian hingga membuka peluang bagi peserta di luar hari kompetisi itu sendiri.",
-        body3: "Setiap kemitraan dipilih dengan cermat. Inilah cara GCT tetap terhubung dengan institusi dan standar yang nyata, bukan berjalan sendiri. Kesempatan bermitra saat ini terbuka, dan mitra resmi akan diumumkan di sini begitu terkonfirmasi."
+        body1: "Global Critical Thinkers berkolaborasi dengan universitas, sekolah, dan organisasi industri yang memiliki standar yang sama dalam menguji dan menilai cara berpikir.",
+        body2: "Setiap kemitraan dipilih dengan cermat, demi rigor akademik dan profesional. Mitra resmi akan diumumkan di sini begitu terkonfirmasi."
       },
       judges: {
         eyebrow: "Dewan Juri",

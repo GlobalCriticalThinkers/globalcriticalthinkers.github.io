@@ -1780,6 +1780,7 @@ body {
 
 .compare {
   margin-top: clamp(3.5rem, 6vw, 5rem);
+  margin-inline: auto;
   max-width: 780px;
 }
 .compare__labels {

@@ -358,7 +358,7 @@ const translations = {
     registration: {
       eyebrow: "Registration",
       headline: "Claim your place<br>at the table.",
-      copy: "Register individually. For the collaborative stages of the competition, you'll be placed into a diverse discussion team by the organizing committee. Together, you'll tackle one real-world challenge, judged by people who reason for a living. No hypotheticals. No safety net — and no one else's confidence to hide behind.",
+      copy: "Global Critical Thinkers is an individual competition built around collaborative problem-solving. You register as an individual, and throughout the competition, your reasoning, communication, and judgment remain at the heart of the assessment. Along the way, the organizing committee places you into a diverse discussion team, where your ideas are challenged, your reasoning refined, and your arguments sharpened alongside others. Outstanding teamwork is recognized through the Best Team award. No hypotheticals. No safety net — and no one else's confidence to hide behind.",
       benefit1: "One real-world challenge based on an authentic situation",
       benefit2: "Pre-event workshops in Critical Thinking and Communicating Ideas, plus direct feedback from an experienced judging panel",
       benefit3: "An official certificate and a personal performance report card from assessors",
@@ -958,7 +958,7 @@ const translations = {
     registration: {
       eyebrow: "Pendaftaran",
       headline: "Klaim tempatmu<br>di meja diskusi.",
-      copy: "Daftar secara individu. Untuk tahap kolaboratif kompetisi, kamu akan ditempatkan ke dalam satu tim diskusi yang beragam oleh panitia penyelenggara. Bersama tim, kamu akan menghadapi satu tantangan nyata yang dinilai oleh mereka yang bernalar sebagai profesi. Tanpa skenario andai-andai. Tanpa jaring pengaman — dan tanpa rasa percaya diri orang lain untuk bersembunyi di baliknya.",
+      copy: "Global Critical Thinkers adalah kompetisi individu yang dibangun di atas kolaborasi dalam memecahkan masalah. Kamu mendaftar sebagai individu, dan sepanjang kompetisi, penalaran, komunikasi, serta cara berpikirmu tetap menjadi inti penilaian. Di tengah perjalanannya, panitia penyelenggara menempatkanmu ke dalam satu tim diskusi yang beragam, tempat gagasanmu diuji, penalaranmu diasah, dan argumenmu diperkuat bersama yang lain. Kerja sama tim yang luar biasa juga diapresiasi melalui penghargaan Best Team. Tanpa skenario andai-andai. Tanpa jaring pengaman — dan tanpa rasa percaya diri orang lain untuk bersembunyi di baliknya.",
       benefit1: "Satu tantangan nyata yang diangkat dari situasi otentik",
       benefit2: "Workshop sebelum acara dalam Critical Thinking dan Menyampaikan Gagasan, plus masukan langsung dari panel juri berpengalaman",
       benefit3: "Sertifikat resmi dan laporan performa pribadi dari para asesor",

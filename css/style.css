@@ -391,25 +391,16 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
 }
-.nav-events__trigger::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-right: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
-  transform: rotate(45deg) translateY(-2px);
+.nav-events__chevron {
+  flex-shrink: 0;
+  color: currentColor;
   transition: transform 0.25s var(--ease);
-  order: 2;
 }
-.nav-events.is-open .nav-events__trigger::before { transform: rotate(-135deg) translateY(1px); }
+.nav-events.is-open .nav-events__chevron { transform: rotate(180deg); }
 
 .nav-events__panel {
+  display: block;
   position: absolute;
   top: calc(100% + 0.9rem);
   left: 50%;
@@ -422,12 +413,14 @@ body {
   padding: 0.5rem;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.22s var(--ease), transform 0.22s var(--ease), visibility 0s linear 0.22s;
   z-index: 950;
 }
 .nav-events.is-open .nav-events__panel {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translate(-50%, 0);
   transition: opacity 0.22s var(--ease), transform 0.22s var(--ease), visibility 0s linear 0s;
 }
@@ -459,7 +452,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .nav-events__panel,
-  .nav-events__trigger::before { transition: none; }
+  .nav-events__chevron { transition: none; }
 }
 
 /* Mobile nav — floating dropdown panel anchored to the toggle button */

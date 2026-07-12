@@ -67,7 +67,6 @@
             '<span class="lang-switch__divider" aria-hidden="true">|</span>' +
             '<button type="button" class="lang-switch__btn" data-lang="id" aria-pressed="false">ID</button>' +
           '</div>' +
-          '<a href="' + registerHref + '" class="site-header__cta" data-i18n="nav.register">Register now</a>' +
           '<div class="nav-pop">' +
             '<button type="button" class="site-nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">' +
               '<span class="site-nav__toggle-icon"></span>' +

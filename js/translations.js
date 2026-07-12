@@ -137,12 +137,25 @@ const translations = {
       item5Rest: "Only once the team's final decision is set does the group choose who will carry it forward."
     },
     defense: {
-      imageAlt: "A participant reasoning through a difficult question from the judges",
-      eyebrow: "Round three",
-      headline: "This is where your thinking<br><em>either holds</em> — or it doesn't.",
-      copy: "Judges will find the weakest point in your reasoning and press on it. You can hold your position or change your mind — both are respected, as long as either one is earned through logic, not stubbornness or nerves.",
-      mark1: "15 minutes of direct, unscripted questioning",
-      mark2: "Judged on how you think, not how you sound"
+      imageAlt: "A team defending their reasoning under questioning from the judging panel",
+      eyebrow: "Round 3 — Team Defense",
+      headline: "Where every decision<br><em>must withstand</em> scrutiny.",
+      copy: "With the team's final position set, it is presented, challenged, and tested in front of the room. The objective isn't simply to defend an answer — it's to show that the reasoning behind it still holds once another team has pushed on it.",
+      mark1: "About 10 minutes per team, start to finish",
+      mark2: "Judged on how the reasoning holds, not how it sounds",
+      processLabel: "How it unfolds",
+      step1Title: "Presentation",
+      step1Desc: "Present the team's final solution.",
+      step1Time: "4 min",
+      step2Title: "Cross-Table Challenge",
+      step2Desc: "Another team critically evaluates the proposal.",
+      step2Time: "3 min",
+      step3Title: "Question",
+      step3Desc: "One assigned table raises a focused question.",
+      step3Time: "1 min",
+      step4Title: "Defense",
+      step4Desc: "Respond with evidence and clear reasoning.",
+      step4Time: "2 min"
     },
     timeline: {
       eyebrow: "Timeline",
@@ -727,12 +740,25 @@ const translations = {
       item5Rest: "Hanya setelah keputusan akhir tim ditetapkan, kelompok memilih siapa yang akan menyampaikannya."
     },
     defense: {
-      imageAlt: "Seorang peserta bernalar menghadapi pertanyaan sulit dari para juri",
-      eyebrow: "Babak ketiga",
-      headline: "Di sinilah pemikiranmu<br><em>terbukti kuat</em> — atau tidak.",
-      copy: "Juri akan mencari titik terlemah dalam penalaranmu dan menekannya. Kamu bisa mempertahankan posisimu atau mengubah pandangan — keduanya sama-sama dihargai, selama didasari logika, bukan sekadar keras kepala atau gugup.",
-      mark1: "15 menit sesi tanya jawab langsung, tanpa naskah",
-      mark2: "Dinilai dari cara kamu berpikir, bukan cara kamu terdengar"
+      imageAlt: "Sebuah tim mempertahankan penalarannya di hadapan pertanyaan dewan juri",
+      eyebrow: "Babak 3 — Pembelaan Tim",
+      headline: "Di sinilah setiap keputusan<br><em>harus bertahan</em> di bawah tekanan.",
+      copy: "Setelah posisi akhir tim ditetapkan, posisi itu dipresentasikan, ditantang, dan diuji di depan ruangan. Tujuannya bukan sekadar mempertahankan jawaban — melainkan menunjukkan bahwa penalaran di baliknya tetap kokoh setelah ditekan oleh tim lain.",
+      mark1: "Sekitar 10 menit per tim, dari awal hingga akhir",
+      mark2: "Dinilai dari seberapa kokoh penalarannya, bukan cara penyampaiannya",
+      processLabel: "Bagaimana alurnya",
+      step1Title: "Presentasi",
+      step1Desc: "Menyampaikan solusi akhir tim.",
+      step1Time: "4 menit",
+      step2Title: "Tantangan Lintas Meja",
+      step2Desc: "Tim lain menilai proposal secara kritis.",
+      step2Time: "3 menit",
+      step3Title: "Pertanyaan",
+      step3Desc: "Satu meja yang ditunjuk mengajukan pertanyaan terarah.",
+      step3Time: "1 menit",
+      step4Title: "Pembelaan",
+      step4Desc: "Merespons dengan bukti dan penalaran yang jelas.",
+      step4Time: "2 menit"
     },
     timeline: {
       eyebrow: "Linimasa",

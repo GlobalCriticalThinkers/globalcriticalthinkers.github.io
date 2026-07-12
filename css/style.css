@@ -2795,6 +2795,26 @@ a.event-card:focus-visible {
   .about-split__text { padding: clamp(2.5rem, 8vw, 3.5rem) var(--edge-pad); order: 2 !important; }
 }
 
+/* Partners section — image is supporting content, not a focal visual.
+   Widened aspect ratio (~3/2 vs the standard 4/5) shortens the displayed
+   height by roughly 35% for the same column width, keeping the text and
+   image columns visually balanced. object-fit: cover, border-radius, and
+   all other media styling are inherited unchanged, so the image is
+   cropped rather than distorted. Self-aligned to center rather than
+   stretched to the full row height. */
+#partners.about-split .about-split__media,
+#partners .about-split .about-split__media {
+  align-self: center;
+  aspect-ratio: 3/2;
+}
+
+@media (max-width: 900px) {
+  #partners.about-split .about-split__media,
+  #partners .about-split .about-split__media {
+    aspect-ratio: 16/10;
+  }
+}
+
 /* -------------------------------------------------------------------------
    14c. ABOUT PAGE — immersive full-bleed section (Building an Institution)
    ------------------------------------------------------------------------- */

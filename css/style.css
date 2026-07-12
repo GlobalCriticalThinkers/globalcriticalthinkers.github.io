@@ -2819,6 +2819,18 @@ a.event-card:focus-visible {
   .about-split__text { padding: clamp(2.5rem, 8vw, 3.5rem) var(--edge-pad); order: 2 !important; }
 }
 
+/* Modifier for shorter-copy instances (e.g. Partners) where a flat 50/50
+   split lets the image visually outweigh the text. Gives text more room
+   and trims the image to a calmer, less portrait-dominant crop, without
+   touching the base .about-split used where copy is longer (e.g. About's
+   "Why We Exist", which already balances at 50/50). */
+.about-split--narrow-media { grid-template-columns: 1.3fr 1fr; }
+.about-split--narrow-media .about-split__media { aspect-ratio: 4/3; }
+@media (max-width: 900px) {
+  .about-split--narrow-media { grid-template-columns: 1fr; }
+  .about-split--narrow-media .about-split__media { aspect-ratio: 16/10; }
+}
+
 /* -------------------------------------------------------------------------
    14c. ABOUT PAGE — immersive full-bleed section (Building an Institution)
    ------------------------------------------------------------------------- */

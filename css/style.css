@@ -603,14 +603,6 @@ body {
     opacity: 0.5;
     cursor: not-allowed;
   }
-  .nav-pop__sublink--all {
-    margin-top: 0.15rem;
-    padding-left: 1rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--gold-light);
-  }
   .nav-pop__sublink:focus-visible {
     outline: 2px solid var(--gold-light);
     outline-offset: 2px;
@@ -2245,14 +2237,6 @@ body {
 .final-cta .btn {
   margin-top: 2.2rem;
 }
-.final-cta__actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.final-cta__actions .btn { margin-top: 2.2rem; }
 
 /* -------------------------------------------------------------------------
    13. REGISTRATION — two column, luxury pricing card

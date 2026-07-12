@@ -1224,6 +1224,64 @@ body {
 }
 .defense__mark svg { flex-shrink: 0; color: var(--gold); }
 
+.defense__process { margin-top: 2.8rem; }
+.defense__process-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.defense__steps {
+  display: flex;
+  align-items: stretch;
+  gap: 0.9rem;
+  flex-wrap: nowrap;
+}
+.defense__step {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem 1.1rem;
+  background: rgba(11,18,32,0.55);
+  border: 1px solid var(--line-navy);
+  border-radius: var(--radius-md);
+}
+.defense__step-time {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--gold-light);
+  margin-bottom: 0.4rem;
+}
+.defense__step-title {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  color: var(--paper);
+  margin-bottom: 0.35rem;
+}
+.defense__step-desc {
+  font-size: 0.76rem;
+  color: var(--muted-on-navy);
+  line-height: 1.5;
+}
+.defense__step-arrow {
+  align-self: center;
+  flex-shrink: 0;
+  color: var(--gold-dim);
+  font-size: 1.1rem;
+}
+@media (max-width: 860px) {
+  .defense__steps { flex-wrap: wrap; }
+  .defense__step { flex: 1 1 calc(50% - 0.45rem); }
+  .defense__step-arrow { display: none; }
+}
+@media (max-width: 560px) {
+  .defense__steps { flex-direction: column; }
+  .defense__step { flex: 1 1 auto; }
+}
+
 /* -------------------------------------------------------------------------
    10. TIMELINE
    ------------------------------------------------------------------------- */

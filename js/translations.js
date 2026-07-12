@@ -430,6 +430,7 @@ const translations = {
       philosophy: {
         eyebrow: "Our philosophy",
         headline: "Five principles that guide how we think.",
+        intro: "We start from a simple premise: sound thinking is not an inborn gift but a discipline, one that sharpens with practice, feedback, and honest reflection. Everything we build rests on five ideas.",
         p1Title: "Critical Thinking",
         p1Desc: "Every problem deserves to be questioned before it is answered.",
         p2Title: "Evidence Before Opinion",
@@ -439,8 +440,7 @@ const translations = {
         p4Title: "Better Decisions",
         p4Desc: "The goal is not to win an argument, but to reach the strongest possible decision.",
         p5Title: "Continuous Growth",
-        p5Desc: "Thinking is a skill that develops with practice, feedback, and reflection.",
-        bridge: "Principles are only meaningful when they are upheld — which is why we hold ourselves to them as closely as we ask participants to."
+        p5Desc: "Thinking is a skill that develops with practice, feedback, and reflection."
       },
       design: {
         eyebrow: "How we design competitions",
@@ -1023,6 +1023,7 @@ const translations = {
       philosophy: {
         eyebrow: "Filosofi kami",
         headline: "Lima prinsip yang membimbing cara kami berpikir.",
+        intro: "Kami bertolak dari satu premis sederhana: bernalar dengan baik bukanlah bakat bawaan, melainkan disiplin — yang semakin tajam lewat latihan, masukan, dan refleksi yang jujur. Semua yang kami bangun bersandar pada lima gagasan berikut.",
         p1Title: "Berpikir Kritis",
         p1Desc: "Setiap masalah layak dipertanyakan sebelum dijawab.",
         p2Title: "Bukti Sebelum Opini",
@@ -1032,8 +1033,7 @@ const translations = {
         p4Title: "Keputusan yang Lebih Baik",
         p4Desc: "Tujuannya bukan memenangkan perdebatan, melainkan mencapai keputusan yang paling kuat.",
         p5Title: "Pertumbuhan Berkelanjutan",
-        p5Desc: "Berpikir adalah keterampilan yang berkembang melalui latihan, masukan, dan refleksi.",
-        bridge: "Prinsip hanya berarti jika benar-benar dijunjung — karena itulah kami memegangnya seketat kami meminta peserta untuk melakukannya."
+        p5Desc: "Berpikir adalah keterampilan yang berkembang melalui latihan, masukan, dan refleksi."
       },
       design: {
         eyebrow: "Cara kami merancang kompetisi",

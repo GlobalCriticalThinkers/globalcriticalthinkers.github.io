@@ -30,8 +30,8 @@ const translations = {
     hero: {
       imageAlt: "A student reasoning through a real-world challenge during Global Critical Thinkers",
       kicker: "Global Critical Thinking Competition",
-      headline: "A competition for students<br>who <em>think</em> clearly — open worldwide.",
-      sub: "One real-world challenge, one day, one panel of judges. Participants reason, defend, and present their way to a result — no scripts, no memorized answers.",
+      headline: "Solve a real problem.<br>Defend your <em>reasoning</em>, live.",
+      sub: "A global critical thinking competition. No scripts, no memorized answers — just judgment tested in front of a live panel.",
       stat1: "Distinct thinking disciplines",
       stat2: "Real-world challenge",
       stat3: "Assumptions questioned",
@@ -599,8 +599,8 @@ const translations = {
     hero: {
       imageAlt: "Seorang peserta bernalar menghadapi tantangan nyata dalam ajang Global Critical Thinkers",
       kicker: "Kompetisi Berpikir Kritis Global",
-      headline: "Kompetisi untuk pelajar<br>yang <em>berpikir</em> jernih — terbuka untuk seluruh dunia.",
-      sub: "Satu tantangan nyata, satu hari, satu panel juri. Peserta bernalar, mempertahankan pendapat, dan mempresentasikan hasil pemikirannya — tanpa naskah, tanpa jawaban hafalan.",
+      headline: "Selesaikan masalah nyata.<br>Pertahankan <em>penalaranmu</em>, secara langsung.",
+      sub: "Kompetisi berpikir kritis global. Tanpa naskah, tanpa jawaban hafalan — hanya penilaian yang diuji langsung di hadapan panel juri.",
       stat1: "Disiplin berpikir yang berbeda",
       stat2: "Tantangan nyata",
       stat3: "Asumsi yang dipertanyakan",

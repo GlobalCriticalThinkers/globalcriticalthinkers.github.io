@@ -170,6 +170,125 @@
       </div>
     </section>
 
+    <!-- ============================================ -->
+    <!-- TRUST — Awards, Venue, FAQ — relocated from homepage -->
+    <!-- ============================================ -->
+    <section class="section section--paper trust" id="trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="trust__head reveal">
+          <p class="eyebrow eyebrow--dark" data-i18n="trust.eyebrow">The record</p>
+          <h2 id="trust-heading" class="display-lg" data-i18n-html="trust.headline">Everything worth knowing<br>before you commit to this.</h2>
+        </div>
+
+        <div class="trust-nav reveal-stagger" role="tablist" aria-label="Awards, Venue, FAQ">
+          <button class="trust-nav__card" type="button" role="tab" id="trust-tab-awards" aria-selected="false" aria-controls="trust-panel-awards" data-target="awards">
+            <span class="trust-nav__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 5.6L20 8.3l-4.2 3.9 1.2 5.8L12 14.9l-5 3.1 1.2-5.8L4 8.3l5.6-.7L12 2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="trust-nav__label" data-i18n="trust.cardAwards">Awards</span>
+            <span class="trust-nav__desc" data-i18n="trust.cardAwardsDesc">Certificates &amp; recognition</span>
+          </button>
+          <button class="trust-nav__card" type="button" role="tab" id="trust-tab-venue" aria-selected="false" aria-controls="trust-panel-venue" data-target="venue">
+            <span class="trust-nav__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.4"/></svg>
+            </span>
+            <span class="trust-nav__label" data-i18n="trust.cardVenue">Venue</span>
+            <span class="trust-nav__desc" data-i18n="trust.cardVenueDesc">Where it's held</span>
+          </button>
+          <button class="trust-nav__card" type="button" role="tab" id="trust-tab-faq" aria-selected="false" aria-controls="trust-panel-faq" data-target="faq">
+            <span class="trust-nav__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9.5 9a2.5 2.5 0 1 1 3.6 2.24C12 11.7 12 12.5 12 13.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="17" r="0.9" fill="currentColor"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/></svg>
+            </span>
+            <span class="trust-nav__label" data-i18n="trust.cardFaq">FAQ</span>
+            <span class="trust-nav__desc" data-i18n="trust.cardFaqDesc">Common questions</span>
+          </button>
+        </div>
+
+        <div class="trust-panels">
+          <p class="trust-empty" id="trust-empty" data-i18n="trust.emptyState">Choose a topic above to continue.</p>
+
+          <div class="trust-panel" id="trust-panel-awards" role="tabpanel" aria-labelledby="trust-tab-awards" hidden>
+            <div class="panel-intro reveal">
+              <h3 class="panel-intro__title" data-i18n="trust.awardsTitle">Recognition & Certification</h3>
+              <p class="panel-intro__copy" data-i18n="trust.awardsCopy">This competition does not provide cash prizes. Every participant who completes the competition will receive an official certificate.</p>
+            </div>
+            <div class="award-list reveal-stagger">
+              <div class="award-row"><span class="award-row__name" data-i18n="trust.award1">Champion</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+              <div class="award-row"><span class="award-row__name" data-i18n-html="trust.award2">Excellence Award <em>(Top 10%)</em></span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+              <div class="award-row"><span class="award-row__name" data-i18n="trust.award3">Outstanding Reasoning</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+              <div class="award-row"><span class="award-row__name" data-i18n="trust.award4">Clearest Communicator</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+              <div class="award-row"><span class="award-row__name" data-i18n="trust.award5">Sharpest Judgment</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+              <div class="award-row"><span class="award-row__name" data-i18n="trust.award6">Best Critical Analysis</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+              <div class="award-row"><span class="award-row__name" data-i18n="trust.award7">Judges' Recognition</span><span class="award-row__value" data-i18n="trust.certificate">Certificate</span></div>
+              <div class="award-row"><span class="award-row__name" data-i18n="trust.award8">Certificate of Participation</span><span class="award-row__value" data-i18n="trust.allParticipants">All Participants</span></div>
+            </div>
+          </div>
+
+          <div class="trust-panel" id="trust-panel-venue" role="tabpanel" aria-labelledby="trust-tab-venue" hidden>
+            <div class="venue-panel reveal">
+              <div class="venue-panel__img">
+                <img src="images/Grandkemang.jpg" alt="Grand Kemang Hotel, Jakarta — poolside courtyard at night" data-i18n-alt="trust.venueImageAlt" loading="lazy">
+              </div>
+              <div class="venue-panel__body">
+                <p class="eyebrow eyebrow--dark" data-i18n="trust.venueEyebrow">Venue</p>
+                <h3 class="venue-panel__name" data-i18n="trust.venueName">Grand Kemang Hotel</h3>
+                <p class="venue-panel__location" data-i18n="trust.venueLocation">Jakarta, Indonesia</p>
+                <p class="venue-panel__note" data-i18n="trust.venueNote">The inaugural Global Critical Thinkers will be held at Grand Kemang Hotel — a landmark venue in South Jakarta, chosen to match the standard we're setting from day one.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="trust-panel" id="trust-panel-faq" role="tabpanel" aria-labelledby="trust-tab-faq" hidden>
+            <div class="faq-list reveal-stagger">
+              <div class="faq-item">
+                <button class="faq-item__q"><span data-i18n="trust.faqQ1">Who can participate?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <div class="faq-item__a"><p data-i18n="trust.faqA1">Global Critical Thinkers is open to junior high school students, senior high school students, university students, and fresh graduates.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-item__q"><span data-i18n="trust.faqQ2">Can I register on my own, or do I need a group?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <div class="faq-item__a"><p data-i18n="trust.faqA2">You can register entirely on your own. You'll be placed alongside other participants by the organizing committee (up to 10 people per group) so the challenge is tested fairly for everyone involved.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-item__q"><span data-i18n="trust.faqQ3">Do I need prior experience?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <div class="faq-item__a"><p data-i18n="trust.faqA3">No. The competition is designed for both beginners and experienced participants.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-item__q"><span data-i18n="trust.faqQ4">What language will be used?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <div class="faq-item__a"><p data-i18n="trust.faqA4">English.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-item__q"><span data-i18n="trust.faqQ5">What should I prepare?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <div class="faq-item__a"><p data-i18n="trust.faqA5">A laptop, business casual attire, an optional notebook, and a willingness to have your thinking questioned.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-item__q"><span data-i18n="trust.faqQ6">Is accommodation included?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <div class="faq-item__a"><p data-i18n="trust.faqA6">Lunch and two coffee breaks are included. Transportation and accommodation are not included.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-item__q"><span data-i18n="trust.faqQ7">When will the venue be announced?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <div class="faq-item__a"><p data-i18n="trust.faqA7">The official venue will be announced before the event.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-item__q"><span data-i18n="trust.faqQ8">What happens after payment?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <div class="faq-item__a"><p data-i18n="trust.faqA8">Your registration will be confirmed within 48 hours after payment verification.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CLOSING CTA -->
+    <!-- ============================================ -->
+    <section class="final-cta" id="competition-final-cta" aria-labelledby="competition-final-cta-heading">
+      <div class="container">
+        <p class="eyebrow final-cta__eyebrow" data-i18n="competition.finalCta.eyebrow">Registration</p>
+        <h2 id="competition-final-cta-heading" class="final-cta__headline" data-i18n="competition.finalCta.headline">You know what it takes. Now take your seat.</h2>
+        <a href="index.html#registration" class="btn btn--gold" data-i18n="competition.finalCta.cta">Register Now</a>
+      </div>
+    </section>
+
   </main>
 
   <!-- ============================================ -->

@@ -92,29 +92,32 @@ const translations = {
       aboutLink: "Learn About GCT <span aria-hidden=\"true\">&rarr;</span>"
     },
     discussion: {
-      eyebrow: "Round one",
-      headline: "You form your position<br>before anyone else's enters the room.",
-      quote: "\u201CThe strongest thinkers don't defend their first answer. They're willing to be wrong out loud, in front of people, until the reasoning actually holds.\u201D",
-      cite: "— Facilitator note, GCT judging panel",
-      imageAlt: "A participant reasoning through the problem aloud before the wider group",
-      tag: "Minutes to form your own position before anyone else's opinion enters the room"
+      eyebrow: "Round 1 — Individual Position Statement",
+      headline: "Before collaboration comes<br>independent judgment.",
+      intro: "Every participant begins alone. Before any team discussion takes place, each participant develops an independent position and presents it directly to the judging panel — a test of reasoning with no one else's opinion in the room yet.",
+      mark1: "2-minute individual presentation",
+      mark2: "Independent reasoning before collaboration",
+      mark3: "No Q&A during presentations",
+      mark4: "Individual assessment by the judging panel",
+      imageAlt: "A participant delivering their individual position statement to the judging panel",
+      tag: "Minutes to present an independent position before the panel"
     },
     disciplines: {
-      eyebrow: "The Four Assessment Dimensions",
+      eyebrow: "The framework",
       headline: "Four disciplines<br>judges are looking for.",
       intro: "Behind the scoring sheet is a simple structure. At every stage of the competition, judges are watching for the same four disciplines — each one a different way of testing whether your thinking actually holds up.",
       role1Alt: "A participant isolating the real problem inside the challenge",
       role1Title: "Analysis",
-      role1Desc: "Seeing past the obvious framing to ask what's actually being asked.",
+      role1Desc: "The discipline of seeing past the obvious framing. You learn to ask what's actually being asked, before reaching for an answer.",
       role2Alt: "A participant testing whether the evidence actually holds up",
       role2Title: "Evidence",
-      role2Desc: "Intellectual honesty — distrusting first instinct until the data earns confidence.",
+      role2Desc: "The discipline of intellectual honesty. You learn to distrust your first instinct until the data has earned your confidence.",
       role3Alt: "A participant shaping analysis into a defensible position",
       role3Title: "Judgment",
-      role3Desc: "Deciding under uncertainty — committing to a position you can actually defend.",
+      role3Desc: "The discipline of deciding under uncertainty. You learn to commit to a position you can actually defend, not just one that sounds good.",
       role4Alt: "A participant making their reasoning legible to the room",
       role4Title: "Communication",
-      role4Desc: "Clarity — an idea only counts once someone else can follow how you got there."
+      role4Desc: "The discipline of clarity. You learn that an idea only counts once someone else can follow exactly how you got there."
     },
     presentation: {
       eyebrow: "Round two",
@@ -536,7 +539,7 @@ const translations = {
       overview: {
         eyebrow: "Competition Overview",
         headline: "One challenge. One day. One standard of judgment.",
-        body: "Every participant works through the same real-world challenge, under the same conditions, using the same evaluation framework — first on their own, then as part of a team — regardless of background, school, or prior experience. Participants first think independently, then collaborate in teams, and finally defend their reasoning before a judging panel."
+        body: "Every participant works through the same real-world challenge, under the same conditions, using the same evaluation framework — first on their own, then as part of a team — regardless of background, school, or prior experience."
       },
       experience: {
         eyebrow: "The Experience",
@@ -674,29 +677,32 @@ const translations = {
       aboutLink: "Pelajari Tentang GCT <span aria-hidden=\"true\">&rarr;</span>"
     },
     discussion: {
-      eyebrow: "Babak pertama",
-      headline: "Kamu membentuk posisimu<br>sebelum pendapat orang lain masuk ke ruangan.",
-      quote: "\u201CPemikir terkuat tidak mempertahankan jawaban pertamanya mati-matian. Mereka bersedia terlihat salah di depan orang lain, sampai penalarannya benar-benar terbukti kuat.\u201D",
-      cite: "— Catatan fasilitator, panel juri GCT",
-      imageAlt: "Seorang peserta menyampaikan penalarannya secara terbuka di hadapan kelompok",
-      tag: "Menit untuk membentuk posisimu sendiri, sebelum pendapat orang lain masuk ke ruangan"
+      eyebrow: "Babak 1 — Pernyataan Posisi Individu",
+      headline: "Sebelum kolaborasi,<br>ada penilaian mandiri.",
+      intro: "Setiap peserta memulai secara individu. Sebelum diskusi tim dimulai, setiap peserta menyusun posisi mandiri dan menyampaikannya langsung di hadapan dewan juri — sebuah uji penalaran sebelum pendapat orang lain memasuki ruangan.",
+      mark1: "Presentasi individu selama 2 menit",
+      mark2: "Penalaran mandiri sebelum kolaborasi",
+      mark3: "Tanpa sesi tanya jawab saat presentasi",
+      mark4: "Penilaian individu oleh dewan juri",
+      imageAlt: "Seorang peserta menyampaikan pernyataan posisi individunya di hadapan dewan juri",
+      tag: "Menit untuk menyampaikan posisi mandiri di hadapan dewan juri"
     },
     disciplines: {
-      eyebrow: "Empat Dimensi Penilaian",
+      eyebrow: "Kerangka penilaian",
       headline: "Empat disiplin<br>yang dicari juri.",
       intro: "Di balik lembar penilaian ada satu struktur sederhana. Di setiap tahap kompetisi, juri mencermati empat disiplin yang sama — masing-masing adalah cara berbeda untuk menguji apakah pemikiranmu benar-benar kokoh.",
       role1Alt: "Seorang peserta mengisolasi inti masalah dalam tantangan",
       role1Title: "Analisis",
-      role1Desc: "Melihat melampaui kerangka di permukaan untuk menemukan apa yang sebenarnya ditanyakan.",
+      role1Desc: "Disiplin untuk melihat melampaui kerangka yang tampak di permukaan. Kamu belajar mempertanyakan apa yang sebenarnya sedang ditanyakan, sebelum buru-buru menjawab.",
       role2Alt: "Seorang peserta menguji apakah bukti yang ada benar-benar kuat",
       role2Title: "Bukti",
-      role2Desc: "Kejujuran intelektual — tidak langsung memercayai insting sampai data benar-benar meyakinkan.",
+      role2Desc: "Disiplin kejujuran intelektual. Kamu belajar untuk tidak langsung memercayai insting pertamamu, sampai data benar-benar meyakinkan.",
       role3Alt: "Seorang peserta membentuk hasil analisis menjadi posisi yang dapat dipertahankan",
       role3Title: "Penilaian",
-      role3Desc: "Mengambil keputusan di tengah ketidakpastian — berkomitmen pada posisi yang benar-benar bisa dipertahankan.",
+      role3Desc: "Disiplin mengambil keputusan di tengah ketidakpastian. Kamu belajar berkomitmen pada posisi yang benar-benar bisa kamu pertahankan, bukan sekadar yang terdengar meyakinkan.",
       role4Alt: "Seorang peserta membuat penalarannya mudah dipahami oleh ruangan",
       role4Title: "Komunikasi",
-      role4Desc: "Kejelasan — sebuah gagasan baru berarti ketika orang lain bisa mengikuti persis bagaimana kamu sampai ke sana."
+      role4Desc: "Disiplin kejelasan. Kamu belajar bahwa sebuah gagasan baru benar-benar berarti ketika orang lain bisa mengikuti persis bagaimana kamu sampai ke sana."
     },
     presentation: {
       eyebrow: "Babak kedua",
@@ -1118,7 +1124,7 @@ const translations = {
       overview: {
         eyebrow: "Ikhtisar Kompetisi",
         headline: "Satu tantangan. Satu hari. Satu standar penilaian.",
-        body: "Setiap peserta menghadapi tantangan nyata yang sama, dalam kondisi yang sama, menggunakan kerangka evaluasi yang sama — pertama secara individu, lalu sebagai bagian dari tim — terlepas dari latar belakang, sekolah, atau pengalaman sebelumnya. Peserta pertama-tama berpikir secara mandiri, kemudian berkolaborasi dalam tim, dan akhirnya mempertahankan penalarannya di hadapan dewan juri."
+        body: "Setiap peserta menghadapi tantangan nyata yang sama, dalam kondisi yang sama, menggunakan kerangka evaluasi yang sama — pertama secara individu, lalu sebagai bagian dari tim — terlepas dari latar belakang, sekolah, atau pengalaman sebelumnya."
       },
       experience: {
         eyebrow: "Pengalaman Kompetisi",

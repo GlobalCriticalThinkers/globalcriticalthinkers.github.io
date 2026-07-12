@@ -417,6 +417,20 @@ body {
   transition: opacity 0.22s var(--ease), transform 0.22s var(--ease), visibility 0s linear 0.22s;
   z-index: 950;
 }
+/* Invisible hover bridge: the panel sits 0.9rem below the trigger, and
+   that visual gap is a dead zone for hover since the panel is
+   position:absolute (removed from the wrapper's normal-flow hover box).
+   This pseudo-element extends the panel's actual hit area up to meet
+   the trigger, so moving the cursor straight down never exits
+   .nav-events and never fires mouseleave prematurely. */
+.nav-events__panel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.9rem;
+  height: 0.9rem;
+}
 .nav-events.is-open .nav-events__panel {
   opacity: 1;
   visibility: visible;

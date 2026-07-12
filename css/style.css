@@ -170,6 +170,18 @@ body {
 @media (max-width: 1100px) {
   .lede--wide { max-width: 100%; }
 }
+/* .analysis__head caps its column (heading + intro) at 660px so the
+   headline keeps its intended two-line wrap. The intro paragraph needs
+   to read wider than that, so its width is set explicitly here to break
+   out of the column constraint without touching .analysis__head itself
+   (which would also stretch the heading undesirably). */
+.analysis__head .lede--wide {
+  width: 940px;
+  max-width: 940px;
+}
+@media (max-width: 1100px) {
+  .analysis__head .lede--wide { width: 100%; }
+}
 
 .container {
   max-width: 1280px;

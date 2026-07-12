@@ -72,7 +72,10 @@
     var desktopLinks =
       homeAboutLinks +
       '\n        <div class="nav-events" id="navEventsDesktop">' +
-        '<a href="events.html" class="site-nav__link nav-events__trigger' + (isEventsActive ? ' is-active' : '') + '" id="navEventsToggle" aria-haspopup="true" aria-expanded="false" aria-controls="navEventsPanel" data-i18n="nav.events">Events</a>' +
+        '<a href="events.html" class="site-nav__link nav-events__trigger' + (isEventsActive ? ' is-active' : '') + '" id="navEventsToggle" aria-haspopup="true" aria-expanded="false" aria-controls="navEventsPanel">' +
+          '<span data-i18n="nav.events">Events</span>' +
+          '<svg class="nav-events__chevron" width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true"><path d="M1 1L4.5 4.5L8 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        '</a>' +
         '<div class="nav-events__panel" id="navEventsPanel" role="menu" aria-label="Events">' +
         '\n            ' + desktopEventsChildren + '\n            ' +
         '</div>' +

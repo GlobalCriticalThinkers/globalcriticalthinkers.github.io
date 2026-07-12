@@ -536,7 +536,7 @@ const translations = {
       overview: {
         eyebrow: "Competition Overview",
         headline: "One challenge. One day. One standard of judgment.",
-        body: "Every participant works through the same real-world challenge, under the same conditions, using the same evaluation framework — first on their own, then as part of a team — regardless of background, school, or prior experience."
+        body: "Every participant works through the same real-world challenge, under the same conditions, using the same evaluation framework — first on their own, then as part of a team — regardless of background, school, or prior experience. Participants first think independently, then collaborate in teams, and finally defend their reasoning before a judging panel."
       },
       experience: {
         eyebrow: "The Experience",
@@ -1118,7 +1118,7 @@ const translations = {
       overview: {
         eyebrow: "Ikhtisar Kompetisi",
         headline: "Satu tantangan. Satu hari. Satu standar penilaian.",
-        body: "Setiap peserta menghadapi tantangan nyata yang sama, dalam kondisi yang sama, menggunakan kerangka evaluasi yang sama — pertama secara individu, lalu sebagai bagian dari tim — terlepas dari latar belakang, sekolah, atau pengalaman sebelumnya."
+        body: "Setiap peserta menghadapi tantangan nyata yang sama, dalam kondisi yang sama, menggunakan kerangka evaluasi yang sama — pertama secara individu, lalu sebagai bagian dari tim — terlepas dari latar belakang, sekolah, atau pengalaman sebelumnya. Peserta pertama-tama berpikir secara mandiri, kemudian berkolaborasi dalam tim, dan akhirnya mempertahankan penalarannya di hadapan dewan juri."
       },
       experience: {
         eyebrow: "Pengalaman Kompetisi",

@@ -92,8 +92,8 @@ const translations = {
       aboutLink: "Learn About GCT <span aria-hidden=\"true\">&rarr;</span>"
     },
     discussion: {
-      eyebrow: "The reasoning",
-      headline: "Your thinking,<br>tested in the open.",
+      eyebrow: "Round one",
+      headline: "You form your position<br>before anyone else's enters the room.",
       quote: "\u201CThe strongest thinkers don't defend their first answer. They're willing to be wrong out loud, in front of people, until the reasoning actually holds.\u201D",
       cite: "— Facilitator note, GCT judging panel",
       imageAlt: "A participant reasoning through the problem aloud before the wider group",
@@ -116,8 +116,8 @@ const translations = {
       role4Desc: "The discipline of clarity. You learn that an idea only counts once someone else can follow exactly how you got there."
     },
     presentation: {
-      eyebrow: "Communicating ideas",
-      headline: "A clear mind sounds like one.",
+      eyebrow: "Round two",
+      headline: "Then you make it legible to everyone else.",
       imageAlt1: "A participant articulating their reasoning to the panel",
       imageAlt2: "Judges listening closely as reasoning, not delivery, is being assessed",
       item1Bold: "10 minutes",
@@ -129,8 +129,8 @@ const translations = {
     },
     defense: {
       imageAlt: "A participant reasoning through a difficult question from the judges",
-      eyebrow: "The examination",
-      headline: "This is where thinking<br><em>either holds</em> — or it doesn't.",
+      eyebrow: "Round three",
+      headline: "This is where your thinking<br><em>either holds</em> — or it doesn't.",
       copy: "Judges will find the weakest point in your reasoning and press on it. You can hold your position or change your mind — both are respected, as long as either one is earned through logic, not stubbornness or nerves.",
       mark1: "15 minutes of direct, unscripted questioning",
       mark2: "Judged on how you think, not how you sound"
@@ -463,7 +463,7 @@ const translations = {
         item4Desc: "The same framework applied consistently to every participant.",
         item5Title: "Personalized Reports",
         item5Desc: "Individual feedback that outlasts the day of the competition.",
-        reference: "A full breakdown of the competition format is available on the <a href=\"index.html#overview\">Competition Overview</a> and <a href=\"index.html#evaluation\">How You're Evaluated</a> sections of the main page.",
+        reference: "A full breakdown of the competition format is available on the <a href=\"competition.html#competition-overview\">Competition Overview</a> and <a href=\"competition.html#evaluation\">How You're Evaluated</a> sections of the Competition page.",
         bridge: "This structure repeats every edition — but the institution around it is built to outlast any one of them."
       },
       beyond: {
@@ -692,8 +692,8 @@ const translations = {
       aboutLink: "Pelajari Tentang GCT <span aria-hidden=\"true\">&rarr;</span>"
     },
     discussion: {
-      eyebrow: "Penalaran",
-      headline: "Cara berpikirmu,<br>diuji secara terbuka.",
+      eyebrow: "Babak pertama",
+      headline: "Kamu membentuk posisimu<br>sebelum pendapat orang lain masuk ke ruangan.",
       quote: "\u201CPemikir terkuat tidak mempertahankan jawaban pertamanya mati-matian. Mereka bersedia terlihat salah di depan orang lain, sampai penalarannya benar-benar terbukti kuat.\u201D",
       cite: "— Catatan fasilitator, panel juri GCT",
       imageAlt: "Seorang peserta menyampaikan penalarannya secara terbuka di hadapan kelompok",
@@ -716,8 +716,8 @@ const translations = {
       role4Desc: "Disiplin kejelasan. Kamu belajar bahwa sebuah gagasan baru benar-benar berarti ketika orang lain bisa mengikuti persis bagaimana kamu sampai ke sana."
     },
     presentation: {
-      eyebrow: "Menyampaikan gagasan",
-      headline: "Pikiran yang jernih, terdengar jernih.",
+      eyebrow: "Babak kedua",
+      headline: "Lalu kamu membuatnya mudah dipahami semua orang.",
       imageAlt1: "Seorang peserta menjelaskan penalarannya kepada panel",
       imageAlt2: "Juri menyimak dengan saksama, menilai penalaran, bukan gaya penyampaian",
       item1Bold: "10 menit",
@@ -729,8 +729,8 @@ const translations = {
     },
     defense: {
       imageAlt: "Seorang peserta bernalar menghadapi pertanyaan sulit dari para juri",
-      eyebrow: "Sesi Pengujian",
-      headline: "Di sinilah pemikiran<br><em>terbukti kuat</em> — atau tidak.",
+      eyebrow: "Babak ketiga",
+      headline: "Di sinilah pemikiranmu<br><em>terbukti kuat</em> — atau tidak.",
       copy: "Juri akan mencari titik terlemah dalam penalaranmu dan menekannya. Kamu bisa mempertahankan posisimu atau mengubah pandangan — keduanya sama-sama dihargai, selama didasari logika, bukan sekadar keras kepala atau gugup.",
       mark1: "15 menit sesi tanya jawab langsung, tanpa naskah",
       mark2: "Dinilai dari cara kamu berpikir, bukan cara kamu terdengar"
@@ -1063,7 +1063,7 @@ const translations = {
         item4Desc: "Kerangka yang sama, diterapkan secara konsisten kepada setiap peserta.",
         item5Title: "Laporan yang Dipersonalisasi",
         item5Desc: "Masukan individual yang tetap relevan jauh melampaui hari kompetisi.",
-        reference: "Rincian lengkap format kompetisi tersedia pada bagian <a href=\"index.html#overview\">Ikhtisar Kompetisi</a> dan <a href=\"index.html#evaluation\">Bagaimana Kamu Dinilai</a> di halaman utama.",
+        reference: "Rincian lengkap format kompetisi tersedia pada bagian <a href=\"competition.html#competition-overview\">Ikhtisar Kompetisi</a> dan <a href=\"competition.html#evaluation\">Bagaimana Kamu Dinilai</a> di halaman Kompetisi.",
         bridge: "Struktur ini terulang di setiap edisi — namun institusi di baliknya dibangun untuk bertahan lebih lama dari salah satu edisinya."
       },
       beyond: {

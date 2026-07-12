@@ -100,21 +100,21 @@ const translations = {
       tag: "Minutes to form your own position before anyone else's opinion enters the room"
     },
     disciplines: {
-      eyebrow: "The framework",
+      eyebrow: "The Four Assessment Dimensions",
       headline: "Four disciplines<br>judges are looking for.",
       intro: "Behind the scoring sheet is a simple structure. At every stage of the competition, judges are watching for the same four disciplines — each one a different way of testing whether your thinking actually holds up.",
       role1Alt: "A participant isolating the real problem inside the challenge",
       role1Title: "Analysis",
-      role1Desc: "The discipline of seeing past the obvious framing. You learn to ask what's actually being asked, before reaching for an answer.",
+      role1Desc: "Seeing past the obvious framing to ask what's actually being asked.",
       role2Alt: "A participant testing whether the evidence actually holds up",
       role2Title: "Evidence",
-      role2Desc: "The discipline of intellectual honesty. You learn to distrust your first instinct until the data has earned your confidence.",
+      role2Desc: "Intellectual honesty — distrusting first instinct until the data earns confidence.",
       role3Alt: "A participant shaping analysis into a defensible position",
       role3Title: "Judgment",
-      role3Desc: "The discipline of deciding under uncertainty. You learn to commit to a position you can actually defend, not just one that sounds good.",
+      role3Desc: "Deciding under uncertainty — committing to a position you can actually defend.",
       role4Alt: "A participant making their reasoning legible to the room",
       role4Title: "Communication",
-      role4Desc: "The discipline of clarity. You learn that an idea only counts once someone else can follow exactly how you got there."
+      role4Desc: "Clarity — an idea only counts once someone else can follow how you got there."
     },
     presentation: {
       eyebrow: "Round two",
@@ -682,21 +682,21 @@ const translations = {
       tag: "Menit untuk membentuk posisimu sendiri, sebelum pendapat orang lain masuk ke ruangan"
     },
     disciplines: {
-      eyebrow: "Kerangka penilaian",
+      eyebrow: "Empat Dimensi Penilaian",
       headline: "Empat disiplin<br>yang dicari juri.",
       intro: "Di balik lembar penilaian ada satu struktur sederhana. Di setiap tahap kompetisi, juri mencermati empat disiplin yang sama — masing-masing adalah cara berbeda untuk menguji apakah pemikiranmu benar-benar kokoh.",
       role1Alt: "Seorang peserta mengisolasi inti masalah dalam tantangan",
       role1Title: "Analisis",
-      role1Desc: "Disiplin untuk melihat melampaui kerangka yang tampak di permukaan. Kamu belajar mempertanyakan apa yang sebenarnya sedang ditanyakan, sebelum buru-buru menjawab.",
+      role1Desc: "Melihat melampaui kerangka di permukaan untuk menemukan apa yang sebenarnya ditanyakan.",
       role2Alt: "Seorang peserta menguji apakah bukti yang ada benar-benar kuat",
       role2Title: "Bukti",
-      role2Desc: "Disiplin kejujuran intelektual. Kamu belajar untuk tidak langsung memercayai insting pertamamu, sampai data benar-benar meyakinkan.",
+      role2Desc: "Kejujuran intelektual — tidak langsung memercayai insting sampai data benar-benar meyakinkan.",
       role3Alt: "Seorang peserta membentuk hasil analisis menjadi posisi yang dapat dipertahankan",
       role3Title: "Penilaian",
-      role3Desc: "Disiplin mengambil keputusan di tengah ketidakpastian. Kamu belajar berkomitmen pada posisi yang benar-benar bisa kamu pertahankan, bukan sekadar yang terdengar meyakinkan.",
+      role3Desc: "Mengambil keputusan di tengah ketidakpastian — berkomitmen pada posisi yang benar-benar bisa dipertahankan.",
       role4Alt: "Seorang peserta membuat penalarannya mudah dipahami oleh ruangan",
       role4Title: "Komunikasi",
-      role4Desc: "Disiplin kejelasan. Kamu belajar bahwa sebuah gagasan baru benar-benar berarti ketika orang lain bisa mengikuti persis bagaimana kamu sampai ke sana."
+      role4Desc: "Kejelasan — sebuah gagasan baru berarti ketika orang lain bisa mengikuti persis bagaimana kamu sampai ke sana."
     },
     presentation: {
       eyebrow: "Babak kedua",

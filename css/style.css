@@ -1270,9 +1270,10 @@ body {
 /* Paper-background variant, used by "How It Works" */
 .timeline-list--paper { border-top-color: rgba(11,18,32,0.12); }
 .timeline-list--paper .timeline-item { border-bottom-color: rgba(11,18,32,0.12); }
+.timeline-list--paper .timeline-item__date { color: var(--gold); font-weight: 600; }
 .timeline-list--paper .timeline-item__meta { color: var(--muted-on-paper); }
-.timeline-list--paper .timeline-item__title { color: var(--ink); }
-.timeline-list--paper .timeline-item__tag { color: var(--muted-on-paper); border-color: rgba(11,18,32,0.14); }
+.timeline-list--paper .timeline-item__title { color: var(--ink); font-weight: 600; }
+.timeline-list--paper .timeline-item__tag { color: var(--muted-on-paper); border-color: rgba(11,18,32,0.22); }
 .timeline-list--paper .timeline-item__list li { color: var(--muted-on-paper); }
 .timeline-item__index {
   font-family: var(--font-display);

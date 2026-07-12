@@ -47,6 +47,61 @@
     </header>
 
     <!-- ============================================ -->
+    <!-- COMPETITION DAY AT A GLANCE — compact, static overview of the -->
+    <!-- day's rhythm; reuses .defense__steps' card language further -->
+    <!-- down the page. Introduces Round 1/2/3 by name before the -->
+    <!-- detailed sections explain them, and before Timeline mentions -->
+    <!-- Competition Day again — no overlap with either. -->
+    <!-- ============================================ -->
+    <section class="day-glance" id="day-glance" aria-labelledby="day-glance-heading">
+      <div class="container">
+        <div class="day-glance__head reveal">
+          <p class="day-glance__label" data-i18n="competition.dayGlance.eyebrow">The Day</p>
+          <h2 id="day-glance-heading" class="day-glance__title" data-i18n="competition.dayGlance.headline">Competition Day at a Glance</h2>
+          <p class="day-glance__copy" data-i18n="competition.dayGlance.copy">See the flow of the competition day — from arrival to the closing ceremony.</p>
+        </div>
+        <div class="day-glance__steps reveal-stagger">
+          <div class="day-glance__step">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step1Time">08:00</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step1Title">Registration</h3>
+          </div>
+          <div class="day-glance__step">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step2Time">09:00</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step2Title">Opening Ceremony</h3>
+          </div>
+          <div class="day-glance__step day-glance__step--round">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step3Time">09:15</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step3Title">Round 1</h3>
+          </div>
+          <div class="day-glance__step">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step4Time">12:00</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step4Title">Lunch Break</h3>
+          </div>
+          <div class="day-glance__step day-glance__step--round">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step5Time">13:30</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step5Title">Round 2</h3>
+          </div>
+          <div class="day-glance__step day-glance__step--round">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step6Time">14:30</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step6Title">Round 3</h3>
+          </div>
+          <div class="day-glance__step">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step7Time">16:00</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step7Title">Inspiration Session</h3>
+          </div>
+          <div class="day-glance__step">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step8Time">16:15</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step8Title">Awarding Ceremony</h3>
+          </div>
+          <div class="day-glance__step">
+            <span class="day-glance__step-time" data-i18n="competition.dayGlance.step9Time">16:40</span>
+            <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step9Title">Closing Ceremony</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
     <!-- COMPETITION OVERVIEW -->
     <!-- ============================================ -->
     <section class="about-block about-block--paper" id="competition-overview" aria-labelledby="competition-overview-heading">
@@ -344,7 +399,6 @@
             <div class="timeline-item__body">
               <span class="timeline-item__title" data-i18n="timeline.item3Title">Competition Day</span>
               <span class="timeline-item__meta" data-i18n="timeline.item3Meta">Grand Kemang Hotel</span>
-              <span class="timeline-item__meta" data-i18n="timeline.item3ListLabel">Includes:</span>
               <ul class="timeline-item__list">
                 <li data-i18n="timeline.item3List1">Round 1 — Individual Position Statement</li>
                 <li data-i18n="timeline.item3List2">Round 2 — Round Table Discussion</li>
@@ -373,7 +427,7 @@
     <!-- PARTNERS — editorial block, not finalized -->
     <!-- ============================================ -->
     <section class="about-block about-block--paper" id="partners" aria-labelledby="partners-heading" style="padding-block:0;">
-      <div class="about-split reveal">
+      <div class="about-split about-split--narrow-media reveal">
         <div class="about-split__text">
           <p class="eyebrow eyebrow--dark" data-i18n="competition.partners.eyebrow">Partners</p>
           <h2 id="partners-heading" class="display-md" data-i18n="competition.partners.headline">Built together with trusted partners.</h2>

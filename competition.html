@@ -60,7 +60,8 @@
           <h2 id="day-glance-heading" class="day-glance__title" data-i18n="competition.dayGlance.headline">Competition Day at a Glance</h2>
           <p class="day-glance__copy" data-i18n="competition.dayGlance.copy">See the flow of the competition day — from arrival to the closing ceremony.</p>
         </div>
-        <div class="day-glance__steps reveal-stagger">
+        <div class="day-glance__scroller">
+          <div class="day-glance__steps" id="dayGlanceSteps" tabindex="0" role="group" aria-label="Competition day schedule, scroll horizontally to see more">
           <div class="day-glance__step">
             <span class="day-glance__step-time" data-i18n="competition.dayGlance.step1Time">08:00</span>
             <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step1Title">Registration</h3>
@@ -96,6 +97,7 @@
           <div class="day-glance__step">
             <span class="day-glance__step-time" data-i18n="competition.dayGlance.step9Time">16:40</span>
             <h3 class="day-glance__step-title" data-i18n="competition.dayGlance.step9Title">Closing Ceremony</h3>
+          </div>
           </div>
         </div>
       </div>

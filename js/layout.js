@@ -87,8 +87,7 @@
         return '<span class="nav-pop__sublink is-disabled" role="menuitem" aria-disabled="true" data-i18n="' + item.i18n + '">' + item.label + '</span>';
       }
       return '<a href="' + item.href + '" class="nav-pop__sublink" role="menuitem" data-i18n="' + item.i18n + '">' + item.label + '</a>';
-    }).join('\n              ') +
-      '\n              <a href="events.html" class="nav-pop__sublink nav-pop__sublink--all" role="menuitem" data-i18n="nav.events">All Events</a>';
+    }).join('\n              ');
 
     var homeAboutMobile = NAV_ITEMS.slice(0, 2).map(function (item) {
       var activeClass = item.key === activePage ? ' is-active' : '';
@@ -147,9 +146,7 @@
      ------------------------------------------------------------------ */
   function buildFooter(activePage) {
     var isHome = activePage === 'home';
-    var isCompetition = activePage === 'events';
     var prefix = isHome ? '' : 'index.html';
-    var competitionPrefix = isCompetition ? '' : 'competition.html';
 
     return (
       '<p class="site-footer__bookend" data-i18n-html="footer.bookend">Think sharper.<br>Your turn.</p>' +
@@ -168,7 +165,7 @@
             '<li><a href="' + prefix + '#why-gct" data-i18n="footer.exploreWhyGct">Why GCT</a></li>' +
             '<li><a href="' + prefix + '#how-it-works" data-i18n="footer.exploreHowItWorks">How it works</a></li>' +
             '<li><a href="' + prefix + '#quick-facts" data-i18n="footer.exploreOverview">Overview</a></li>' +
-            '<li><a href="' + competitionPrefix + '#trust" data-i18n="footer.exploreFaq">Everything to Know</a></li>' +
+            '<li><a href="' + prefix + '#trust" data-i18n="footer.exploreFaq">Everything to Know</a></li>' +
           '</ul>' +
         '</nav>' +
 

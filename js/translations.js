@@ -582,9 +582,9 @@ const translations = {
         body3: "Every partnership is chosen deliberately. It's how GCT stays connected to real institutions and real standards, rather than operating in isolation. Partnership opportunities are currently open, and official partners will be named here as they're confirmed."
       },
       judges: {
-        eyebrow: "Judges",
+        eyebrow: "Judging Panel",
         headline: "The judging panel is currently being finalized.",
-        body: "Every judge will come from professional backgrounds across academia, industry, entrepreneurship, and public policy — chosen for their ability to evaluate reasoning, not performance. Names will be announced ahead of the competition."
+        body: "Judges will be announced ahead of the competition."
       },
       finalCta: {
         eyebrow: "Registration",
@@ -1189,9 +1189,9 @@ const translations = {
         body3: "Setiap kemitraan dipilih dengan cermat. Inilah cara GCT tetap terhubung dengan institusi dan standar yang nyata, bukan berjalan sendiri. Kesempatan bermitra saat ini terbuka, dan mitra resmi akan diumumkan di sini begitu terkonfirmasi."
       },
       judges: {
-        eyebrow: "Juri",
+        eyebrow: "Dewan Juri",
         headline: "Dewan juri saat ini sedang difinalisasi.",
-        body: "Setiap juri berasal dari latar belakang profesional lintas akademisi, industri, kewirausahaan, dan kebijakan publik — dipilih karena kemampuan mereka menilai penalaran, bukan penampilan. Nama-nama akan diumumkan menjelang kompetisi."
+        body: "Juri akan diumumkan menjelang kompetisi."
       },
       finalCta: {
         eyebrow: "Pendaftaran",

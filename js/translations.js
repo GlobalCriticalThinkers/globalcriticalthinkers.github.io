@@ -341,7 +341,8 @@ const translations = {
       principle5Title: "Evidence-Based Reasoning",
       principle5Desc: "Strong conclusions require strong evidence. Arguments should be supported by logic rather than assumptions.",
       closing1: "Integrity is not a separate part of this competition.",
-      closing2: "It is the standard expected from every participant, judge, assessor, facilitator, and organizer."
+      closing2: "It is the standard expected from every participant, judge, assessor, facilitator, and organizer.",
+      transition: "These standards are not adjusted from one edition to the next. Regardless of theme, venue, or industry focus, every Global Critical Thinkers competition is built and judged against the same set of standards."
     },
     registration: {
       eyebrow: "Registration",
@@ -922,7 +923,8 @@ const translations = {
       principle5Title: "Penalaran Berbasis Bukti",
       principle5Desc: "Kesimpulan yang kuat membutuhkan bukti yang kuat. Argumen harus didukung oleh logika, bukan asumsi.",
       closing1: "Integritas bukan bagian yang terpisah dari kompetisi ini.",
-      closing2: "Integritas adalah standar yang diharapkan dari setiap peserta, juri, asesor, fasilitator, dan penyelenggara."
+      closing2: "Integritas adalah standar yang diharapkan dari setiap peserta, juri, asesor, fasilitator, dan penyelenggara.",
+      transition: "Standar ini tidak disesuaikan dari satu edisi ke edisi lain. Apa pun tema, lokasi, atau fokus industrinya, setiap kompetisi Global Critical Thinkers dibangun dan dinilai berdasarkan satu set standar yang sama."
     },
     registration: {
       eyebrow: "Pendaftaran",

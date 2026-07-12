@@ -293,6 +293,83 @@
   }
 
   /* ------------------------------------------------------------------
+     Competition Day at a Glance — horizontal scroll strip. Touch and
+     trackpad users already get native horizontal scroll/swipe for free
+     via overflow-x:auto; this only adds two conveniences for desktop
+     mouse users, who otherwise have no way to scroll a horizontal strip
+     without a trackpad: click-and-drag, and plain (vertical) mouse-wheel
+     input translated to horizontal movement.
+     ------------------------------------------------------------------ */
+  var dayGlanceSteps = document.getElementById('dayGlanceSteps');
+
+  if (dayGlanceSteps) {
+    var isDragging = false;
+    var dragStartX = 0;
+    var dragStartScroll = 0;
+    var dragMoved = false;
+
+    dayGlanceSteps.addEventListener('mousedown', function (event) {
+      isDragging = true;
+      dragMoved = false;
+      dragStartX = event.pageX;
+      dragStartScroll = dayGlanceSteps.scrollLeft;
+      dayGlanceSteps.classList.add('is-dragging');
+    });
+
+    window.addEventListener('mousemove', function (event) {
+      if (!isDragging) return;
+      var delta = event.pageX - dragStartX;
+      if (Math.abs(delta) > 4) dragMoved = true;
+      dayGlanceSteps.scrollLeft = dragStartScroll - delta;
+    });
+
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      dayGlanceSteps.classList.remove('is-dragging');
+    }
+    window.addEventListener('mouseup', endDrag);
+    dayGlanceSteps.addEventListener('mouseleave', endDrag);
+
+    /* A drag that actually moved the strip shouldn't also register as a
+       click on whatever the cursor lands on when the mouse is released
+       (the cards have no links today, but this keeps the behavior
+       correct if that ever changes). */
+    dayGlanceSteps.addEventListener('click', function (event) {
+      if (dragMoved) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    }, true);
+
+    /* Vertical wheel input scrolls the strip horizontally, matching the
+       "mouse wheel + Shift" convenience many horizontal-scroll patterns
+       offer — Shift+wheel already does this natively in every browser,
+       so this only needs to handle the plain vertical-wheel case. */
+    dayGlanceSteps.addEventListener('wheel', function (event) {
+      if (event.deltaY === 0 || event.shiftKey) return;
+      var atLeftEdge = dayGlanceSteps.scrollLeft <= 0 && event.deltaY < 0;
+      var atRightEdge = dayGlanceSteps.scrollLeft + dayGlanceSteps.clientWidth >= dayGlanceSteps.scrollWidth - 1 && event.deltaY > 0;
+      if (atLeftEdge || atRightEdge) return;
+      event.preventDefault();
+      dayGlanceSteps.scrollLeft += event.deltaY;
+    }, { passive: false });
+
+    /* Keyboard support for the focusable strip (tabindex="0" + role="group"
+       in the markup) — Left/Right move by roughly one card width. */
+    dayGlanceSteps.addEventListener('keydown', function (event) {
+      var step = 160;
+      if (event.key === 'ArrowRight') {
+        dayGlanceSteps.scrollLeft += step;
+        event.preventDefault();
+      } else if (event.key === 'ArrowLeft') {
+        dayGlanceSteps.scrollLeft -= step;
+        event.preventDefault();
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------
      Footer year
      ------------------------------------------------------------------ */
   var yearEl = document.getElementById('currentYear');

@@ -2360,6 +2360,10 @@ body {
 .final-cta .btn {
   margin-top: 2.2rem;
 }
+.final-cta__copy {
+  margin-top: 1.1rem;
+  margin-inline: auto;
+}
 
 /* -------------------------------------------------------------------------
    13. REGISTRATION — two column, luxury pricing card

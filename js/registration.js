@@ -193,10 +193,12 @@
     input.min = toISO(minDate);
     input.max = toISO(maxDate);
 
-    // readonly (set in markup) blocks typing; showPicker() on focus/click
-    // guarantees the calendar opens instead of leaving a dead readonly
-    // field on browsers where readonly also suppresses the native
-    // picker-indicator click.
+    // The field is NOT readonly (readonly suppresses the native picker
+    // on click/tap in most browsers, which is exactly the bug this
+    // fixes). Instead: showPicker() opens the calendar on click/focus,
+    // and a keydown listener blocks character entry so the only way to
+    // set a value is through the picker itself. Navigation, accessibility,
+    // and clipboard keys are explicitly allowed through.
     function open() {
       if (typeof input.showPicker === 'function') {
         try { input.showPicker(); } catch (e) { /* ignore unsupported state */ }
@@ -204,6 +206,17 @@
     }
     input.addEventListener('click', open);
     input.addEventListener('focus', open);
+
+    var allowedKeys = [
+      'Tab', 'Escape', 'Enter', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown',
+      'Backspace', 'Delete', 'Home', 'End'
+    ];
+    input.addEventListener('keydown', function (event) {
+      var isAllowedNav = allowedKeys.indexOf(event.key) !== -1;
+      var isCopyPaste = (event.ctrlKey || event.metaKey) && ['a', 'c', 'v', 'x'].indexOf(event.key.toLowerCase()) !== -1;
+      if (isAllowedNav || isCopyPaste) return;
+      event.preventDefault();
+    });
   }
 
   /* ------------------------------------------------------------------

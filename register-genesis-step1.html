@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="regStep1.meta.title">Step 1 · Personal Information — Genesis 2026 Registration | Global Critical Thinkers</title>
+  <meta name="description" content="Step 1 of Genesis 2026 registration: personal, academic, contact, health, and guardian information." data-i18n-content="regStep1.meta.description">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="registration">
+
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+  <div class="progress-thread" aria-hidden="true">
+    <div class="progress-thread__fill" id="progressFill"></div>
+  </div>
+
+  <header class="site-header" id="siteHeader" data-layout="header"></header>
+
+  <main id="main">
+
+    <!-- ============================================ -->
+    <!-- PAGE HEADER -->
+    <!-- ============================================ -->
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__kicker">
+          <span class="page-header__kicker-line"></span>
+          <span class="page-header__kicker-text" data-i18n="regStep1.hero.kicker">Genesis 2026 Registration</span>
+        </div>
+        <h1 class="page-header__title" data-i18n-html="regStep1.hero.title">Step 1<br>Personal Information</h1>
+        <p class="page-header__intro" data-i18n="regStep1.hero.intro">Let's begin with some basic information about you before continuing to the next step.</p>
+      </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- PROGRESS INDICATOR -->
+    <!-- Reusable across all five registration steps — -->
+    <!-- only the is-active / is-done positions change. -->
+    <!-- ============================================ -->
+    <div class="reg-progress">
+      <div class="container">
+        <p class="reg-progress__label" data-i18n="regProgress.label">Step 1 of 5</p>
+        <div class="reg-progress__track" role="group" aria-label="Registration progress">
+          <span class="reg-progress__step is-active" aria-current="step" aria-label="Step 1: Personal Information"></span>
+          <span class="reg-progress__connector"></span>
+          <span class="reg-progress__step" aria-label="Step 2"></span>
+          <span class="reg-progress__connector"></span>
+          <span class="reg-progress__step" aria-label="Step 3"></span>
+          <span class="reg-progress__connector"></span>
+          <span class="reg-progress__step" aria-label="Step 4"></span>
+          <span class="reg-progress__connector"></span>
+          <span class="reg-progress__step" aria-label="Step 5"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- REGISTRATION FORM — STEP 1 -->
+    <!-- ============================================ -->
+    <section class="about-block about-block--paper" id="reg-step1" aria-labelledby="reg-step1-heading">
+      <div class="container">
+        <h2 id="reg-step1-heading" class="visually-hidden">Personal Information</h2>
+
+        <form class="reg-form" id="regStep1Form" novalidate>
+
+          <!-- SECTION 1 — PERSONAL DETAILS -->
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep1.section1.title">Personal Details</h3>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-fullname" data-i18n="regStep1.section1.fullNameLabel">Full Name<span class="reg-required">*</span></label>
+              <input class="contact-form__input" type="text" id="rg-fullname" name="fullName" autocomplete="name" required>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-dob" data-i18n="regStep1.section1.dobLabel">Date of Birth<span class="reg-required">*</span></label>
+              <input class="reg-date" type="date" id="rg-dob" name="dateOfBirth" readonly required aria-describedby="rg-dob-hint">
+              <p class="reg-hint" id="rg-dob-hint" data-i18n="regStep1.section1.dobHint">Participants must be between 11 and 25 years old.</p>
+              <p class="reg-field__error" data-i18n="regValidation.dobRange">Please select a date of birth within the eligible age range.</p>
+            </div>
+
+            <div class="contact-form__field">
+              <span class="contact-form__label" data-i18n="regStep1.section1.genderLabel">Gender<span class="reg-required">*</span></span>
+              <div class="reg-radio-group" role="radiogroup" aria-required="true">
+                <label class="reg-radio">
+                  <input type="radio" name="gender" value="male" required>
+                  <span data-i18n="regStep1.section1.genderMale">Male</span>
+                </label>
+                <label class="reg-radio">
+                  <input type="radio" name="gender" value="female" required>
+                  <span data-i18n="regStep1.section1.genderFemale">Female</span>
+                </label>
+              </div>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+          </div>
+
+          <!-- SECTION 2 — ACADEMIC INFORMATION -->
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep1.section2.title">Academic Information</h3>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-school" data-i18n="regStep1.section2.schoolLabel">School / University Name<span class="reg-required">*</span></label>
+              <input class="contact-form__input" type="text" id="rg-school" name="school" autocomplete="organization" required>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="rg-city" data-i18n="regStep1.section2.cityLabel">City of Residence<span class="reg-required">*</span></label>
+                <input class="contact-form__input" type="text" id="rg-city" name="city" autocomplete="address-level2" required>
+                <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+              </div>
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="rg-country-trigger" data-i18n="regStep1.section2.countryLabel">Country of Residence<span class="reg-required">*</span></label>
+                <div class="reg-combo" id="rg-country-combo" data-combo="country">
+                  <button type="button" class="reg-combo__trigger is-placeholder" id="rg-country-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="reg-combo__value" data-i18n="regStep1.section2.countryPlaceholder">Select country</span>
+                    <svg class="reg-combo__chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <div class="reg-combo__panel">
+                    <input type="text" class="reg-combo__search" data-i18n-placeholder="regStep1.section2.countrySearchPlaceholder" placeholder="Search country…" aria-label="Search country" autocomplete="off">
+                    <ul class="reg-combo__list" role="listbox" aria-label="Country of residence"></ul>
+                  </div>
+                  <input type="hidden" name="country" id="rg-country" required>
+                </div>
+                <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+              </div>
+            </div>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-english" data-i18n="regStep1.section2.englishLabel">English Proficiency<span class="reg-required">*</span></label>
+              <select class="reg-select-native" id="rg-english" name="englishProficiency" required>
+                <option value="" disabled selected data-i18n="regStep1.section2.englishPlaceholder">Select your level</option>
+                <option value="beginner" data-i18n="regStep1.section2.englishBeginner">Beginner (A1–A2)</option>
+                <option value="intermediate" data-i18n="regStep1.section2.englishIntermediate">Intermediate (B1–B2)</option>
+                <option value="upper-intermediate" data-i18n="regStep1.section2.englishUpperIntermediate">Upper Intermediate (B2)</option>
+                <option value="advanced" data-i18n="regStep1.section2.englishAdvanced">Advanced (C1)</option>
+                <option value="fluent" data-i18n="regStep1.section2.englishFluent">Fluent / Native</option>
+              </select>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+          </div>
+
+          <!-- SECTION 3 — CONTACT INFORMATION -->
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep1.section3.title">Contact Information</h3>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-whatsapp-number" data-i18n="regStep1.section3.whatsappLabel">WhatsApp Number<span class="reg-required">*</span></label>
+              <div class="reg-tel">
+                <div class="reg-combo" id="rg-whatsapp-code-combo" data-combo="dialcode">
+                  <button type="button" class="reg-combo__trigger" id="rg-whatsapp-code-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="reg-combo__value">+62</span>
+                    <svg class="reg-combo__chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <div class="reg-combo__panel">
+                    <input type="text" class="reg-combo__search" data-i18n-placeholder="regStep1.section3.codeSearchPlaceholder" placeholder="Search code or country…" aria-label="Search country code" autocomplete="off">
+                    <ul class="reg-combo__list" role="listbox" aria-label="Country dial code"></ul>
+                  </div>
+                  <input type="hidden" name="whatsappCode" id="rg-whatsapp-code" value="+62">
+                </div>
+                <input class="contact-form__input" type="tel" id="rg-whatsapp-number" name="whatsappNumber" inputmode="numeric" autocomplete="tel-national" required>
+              </div>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="rg-instagram" data-i18n="regStep1.section3.instagramLabel">Instagram Username</label>
+                <input class="contact-form__input" type="text" id="rg-instagram" name="instagram" autocomplete="off">
+              </div>
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="rg-facebook" data-i18n="regStep1.section3.facebookLabel">Facebook Profile</label>
+                <input class="contact-form__input" type="text" id="rg-facebook" name="facebook" autocomplete="off">
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4 — HEALTH INFORMATION -->
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep1.section4.title">Health Information</h3>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-allergies" data-i18n="regStep1.section4.allergiesLabel">Food Allergies</label>
+              <textarea class="contact-form__textarea" id="rg-allergies" name="allergies" data-i18n-placeholder="regStep1.section4.allergiesPlaceholder" placeholder="Example: Peanuts, Seafood, None"></textarea>
+            </div>
+          </div>
+
+          <!-- SECTION 5 — PARENT / GUARDIAN INFORMATION -->
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep1.section5.title">Parent / Guardian Information</h3>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-guardian-name" data-i18n="regStep1.section5.nameLabel">Parent / Guardian Full Name<span class="reg-required">*</span></label>
+              <input class="contact-form__input" type="text" id="rg-guardian-name" name="guardianName" autocomplete="off" required>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-guardian-number" data-i18n="regStep1.section5.whatsappLabel">Parent / Guardian WhatsApp Number<span class="reg-required">*</span></label>
+              <div class="reg-tel">
+                <div class="reg-combo" id="rg-guardian-code-combo" data-combo="dialcode">
+                  <button type="button" class="reg-combo__trigger" id="rg-guardian-code-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="reg-combo__value">+62</span>
+                    <svg class="reg-combo__chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <div class="reg-combo__panel">
+                    <input type="text" class="reg-combo__search" data-i18n-placeholder="regStep1.section3.codeSearchPlaceholder" placeholder="Search code or country…" aria-label="Search country code" autocomplete="off">
+                    <ul class="reg-combo__list" role="listbox" aria-label="Country dial code"></ul>
+                  </div>
+                  <input type="hidden" name="guardianCode" id="rg-guardian-code" value="+62">
+                </div>
+                <input class="contact-form__input" type="tel" id="rg-guardian-number" name="guardianNumber" inputmode="numeric" autocomplete="off" required>
+              </div>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+          </div>
+
+          <!-- BOTTOM NAVIGATION — Step 1 has no Back button -->
+          <div class="reg-nav">
+            <button type="submit" class="btn btn--gold" id="regStep1Next" data-i18n="regNav.next">Next →</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer class="site-footer" data-layout="footer"></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="js/layout-loader.js"></script>
+  <script src="js/translations.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/registration-data.js" defer></script>
+  <script src="js/registration.js" defer></script>
+</body>
+</html>

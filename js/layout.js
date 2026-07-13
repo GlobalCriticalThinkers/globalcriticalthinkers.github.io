@@ -172,7 +172,7 @@
         '<nav class="footer-col" aria-label="Registration">' +
           '<p class="footer-col__title" data-i18n="footer.registerTitle">Register</p>' +
           '<ul>' +
-            '<li><a href="' + prefix + '#registration" data-i18n="footer.registerPricing">Pricing</a></li>' +
+            '<li><a href="register-genesis.html" data-i18n="footer.registerPricing">Pricing</a></li>' +
             '<li><a href="[[REGISTRATION_LINK_PLACEHOLDER]]" data-i18n="footer.registerNow">Register now</a></li>' +
           '</ul>' +
         '</nav>' +

@@ -179,6 +179,13 @@
               <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
             </div>
 
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-email" data-i18n="regStep1.section3.emailLabel">Email Address<span class="reg-required">*</span></label>
+              <input class="contact-form__input reg-email-input" type="email" id="rg-email" name="email" autocomplete="email" required>
+              <p class="reg-field__email-status" aria-live="polite"></p>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+
             <div class="contact-form__row">
               <div class="contact-form__field">
                 <label class="contact-form__label" for="rg-instagram" data-i18n="regStep1.section3.instagramLabel">Instagram Username</label>
@@ -254,6 +261,7 @@
   <script src="js/script.js" defer></script>
   <script src="js/registration-data.js" defer></script>
   <script src="js/phone-validation.js" defer></script>
+  <script src="js/email-validation.js" defer></script>
   <script src="js/registration.js" defer></script>
 </body>
 </html>

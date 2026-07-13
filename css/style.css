@@ -3536,3 +3536,93 @@ a.event-card:focus-visible {
   .reg-nav .btn { width: 100%; justify-content: center; }
 }
 
+
+/* ------------------------------------------------------------------
+   Phone number validation (WhatsApp fields) — reuses the existing
+   .reg-field__error color language for the invalid state and adds a
+   matching subtle green for valid, plus a right-aligned check icon on
+   the number input itself. Added for reg-tel / phone-validation.js;
+   does not touch any existing selector above.
+   ------------------------------------------------------------------ */
+.reg-tel { position: relative; }
+
+.reg-tel input[type="tel"] {
+  transition: border-color 0.3s var(--ease), padding-right 0.2s var(--ease);
+}
+
+.reg-tel--valid input[type="tel"] {
+  border-bottom-color: #3F7A54;
+  padding-right: 1.6rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 12l5 5L20 6' stroke='%233F7A54' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.15rem center;
+}
+
+.reg-tel--invalid input[type="tel"] {
+  border-bottom-color: #B3432E;
+}
+
+.reg-field__phone-status {
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.2s var(--ease), max-height 0.2s var(--ease), margin-top 0.2s var(--ease);
+}
+.reg-field__phone-status.is-visible {
+  max-height: 2.5rem;
+  opacity: 1;
+}
+.reg-field__phone-status.is-valid { color: #3F7A54; }
+.reg-field__phone-status.is-invalid { color: #B3432E; }
+
+/* When the phone field is marked invalid on submit, keep the same
+   red underline treatment already used for every other field. */
+.contact-form__field.is-invalid .reg-tel input[type="tel"] {
+  border-bottom-color: #B3432E;
+}
+
+/* ------------------------------------------------------------------
+   Email address validation — same color language and status-line
+   pattern as phone validation above, adapted for a plain single input
+   rather than the two-column .reg-tel grid. Does not touch any
+   existing selector.
+   ------------------------------------------------------------------ */
+.reg-email-input {
+  transition: border-color 0.3s var(--ease), padding-right 0.2s var(--ease);
+}
+
+.reg-email-input--valid {
+  border-bottom-color: #3F7A54;
+  padding-right: 1.6rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 12l5 5L20 6' stroke='%233F7A54' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.15rem center;
+}
+
+.reg-email-input--invalid {
+  border-bottom-color: #B3432E;
+}
+
+.reg-field__email-status {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.2s var(--ease), max-height 0.2s var(--ease), margin-top 0.2s var(--ease);
+}
+.reg-field__email-status.is-visible {
+  max-height: 2.5rem;
+  opacity: 1;
+}
+.reg-field__email-status.is-valid { color: #3F7A54; }
+.reg-field__email-status.is-invalid { color: #B3432E; }
+
+/* When the email field is marked invalid on submit, keep the same red
+   underline treatment already used for every other field. */
+.contact-form__field.is-invalid .reg-email-input {
+  border-bottom-color: #B3432E;
+}

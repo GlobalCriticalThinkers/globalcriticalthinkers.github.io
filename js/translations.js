@@ -318,9 +318,10 @@ const translations = {
       locationValue: "Jakarta, Indonesia"
     },
     finalCta: {
-      eyebrow: "Registration",
-      headline: "Ready to challenge the way you think?",
-      cta: "Register Now",
+      eyebrow: "Genesis 2026",
+      headline: "Registration is Now Open",
+      copy: "Join ambitious students from around the world and challenge the way you think through real-world problems, collaborative discussion, and evidence-based reasoning.",
+      cta: "Register for Genesis 2026",
       ctaSecondary: "See How It's Judged"
     },
     evaluation: {
@@ -953,9 +954,10 @@ const translations = {
       locationValue: "Jakarta, Indonesia"
     },
     finalCta: {
-      eyebrow: "Pendaftaran",
-      headline: "Siap menantang cara berpikirmu?",
-      cta: "Daftar Sekarang",
+      eyebrow: "Genesis 2026",
+      headline: "Pendaftaran Sudah Dibuka",
+      copy: "Bergabunglah dengan pelajar ambisius dari seluruh dunia dan tantang cara berpikirmu melalui masalah nyata, diskusi kolaboratif, dan penalaran berbasis bukti.",
+      cta: "Daftar Genesis 2026",
       ctaSecondary: "Lihat Cara Penilaiannya"
     },
     evaluation: {

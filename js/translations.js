@@ -365,13 +365,13 @@ const translations = {
       transition: "These standards are not adjusted from one edition to the next. Regardless of theme, venue, or industry focus, every Global Critical Thinkers competition is built and judged against the same set of standards."
     },
     registration: {
-      eyebrow: "Registration",
-      headline: "Claim your place<br>at the table.",
+      eyebrow: "Genesis 2026 Registration",
+      headline: "Claim your place at the discussion table.",
       copy: "Global Critical Thinkers is an individual competition built around collaborative problem-solving. You register as an individual, and throughout the competition, your reasoning, communication, and judgment remain at the heart of the assessment. Along the way, the organizing committee places you into a diverse discussion team, where your ideas are challenged, your reasoning refined, and your arguments sharpened alongside others. Outstanding teamwork is recognized through the Best Team award. No hypotheticals. No safety net — and no one else's confidence to hide behind.",
       benefit1: "One real-world challenge based on an authentic situation",
       benefit2: "Pre-event workshops in Critical Thinking and Communicating Ideas, plus direct feedback from an experienced judging panel",
       benefit3: "An official certificate and a personal performance report card from assessors",
-      priceLabel: "Registration information",
+      priceLabel: "Registration Details",
       priceTitle: "Registration Fee",
       priceSubtitle: "Individual Registration Only",
       priceNoteTop: "Participants will be placed into balanced groups by the organizing committee. Group assignments will be announced one week before the competition.",
@@ -994,13 +994,13 @@ const translations = {
       transition: "Standar ini tidak disesuaikan dari satu edisi ke edisi lain. Apa pun tema, lokasi, atau fokus industrinya, setiap kompetisi Global Critical Thinkers dibangun dan dinilai berdasarkan satu set standar yang sama."
     },
     registration: {
-      eyebrow: "Pendaftaran",
-      headline: "Klaim tempatmu<br>di meja diskusi.",
+      eyebrow: "Pendaftaran Genesis 2026",
+      headline: "Klaim tempatmu di meja diskusi.",
       copy: "Global Critical Thinkers adalah kompetisi individu yang dibangun di atas kolaborasi dalam memecahkan masalah. Kamu mendaftar sebagai individu, dan sepanjang kompetisi, penalaran, komunikasi, serta cara berpikirmu tetap menjadi inti penilaian. Di tengah perjalanannya, panitia penyelenggara menempatkanmu ke dalam satu tim diskusi yang beragam, tempat gagasanmu diuji, penalaranmu diasah, dan argumenmu diperkuat bersama yang lain. Kerja sama tim yang luar biasa juga diapresiasi melalui penghargaan Best Team. Tanpa skenario andai-andai. Tanpa jaring pengaman — dan tanpa rasa percaya diri orang lain untuk bersembunyi di baliknya.",
       benefit1: "Satu tantangan nyata yang diangkat dari situasi otentik",
       benefit2: "Workshop sebelum acara dalam Critical Thinking dan Menyampaikan Gagasan, plus masukan langsung dari panel juri berpengalaman",
       benefit3: "Sertifikat resmi dan laporan performa pribadi dari para asesor",
-      priceLabel: "Informasi pendaftaran",
+      priceLabel: "Detail Pendaftaran",
       priceTitle: "Biaya Pendaftaran",
       priceSubtitle: "Hanya Pendaftaran Individu",
       priceNoteTop: "Peserta akan ditempatkan ke dalam kelompok yang seimbang oleh panitia penyelenggara. Susunan kelompok akan diumumkan satu minggu sebelum kompetisi.",

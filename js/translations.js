@@ -415,7 +415,9 @@ const translations = {
     },
     regValidation: {
       required: "This field is required.",
-      dobRange: "Please select a date of birth within the eligible age range."
+      dobRange: "Please select a date of birth within the eligible age range.",
+      phoneValid: "✓ Valid phone number.",
+      phoneInvalid: "❌ Invalid phone number."
     },
     regStep1: {
       meta: {
@@ -1114,7 +1116,9 @@ const translations = {
     },
     regValidation: {
       required: "Kolom ini wajib diisi.",
-      dobRange: "Silakan pilih tanggal lahir dalam rentang usia yang memenuhi syarat."
+      dobRange: "Silakan pilih tanggal lahir dalam rentang usia yang memenuhi syarat.",
+      phoneValid: "✓ Nomor telepon valid.",
+      phoneInvalid: "❌ Nomor telepon tidak valid."
     },
     regStep1: {
       meta: {

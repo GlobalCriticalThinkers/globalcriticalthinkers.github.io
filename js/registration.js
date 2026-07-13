@@ -273,6 +273,19 @@
       fail(dob);
     }
 
+    // Phone number validation (WhatsApp fields) — handled by
+    // phone-validation.js; each .reg-tel wrapper exposes a validator
+    // once GCTPhoneValidation.attachAll() has run on page load.
+    form.querySelectorAll('.reg-tel').forEach(function (wrapper) {
+      var validator = wrapper.phoneValidator;
+      var phoneInput = wrapper.querySelector('input[type="tel"]');
+      if (!validator || !phoneInput) return;
+      var ok = validator.forceCheck();
+      if (!phoneInput.value.trim() || !ok) {
+        fail(phoneInput);
+      }
+    });
+
     // Gender radio group
     var genderChecked = form.querySelector('input[name="gender"]:checked');
     var genderGroup = form.querySelector('input[name="gender"]');
@@ -323,5 +336,6 @@
     initAllCombos();
     setupDateOfBirth();
     initStep1Form();
+    if (window.GCTPhoneValidation) window.GCTPhoneValidation.attachAll();
   });
 })();

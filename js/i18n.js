@@ -92,6 +92,15 @@
       }
     });
 
+    // placeholder attributes (inputs, textareas)
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const value = getValue(dict, key);
+      if (typeof value === 'string') {
+        el.setAttribute('placeholder', value);
+      }
+    });
+
     // content attributes (meta tags) + <title>
     document.querySelectorAll('[data-i18n-content]').forEach(function (el) {
       const key = el.getAttribute('data-i18n-content');

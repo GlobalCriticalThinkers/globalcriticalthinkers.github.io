@@ -406,6 +406,69 @@ const translations = {
         description: "Register for Genesis 2026, the inaugural Global Critical Thinkers competition. Individual registration, pricing, and everything included."
       }
     },
+    regProgress: {
+      label: "Step 1 of 5"
+    },
+    regNav: {
+      back: "← Back",
+      next: "Next →"
+    },
+    regValidation: {
+      required: "This field is required.",
+      dobRange: "Please select a date of birth within the eligible age range."
+    },
+    regStep1: {
+      meta: {
+        title: "Step 1 · Personal Information — Genesis 2026 Registration | Global Critical Thinkers",
+        description: "Step 1 of Genesis 2026 registration: personal, academic, contact, health, and guardian information."
+      },
+      hero: {
+        kicker: "Genesis 2026 Registration",
+        title: "Step 1<br>Personal Information",
+        intro: "Let's begin with some basic information about you before continuing to the next step."
+      },
+      section1: {
+        title: "Personal Details",
+        fullNameLabel: "Full Name",
+        dobLabel: "Date of Birth",
+        dobHint: "Participants must be between 11 and 25 years old.",
+        genderLabel: "Gender",
+        genderMale: "Male",
+        genderFemale: "Female"
+      },
+      section2: {
+        title: "Academic Information",
+        schoolLabel: "School / University Name",
+        cityLabel: "City of Residence",
+        countryLabel: "Country of Residence",
+        countryPlaceholder: "Select country",
+        countrySearchPlaceholder: "Search country…",
+        englishLabel: "English Proficiency",
+        englishPlaceholder: "Select your level",
+        englishBeginner: "Beginner (A1–A2)",
+        englishIntermediate: "Intermediate (B1–B2)",
+        englishUpperIntermediate: "Upper Intermediate (B2)",
+        englishAdvanced: "Advanced (C1)",
+        englishFluent: "Fluent / Native"
+      },
+      section3: {
+        title: "Contact Information",
+        whatsappLabel: "WhatsApp Number",
+        codeSearchPlaceholder: "Search code or country…",
+        instagramLabel: "Instagram Username",
+        facebookLabel: "Facebook Profile"
+      },
+      section4: {
+        title: "Health Information",
+        allergiesLabel: "Food Allergies",
+        allergiesPlaceholder: "Example: Peanuts, Seafood, None"
+      },
+      section5: {
+        title: "Parent / Guardian Information",
+        nameLabel: "Parent / Guardian Full Name",
+        whatsappLabel: "Parent / Guardian WhatsApp Number"
+      }
+    },
     footer: {
       bookend: "Think sharper.<br>Your turn.",
       tagline: "A Global Critical Thinking Competition where participants sharpen how they reason, judge, and communicate under real pressure.",
@@ -1040,6 +1103,69 @@ const translations = {
       meta: {
         title: "Daftar — Genesis 2026 | Global Critical Thinkers",
         description: "Daftar untuk Genesis 2026, kompetisi perdana Global Critical Thinkers. Pendaftaran individu, harga, dan semua yang termasuk di dalamnya."
+      }
+    },
+    regProgress: {
+      label: "Langkah 1 dari 5"
+    },
+    regNav: {
+      back: "← Kembali",
+      next: "Lanjut →"
+    },
+    regValidation: {
+      required: "Kolom ini wajib diisi.",
+      dobRange: "Silakan pilih tanggal lahir dalam rentang usia yang memenuhi syarat."
+    },
+    regStep1: {
+      meta: {
+        title: "Langkah 1 · Informasi Pribadi — Pendaftaran Genesis 2026 | Global Critical Thinkers",
+        description: "Langkah 1 dari pendaftaran Genesis 2026: informasi pribadi, akademik, kontak, kesehatan, dan wali."
+      },
+      hero: {
+        kicker: "Pendaftaran Genesis 2026",
+        title: "Langkah 1<br>Informasi Pribadi",
+        intro: "Mari mulai dengan beberapa informasi dasar tentang dirimu sebelum melanjutkan ke langkah berikutnya."
+      },
+      section1: {
+        title: "Detail Pribadi",
+        fullNameLabel: "Nama Lengkap",
+        dobLabel: "Tanggal Lahir",
+        dobHint: "Peserta harus berusia antara 11 hingga 25 tahun.",
+        genderLabel: "Jenis Kelamin",
+        genderMale: "Laki-laki",
+        genderFemale: "Perempuan"
+      },
+      section2: {
+        title: "Informasi Akademik",
+        schoolLabel: "Nama Sekolah / Universitas",
+        cityLabel: "Kota Domisili",
+        countryLabel: "Negara Domisili",
+        countryPlaceholder: "Pilih negara",
+        countrySearchPlaceholder: "Cari negara…",
+        englishLabel: "Kemampuan Bahasa Inggris",
+        englishPlaceholder: "Pilih level kamu",
+        englishBeginner: "Pemula (A1–A2)",
+        englishIntermediate: "Menengah (B1–B2)",
+        englishUpperIntermediate: "Menengah Atas (B2)",
+        englishAdvanced: "Mahir (C1)",
+        englishFluent: "Fasih / Native"
+      },
+      section3: {
+        title: "Informasi Kontak",
+        whatsappLabel: "Nomor WhatsApp",
+        codeSearchPlaceholder: "Cari kode atau negara…",
+        instagramLabel: "Username Instagram",
+        facebookLabel: "Profil Facebook"
+      },
+      section4: {
+        title: "Informasi Kesehatan",
+        allergiesLabel: "Alergi Makanan",
+        allergiesPlaceholder: "Contoh: Kacang, Makanan Laut, Tidak ada"
+      },
+      section5: {
+        title: "Informasi Orang Tua / Wali",
+        nameLabel: "Nama Lengkap Orang Tua / Wali",
+        whatsappLabel: "Nomor WhatsApp Orang Tua / Wali"
       }
     },
     footer: {

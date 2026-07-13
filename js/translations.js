@@ -417,7 +417,9 @@ const translations = {
       required: "This field is required.",
       dobRange: "Please select a date of birth within the eligible age range.",
       phoneValid: "✓ Valid phone number.",
-      phoneInvalid: "❌ Invalid phone number."
+      phoneInvalid: "❌ Invalid phone number.",
+      emailValid: "✓ Valid email address.",
+      emailInvalid: "❌ Invalid email address."
     },
     regStep1: {
       meta: {
@@ -457,6 +459,7 @@ const translations = {
         title: "Contact Information",
         whatsappLabel: "WhatsApp Number",
         codeSearchPlaceholder: "Search code or country…",
+        emailLabel: "Email Address",
         instagramLabel: "Instagram Username",
         facebookLabel: "Facebook Profile"
       },
@@ -1118,7 +1121,9 @@ const translations = {
       required: "Kolom ini wajib diisi.",
       dobRange: "Silakan pilih tanggal lahir dalam rentang usia yang memenuhi syarat.",
       phoneValid: "✓ Nomor telepon valid.",
-      phoneInvalid: "❌ Nomor telepon tidak valid."
+      phoneInvalid: "❌ Nomor telepon tidak valid.",
+      emailValid: "✓ Alamat email valid.",
+      emailInvalid: "❌ Alamat email tidak valid."
     },
     regStep1: {
       meta: {
@@ -1158,6 +1163,7 @@ const translations = {
         title: "Informasi Kontak",
         whatsappLabel: "Nomor WhatsApp",
         codeSearchPlaceholder: "Cari kode atau negara…",
+        emailLabel: "Alamat Email",
         instagramLabel: "Username Instagram",
         facebookLabel: "Profil Facebook"
       },

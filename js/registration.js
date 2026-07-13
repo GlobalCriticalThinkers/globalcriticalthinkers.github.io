@@ -286,6 +286,18 @@
       }
     });
 
+    // Email address validation — handled by email-validation.js; each
+    // .reg-email-input exposes a validator once
+    // GCTEmailValidation.attachAll() has run on page load.
+    form.querySelectorAll('.reg-email-input').forEach(function (emailInput) {
+      var emailValidator = emailInput.emailValidator;
+      if (!emailValidator) return;
+      var ok = emailValidator.forceCheck();
+      if (!emailInput.value.trim() || !ok) {
+        fail(emailInput);
+      }
+    });
+
     // Gender radio group
     var genderChecked = form.querySelector('input[name="gender"]:checked');
     var genderGroup = form.querySelector('input[name="gender"]');
@@ -337,5 +349,6 @@
     setupDateOfBirth();
     initStep1Form();
     if (window.GCTPhoneValidation) window.GCTPhoneValidation.attachAll();
+    if (window.GCTEmailValidation) window.GCTEmailValidation.attachAll();
   });
 })();

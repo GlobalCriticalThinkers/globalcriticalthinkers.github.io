@@ -329,8 +329,10 @@
       }
       // Persist this step's fields so later steps (Step 2's age-based
       // topic list in particular) can read them back on their own page
-      // load — sessionStorage via GCTRegistrationState, see
-      // registration-state.js.
+      // load, and so navigating back here from Step 2 restores what
+      // was typed — sessionStorage via GCTRegistrationState, see
+      // registration-state.js. Data here only ever changes when this
+      // form is submitted again; simply visiting the page never resets it.
       if (window.GCTRegistrationState) {
         var formData = new FormData(form);
         var fields = {};
@@ -353,11 +355,92 @@
     });
   }
 
+  /* ------------------------------------------------------------------
+     Restore Step 1 fields from sessionStorage — runs on every load of
+     this page, so a participant who filled the form, continued to
+     Step 2, then clicked "Back" sees everything exactly as they left
+     it instead of a blank form. Data only ever changes here when
+     Step 1's own form is submitted again (see initStep1Form above);
+     simply navigating back and forth never clears or rewrites it.
+
+     Handles three input shapes:
+       - plain text/date/email/tel inputs and <select> — direct .value
+       - .reg-combo searchable dropdowns (country, dial codes) — value
+         lives in a hidden input, but the visible trigger label also
+         needs updating, which initSearchableCombo() doesn't expose,
+         so it's replicated here from the same option list
+       - gender radio group — check the matching radio
+     ------------------------------------------------------------------ */
+  function restoreStep1Fields() {
+    var form = document.getElementById('regStep1Form');
+    if (!form || !window.GCTRegistrationState) return;
+
+    var saved = window.GCTRegistrationState.getAll();
+    if (!saved || Object.keys(saved).length === 0) return;
+
+    Object.keys(saved).forEach(function (name) {
+      var value = saved[name];
+      if (value === undefined || value === null || value === '') return;
+
+      if (name === 'gender') {
+        var radio = form.querySelector('input[name="gender"][value="' + value + '"]');
+        if (radio) radio.checked = true;
+        return;
+      }
+
+      var field = form.querySelector('[name="' + name + '"]');
+      if (!field) return;
+
+      // Hidden inputs backing a .reg-combo (whatsappCode, guardianCode,
+      // country) need the visible trigger label restored too, since
+      // that's rendered separately from the hidden input's value.
+      var comboWrapper = field.closest('.reg-combo');
+      if (comboWrapper && field.type === 'hidden') {
+        field.value = value;
+        var kind = comboWrapper.getAttribute('data-combo');
+        var valueEl = comboWrapper.querySelector('.reg-combo__value');
+        var trigger = comboWrapper.querySelector('.reg-combo__trigger');
+        if (!valueEl) return;
+
+        if (kind === 'dialcode') {
+          // Dial code display is just the code itself (e.g. "+62").
+          valueEl.textContent = value;
+          if (trigger) trigger.classList.remove('is-placeholder');
+        } else if (kind === 'country') {
+          // Country display is the full label; look it up from the
+          // same data source initSearchableCombo() uses.
+          var countries = (window.GCTRegistrationData || {}).COUNTRIES || [];
+          if (countries.indexOf(value) !== -1) {
+            valueEl.textContent = value;
+            if (trigger) trigger.classList.remove('is-placeholder');
+          }
+        }
+        return;
+      }
+
+      field.value = value;
+    });
+
+    // Restored phone/email values won't show their ✓/❌ status until
+    // something re-runs the validator against the now-filled field —
+    // force that check once, quietly (no scroll, just the inline state).
+    form.querySelectorAll('.reg-tel').forEach(function (wrapper) {
+      if (wrapper.phoneValidator) wrapper.phoneValidator.forceCheck();
+    });
+    form.querySelectorAll('.reg-email-input').forEach(function (input) {
+      if (input.emailValidator) input.emailValidator.forceCheck();
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initAllCombos();
     setupDateOfBirth();
     initStep1Form();
+    // Validators must attach before restoring, so the restored phone/
+    // email values immediately show their correct valid/invalid state
+    // instead of appearing unchecked until the person touches them.
     if (window.GCTPhoneValidation) window.GCTPhoneValidation.attachAll();
     if (window.GCTEmailValidation) window.GCTEmailValidation.attachAll();
+    restoreStep1Fields();
   });
 })();

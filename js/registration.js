@@ -327,7 +327,16 @@
         }
         return;
       }
-      // Step 2 does not exist yet — this is the prepared hand-off point.
+      // Persist this step's fields so later steps (Step 2's age-based
+      // topic list in particular) can read them back on their own page
+      // load — sessionStorage via GCTRegistrationState, see
+      // registration-state.js.
+      if (window.GCTRegistrationState) {
+        var formData = new FormData(form);
+        var fields = {};
+        formData.forEach(function (value, key) { fields[key] = value; });
+        window.GCTRegistrationState.setMany(fields);
+      }
       window.location.href = 'register-genesis-step2.html';
     });
 

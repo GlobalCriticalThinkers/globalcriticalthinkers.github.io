@@ -118,5 +118,44 @@ window.GCTRegistrationData = {
     { code: '+254', country: 'Kenya' },
     { code: '+233', country: 'Ghana' },
     { code: '+212', country: 'Morocco' }
-  ]
+  ],
+
+  /* Step 2 — Research Topic Selection. Two age bands, each with its own
+     fixed topic set. Keys match the <select> option values used in
+     register-genesis-step2.html; descriptions power the Topic Preview
+     box. registration-step2.js is the only file that reads this. */
+  RESEARCH_TOPICS: {
+    'young': {
+      minAge: 11,
+      maxAge: 14,
+      topics: [
+        {
+          value: 'social-media-mental-health',
+          label: 'Social Media & Mental Health',
+          description: 'Explore how different countries address the impact of social media on young people\u2019s mental health, including online safety, cyberbullying, digital well-being, and government policies.'
+        },
+        {
+          value: 'ai-in-education',
+          label: 'AI in Education',
+          description: 'Explore how countries integrate Artificial Intelligence into education, including classroom use, ethical considerations, accessibility, and national education policies.'
+        }
+      ]
+    },
+    'older': {
+      minAge: 15,
+      maxAge: 25,
+      topics: [
+        {
+          value: 'youth-employment',
+          label: 'Youth Employment',
+          description: 'Explore how countries address youth unemployment through education, workforce development, entrepreneurship, and employment policies.'
+        },
+        {
+          value: 'ai-governance',
+          label: 'AI Governance',
+          description: 'Explore how governments regulate Artificial Intelligence while balancing innovation, ethics, privacy, security, and public interest.'
+        }
+      ]
+    }
+  }
 };

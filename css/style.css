@@ -3705,7 +3705,8 @@ a.event-card:focus-visible {
    applied to a taller block since this reveals a full textarea instead
    of a one-line message. Collapsed by default (hidden until "Yes" is
    selected) rather than using [hidden], so the appearance animates
-   smoothly instead of popping in. */
+   smoothly instead of popping in. max-height is generous enough to fit
+   the textarea plus the nested Talent Showcase sub-section below it. */
 .reg-talent-detail {
   max-height: 0;
   opacity: 0;
@@ -3714,10 +3715,25 @@ a.event-card:focus-visible {
   transition: opacity 0.3s var(--ease), max-height 0.3s var(--ease), margin-top 0.3s var(--ease);
 }
 .reg-talent-detail.is-visible {
-  max-height: 420px;
+  max-height: 760px;
   opacity: 1;
   margin-top: 1.5rem !important;
 }
+
+/* Talent Showcase — nested inside .reg-talent-detail, so it inherits
+   that block's reveal/hide animation automatically and needs no
+   visibility logic of its own. A thin top divider plus spacing
+   separates it from the description textarea above, matching the
+   quiet rule treatment already used for .reg-topic-preview and
+   .reg-country-select__notice elsewhere on this page. */
+.reg-talent-showcase {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(11,18,32,0.1);
+}
+.reg-talent-showcase__label { display: block; margin-bottom: 0.4rem; }
+.reg-talent-showcase .reg-hint { margin-bottom: 0.5rem; }
+.reg-talent-showcase .reg-radio-group { margin-top: 0.8rem; }
 
 @media (max-width: 640px) {
   .reg-progress__label { font-size: 0.68rem; }
@@ -3727,6 +3743,7 @@ a.event-card:focus-visible {
   .reg-nav .btn { width: 100%; justify-content: center; }
   .reg-topic-preview { padding: 1.25rem 1.4rem; }
   .reg-country-select__list { grid-template-columns: 1fr; max-height: 280px; }
+  .reg-talent-showcase .reg-radio-group { flex-direction: column; gap: 0.9rem; }
 }
 
 

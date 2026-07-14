@@ -10,9 +10,20 @@
  * missing (direct page load, cleared session), the participant is sent
  * back to Step 1 rather than shown an empty or wrong-guess dropdown.
  *
+ * All visible text (topic labels, descriptions, the age-eligibility
+ * notice, the placeholder option) is generated at runtime rather than
+ * sitting as static markup, since it depends on the participant's
+ * computed age band. Because i18n.js's applyTranslations() only walks
+ * elements already in the DOM, none of this would be caught by a normal
+ * data-i18n pass — so this file looks strings up itself via
+ * window.GCTi18n.t() (falling back to English if i18n.js hasn't loaded
+ * for some reason) and re-renders on the 'gct:langchange' event i18n.js
+ * dispatches after a language switch.
+ *
  * Depends on:
  *   - registration-data.js  (window.GCTRegistrationData.RESEARCH_TOPICS)
  *   - registration-state.js (window.GCTRegistrationState)
+ *   - i18n.js               (window.GCTi18n.t(), 'gct:langchange' event)
  */
 
 (function () {
@@ -51,6 +62,20 @@
   }
 
   /* ------------------------------------------------------------------
+     Translation lookup with English fallback. Wraps window.GCTi18n.t()
+     so a missing i18n.js (shouldn't happen, but this page shouldn't
+     hard-fail if it does) still renders readable English rather than
+     throwing or showing blank text.
+     ------------------------------------------------------------------ */
+  function t(path, vars, fallback) {
+    if (window.GCTi18n && typeof window.GCTi18n.t === 'function') {
+      var value = window.GCTi18n.t(path, vars);
+      if (typeof value === 'string') return value;
+    }
+    return fallback;
+  }
+
+  /* ------------------------------------------------------------------
      Init
      ------------------------------------------------------------------ */
   function initStep2() {
@@ -79,60 +104,87 @@
 
     var previouslySelected = state ? state.get('researchTopic') : null;
 
+    function topicLabel(topic) {
+      return t('regStep2.topics.' + topic.i18nKey + '.label', null, topic.label);
+    }
+
+    function topicDescription(topic) {
+      return t('regStep2.topics.' + topic.i18nKey + '.description', null, topic.description);
+    }
+
     function renderOptions() {
+      // Remember the value before rebuilding, since re-render (on
+      // language change) shouldn't lose the participant's selection.
+      var currentValue = select.value;
       select.innerHTML = '';
 
       var placeholder = document.createElement('option');
       placeholder.value = '';
       placeholder.disabled = true;
-      placeholder.textContent = 'Select your topic';
-      placeholder.setAttribute('data-i18n', 'regStep2.topicPlaceholder');
+      placeholder.textContent = t('regStep2.topicPlaceholder', null, 'Select your topic');
       select.appendChild(placeholder);
 
       band.topics.forEach(function (topic) {
         var option = document.createElement('option');
         option.value = topic.value;
-        option.textContent = topic.label;
+        option.textContent = topicLabel(topic);
         select.appendChild(option);
       });
 
       // Restore a prior selection only if it's still valid for the
       // (re)computed age band; otherwise fall back to the placeholder,
       // per the "clear selection automatically" requirement.
-      var stillValid = previouslySelected && band.topics.some(function (t) {
-        return t.value === previouslySelected;
+      var candidate = currentValue || previouslySelected;
+      var stillValid = candidate && band.topics.some(function (item) {
+        return item.value === candidate;
       });
-      select.value = stillValid ? previouslySelected : '';
+      select.value = stillValid ? candidate : '';
       placeholder.selected = !stillValid;
 
       updatePreview();
     }
 
     function updatePreview() {
-      var topic = band.topics.filter(function (t) { return t.value === select.value; })[0];
+      var topic = band.topics.filter(function (topicItem) {
+        return topicItem.value === select.value;
+      })[0];
 
       if (!topic) {
         if (preview) preview.hidden = true;
         return;
       }
 
-      if (previewTitle) previewTitle.textContent = topic.label;
-      if (previewCopy) previewCopy.textContent = topic.description;
+      if (previewTitle) previewTitle.textContent = topicLabel(topic);
+      if (previewCopy) previewCopy.textContent = topicDescription(topic);
       if (preview) preview.hidden = false;
     }
 
-    if (ageNotice) {
-      ageNotice.textContent = 'Based on your date of birth, you are eligible for topics in the ' +
-        band.minAge + '\u2013' + band.maxAge + ' age category.';
+    function renderAgeNotice() {
+      if (!ageNotice) return;
+      ageNotice.textContent = t(
+        'regStep2.ageNotice',
+        { minAge: band.minAge, maxAge: band.maxAge },
+        'Based on your date of birth, you are eligible for topics in the ' + band.minAge + '\u2013' + band.maxAge + ' age category.'
+      );
     }
 
-    renderOptions();
+    function renderAll() {
+      renderAgeNotice();
+      renderOptions();
+    }
+
+    renderAll();
 
     select.addEventListener('change', function () {
       var fieldWrap = select.closest('.contact-form__field');
       if (fieldWrap) fieldWrap.classList.remove('is-invalid');
       updatePreview();
     });
+
+    // Re-render every runtime-generated string when the language
+    // switcher fires, since none of this markup exists at the time
+    // i18n.js's own DOMContentLoaded pass runs.
+    document.addEventListener('gct:langchange', renderAll);
 
     // ------------------------------------------------------------------
     // Validation + navigation — mirrors registration.js's Step 1 pattern

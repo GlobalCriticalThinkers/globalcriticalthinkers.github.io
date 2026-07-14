@@ -53,6 +53,26 @@
     return node;
   }
 
+  // Replaces {varName} tokens in a translation string using a JSON object
+  // read from the element's data-i18n-vars attribute, e.g.
+  // data-i18n-vars='{"current":"2","total":"5"}'. Elements without that
+  // attribute (the vast majority) pass through untouched — this only
+  // matters for the handful of dynamic strings like the step progress
+  // label ("Step {current} of {total}") or Step 2's age notice.
+  function interpolate(el, value) {
+    const varsAttr = el.getAttribute('data-i18n-vars');
+    if (!varsAttr) return value;
+    let vars;
+    try {
+      vars = JSON.parse(varsAttr);
+    } catch (e) {
+      return value;
+    }
+    return value.replace(/\{(\w+)\}/g, function (match, key) {
+      return Object.prototype.hasOwnProperty.call(vars, key) ? vars[key] : match;
+    });
+  }
+
   function applyTranslations(lang) {
     const dict = translations[lang] || translations[DEFAULT_LANG];
 
@@ -61,7 +81,7 @@
       const key = el.getAttribute('data-i18n');
       const value = getValue(dict, key);
       if (typeof value === 'string') {
-        el.textContent = value;
+        el.textContent = interpolate(el, value);
       }
     });
 
@@ -139,6 +159,7 @@
       applyTranslations(lang);
       updateSwitchUI(lang);
       storeLang(lang);
+      document.dispatchEvent(new CustomEvent('gct:langchange', { detail: { lang: lang } }));
       return;
     }
 
@@ -151,6 +172,7 @@
       updateSwitchUI(lang);
       storeLang(lang);
       root.style.opacity = '1';
+      document.dispatchEvent(new CustomEvent('gct:langchange', { detail: { lang: lang } }));
     }, FADE_MS);
   }
 
@@ -164,11 +186,27 @@
     });
   }
 
-  // Public API (used only if other scripts need it; not required otherwise)
+  // Public API
   window.GCTi18n = {
     setLanguage: setLanguage,
     getCurrentLang: function () {
       return document.documentElement.getAttribute('lang') || DEFAULT_LANG;
+    },
+    // Exposed so pages with dynamically-generated text (e.g. Step 2's
+    // topic dropdown/preview, built at runtime from
+    // registration-data.js rather than static markup) can look up a
+    // translated string themselves instead of duplicating the lookup
+    // logic, and can re-run their own render function on language
+    // change via the 'gct:langchange' event below.
+    t: function (path, vars) {
+      const lang = document.documentElement.getAttribute('lang') || DEFAULT_LANG;
+      const dict = translations[lang] || translations[DEFAULT_LANG];
+      const value = getValue(dict, path);
+      if (typeof value !== 'string') return undefined;
+      if (!vars) return value;
+      return value.replace(/\{(\w+)\}/g, function (match, key) {
+        return Object.prototype.hasOwnProperty.call(vars, key) ? vars[key] : match;
+      });
     }
   };
 

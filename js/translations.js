@@ -407,7 +407,7 @@ const translations = {
       }
     },
     regProgress: {
-      label: "Step 1 of 5"
+      label: "Step {current} of {total}"
     },
     regNav: {
       back: "← Back",
@@ -472,6 +472,43 @@ const translations = {
         title: "Parent / Guardian Information",
         nameLabel: "Parent / Guardian Full Name",
         whatsappLabel: "Parent / Guardian WhatsApp Number"
+      }
+    },
+    regStep2: {
+      meta: {
+        title: "Step 2 · Research Topic — Genesis 2026 Registration | Global Critical Thinkers",
+        description: "Step 2 of Genesis 2026 registration: choose your research topic."
+      },
+      hero: {
+        kicker: "Genesis 2026 Registration",
+        title: "Step 2<br>Choose Your Research Topic",
+        intro: "Your available research topics are automatically selected based on the age information you provided during registration."
+      },
+      section: {
+        title: "Research Topic",
+        intro: "Choose one topic that interests you. Your assigned country for the competition will be related to this topic."
+      },
+      ageNotice: "Based on your date of birth, you are eligible for topics in the {minAge}–{maxAge} age category.",
+      topicLabel: "Research Topic",
+      topicPlaceholder: "Select your topic",
+      previewLabel: "Topic Preview",
+      topics: {
+        socialMediaMentalHealth: {
+          label: "Social Media & Mental Health",
+          description: "Explore how different countries address the impact of social media on young people's mental health, including online safety, cyberbullying, digital well-being, and government policies."
+        },
+        aiInEducation: {
+          label: "AI in Education",
+          description: "Explore how countries integrate Artificial Intelligence into education, including classroom use, ethical considerations, accessibility, and national education policies."
+        },
+        youthEmployment: {
+          label: "Youth Employment",
+          description: "Explore how countries address youth unemployment through education, workforce development, entrepreneurship, and employment policies."
+        },
+        aiGovernance: {
+          label: "AI Governance",
+          description: "Explore how governments regulate Artificial Intelligence while balancing innovation, ethics, privacy, security, and public interest."
+        }
       }
     },
     footer: {
@@ -1111,7 +1148,7 @@ const translations = {
       }
     },
     regProgress: {
-      label: "Langkah 1 dari 5"
+      label: "Langkah {current} dari {total}"
     },
     regNav: {
       back: "← Kembali",
@@ -1176,6 +1213,43 @@ const translations = {
         title: "Informasi Orang Tua / Wali",
         nameLabel: "Nama Lengkap Orang Tua / Wali",
         whatsappLabel: "Nomor WhatsApp Orang Tua / Wali"
+      }
+    },
+    regStep2: {
+      meta: {
+        title: "Langkah 2 · Topik Riset — Pendaftaran Genesis 2026 | Global Critical Thinkers",
+        description: "Langkah 2 dari pendaftaran Genesis 2026: pilih topik risetmu."
+      },
+      hero: {
+        kicker: "Pendaftaran Genesis 2026",
+        title: "Langkah 2<br>Pilih Topik Risetmu",
+        intro: "Topik riset yang tersedia untukmu dipilih secara otomatis berdasarkan informasi usia yang kamu berikan saat pendaftaran."
+      },
+      section: {
+        title: "Topik Riset",
+        intro: "Pilih satu topik yang menarik minatmu. Negara yang ditugaskan untukmu dalam kompetisi akan berkaitan dengan topik ini."
+      },
+      ageNotice: "Berdasarkan tanggal lahirmu, kamu memenuhi syarat untuk topik dalam kategori usia {minAge}–{maxAge} tahun.",
+      topicLabel: "Topik Riset",
+      topicPlaceholder: "Pilih topikmu",
+      previewLabel: "Pratinjau Topik",
+      topics: {
+        socialMediaMentalHealth: {
+          label: "Media Sosial & Kesehatan Mental",
+          description: "Pelajari bagaimana berbagai negara menangani dampak media sosial terhadap kesehatan mental generasi muda, termasuk keamanan daring, perundungan siber, kesejahteraan digital, dan kebijakan pemerintah."
+        },
+        aiInEducation: {
+          label: "AI dalam Pendidikan",
+          description: "Pelajari bagaimana negara-negara mengintegrasikan Kecerdasan Buatan ke dalam pendidikan, termasuk penggunaan di kelas, pertimbangan etika, aksesibilitas, dan kebijakan pendidikan nasional."
+        },
+        youthEmployment: {
+          label: "Ketenagakerjaan Pemuda",
+          description: "Pelajari bagaimana negara-negara mengatasi pengangguran pemuda melalui pendidikan, pengembangan tenaga kerja, kewirausahaan, dan kebijakan ketenagakerjaan."
+        },
+        aiGovernance: {
+          label: "Tata Kelola AI",
+          description: "Pelajari bagaimana pemerintah mengatur Kecerdasan Buatan sambil menyeimbangkan inovasi, etika, privasi, keamanan, dan kepentingan publik."
+        }
       }
     },
     footer: {

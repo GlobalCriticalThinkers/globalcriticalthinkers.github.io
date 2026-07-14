@@ -122,8 +122,11 @@ window.GCTRegistrationData = {
 
   /* Step 2 — Research Topic Selection. Two age bands, each with its own
      fixed topic set. Keys match the <select> option values used in
-     register-genesis-step2.html; descriptions power the Topic Preview
-     box. registration-step2.js is the only file that reads this. */
+     register-genesis-step2.html. `i18nKey` points into
+     translations.js's regStep2.topics.* block — registration-step2.js
+     looks the label/description up there via GCTi18n.t() so both
+     languages render correctly; label/description here are only an
+     English fallback for the (unexpected) case i18n.js hasn't loaded. */
   RESEARCH_TOPICS: {
     'young': {
       minAge: 11,
@@ -131,11 +134,13 @@ window.GCTRegistrationData = {
       topics: [
         {
           value: 'social-media-mental-health',
+          i18nKey: 'socialMediaMentalHealth',
           label: 'Social Media & Mental Health',
           description: 'Explore how different countries address the impact of social media on young people\u2019s mental health, including online safety, cyberbullying, digital well-being, and government policies.'
         },
         {
           value: 'ai-in-education',
+          i18nKey: 'aiInEducation',
           label: 'AI in Education',
           description: 'Explore how countries integrate Artificial Intelligence into education, including classroom use, ethical considerations, accessibility, and national education policies.'
         }
@@ -147,11 +152,13 @@ window.GCTRegistrationData = {
       topics: [
         {
           value: 'youth-employment',
+          i18nKey: 'youthEmployment',
           label: 'Youth Employment',
           description: 'Explore how countries address youth unemployment through education, workforce development, entrepreneurship, and employment policies.'
         },
         {
           value: 'ai-governance',
+          i18nKey: 'aiGovernance',
           label: 'AI Governance',
           description: 'Explore how governments regulate Artificial Intelligence while balancing innovation, ethics, privacy, security, and public interest.'
         }

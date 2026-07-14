@@ -526,6 +526,15 @@ const translations = {
         required: "Please answer this question.",
         minWords: "Please write at least {min} words.",
         maxWords: "Please keep your response within {max} words."
+      },
+      talent: {
+        title: "Talent & Skills",
+        intro: "We'd love to know more about you beyond the competition.",
+        question: "Do you have any talent or special skill that you would like us to know?",
+        yes: "Yes",
+        no: "No",
+        descriptionLabel: "Please describe your talent or special skill.",
+        descriptionHint: "Examples: Singing, Dancing, Musical Instrument, Public Speaking, Debate, Poetry, Acting, Drawing, Photography, Coding, Martial Arts, Sports, Leadership, or any other talent or special skill."
       }
     },
     footer: {
@@ -1284,6 +1293,15 @@ const translations = {
         required: "Silakan jawab pertanyaan ini.",
         minWords: "Tulis jawabanmu minimal {min} kata.",
         maxWords: "Jawabanmu tidak boleh lebih dari {max} kata."
+      },
+      talent: {
+        title: "Bakat & Keterampilan",
+        intro: "Kami ingin lebih mengenal dirimu di luar kompetisi ini.",
+        question: "Apakah kamu memiliki bakat atau keterampilan khusus yang ingin kamu ceritakan kepada kami?",
+        yes: "Ya",
+        no: "Tidak",
+        descriptionLabel: "Ceritakan bakat atau keterampilan khususmu.",
+        descriptionHint: "Contoh: Menyanyi, Menari, Alat Musik, Public Speaking, Debat, Puisi, Akting, Menggambar, Fotografi, Coding, Bela Diri, Olahraga, Kepemimpinan, atau bakat/keterampilan lainnya."
       }
     },
     footer: {

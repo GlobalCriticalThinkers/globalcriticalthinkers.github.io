@@ -358,6 +358,40 @@
     }
 
     /* ==================================================================
+       TALENT & SKILLS — fully optional. No default radio selection;
+       the description textarea only appears once "Yes" is chosen, and
+       switching to "No" clears whatever was typed so an unused answer
+       never gets submitted alongside a "No".
+       ================================================================== */
+    var talentYesRadio = document.getElementById('rg-talent-yes');
+    var talentNoRadio = document.getElementById('rg-talent-no');
+    var talentDetail = document.getElementById('rg-talent-detail');
+    var talentDescription = document.getElementById('rg-talent-description');
+    var hasTalentUI = !!(talentYesRadio && talentNoRadio && talentDetail && talentDescription);
+
+    function updateTalentDetailVisibility() {
+      if (!hasTalentUI) return;
+      if (talentYesRadio.checked) {
+        talentDetail.classList.add('is-visible');
+      } else {
+        // Covers both "No" selected and nothing selected yet — the
+        // detail field only ever makes sense alongside "Yes".
+        talentDetail.classList.remove('is-visible');
+        if (talentNoRadio.checked) {
+          // "No" explicitly chosen: clear any previously-typed
+          // description so a stray answer never rides along with a
+          // "No" submission, per spec.
+          talentDescription.value = '';
+        }
+      }
+    }
+
+    if (hasTalentUI) {
+      talentYesRadio.addEventListener('change', updateTalentDetailVisibility);
+      talentNoRadio.addEventListener('change', updateTalentDetailVisibility);
+    }
+
+    /* ==================================================================
        Shared render/validate/submit
        ================================================================== */
     function renderAll() {
@@ -421,7 +455,9 @@
         state.setMany({
           researchTopic: select.value,
           preferredCountry: hasCountryUI ? countryHidden.value : '',
-          countryJustification: hasJustificationUI ? justification.value : ''
+          countryJustification: hasJustificationUI ? justification.value : '',
+          hasTalent: hasTalentUI ? (talentYesRadio.checked ? 'yes' : (talentNoRadio.checked ? 'no' : '')) : '',
+          talentDescription: hasTalentUI && talentYesRadio.checked ? talentDescription.value : ''
         });
       }
 
@@ -441,6 +477,24 @@
         justification.value = savedJustification;
         updateWordCount();
       }
+    }
+
+    // ------------------------------------------------------------------
+    // Restore a previously-made Talent & Skills choice, same "came back
+    // from a later step" scenario as the justification restore above.
+    // ------------------------------------------------------------------
+    if (hasTalentUI && state) {
+      var savedHasTalent = state.get('hasTalent');
+      if (savedHasTalent === 'yes') {
+        talentYesRadio.checked = true;
+      } else if (savedHasTalent === 'no') {
+        talentNoRadio.checked = true;
+      }
+      var savedTalentDescription = state.get('talentDescription');
+      if (savedTalentDescription && savedHasTalent === 'yes') {
+        talentDescription.value = savedTalentDescription;
+      }
+      updateTalentDetailVisibility();
     }
   }
 

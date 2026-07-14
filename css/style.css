@@ -3677,6 +3677,25 @@ a.event-card:focus-visible {
 }
 .reg-country-select__notice strong { color: var(--ink); }
 
+/* Country Justification — reuses .contact-form__textarea's underline
+   style, just taller (a "comfortable writing area", not the compact
+   allergies box from Step 1) and with manual resize turned off since
+   JS grows it automatically; a lingering drag handle would fight the
+   auto-grow and look broken once JS has already set an explicit height. */
+.reg-justification-textarea {
+  min-height: 180px;
+  resize: none;
+  overflow: hidden;
+}
+.reg-word-count {
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--muted-on-paper);
+  text-align: right;
+}
+.reg-word-count.is-under,
+.reg-word-count.is-over { color: #B3432E; }
+
 @media (max-width: 640px) {
   .reg-progress__label { font-size: 0.68rem; }
   .reg-tel { grid-template-columns: 1fr; }

@@ -369,6 +369,18 @@
     var talentDescription = document.getElementById('rg-talent-description');
     var hasTalentUI = !!(talentYesRadio && talentNoRadio && talentDetail && talentDescription);
 
+    // Talent Showcase — nested inside .reg-talent-detail, so it's only
+    // ever visible alongside the description textarea (same "Yes"
+    // gate). No visibility class of its own; it just rides along with
+    // .reg-talent-detail's reveal/hide.
+    var showcaseRadios = Array.prototype.slice.call(document.querySelectorAll('input[name="talentShowcase"]'));
+    var hasShowcaseUI = showcaseRadios.length > 0;
+
+    function clearTalentShowcaseSelection() {
+      if (!hasShowcaseUI) return;
+      showcaseRadios.forEach(function (radio) { radio.checked = false; });
+    }
+
     function updateTalentDetailVisibility() {
       if (!hasTalentUI) return;
       if (talentYesRadio.checked) {
@@ -379,9 +391,11 @@
         talentDetail.classList.remove('is-visible');
         if (talentNoRadio.checked) {
           // "No" explicitly chosen: clear any previously-typed
-          // description so a stray answer never rides along with a
-          // "No" submission, per spec.
+          // description, and any Talent Showcase selection made while
+          // "Yes" was active, so neither rides along with a "No"
+          // submission, per spec.
           talentDescription.value = '';
+          clearTalentShowcaseSelection();
         }
       }
     }
@@ -457,7 +471,10 @@
           preferredCountry: hasCountryUI ? countryHidden.value : '',
           countryJustification: hasJustificationUI ? justification.value : '',
           hasTalent: hasTalentUI ? (talentYesRadio.checked ? 'yes' : (talentNoRadio.checked ? 'no' : '')) : '',
-          talentDescription: hasTalentUI && talentYesRadio.checked ? talentDescription.value : ''
+          talentDescription: hasTalentUI && talentYesRadio.checked ? talentDescription.value : '',
+          talentShowcase: hasShowcaseUI && talentYesRadio.checked
+            ? (showcaseRadios.filter(function (r) { return r.checked; })[0] || {}).value || ''
+            : ''
         });
       }
 
@@ -493,6 +510,13 @@
       var savedTalentDescription = state.get('talentDescription');
       if (savedTalentDescription && savedHasTalent === 'yes') {
         talentDescription.value = savedTalentDescription;
+      }
+      if (hasShowcaseUI && savedHasTalent === 'yes') {
+        var savedShowcase = state.get('talentShowcase');
+        if (savedShowcase) {
+          var matchingRadio = showcaseRadios.filter(function (r) { return r.value === savedShowcase; })[0];
+          if (matchingRadio) matchingRadio.checked = true;
+        }
       }
       updateTalentDetailVisibility();
     }

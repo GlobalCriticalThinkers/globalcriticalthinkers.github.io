@@ -534,7 +534,12 @@ const translations = {
         yes: "Yes",
         no: "No",
         descriptionLabel: "Please describe your talent or special skill.",
-        descriptionHint: "Examples: Singing, Dancing, Musical Instrument, Public Speaking, Debate, Poetry, Acting, Drawing, Photography, Coding, Martial Arts, Sports, Leadership, or any other talent or special skill."
+        descriptionHint: "Examples: Singing, Dancing, Musical Instrument, Public Speaking, Debate, Poetry, Acting, Drawing, Photography, Coding, Martial Arts, Sports, Leadership, or any other talent or special skill.",
+        showcaseQuestion: "Would you be interested in showcasing your talent during the GCT Talent Showcase Session?",
+        showcaseHint: "Selected participants may be invited to showcase their talent during the GCT Talent Showcase Session as part of the event program.",
+        showcaseYes: "Yes, I'd love to.",
+        showcaseMaybe: "Maybe.",
+        showcaseNo: "No, thank you."
       }
     },
     footer: {
@@ -1301,7 +1306,12 @@ const translations = {
         yes: "Ya",
         no: "Tidak",
         descriptionLabel: "Ceritakan bakat atau keterampilan khususmu.",
-        descriptionHint: "Contoh: Menyanyi, Menari, Alat Musik, Public Speaking, Debat, Puisi, Akting, Menggambar, Fotografi, Coding, Bela Diri, Olahraga, Kepemimpinan, atau bakat/keterampilan lainnya."
+        descriptionHint: "Contoh: Menyanyi, Menari, Alat Musik, Public Speaking, Debat, Puisi, Akting, Menggambar, Fotografi, Coding, Bela Diri, Olahraga, Kepemimpinan, atau bakat/keterampilan lainnya.",
+        showcaseQuestion: "Apakah kamu tertarik untuk menampilkan bakatmu selama Sesi Talent Showcase GCT?",
+        showcaseHint: "Peserta terpilih mungkin akan diundang untuk menampilkan bakatnya selama Sesi Talent Showcase GCT sebagai bagian dari rangkaian acara.",
+        showcaseYes: "Ya, aku mau.",
+        showcaseMaybe: "Mungkin.",
+        showcaseNo: "Tidak, terima kasih."
       }
     },
     footer: {

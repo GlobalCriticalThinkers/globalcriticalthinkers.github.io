@@ -3678,16 +3678,15 @@ a.event-card:focus-visible {
 .reg-country-select__notice strong { color: var(--ink); }
 
 /* Country Justification — reuses .contact-form__textarea's underline
-   style. Fixed height (not auto-growing) so typing a long response
-   scrolls inside the box instead of pushing the rest of the page down;
-   resize: vertical matches the same manual-drag convention already
-   used by .contact-form__textarea elsewhere (e.g. Step 1's allergies
-   field), so a participant who wants more room can still drag for it,
-   but the height never changes on its own. */
+   style. Fixed height (not auto-growing), like a standard essay field
+   on an application/exam form: typing past the visible area scrolls
+   inside the box instead of pushing the rest of the page down. resize:
+   vertical matches the same manual-drag convention already used by
+   .contact-form__textarea elsewhere (e.g. Step 1's allergies field),
+   so a participant who wants more room can still drag for it, but the
+   height never changes on its own as they type. */
 .reg-justification-textarea {
   height: 240px;
-  min-height: 220px;
-  max-height: 480px;
   resize: vertical;
   overflow-y: auto;
 }
@@ -3699,6 +3698,26 @@ a.event-card:focus-visible {
 }
 .reg-word-count.is-under,
 .reg-word-count.is-over { color: #B3432E; }
+
+/* Talent & Skills — conditional textarea reveal. Same max-height/
+   opacity transition already used for the phone/email inline status
+   messages (.reg-field__phone-status / .reg-field__email-status), just
+   applied to a taller block since this reveals a full textarea instead
+   of a one-line message. Collapsed by default (hidden until "Yes" is
+   selected) rather than using [hidden], so the appearance animates
+   smoothly instead of popping in. */
+.reg-talent-detail {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0 !important;
+  transition: opacity 0.3s var(--ease), max-height 0.3s var(--ease), margin-top 0.3s var(--ease);
+}
+.reg-talent-detail.is-visible {
+  max-height: 420px;
+  opacity: 1;
+  margin-top: 1.5rem !important;
+}
 
 @media (max-width: 640px) {
   .reg-progress__label { font-size: 0.68rem; }

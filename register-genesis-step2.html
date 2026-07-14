@@ -136,6 +136,32 @@
             </div>
           </div>
 
+          <!-- SECTION — TALENT & SKILLS -->
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep2.talent.title">Talent & Skills</h3>
+            <p class="reg-hint" data-i18n="regStep2.talent.intro">We'd love to know more about you beyond the competition.</p>
+
+            <div class="contact-form__field">
+              <span class="contact-form__label" data-i18n="regStep2.talent.question">Do you have any talent or special skill that you would like us to know?</span>
+              <div class="reg-radio-group" role="radiogroup" aria-label="Talent or special skill">
+                <label class="reg-radio">
+                  <input type="radio" name="hasTalent" id="rg-talent-yes" value="yes">
+                  <span data-i18n="regStep2.talent.yes">Yes</span>
+                </label>
+                <label class="reg-radio">
+                  <input type="radio" name="hasTalent" id="rg-talent-no" value="no">
+                  <span data-i18n="regStep2.talent.no">No</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="contact-form__field reg-talent-detail" id="rg-talent-detail">
+              <label class="contact-form__label" for="rg-talent-description" data-i18n="regStep2.talent.descriptionLabel">Please describe your talent or special skill.</label>
+              <textarea class="contact-form__textarea reg-justification-textarea" id="rg-talent-description" name="talentDescription" rows="6" aria-describedby="rg-talent-hint"></textarea>
+              <p class="reg-hint" id="rg-talent-hint" data-i18n="regStep2.talent.descriptionHint">Examples: Singing, Dancing, Musical Instrument, Public Speaking, Debate, Poetry, Acting, Drawing, Photography, Coding, Martial Arts, Sports, Leadership, or any other talent or special skill.</p>
+            </div>
+          </div>
+
           <!-- BOTTOM NAVIGATION — Back + Continue -->
           <div class="reg-nav">
             <a href="register-genesis-step1.html" class="btn btn--outline-dark" id="regStep2Back" data-i18n="regNav.back">← Back</a>

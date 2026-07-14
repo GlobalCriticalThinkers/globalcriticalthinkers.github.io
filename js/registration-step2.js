@@ -281,15 +281,110 @@
     }
 
     /* ==================================================================
+       COUNTRY JUSTIFICATION
+       ================================================================== */
+    var justification = document.getElementById('rg-justification');
+    var wordCountEl = document.getElementById('rg-justification-count');
+    var justificationErrorRequired = document.getElementById('rg-justification-error-required');
+    var justificationErrorMin = document.getElementById('rg-justification-error-min');
+    var justificationErrorMax = document.getElementById('rg-justification-error-max');
+    var hasJustificationUI = !!justification;
+
+    var JUSTIFICATION_MIN_WORDS = 50;
+    var JUSTIFICATION_MAX_WORDS = 200;
+
+    function countWords(text) {
+      var trimmed = (text || '').trim();
+      if (!trimmed) return 0;
+      return trimmed.split(/\s+/).length;
+    }
+
+    // Not validation logic — purely visual. Grows the textarea to fit
+    // its content instead of showing an internal scrollbar, per the
+    // "large comfortable writing area" / auto-resize requirement.
+    // resetting to 'auto' first lets scrollHeight shrink back down too
+    // (e.g. after deleting text), not just grow.
+    function autoResizeJustification() {
+      if (!justification) return;
+      justification.style.height = 'auto';
+      justification.style.height = justification.scrollHeight + 'px';
+    }
+
+    function updateWordCount() {
+      if (!wordCountEl || !justification) return;
+      var count = countWords(justification.value);
+
+      wordCountEl.textContent = t(
+        'regStep2.justification.wordCount',
+        { count: count, max: JUSTIFICATION_MAX_WORDS },
+        count + ' / ' + JUSTIFICATION_MAX_WORDS + ' words'
+      );
+
+      // Only flag red once the participant has actually typed something
+      // and gone out of range — an empty field is caught by the
+      // "required" message on submit, not by the live counter turning
+      // red before they've started.
+      wordCountEl.classList.toggle('is-under', count > 0 && count < JUSTIFICATION_MIN_WORDS);
+      wordCountEl.classList.toggle('is-over', count > JUSTIFICATION_MAX_WORDS);
+    }
+
+    // Only one of the three justification error messages should be
+    // visible at a time (required / too-short / too-long), but the
+    // shared .contact-form__field.is-invalid CSS rule reveals every
+    // .reg-field__error inside the wrapper indiscriminately. Explicit
+    // inline display overrides that generic rule so exactly one message
+    // shows — same targeted-message approach phone/email validation
+    // already use via their own status element.
+    function showJustificationError(kind) {
+      var fieldWrap = justification.closest('.contact-form__field');
+      if (fieldWrap) fieldWrap.classList.add('is-invalid');
+
+      if (justificationErrorRequired) justificationErrorRequired.style.display = kind === 'required' ? 'block' : 'none';
+      if (justificationErrorMin) justificationErrorMin.style.display = kind === 'min' ? 'block' : 'none';
+      if (justificationErrorMax) justificationErrorMax.style.display = kind === 'max' ? 'block' : 'none';
+    }
+
+    function clearJustificationError() {
+      var fieldWrap = justification.closest('.contact-form__field');
+      if (fieldWrap) fieldWrap.classList.remove('is-invalid');
+      if (justificationErrorRequired) justificationErrorRequired.style.display = '';
+      if (justificationErrorMin) justificationErrorMin.style.display = '';
+      if (justificationErrorMax) justificationErrorMax.style.display = '';
+    }
+
+    // Returns null when valid, otherwise which error to show.
+    function validateJustification() {
+      var count = countWords(justification.value);
+      if (count === 0) return 'required';
+      if (count < JUSTIFICATION_MIN_WORDS) return 'min';
+      if (count > JUSTIFICATION_MAX_WORDS) return 'max';
+      return null;
+    }
+
+    if (hasJustificationUI) {
+      justification.addEventListener('input', function () {
+        autoResizeJustification();
+        updateWordCount();
+        clearJustificationError();
+      });
+    }
+
+    /* ==================================================================
        Shared render/validate/submit
        ================================================================== */
     function renderAll() {
       renderAgeNotice();
       renderTopicOptions();
       if (hasCountryUI) renderCountryList(countrySearch.value);
+      if (hasJustificationUI) updateWordCount();
     }
 
     renderAll();
+
+    // Auto-resize needs an initial pass too, once restored text (if
+    // any) has actually landed in the textarea — see restore logic
+    // further down, which calls this again after setting .value.
+    if (hasJustificationUI) autoResizeJustification();
 
     // Re-render every runtime-generated string when the language
     // switcher fires, since none of this markup exists at the time
@@ -324,6 +419,16 @@
         }
       }
 
+      if (hasJustificationUI) {
+        var justificationProblem = validateJustification();
+        if (justificationProblem) {
+          showJustificationError(justificationProblem);
+          firstInvalid = firstInvalid || justification.closest('.contact-form__field');
+        } else {
+          clearJustificationError();
+        }
+      }
+
       if (firstInvalid) {
         firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
@@ -332,13 +437,29 @@
       if (state) {
         state.setMany({
           researchTopic: select.value,
-          preferredCountry: hasCountryUI ? countryHidden.value : ''
+          preferredCountry: hasCountryUI ? countryHidden.value : '',
+          countryJustification: hasJustificationUI ? justification.value : ''
         });
       }
 
       // Step 3 does not exist yet — this is the prepared hand-off point.
       window.location.href = 'register-genesis-step3.html';
     });
+
+    // ------------------------------------------------------------------
+    // Restore a previously-typed justification response (e.g. the
+    // participant continued to Step 3, then came back). Placed after
+    // the submit handler is wired up since it needs autoResize/
+    // updateWordCount, both already defined above by this point.
+    // ------------------------------------------------------------------
+    if (hasJustificationUI && state) {
+      var savedJustification = state.get('countryJustification');
+      if (savedJustification) {
+        justification.value = savedJustification;
+        autoResizeJustification();
+        updateWordCount();
+      }
+    }
   }
 
   document.addEventListener('DOMContentLoaded', initStep2);

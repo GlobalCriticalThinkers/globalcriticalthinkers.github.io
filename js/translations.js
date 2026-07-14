@@ -517,6 +517,15 @@ const translations = {
         searchPlaceholder: "Search by country name...",
         empty: "No countries match your search.",
         required: "Please select your preferred country."
+      },
+      justification: {
+        title: "Country Justification",
+        question: "Briefly explain why you chose this country and how it relates to your selected research topic.",
+        supportingText: "Please answer in English. Your response helps the organizing committee better understand your reasoning and English communication skills before the competition.",
+        wordCount: "{count} / {max} words",
+        required: "Please answer this question.",
+        minWords: "Please write at least {min} words.",
+        maxWords: "Please keep your response within {max} words."
       }
     },
     footer: {
@@ -1266,6 +1275,15 @@ const translations = {
         searchPlaceholder: "Cari berdasarkan nama negara...",
         empty: "Tidak ada negara yang cocok dengan pencarianmu.",
         required: "Silakan pilih negara pilihanmu."
+      },
+      justification: {
+        title: "Alasan Pemilihan Negara",
+        question: "Jelaskan secara singkat mengapa kamu memilih negara ini dan bagaimana kaitannya dengan topik riset yang kamu pilih.",
+        supportingText: "Mohon jawab dalam Bahasa Inggris. Jawabanmu membantu panitia penyelenggara memahami cara berpikirmu dan kemampuan komunikasi Bahasa Inggrismu sebelum kompetisi berlangsung.",
+        wordCount: "{count} / {max} kata",
+        required: "Silakan jawab pertanyaan ini.",
+        minWords: "Tulis jawabanmu minimal {min} kata.",
+        maxWords: "Jawabanmu tidak boleh lebih dari {max} kata."
       }
     },
     footer: {

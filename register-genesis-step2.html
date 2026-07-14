@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="regStep2.meta.title">Step 2 · Research Topic — Genesis 2026 Registration | Global Critical Thinkers</title>
+  <meta name="description" content="Step 2 of Genesis 2026 registration: choose your research topic." data-i18n-content="regStep2.meta.description">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="registration">
+
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+  <div class="progress-thread" aria-hidden="true">
+    <div class="progress-thread__fill" id="progressFill"></div>
+  </div>
+
+  <header class="site-header" id="siteHeader" data-layout="header"></header>
+
+  <main id="main">
+
+    <!-- ============================================ -->
+    <!-- PAGE HEADER -->
+    <!-- ============================================ -->
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__kicker">
+          <span class="page-header__kicker-line"></span>
+          <span class="page-header__kicker-text" data-i18n="regStep2.hero.kicker">Genesis 2026 Registration</span>
+        </div>
+        <h1 class="page-header__title" data-i18n-html="regStep2.hero.title">Step 2<br>Choose Your Research Topic</h1>
+        <p class="page-header__intro" data-i18n="regStep2.hero.intro">Your available research topics are automatically selected based on the age information you provided during registration.</p>
+      </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- PROGRESS INDICATOR -->
+    <!-- Same shared markup as every step — only the   -->
+    <!-- is-active / is-done positions change.          -->
+    <!-- ============================================ -->
+    <div class="reg-progress">
+      <div class="container">
+        <p class="reg-progress__label" data-i18n="regProgress.label">Step 2 of 5</p>
+        <div class="reg-progress__track" role="group" aria-label="Registration progress">
+          <span class="reg-progress__step is-done" aria-label="Step 1: Personal Information (completed)"></span>
+          <span class="reg-progress__connector is-done"></span>
+          <span class="reg-progress__step is-active" aria-current="step" aria-label="Step 2: Research Topic"></span>
+          <span class="reg-progress__connector"></span>
+          <span class="reg-progress__step" aria-label="Step 3"></span>
+          <span class="reg-progress__connector"></span>
+          <span class="reg-progress__step" aria-label="Step 4"></span>
+          <span class="reg-progress__connector"></span>
+          <span class="reg-progress__step" aria-label="Step 5"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- REGISTRATION FORM — STEP 2 -->
+    <!-- ============================================ -->
+    <section class="about-block about-block--paper" id="reg-step2" aria-labelledby="reg-step2-heading">
+      <div class="container">
+        <h2 id="reg-step2-heading" class="visually-hidden">Choose Your Research Topic</h2>
+
+        <form class="reg-form" id="regStep2Form" novalidate>
+
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep2.section.title">Research Topic</h3>
+            <p class="reg-hint" id="rg-topic-age-notice" data-i18n="regStep2.ageNotice">
+              Based on your date of birth, you are eligible for topics in your age category.
+            </p>
+            <p class="reg-hint" data-i18n="regStep2.section.intro">
+              Choose one topic that interests you. Your assigned country for the competition will be related to this topic.
+            </p>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-topic" data-i18n="regStep2.topicLabel">Research Topic<span class="reg-required">*</span></label>
+              <select class="reg-select-native" id="rg-topic" name="researchTopic" required>
+                <option value="" disabled selected data-i18n="regStep2.topicPlaceholder">Select your topic</option>
+              </select>
+              <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
+            </div>
+
+            <div class="reg-topic-preview" id="rg-topic-preview" hidden>
+              <p class="reg-topic-preview__label" data-i18n="regStep2.previewLabel">Topic Preview</p>
+              <h4 class="reg-topic-preview__title" id="rg-topic-preview-title"></h4>
+              <p class="reg-topic-preview__copy" id="rg-topic-preview-copy"></p>
+            </div>
+          </div>
+
+          <!-- BOTTOM NAVIGATION — Back + Continue -->
+          <div class="reg-nav">
+            <a href="register-genesis-step1.html" class="btn btn--outline" id="regStep2Back" data-i18n="regNav.back">← Back</a>
+            <button type="submit" class="btn btn--gold" id="regStep2Next" data-i18n="regNav.next">Next →</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer class="site-footer" data-layout="footer"></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="js/layout-loader.js"></script>
+  <script src="js/translations.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/registration-data.js" defer></script>
+  <script src="js/registration-state.js" defer></script>
+  <script src="js/registration-step2.js" defer></script>
+</body>
+</html>

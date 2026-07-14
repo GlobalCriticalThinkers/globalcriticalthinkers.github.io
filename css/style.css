@@ -3344,9 +3344,11 @@ a.event-card:focus-visible {
 .contact-form__field.is-invalid .contact-form__input,
 .contact-form__field.is-invalid .contact-form__textarea,
 .contact-form__field.is-invalid .reg-select__trigger,
-.contact-form__field.is-invalid .reg-combo__trigger {
+.contact-form__field.is-invalid .reg-combo__trigger,
+.contact-form__field.is-invalid .reg-country-select__list {
   border-bottom-color: #B3432E;
 }
+.contact-form__field.is-invalid .reg-country-select__list { border: 1px solid #B3432E; }
 .contact-form__field.is-invalid .reg-field__error { display: block; }
 
 /* Radio group */
@@ -3560,6 +3562,121 @@ a.event-card:focus-visible {
   margin: 0.6rem 0 0;
 }
 
+/* Preferred country — search + scrollable grid of checkbox cards.
+   Search input reuses the same visual language as .reg-combo__search;
+   cards borrow the underline-free, bordered-box treatment already
+   established by .price-tier / .includes__item rather than inventing a
+   new surface. Kept as its own block (not folded into .reg-combo)
+   since it's a fixed-height grid, not a floating dropdown panel. */
+.reg-country-select { margin-top: 1.5rem; }
+
+.reg-country-select__search-wrap {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.reg-country-select__search {
+  width: 100%;
+  border: 1px solid rgba(11,18,32,0.15);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  padding: 0.8rem 1rem 0.8rem 2.6rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--ink);
+  transition: border-color 0.3s var(--ease);
+}
+.reg-country-select__search:focus { outline: none; border-color: var(--gold); }
+.reg-country-select__search-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted-on-paper);
+  pointer-events: none;
+}
+
+.reg-country-select__list {
+  max-height: 320px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  padding: 0.3rem;
+  border: 1px solid rgba(11,18,32,0.1);
+  border-radius: var(--radius-md);
+  background: var(--paper-dim);
+}
+
+.reg-country-card {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--white);
+  border: 1px solid rgba(11,18,32,0.1);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease), transform 0.2s var(--ease);
+  text-align: left;
+}
+.reg-country-card:hover { border-color: var(--gold-dim); }
+.reg-country-card.is-selected {
+  border-color: var(--gold);
+  background: rgba(201,162,75,0.08);
+}
+.reg-country-card__box {
+  flex: 0 0 auto;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 1px solid rgba(11,18,32,0.3);
+  border-radius: 3px;
+  display: grid;
+  place-content: center;
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.reg-country-card.is-selected .reg-country-card__box {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+.reg-country-card__box svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.15s var(--ease), transform 0.15s var(--ease);
+  color: var(--navy-950);
+}
+.reg-country-card.is-selected .reg-country-card__box svg {
+  opacity: 1;
+  transform: scale(1);
+}
+.reg-country-card__name {
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.reg-country-select__empty {
+  grid-column: 1 / -1;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted-on-paper);
+}
+
+/* Preference disclaimer — same restrained, boxed treatment as
+   .reg-topic-preview so the two "read this carefully" callouts on the
+   page feel like one family rather than two competing styles. */
+.reg-country-select__notice {
+  margin-top: 1.1rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--paper-dim);
+  border-left: 2px solid var(--gold);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--muted-on-paper);
+}
+.reg-country-select__notice strong { color: var(--ink); }
+
 @media (max-width: 640px) {
   .reg-progress__label { font-size: 0.68rem; }
   .reg-tel { grid-template-columns: 1fr; }
@@ -3567,6 +3684,7 @@ a.event-card:focus-visible {
   .reg-nav { justify-content: stretch; }
   .reg-nav .btn { width: 100%; justify-content: center; }
   .reg-topic-preview { padding: 1.25rem 1.4rem; }
+  .reg-country-select__list { grid-template-columns: 1fr; max-height: 280px; }
 }
 
 

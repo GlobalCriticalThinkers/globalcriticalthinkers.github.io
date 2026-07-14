@@ -299,17 +299,6 @@
       return trimmed.split(/\s+/).length;
     }
 
-    // Not validation logic — purely visual. Grows the textarea to fit
-    // its content instead of showing an internal scrollbar, per the
-    // "large comfortable writing area" / auto-resize requirement.
-    // resetting to 'auto' first lets scrollHeight shrink back down too
-    // (e.g. after deleting text), not just grow.
-    function autoResizeJustification() {
-      if (!justification) return;
-      justification.style.height = 'auto';
-      justification.style.height = justification.scrollHeight + 'px';
-    }
-
     function updateWordCount() {
       if (!wordCountEl || !justification) return;
       var count = countWords(justification.value);
@@ -363,7 +352,6 @@
 
     if (hasJustificationUI) {
       justification.addEventListener('input', function () {
-        autoResizeJustification();
         updateWordCount();
         clearJustificationError();
       });
@@ -380,11 +368,6 @@
     }
 
     renderAll();
-
-    // Auto-resize needs an initial pass too, once restored text (if
-    // any) has actually landed in the textarea — see restore logic
-    // further down, which calls this again after setting .value.
-    if (hasJustificationUI) autoResizeJustification();
 
     // Re-render every runtime-generated string when the language
     // switcher fires, since none of this markup exists at the time
@@ -449,14 +432,13 @@
     // ------------------------------------------------------------------
     // Restore a previously-typed justification response (e.g. the
     // participant continued to Step 3, then came back). Placed after
-    // the submit handler is wired up since it needs autoResize/
-    // updateWordCount, both already defined above by this point.
+    // the submit handler is wired up since it needs updateWordCount,
+    // already defined above by this point.
     // ------------------------------------------------------------------
     if (hasJustificationUI && state) {
       var savedJustification = state.get('countryJustification');
       if (savedJustification) {
         justification.value = savedJustification;
-        autoResizeJustification();
         updateWordCount();
       }
     }

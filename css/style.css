@@ -3678,14 +3678,18 @@ a.event-card:focus-visible {
 .reg-country-select__notice strong { color: var(--ink); }
 
 /* Country Justification — reuses .contact-form__textarea's underline
-   style, just taller (a "comfortable writing area", not the compact
-   allergies box from Step 1) and with manual resize turned off since
-   JS grows it automatically; a lingering drag handle would fight the
-   auto-grow and look broken once JS has already set an explicit height. */
+   style. Fixed height (not auto-growing) so typing a long response
+   scrolls inside the box instead of pushing the rest of the page down;
+   resize: vertical matches the same manual-drag convention already
+   used by .contact-form__textarea elsewhere (e.g. Step 1's allergies
+   field), so a participant who wants more room can still drag for it,
+   but the height never changes on its own. */
 .reg-justification-textarea {
-  min-height: 180px;
-  resize: none;
-  overflow: hidden;
+  height: 240px;
+  min-height: 220px;
+  max-height: 480px;
+  resize: vertical;
+  overflow-y: auto;
 }
 .reg-word-count {
   margin-top: 0.6rem;

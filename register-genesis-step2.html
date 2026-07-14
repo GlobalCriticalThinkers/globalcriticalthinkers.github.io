@@ -96,6 +96,31 @@
             </div>
           </div>
 
+          <!-- SECTION — PREFERRED COUNTRY -->
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep2.country.title">Preferred Country</h3>
+            <p class="reg-hint" data-i18n="regStep2.country.intro">Select the country you would most like to represent during the competition.</p>
+
+            <div class="contact-form__field">
+              <span class="contact-form__label" data-i18n="regStep2.country.title">Preferred Country<span class="reg-required">*</span></span>
+
+              <div class="reg-country-select" id="rgCountrySelect">
+                <div class="reg-country-select__search-wrap">
+                  <svg class="reg-country-select__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                  <input type="text" class="reg-country-select__search" id="rg-country-search" data-i18n-placeholder="regStep2.country.searchPlaceholder" placeholder="Search by country name..." aria-label="Search countries" autocomplete="off">
+                </div>
+                <div class="reg-country-select__list" id="rg-country-list" role="listbox" aria-label="Preferred country"></div>
+                <input type="hidden" name="preferredCountry" id="rg-preferred-country">
+              </div>
+
+              <p class="reg-field__error" id="rg-country-error" data-i18n="regStep2.country.required">Please select your preferred country.</p>
+            </div>
+
+            <div class="reg-country-select__notice" data-i18n-html="regStep2.country.notice">
+              <strong>Important:</strong> Your selected country is considered a preference only. If your preferred country has already been assigned to another participant or is unavailable, the organizing committee will assign you another country within your selected research topic.
+            </div>
+          </div>
+
           <!-- BOTTOM NAVIGATION — Back + Continue -->
           <div class="reg-nav">
             <a href="register-genesis-step1.html" class="btn btn--outline-dark" id="regStep2Back" data-i18n="regNav.back">← Back</a>

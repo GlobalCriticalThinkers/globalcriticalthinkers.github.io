@@ -121,6 +121,21 @@
             </div>
           </div>
 
+          <!-- SECTION — COUNTRY JUSTIFICATION -->
+          <div class="reg-form__section">
+            <h3 class="reg-form__section-title" data-i18n="regStep2.justification.title">Country Justification</h3>
+            <p class="reg-hint" data-i18n="regStep2.justification.supportingText">Please answer in English. Your response helps the organizing committee better understand your reasoning and English communication skills before the competition.</p>
+
+            <div class="contact-form__field">
+              <label class="contact-form__label" for="rg-justification" data-i18n="regStep2.justification.question">Briefly explain why you chose this country and how it relates to your selected research topic.<span class="reg-required">*</span></label>
+              <textarea class="contact-form__textarea reg-justification-textarea" id="rg-justification" name="countryJustification" rows="6" required aria-describedby="rg-justification-count"></textarea>
+              <p class="reg-word-count" id="rg-justification-count" aria-live="polite">0 / 200 words</p>
+              <p class="reg-field__error" id="rg-justification-error-required" data-i18n="regStep2.justification.required">Please answer this question.</p>
+              <p class="reg-field__error" id="rg-justification-error-min" data-i18n="regStep2.justification.minWords">Please write at least 50 words.</p>
+              <p class="reg-field__error" id="rg-justification-error-max" data-i18n="regStep2.justification.maxWords">Please keep your response within 200 words.</p>
+            </div>
+          </div>
+
           <!-- BOTTOM NAVIGATION — Back + Continue -->
           <div class="reg-nav">
             <a href="register-genesis-step1.html" class="btn btn--outline-dark" id="regStep2Back" data-i18n="regNav.back">← Back</a>

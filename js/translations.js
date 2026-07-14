@@ -509,6 +509,14 @@ const translations = {
           label: "AI Governance",
           description: "Explore how governments regulate Artificial Intelligence while balancing innovation, ethics, privacy, security, and public interest."
         }
+      },
+      country: {
+        title: "Preferred Country",
+        intro: "Select the country you would most like to represent during the competition.",
+        notice: "<strong>Important:</strong> Your selected country is considered a preference only. If your preferred country has already been assigned to another participant or is unavailable, the organizing committee will assign you another country within your selected research topic.",
+        searchPlaceholder: "Search by country name...",
+        empty: "No countries match your search.",
+        required: "Please select your preferred country."
       }
     },
     footer: {
@@ -1250,6 +1258,14 @@ const translations = {
           label: "Tata Kelola AI",
           description: "Pelajari bagaimana pemerintah mengatur Kecerdasan Buatan sambil menyeimbangkan inovasi, etika, privasi, keamanan, dan kepentingan publik."
         }
+      },
+      country: {
+        title: "Negara Pilihan",
+        intro: "Pilih negara yang paling ingin kamu wakili selama kompetisi berlangsung.",
+        notice: "<strong>Penting:</strong> Negara yang kamu pilih hanya bersifat preferensi. Jika negara pilihanmu sudah ditugaskan kepada peserta lain atau tidak tersedia, panitia penyelenggara akan menugaskan negara lain kepadamu dalam topik riset yang sama.",
+        searchPlaceholder: "Cari berdasarkan nama negara...",
+        empty: "Tidak ada negara yang cocok dengan pencarianmu.",
+        required: "Silakan pilih negara pilihanmu."
       }
     },
     footer: {

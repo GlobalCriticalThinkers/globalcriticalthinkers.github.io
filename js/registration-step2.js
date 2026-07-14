@@ -1,27 +1,32 @@
 /**
  * Global Critical Thinkers — registration-step2.js
  *
- * Step 2 — Research Topic Selection.
+ * Step 2 — Research Topic Selection + Preferred Country.
  *
- * The participant never picks an age group directly. Age is derived
- * from the Date of Birth saved by Step 1 (registration-state.js), and
- * that age determines which two-item topic list from
+ * TOPIC: The participant never picks an age group directly. Age is
+ * derived from the Date of Birth saved by Step 1 (registration-state.js),
+ * and that age determines which two-item topic list from
  * registration-data.js's RESEARCH_TOPICS is shown. If Step 1's data is
  * missing (direct page load, cleared session), the participant is sent
  * back to Step 1 rather than shown an empty or wrong-guess dropdown.
  *
- * All visible text (topic labels, descriptions, the age-eligibility
- * notice, the placeholder option) is generated at runtime rather than
- * sitting as static markup, since it depends on the participant's
- * computed age band. Because i18n.js's applyTranslations() only walks
- * elements already in the DOM, none of this would be caught by a normal
- * data-i18n pass — so this file looks strings up itself via
- * window.GCTi18n.t() (falling back to English if i18n.js hasn't loaded
- * for some reason) and re-renders on the 'gct:langchange' event i18n.js
- * dispatches after a language switch.
+ * COUNTRY: A single "preferred country" pick from the full COUNTRIES
+ * list already used by Step 1's Country of Residence combo (reused
+ * as-is, not duplicated). Rendered as a searchable, scrollable grid of
+ * checkbox cards rather than a <select>, per the design brief — this is
+ * explicitly a *preference*, not an availability-checked assignment,
+ * and the UI (notice text) says so; no availability logic exists here
+ * or should be added here.
+ *
+ * All visible text generated at runtime (topic options, age notice,
+ * topic preview, country search placeholder/empty state) is looked up
+ * via window.GCTi18n.t() with an English fallback, and re-rendered on
+ * the 'gct:langchange' event i18n.js dispatches after a language
+ * switch — none of it exists in the DOM at the time i18n.js's own
+ * DOMContentLoaded pass runs, so a normal data-i18n sweep can't reach it.
  *
  * Depends on:
- *   - registration-data.js  (window.GCTRegistrationData.RESEARCH_TOPICS)
+ *   - registration-data.js  (RESEARCH_TOPICS, COUNTRIES)
  *   - registration-state.js (window.GCTRegistrationState)
  *   - i18n.js               (window.GCTi18n.t(), 'gct:langchange' event)
  */
@@ -31,6 +36,7 @@
 
   var data = window.GCTRegistrationData || {};
   var topicBands = data.RESEARCH_TOPICS || {};
+  var COUNTRIES = data.COUNTRIES || [];
 
   /* ------------------------------------------------------------------
      Age calculation — same "years elapsed, adjusted if birthday hasn't
@@ -75,6 +81,8 @@
     return fallback;
   }
 
+  var CHECK_ICON_SVG = '<svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
   /* ------------------------------------------------------------------
      Init
      ------------------------------------------------------------------ */
@@ -82,6 +90,11 @@
     var form = document.getElementById('regStep2Form');
     if (!form) return;
 
+    var state = window.GCTRegistrationState;
+
+    /* ==================================================================
+       RESEARCH TOPIC
+       ================================================================== */
     var select = document.getElementById('rg-topic');
     var preview = document.getElementById('rg-topic-preview');
     var previewTitle = document.getElementById('rg-topic-preview-title');
@@ -89,7 +102,6 @@
     var ageNotice = document.getElementById('rg-topic-age-notice');
     if (!select) return;
 
-    var state = window.GCTRegistrationState;
     var dob = state ? state.get('dateOfBirth') : null;
     var age = calculateAge(dob);
     var band = age !== null ? bandForAge(age) : null;
@@ -102,7 +114,7 @@
       return;
     }
 
-    var previouslySelected = state ? state.get('researchTopic') : null;
+    var previouslySelectedTopic = state ? state.get('researchTopic') : null;
 
     function topicLabel(topic) {
       return t('regStep2.topics.' + topic.i18nKey + '.label', null, topic.label);
@@ -112,9 +124,7 @@
       return t('regStep2.topics.' + topic.i18nKey + '.description', null, topic.description);
     }
 
-    function renderOptions() {
-      // Remember the value before rebuilding, since re-render (on
-      // language change) shouldn't lose the participant's selection.
+    function renderTopicOptions() {
       var currentValue = select.value;
       select.innerHTML = '';
 
@@ -134,17 +144,17 @@
       // Restore a prior selection only if it's still valid for the
       // (re)computed age band; otherwise fall back to the placeholder,
       // per the "clear selection automatically" requirement.
-      var candidate = currentValue || previouslySelected;
+      var candidate = currentValue || previouslySelectedTopic;
       var stillValid = candidate && band.topics.some(function (item) {
         return item.value === candidate;
       });
       select.value = stillValid ? candidate : '';
       placeholder.selected = !stillValid;
 
-      updatePreview();
+      updateTopicPreview();
     }
 
-    function updatePreview() {
+    function updateTopicPreview() {
       var topic = band.topics.filter(function (topicItem) {
         return topicItem.value === select.value;
       })[0];
@@ -168,18 +178,118 @@
       );
     }
 
-    function renderAll() {
-      renderAgeNotice();
-      renderOptions();
-    }
-
-    renderAll();
-
     select.addEventListener('change', function () {
       var fieldWrap = select.closest('.contact-form__field');
       if (fieldWrap) fieldWrap.classList.remove('is-invalid');
-      updatePreview();
+      updateTopicPreview();
     });
+
+    /* ==================================================================
+       PREFERRED COUNTRY
+       ================================================================== */
+    var countrySearch = document.getElementById('rg-country-search');
+    var countryList = document.getElementById('rg-country-list');
+    var countryHidden = document.getElementById('rg-preferred-country');
+    var hasCountryUI = countrySearch && countryList && countryHidden;
+
+    var selectedCountry = state ? (state.get('preferredCountry') || '') : '';
+
+    // Card nodes are built directly via document.createElement in
+    // renderCountryList() below (not an HTML template string), since a
+    // handful of COUNTRIES entries contain parentheses/quotes (e.g.
+    // "Congo (Congo-Brazzaville)") that would need careful escaping if
+    // interpolated into a raw HTML string instead.
+
+    function renderCountryList(filterText) {
+      if (!hasCountryUI) return;
+      var query = (filterText || '').trim().toLowerCase();
+      var matches = query
+        ? COUNTRIES.filter(function (name) { return name.toLowerCase().indexOf(query) !== -1; })
+        : COUNTRIES;
+
+      countryList.innerHTML = '';
+
+      if (matches.length === 0) {
+        var empty = document.createElement('p');
+        empty.className = 'reg-country-select__empty';
+        empty.textContent = t('regStep2.country.empty', null, 'No countries match your search.');
+        countryList.appendChild(empty);
+        return;
+      }
+
+      var frag = document.createDocumentFragment();
+      matches.forEach(function (name) {
+        var card = document.createElement('div');
+        card.className = 'reg-country-card';
+        card.setAttribute('role', 'option');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('data-country', name);
+        var isSelected = name === selectedCountry;
+        card.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+        if (isSelected) card.classList.add('is-selected');
+
+        var box = document.createElement('span');
+        box.className = 'reg-country-card__box';
+        box.innerHTML = CHECK_ICON_SVG;
+
+        var label = document.createElement('span');
+        label.className = 'reg-country-card__name';
+        label.textContent = name;
+
+        card.appendChild(box);
+        card.appendChild(label);
+        frag.appendChild(card);
+      });
+      countryList.appendChild(frag);
+    }
+
+    function selectCountry(name) {
+      selectedCountry = name;
+      countryHidden.value = name;
+      countryList.querySelectorAll('.reg-country-card').forEach(function (card) {
+        var match = card.getAttribute('data-country') === name;
+        card.classList.toggle('is-selected', match);
+        card.setAttribute('aria-selected', match ? 'true' : 'false');
+      });
+      var fieldWrap = countryHidden.closest('.contact-form__field');
+      if (fieldWrap) fieldWrap.classList.remove('is-invalid');
+    }
+
+    if (hasCountryUI) {
+      countryHidden.value = selectedCountry;
+
+      countryList.addEventListener('click', function (event) {
+        var card = event.target.closest('.reg-country-card');
+        if (!card) return;
+        selectCountry(card.getAttribute('data-country'));
+      });
+
+      // Keyboard activation for the same role="option" cards, mirroring
+      // how .reg-combo__option is mouse-only but this grid is meant to
+      // be focusable (tabindex="0" per card).
+      countryList.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        var card = event.target.closest('.reg-country-card');
+        if (!card) return;
+        event.preventDefault();
+        selectCountry(card.getAttribute('data-country'));
+      });
+
+      countrySearch.addEventListener('input', function () {
+        renderCountryList(countrySearch.value);
+      });
+    }
+
+    /* ==================================================================
+       Shared render/validate/submit
+       ================================================================== */
+    function renderAll() {
+      renderAgeNotice();
+      renderTopicOptions();
+      if (hasCountryUI) renderCountryList(countrySearch.value);
+    }
+
+    renderAll();
 
     // Re-render every runtime-generated string when the language
     // switcher fires, since none of this markup exists at the time
@@ -194,16 +304,36 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
-      var fieldWrap = select.closest('.contact-form__field');
+      var firstInvalid = null;
+
+      var topicFieldWrap = select.closest('.contact-form__field');
       if (!select.value) {
-        if (fieldWrap) fieldWrap.classList.add('is-invalid');
-        fieldWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (topicFieldWrap) topicFieldWrap.classList.add('is-invalid');
+        firstInvalid = firstInvalid || topicFieldWrap;
+      } else if (topicFieldWrap) {
+        topicFieldWrap.classList.remove('is-invalid');
+      }
+
+      if (hasCountryUI) {
+        var countryFieldWrap = countryHidden.closest('.contact-form__field');
+        if (!countryHidden.value) {
+          if (countryFieldWrap) countryFieldWrap.classList.add('is-invalid');
+          firstInvalid = firstInvalid || countryFieldWrap;
+        } else if (countryFieldWrap) {
+          countryFieldWrap.classList.remove('is-invalid');
+        }
+      }
+
+      if (firstInvalid) {
+        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
-      if (fieldWrap) fieldWrap.classList.remove('is-invalid');
 
       if (state) {
-        state.set('researchTopic', select.value);
+        state.setMany({
+          researchTopic: select.value,
+          preferredCountry: hasCountryUI ? countryHidden.value : ''
+        });
       }
 
       // Step 3 does not exist yet — this is the prepared hand-off point.

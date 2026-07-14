@@ -48,7 +48,7 @@
     <!-- ============================================ -->
     <div class="reg-progress">
       <div class="container">
-        <p class="reg-progress__label" data-i18n="regProgress.label">Step 2 of 5</p>
+        <p class="reg-progress__label" data-i18n="regProgress.label" data-i18n-vars='{"current":"2","total":"5"}'>Step 2 of 5</p>
         <div class="reg-progress__track" role="group" aria-label="Registration progress">
           <span class="reg-progress__step is-done" aria-label="Step 1: Personal Information (completed)"></span>
           <span class="reg-progress__connector is-done"></span>
@@ -74,7 +74,7 @@
 
           <div class="reg-form__section">
             <h3 class="reg-form__section-title" data-i18n="regStep2.section.title">Research Topic</h3>
-            <p class="reg-hint" id="rg-topic-age-notice" data-i18n="regStep2.ageNotice">
+            <p class="reg-hint" id="rg-topic-age-notice">
               Based on your date of birth, you are eligible for topics in your age category.
             </p>
             <p class="reg-hint" data-i18n="regStep2.section.intro">
@@ -84,7 +84,7 @@
             <div class="contact-form__field">
               <label class="contact-form__label" for="rg-topic" data-i18n="regStep2.topicLabel">Research Topic<span class="reg-required">*</span></label>
               <select class="reg-select-native" id="rg-topic" name="researchTopic" required>
-                <option value="" disabled selected data-i18n="regStep2.topicPlaceholder">Select your topic</option>
+                <option value="" disabled selected>Select your topic</option>
               </select>
               <p class="reg-field__error" data-i18n="regValidation.required">This field is required.</p>
             </div>

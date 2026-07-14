@@ -159,6 +159,25 @@
               <label class="contact-form__label" for="rg-talent-description" data-i18n="regStep2.talent.descriptionLabel">Please describe your talent or special skill.</label>
               <textarea class="contact-form__textarea reg-justification-textarea" id="rg-talent-description" name="talentDescription" rows="6" aria-describedby="rg-talent-hint"></textarea>
               <p class="reg-hint" id="rg-talent-hint" data-i18n="regStep2.talent.descriptionHint">Examples: Singing, Dancing, Musical Instrument, Public Speaking, Debate, Poetry, Acting, Drawing, Photography, Coding, Martial Arts, Sports, Leadership, or any other talent or special skill.</p>
+
+              <div class="reg-talent-showcase" id="rg-talent-showcase">
+                <span class="contact-form__label reg-talent-showcase__label" data-i18n="regStep2.talent.showcaseQuestion">Would you be interested in showcasing your talent during the GCT Talent Showcase Session?</span>
+                <p class="reg-hint" data-i18n="regStep2.talent.showcaseHint">Selected participants may be invited to showcase their talent during the GCT Talent Showcase Session as part of the event program.</p>
+                <div class="reg-radio-group" role="radiogroup" aria-label="Talent Showcase interest">
+                  <label class="reg-radio">
+                    <input type="radio" name="talentShowcase" id="rg-showcase-yes" value="yes">
+                    <span data-i18n="regStep2.talent.showcaseYes">Yes, I'd love to.</span>
+                  </label>
+                  <label class="reg-radio">
+                    <input type="radio" name="talentShowcase" id="rg-showcase-maybe" value="maybe">
+                    <span data-i18n="regStep2.talent.showcaseMaybe">Maybe.</span>
+                  </label>
+                  <label class="reg-radio">
+                    <input type="radio" name="talentShowcase" id="rg-showcase-no" value="no">
+                    <span data-i18n="regStep2.talent.showcaseNo">No, thank you.</span>
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
 

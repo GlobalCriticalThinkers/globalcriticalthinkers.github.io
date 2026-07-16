@@ -34,7 +34,7 @@
 (function () {
   'use strict';
 
-  var GOOGLE_SCRIPT_URL = "PASTE_GOOGLE_SCRIPT_URL_HERE";
+  var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzGneRbzYry2QOrNwT-oC1r5-2QjGDx7kGL3I9pLgq6B9l0M6HZ0k7gesg5r4tw_zIO/exec";
 
   var data = window.GCTRegistrationData || {};
   var topicBands = data.RESEARCH_TOPICS || {};

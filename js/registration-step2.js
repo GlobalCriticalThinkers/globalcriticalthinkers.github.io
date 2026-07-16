@@ -520,7 +520,7 @@
           if (result.success !== true) {
             throw new Error(result.message || "Submission failed");
           }
-          window.location.href = 'thank-you.html';
+          window.location.href = 'thank-you.html?reg=' + encodeURIComponent(result.registrationNumber);
         })
         .catch(function () {
           if (submitBtn) {

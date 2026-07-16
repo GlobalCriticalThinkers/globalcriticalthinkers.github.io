@@ -255,6 +255,19 @@ body {
   color: var(--navy-950);
 }
 .btn--gold:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -10px rgba(201,162,75,0.55); }
+.btn:disabled { cursor: default; opacity: 0.85; transform: none !important; box-shadow: none !important; }
+.btn-spinner {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: btn-spinner-spin 0.7s linear infinite;
+}
+@keyframes btn-spinner-spin {
+  to { transform: rotate(360deg); }
+}
 .btn--outline {
   border: 1px solid var(--gold-dim);
   color: var(--paper);

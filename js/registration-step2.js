@@ -464,6 +464,7 @@
 
       if (firstInvalid) {
         firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstInvalid.classList.add('is-invalid');
         return;
       }
 

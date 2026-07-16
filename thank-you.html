@@ -73,6 +73,17 @@
 
   <script>
     (function () {
+      // Reinforces the replaceState() already done in registration-step2.js
+      // right before the redirect. Calling it again here, on load, means
+      // that even if this page is ever reached in a way that bypassed
+      // that first replaceState (e.g. a bookmarked/shared link opened
+      // fresh), the CURRENT history entry — whatever it is — gets
+      // replaced with this same URL. That doesn't erase earlier history,
+      // but it guarantees this page never re-adds a "back to the form"
+      // step of its own, and makes the intended behavior consistent
+      // regardless of how the page was reached.
+      window.history.replaceState(null, '', window.location.href);
+
       var params = new URLSearchParams(window.location.search);
       var reg = params.get('reg');
       var wrap = document.getElementById('thankYouRegNumber');

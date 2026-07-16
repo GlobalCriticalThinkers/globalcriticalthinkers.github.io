@@ -66,10 +66,24 @@
     writeStore(store);
   }
 
+  // Wipes all stored registration fields. Used after a successful
+  // submission — once the data has been sent to the backend, nothing
+  // about the previous participant should still be readable if the
+  // person lands back on Step 1 or Step 2 (via Back button, bfcache
+  // restore, or clicking "Register Now" again in the same tab/session).
+  function clear() {
+    try {
+      window.sessionStorage.removeItem(STORAGE_KEY);
+    } catch (e) {
+      /* sessionStorage unavailable — nothing to clear */
+    }
+  }
+
   window.GCTRegistrationState = {
     get: get,
     getAll: getAll,
     set: set,
-    setMany: setMany
+    setMany: setMany,
+    clear: clear
   };
 })();

@@ -521,6 +521,16 @@
             throw new Error(result.message || "Submission failed");
           }
 
+          // Wipe every stored registration field now that the data has
+          // actually reached the backend. This is what prevents the
+          // NEXT visit to Step 1/Step 2 — whether via Back button,
+          // bfcache restore, or clicking "Register Now" again in this
+          // same tab — from showing this participant's leftover data.
+          // Must run before the redirect below.
+          if (window.GCTRegistrationState) {
+            window.GCTRegistrationState.clear();
+          }
+
           // Mark this registration as successfully submitted. The guard
           // script at the top of register-genesis-step1.html and
           // register-genesis-step2.html checks this flag on every load

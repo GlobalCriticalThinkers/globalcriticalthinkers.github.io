@@ -521,6 +521,17 @@
             throw new Error(result.message || "Submission failed");
           }
 
+          // Mark this registration as successfully submitted. The guard
+          // script at the top of register-genesis-step1.html and
+          // register-genesis-step2.html checks this flag on every load
+          // and redirects to index.html if it's set — this is what
+          // actually stops the Back button from showing the filled-in
+          // form again, independent of how reliably replaceState()
+          // below behaves across different browsers.
+          if (window.sessionStorage) {
+            window.sessionStorage.setItem('gct-registration-submitted', 'true');
+          }
+
           // Replace this form page's history entry with the destination
           // BEFORE navigating there. This means the browser's Back
           // button, once on thank-you.html, has nothing to "go back to"

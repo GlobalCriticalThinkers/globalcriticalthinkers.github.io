@@ -28,12 +28,61 @@
         <h1 id="thank-you-heading" class="thank-you__title" data-i18n="thankYou.title">Thank You</h1>
         <p class="thank-you__copy" data-i18n="thankYou.copy1">Your message has been successfully sent.</p>
         <p class="thank-you__copy" data-i18n="thankYou.copy2">Our team will review your inquiry and respond within one business day.</p>
+
+        <!-- Registration Number — populated from ?reg= query param set by
+             registration-step2.js on redirect. Scoped styles only, reusing
+             the existing gold/navy palette and Fraunces/Montserrat fonts
+             already loaded on this page; no new design system. -->
+        <div class="thank-you__reg-number" id="thankYouRegNumber" hidden>
+          <p class="thank-you__reg-number-label">Registration Number</p>
+          <p class="thank-you__reg-number-value" id="thankYouRegNumberValue"></p>
+        </div>
+
         <div class="thank-you__action">
           <a href="index.html" class="btn btn--gold" data-i18n="thankYou.cta">Return to Home</a>
         </div>
       </div>
     </section>
   </main>
+
+  <style>
+    /* Scoped to the Registration Number block only — reuses the page's
+       existing gold accent and font stack, no new design tokens. */
+    .thank-you__reg-number {
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .thank-you__reg-number-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #b8bfd1;
+      margin: 0 0 0.5rem;
+    }
+    .thank-you__reg-number-value {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-weight: 500;
+      color: #d4af6a;
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+  </style>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var reg = params.get('reg');
+      var wrap = document.getElementById('thankYouRegNumber');
+      var valueEl = document.getElementById('thankYouRegNumberValue');
+      if (!wrap || !valueEl) return;
+
+      valueEl.textContent = reg ? reg : 'Registration Number Unavailable';
+      wrap.hidden = false;
+    })();
+  </script>
 
   <script src="js/layout.js"></script>
   <script src="js/layout-loader.js"></script>

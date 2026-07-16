@@ -411,7 +411,8 @@ const translations = {
     },
     regNav: {
       back: "← Back",
-      next: "Next →"
+      next: "Next →",
+      submit: "Submit"
     },
     regValidation: {
       required: "This field is required.",
@@ -1183,7 +1184,8 @@ const translations = {
     },
     regNav: {
       back: "← Kembali",
-      next: "Lanjut →"
+      next: "Lanjut →",
+      submit: "Kirim Pendaftaran"
     },
     regValidation: {
       required: "Kolom ini wajib diisi.",

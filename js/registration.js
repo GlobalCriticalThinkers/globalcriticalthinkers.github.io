@@ -217,6 +217,25 @@
       if (isAllowedNav || isCopyPaste) return;
       event.preventDefault();
     });
+
+    // Real-time enforcement, independent of native min/max support.
+    // Desktop browsers generally respect min/max in their date picker
+    // UI (can't even select an out-of-range date), but many mobile
+    // browsers render the OS's own native date widget, which doesn't
+    // reliably honor min/max — a user can end up with an out-of-range
+    // value in the field despite those attributes being set. Checking
+    // again here, on 'change' (fires once a date is actually picked,
+    // on both desktop and mobile), catches that gap: an out-of-range
+    // value is immediately cleared and flagged invalid the moment it's
+    // selected, rather than only being caught later at submit time.
+    input.addEventListener('change', function () {
+      if (input.value && !isDateWithinRange(input)) {
+        input.value = '';
+        markInvalid(input);
+      } else {
+        markValid(input);
+      }
+    });
   }
 
   /* ------------------------------------------------------------------
@@ -339,15 +358,6 @@
         formData.forEach(function (value, key) { fields[key] = value; });
         window.GCTRegistrationState.setMany(fields);
       }
-      // Replace this page's history entry with Step 2's URL before
-      // navigating there — same technique used at the end of the flow
-      // in registration-step2.js. Without this, Step 1 stays in
-      // history as its own entry: after finishing Step 2 and reaching
-      // thank-you.html, pressing Back would skip the (already-replaced)
-      // Step 2 entry but land back on this filled-in Step 1 page. With
-      // both steps replacing their own entries as the person moves
-      // forward, Back from thank-you.html instead goes to whatever
-      // page was open before the person started the form at all.
       window.history.replaceState(null, '', 'register-genesis-step2.html');
       window.location.href = 'register-genesis-step2.html';
     });

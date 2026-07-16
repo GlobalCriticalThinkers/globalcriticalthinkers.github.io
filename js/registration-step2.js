@@ -34,6 +34,8 @@
 (function () {
   'use strict';
 
+  var GOOGLE_SCRIPT_URL = "PASTE_GOOGLE_SCRIPT_URL_HERE";
+
   var data = window.GCTRegistrationData || {};
   var topicBands = data.RESEARCH_TOPICS || {};
   var COUNTRIES = data.COUNTRIES || [];
@@ -478,8 +480,45 @@
         });
       }
 
-      // Step 3 does not exist yet — this is the prepared hand-off point.
-      window.location.href = 'register-genesis-step3.html';
+      var registrationData = state ? state.getAll() : {};
+
+      var submitBtn = document.getElementById('regStep2Next');
+
+      if (submitBtn) {
+        submitBtn.style.width = submitBtn.offsetWidth + 'px';
+        submitBtn.style.height = submitBtn.offsetHeight + 'px';
+        submitBtn.disabled = true;
+        submitBtn.dataset.originalContent = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span class="btn-spinner" aria-hidden="true"></span>Submitting...';
+      }
+
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(registrationData)
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Request failed");
+          }
+          return response.json();
+        })
+        .then(function (result) {
+          if (result.success !== true) {
+            throw new Error(result.message || "Submission failed");
+          }
+          window.location.href = 'thank-you.html';
+        })
+        .catch(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = submitBtn.dataset.originalContent;
+            submitBtn.style.width = '';
+            submitBtn.style.height = '';
+          }
+        });
     });
 
     // ------------------------------------------------------------------

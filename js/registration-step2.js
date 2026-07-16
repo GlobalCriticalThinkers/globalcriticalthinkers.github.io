@@ -520,7 +520,18 @@
           if (result.success !== true) {
             throw new Error(result.message || "Submission failed");
           }
-          window.location.href = 'thank-you.html?reg=' + encodeURIComponent(result.registrationNumber);
+
+          // Replace this form page's history entry with the destination
+          // BEFORE navigating there. This means the browser's Back
+          // button, once on thank-you.html, has nothing to "go back to"
+          // on this page — the form entry in history is gone, replaced
+          // by thank-you.html itself, so Back skips straight to
+          // whatever was open before the form (index.html). Works the
+          // same way on desktop and mobile browsers since it's the
+          // standard History API, not a browser-specific trick.
+          var thankYouUrl = 'thank-you.html?reg=' + encodeURIComponent(result.registrationNumber);
+          window.history.replaceState(null, '', thankYouUrl);
+          window.location.href = thankYouUrl;
         })
         .catch(function () {
           if (submitBtn) {

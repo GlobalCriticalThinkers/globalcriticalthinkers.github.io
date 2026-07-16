@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    // Guard: if this registration was already submitted successfully
+    // (flagged by registration-step2.js right before it redirects to
+    // thank-you.html), the person landing back on this page can only
+    // mean they used the browser Back/forward-cache button. Rather than
+    // rely solely on history.replaceState() — whose exact behavior with
+    // Back can vary across browsers, especially with bfcache restoring
+    // a page instead of re-running its scripts — this checks a plain
+    // sessionStorage flag on every load and bounces to the homepage
+    // before any form markup renders. Placed as the very first thing in
+    // <head>, before any other tag, so the redirect fires immediately
+    // with no flash of the filled-in form.
+    if (window.sessionStorage && window.sessionStorage.getItem('gct-registration-submitted') === 'true') {
+      window.location.replace('index.html');
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="regStep2.meta.title">Step 2 · Research Topic — Genesis 2026 Registration | Global Critical Thinkers</title>

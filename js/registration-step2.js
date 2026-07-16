@@ -34,7 +34,7 @@
 (function () {
   'use strict';
 
-  var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzGneRbzYry2QOrNwT-oC1r5-2QjGDx7kGL3I9pLgq6B9l0M6HZ0k7gesg5r4tw_zIO/exec";
+  var GOOGLE_SCRIPT_URL = "PASTE_GOOGLE_SCRIPT_URL_HERE";
 
   var data = window.GCTRegistrationData || {};
   var topicBands = data.RESEARCH_TOPICS || {};
@@ -493,10 +493,20 @@
         submitBtn.innerHTML = '<span class="btn-spinner" aria-hidden="true"></span>Submitting...';
       }
 
+      // IMPORTANT: Content-Type is deliberately "text/plain" here, NOT
+      // "application/json". Apps Script Web Apps don't support CORS
+      // preflight (OPTIONS) requests, so any header combination that
+      // triggers a preflight — "application/json" being the classic
+      // one — gets blocked by the browser before it ever reaches
+      // Code.gs's doPost(). "text/plain" is a CORS-safelisted content
+      // type, so the browser sends this as a "simple request" with no
+      // preflight. The body is still the exact same JSON string, and
+      // doPost() parses it with JSON.parse() exactly as before —
+      // only this one header changes, nothing about the payload shape.
       fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "text/plain;charset=utf-8"
         },
         body: JSON.stringify(registrationData)
       })

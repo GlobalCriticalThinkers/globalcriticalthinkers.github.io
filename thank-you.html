@@ -29,13 +29,33 @@
         <p class="thank-you__copy" data-i18n="thankYou.copy1">Your message has been successfully sent.</p>
         <p class="thank-you__copy" data-i18n="thankYou.copy2">Our team will review your inquiry and respond within one business day.</p>
 
-        <!-- Registration Number — populated from ?reg= query param set by
-             registration-step2.js on redirect. Scoped styles only, reusing
+        <!-- Registration Number + Access Code — populated from the ?reg=
+             and ?code= query params set by registration-step2.js on
+             redirect (both values come from the same backend response
+             as the registration submission itself; this page makes no
+             separate request for either). Scoped styles only, reusing
              the existing gold/navy palette and Fraunces/Montserrat fonts
              already loaded on this page; no new design system. -->
-        <div class="thank-you__reg-number" id="thankYouRegNumber" hidden>
-          <p class="thank-you__reg-number-label">Registration Number</p>
-          <p class="thank-you__reg-number-value" id="thankYouRegNumberValue"></p>
+        <div class="thank-you__credentials" id="thankYouCredentials" hidden>
+          <div class="thank-you__reg-number" id="thankYouRegNumber">
+            <p class="thank-you__reg-number-label">Registration Number</p>
+            <p class="thank-you__reg-number-value" id="thankYouRegNumberValue"></p>
+            <button type="button" class="thank-you__copy-btn" id="thankYouCopyReg" data-copy-target="thankYouRegNumberValue">
+              <span data-copy-label>Copy</span>
+            </button>
+          </div>
+
+          <div class="thank-you__reg-number thank-you__access-code" id="thankYouAccessCode">
+            <p class="thank-you__reg-number-label">Access Code</p>
+            <p class="thank-you__reg-number-value" id="thankYouAccessCodeValue"></p>
+            <button type="button" class="thank-you__copy-btn" id="thankYouCopyCode" data-copy-target="thankYouAccessCodeValue">
+              <span data-copy-label>Copy</span>
+            </button>
+          </div>
+
+          <p class="thank-you__credentials-notice">
+            Please save your Registration Number and Access Code. These credentials will be required to access the Participant Portal.
+          </p>
         </div>
 
         <div class="thank-you__action">
@@ -46,10 +66,14 @@
   </main>
 
   <style>
-    /* Scoped to the Registration Number block only — reuses the page's
-       existing gold accent and font stack, no new design tokens. */
-    .thank-you__reg-number {
+    /* Scoped to the Registration Number / Access Code block only —
+       reuses the page's existing gold accent and font stack, no new
+       design tokens. */
+    .thank-you__credentials {
       margin: 2rem auto;
+    }
+    .thank-you__reg-number {
+      margin: 0 auto 1.5rem;
       text-align: center;
     }
     .thank-you__reg-number-label {
@@ -69,6 +93,45 @@
       margin: 0;
       letter-spacing: 0.02em;
     }
+    /* Access Code reuses the identical treatment as Registration Number
+       on purpose — both are presented as equally important credentials,
+       per spec, not a primary/secondary pair. */
+    .thank-you__access-code {
+      margin-bottom: 1.5rem;
+    }
+    .thank-you__copy-btn {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #d4af6a;
+      background: transparent;
+      border: 1px solid #d4af6a;
+      border-radius: 999px;
+      padding: 0.4rem 1.1rem;
+      margin-top: 0.75rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .thank-you__copy-btn:hover,
+    .thank-you__copy-btn:focus-visible {
+      background: #d4af6a;
+      color: #1b2a4a;
+    }
+    .thank-you__copy-btn.is-copied {
+      background: #d4af6a;
+      color: #1b2a4a;
+    }
+    .thank-you__credentials-notice {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #b8bfd1;
+      max-width: 32rem;
+      margin: 1.5rem auto 0;
+      text-align: center;
+    }
   </style>
 
   <script>
@@ -86,12 +149,51 @@
 
       var params = new URLSearchParams(window.location.search);
       var reg = params.get('reg');
-      var wrap = document.getElementById('thankYouRegNumber');
-      var valueEl = document.getElementById('thankYouRegNumberValue');
-      if (!wrap || !valueEl) return;
+      var code = params.get('code');
 
-      valueEl.textContent = reg ? reg : 'Registration Number Unavailable';
-      wrap.hidden = false;
+      var credentialsWrap = document.getElementById('thankYouCredentials');
+      var regValueEl = document.getElementById('thankYouRegNumberValue');
+      var codeValueEl = document.getElementById('thankYouAccessCodeValue');
+      if (!credentialsWrap || !regValueEl || !codeValueEl) return;
+
+      regValueEl.textContent = reg ? reg : 'Registration Number Unavailable';
+      codeValueEl.textContent = code ? code : 'Access Code Unavailable';
+      credentialsWrap.hidden = false;
+
+      // Copy-to-clipboard for both values. navigator.clipboard requires
+      // a secure context (https), which this site is already served
+      // over, so no fallback path is needed. Button label flips to
+      // "Copied" briefly for feedback, then reverts — same pattern
+      // regardless of which of the two buttons was pressed.
+      function wireCopyButton(buttonId, targetId) {
+        var button = document.getElementById(buttonId);
+        var target = document.getElementById(targetId);
+        if (!button || !target || !navigator.clipboard) return;
+
+        var label = button.querySelector('[data-copy-label]');
+        var originalText = label ? label.textContent : 'Copy';
+
+        button.addEventListener('click', function () {
+          var text = target.textContent;
+          if (!text) return;
+
+          navigator.clipboard.writeText(text).then(function () {
+            if (label) label.textContent = 'Copied';
+            button.classList.add('is-copied');
+            window.setTimeout(function () {
+              if (label) label.textContent = originalText;
+              button.classList.remove('is-copied');
+            }, 1500);
+          }).catch(function () {
+            /* Clipboard write failed (permissions, etc.) — the value is
+               already visible on the page for manual copy, so this
+               fails silently rather than showing an error state. */
+          });
+        });
+      }
+
+      wireCopyButton('thankYouCopyReg', 'thankYouRegNumberValue');
+      wireCopyButton('thankYouCopyCode', 'thankYouAccessCodeValue');
     })();
   </script>
 

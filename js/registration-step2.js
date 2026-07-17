@@ -550,7 +550,13 @@
           // whatever was open before the form (index.html). Works the
           // same way on desktop and mobile browsers since it's the
           // standard History API, not a browser-specific trick.
-          var thankYouUrl = 'thank-you.html?reg=' + encodeURIComponent(result.registrationNumber);
+          //
+          // Access Code is passed through the same way, straight from
+          // this response — thank-you.html never makes a second
+          // request of its own to fetch it separately.
+          var thankYouUrl = 'thank-you.html' +
+            '?reg=' + encodeURIComponent(result.registrationNumber) +
+            '&code=' + encodeURIComponent(result.accessCode || '');
           window.history.replaceState(null, '', thankYouUrl);
           window.location.href = thankYouUrl;
         })
